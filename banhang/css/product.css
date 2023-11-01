@@ -33,6 +33,7 @@ margin-right: .1%;
     flex-wrap: wrap;
     width: 100%;
     justify-content: space-between;
+    position: relative;
 }
 
 
@@ -174,15 +175,21 @@ border: 1px solid black;
     --bs-gutter-x:0
 }
 /* nút */
+.nut_one,
 .nut{
     position: absolute;
     color: rgb(255, 0, 0);
    top: 50%;
-   
+    
     width: 97%;
     font-size: 23px;
     cursor: pointer;
 }
+.nut_one{
+    width: 100%;
+    top: 45%;
+}
+.nut_one .next,
 .nut .next{
  position: absolute;
  left: 10px;
@@ -192,6 +199,7 @@ border: 1px solid black;
  border-radius: 50%;
  border: 1px solid black;
 }
+.nut_one .pre,
 .nut .pre{
     position: absolute;
 right: 10px;
@@ -200,6 +208,9 @@ height: 38px;
 text-align: center;
 border-radius: 50%;
 border: 1px solid black;
+}
+.nut_one .next{
+    left: 220px;
 }
 .dots{
     display: flex;
