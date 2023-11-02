@@ -5,26 +5,17 @@
 }
 
 .product__item{
-<<<<<<< HEAD
-    background-color: white;
-
-margin-right: .1%;
-=======
     background-color: rgb(255, 255, 255);
 
     width: 100%;
     margin-right: .1%;
->>>>>>> devTri
     overflow: hidden;
 
    position: relative;
   
     
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> devTri
 .product__banner_hot{
     
     background-image: url('../img/banner/x.jpg');
@@ -33,11 +24,7 @@ margin-right: .1%;
 }
 .product__bt{
     width:212px; 
-<<<<<<< HEAD
-      height: 320px;
-=======
     height: 320px;
->>>>>>> devTri
 }
 .product___hot{
     width: 250px;
@@ -52,14 +39,11 @@ margin-right: .1%;
     justify-content: space-between;
     position: relative;
     overflow: hidden;
-<<<<<<< HEAD
-=======
 }
 .khung_product{
     display: flex;
     gap: 10px;
     transition: 0.5s ease;
->>>>>>> devTri
 }
 
 .product__title {
@@ -224,13 +208,9 @@ border: 1px solid black;
  height: 38px;
  text-align: center;
  border-radius: 50%;
-<<<<<<< HEAD
- border: 1px solid black;
-=======
 
  border: 1px solid black;
  
->>>>>>> devTri
 }
 .nut_one .pre,
 .nut .pre{
@@ -254,14 +234,6 @@ border: 1px solid black;
     height: 11px;
     border: 1px solid black;
     border-radius: 50%;
-<<<<<<< HEAD
-    background-color: #f396ad;
-    margin-right: 4px;
-    cursor: pointer;
-}
-.dot__item.active{
-    background-color: #fb6f92;
-=======
     background-color: white;
     margin-right: 4px;
     cursor: pointer;
@@ -282,7 +254,6 @@ border: 1px solid black;
     .product__bt{
         width: 230px;
     }
->>>>>>> devTri
 }
 @media (max-width:700px){
     
