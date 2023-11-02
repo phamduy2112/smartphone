@@ -171,6 +171,8 @@ padding: 0 10px;
 }
 .group__fl{
     font-size: 18px;
+
+    
 }
 .productss__item{
     display: flex;
@@ -284,7 +286,7 @@ border: 1px solid black;
 }
 @media (max-width:700px){
     
-  
+    
 
     .product___hot{
         width: 310px;
