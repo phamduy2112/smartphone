@@ -165,6 +165,7 @@ header{
     }
 .row{
     margin: 0;
+    --bs-gutter-x:0
 }
  .footer__top{
     border-bottom: 1px solid black;
@@ -361,7 +362,6 @@ top: 30px;
         display: flex;
         font-size: 20px;
         
-        
     }
     .header__menu__item i{
         position: relative;
@@ -398,6 +398,14 @@ top: 30px;
     }
    
 }
+label{
+    color: red;
+    opacity: 0;
+    visibility:hidden;
+    transition: 0.5s ease;
+ 
+ 
+ }
  @media (min-width:1668px){
     .header__menu{
         top: 10%;
@@ -411,11 +419,3 @@ top: 30px;
     }
     }
 
-label{
-   color: red;
-   opacity: 0;
-   visibility:hidden;
-   transition: 0.5s ease;
-
-
-}
