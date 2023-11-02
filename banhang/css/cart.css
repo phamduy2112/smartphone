@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.cart__flex{
+    display: flex;
+}
+.cart__right{
+    width: 25%;
+    border: 1px solid black;
+    margin-left: 1%;
+    background-color: white;
+    height: 250px;
+    padding: 10px 0;
+}
+.cart__right hr{
+    margin: 0;
+}
+.cart__right p{
+   
+}
+.cart__right p {
+    display: flex;
+    justify-content: space-between;
+}
+.cart__right div{
+    padding: 0 20px;
+
+}
+.cart__right__deal{
+    width: 100%;
+}
+.cart__right__deal input[type="text"]{
+    width: 77%;
+}
+.cart__right__deal input[type="submit"]{
+    width: 19%;
+}
+.cart__left{
+    width: 70%;
+    background-color: white;
+}
+.cart__left .image__product{
+    width: 100px;
+}
+.image__product img{
+    width: 100%;
+}
+.table>:not(caption)>*>*{
+    border-bottom-width:0;
+}
+.cart__left .table tbody tr td:first-child{
+width: 60%;
+}
+.cart__left .table tbody tr td{
+    width: 20%;
+}
+.product__cart{
+display: flex;
+width: 80%;
+}
+
+.cart__left .table tbody tr td:last-child{
+   width: 20%;
+}
+tr{
+    border-bottom: 1px solid black;
+}
+
+tr .number__count .number__count_pr{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    
+   
+  
+  cursor: pointer;
+ 
+}
+.table{
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
