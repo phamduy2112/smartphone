@@ -93,16 +93,37 @@ header{
     }
     .banner__bottom{
         width: 100%;
+        display: flex;
     }
     .banner__bottom .img__banner{
         width:33.33%;
         margin-top: 5px;
        
        margin-right: 1%;
+        position: relative;
     }
-
     .banner__bottom .img__banner img{
         width: 100%;
+    }
+    .banner__bottom .img__title{
+        position: absolute;
+        padding: 20px 20px;
+        width: 70%;
+        transform: scale(1);
+       transition:all .5s;
+    }
+    .banner__bottom .img__title h3{
+        font-size: 20px;
+    }
+    .banner__bottom .img__title p{
+        font-size: 16px;
+    }
+    .banner__bottom .img__banner {
+        width: 100%;
+     
+    }
+    .banner__bottom .img__banner:hover{
+        transform: scale(1.1);
     }
     .shippy{
         margin-top: 10px;
@@ -297,9 +318,18 @@ top: 30px;
 .carousel .d-none{
     display: block;
 }
+.blog__item{
+    width: 49%;
+}
+.blog__item .blog__body h4{
+    font-size: 15px;
+ }
 }
 @media (max-width:600px){
-    
+    .container-md {
+        width: 95%;
+        margin: auto;
+    }
     .header__main form .submit{
         height: 40px;
         padding: 0 10px;
@@ -315,6 +345,14 @@ top: 30px;
     outline: none;
     padding: 0 20px;
     }
+   
+     .banner__bottom{
+    display: flex;
+    flex-wrap: wrap;
+     }
+   .img__banner{
+    width: 100%;
+   }
 }   
 @media (min-width:999px){
     .header__mobile{

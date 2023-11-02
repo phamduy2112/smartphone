@@ -53,7 +53,7 @@
   }
   
   .form__group_icon {
-  width: 90%;
+  width: 100%;
     border: 1px solid black;
     position: relative;
     
@@ -76,7 +76,7 @@
   }
   .sign .btna{
     margin-top: 13px;
-    width: 90%;
+    width: 100%;
     padding: 5px 0;
   
   }
@@ -90,6 +90,9 @@
     width: 40%;
     border: 1px solid black;
     position: relative;
+  }
+  .form__group_one{
+    width: 100%;
   }
   .form__group_one h1{
     font-size: 20px;
@@ -125,3 +128,19 @@
     cursor: pointer;
   
   }
+  @media (max-width:1000px){
+    .forget,
+    .sign{
+      width: 60%;
+    }
+    .forget_from{
+      margin-left: 30vw;
+    }
+  }
+  @media (max-width:767px){
+    .forget,
+    .sign{
+      width: 100%;
+    }
+  }
+  
