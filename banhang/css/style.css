@@ -3,6 +3,8 @@
 @import url('../css/product.css');
 @import url('../css/dangnhap.css');
 @import url('../css/user.css');
+@import url('../css/cart.css');
+
 *{
     padding: 0;
     margin: 0;
@@ -194,7 +196,32 @@ header{
     .footer__box .footer__item{
         
     }
-    
+    /*  contact */ 
+    .nut_chinh{
+        width: 100%;
+        font-size: 20px;
+    }
+    .contact__left{
+        padding-right: 50px;
+    }
+    .contact__bottom{
+        background-color: #fff;
+        padding: 30px 40px;
+    }
+    .contact__left input{
+        height: 50px;
+        outline: none;
+        padding: 0 20px;
+        border-radius: 20px;
+        border: 1px solid black;
+    }
+    .contact__left .group_flex .form__group>input{
+        width: 96%;
+    }
+   .contact__right .contact__title h4{
+    font-size: 18px;
+    margin-bottom:0;
+   }
  @media (max-width:998px) {
   .header__main .container{
         width: 90%;
@@ -324,6 +351,9 @@ top: 30px;
 .blog__item .blog__body h4{
     font-size: 15px;
  }
+ .contact__left{
+    padding-right: 0;
+   }
 }
 @media (max-width:600px){
     .container-md {
@@ -353,6 +383,7 @@ top: 30px;
    .img__banner{
     width: 100%;
    }
+  
 }   
 @media (min-width:999px){
     .header__mobile{
