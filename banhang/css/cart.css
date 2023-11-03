@@ -84,16 +84,21 @@ tr .number__count .number__count_pr{
 }
 /* kênh thanh toan */
 .thanhtoan_left{
- 
-    padding: 10px 150px;
+ border: 1px solid black;
+    background-color: white;
+  padding: 20px 30px;
+  margin-right: 7%;
     
 }
 .form__thanhtoan{   
-    border: 1px solid black;
-    background-color: white;
-    padding: 10px 50px;
+    
+   
 }
 .thanhtoan_left input{
     width: 100%;
     height: 35px;
+}
+.thanhtoan_right{
+    border: 1px solid black;
+    background-color: white;
 }
