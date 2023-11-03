@@ -52,7 +52,7 @@ function dangki(){
         passone_error.style.visibility="visible";
         passone_error.innerHTML = `Bạn còn thiếu ${6-passtest} kí tự dễ bị hack lắm đó nhập lại dài hơn đi.`;    
         return false;
-    }else if(!isNaN(passone.value)){
+    }else if(isNaN(passone.value)){
         passone_error.style.opacity="1";
         passone_error.style.visibility="visible";
         passone_error.innerHTML = 'Tính nhập mật khẩu toàn là số à dễ bị hack đó nhập lại đi!';
