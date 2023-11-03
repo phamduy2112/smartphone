@@ -28,7 +28,7 @@ function dangki(){
         ten_error.style.visibility="visible";
         ten_error.innerHTML = `Tên độ dài quá lớn`;
         return false;
-    }else if(!isNaN(ten.value)){
+    }else if(isNaN(ten.value)){
         ten_error.style.opacity="1";
         ten_error.style.visibility="visible";
         ten_error.innerHTML = 'Định nhập số hết à sai rồi nhập lại đi nhớ có chữ ok!';
