@@ -4,6 +4,7 @@
 @import url('../css/dangnhap.css');
 @import url('../css/user.css');
 @import url('../css/cart.css');
+@import url('../css/bien.css');
 
 *{
     padding: 0;
@@ -200,9 +201,23 @@ header{
     .nut_chinh{
         width: 100%;
         font-size: 20px;
+        background: var(--font--color);
+        color: white;
+        border: none;
+        box-shadow: 2px 2px 4px rgba(0,0,0,.3);
+        transition: all .5s;
+    }
+    .nut_chinh:hover{
+        background: transparent;
+        color: var(--font--color);
+        border: 1px solid var(--font--color);
     }
     .contact__left{
         padding-right: 50px;
+    }
+    .contact__left form .form__group p{
+        color: var(--font--color);
+        font-weight: bold;
     }
     .contact__bottom{
         background-color: #fff;
@@ -221,6 +236,26 @@ header{
    .contact__right .contact__title h4{
     font-size: 18px;
     margin-bottom:0;
+    color: var(--font--color);
+    
+   }
+   .contact__right .contact__title i{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 1px solid black;
+    font-size: 20px;
+    text-align: center;
+    line-height: 32px;
+    margin-right: 4px;
+    cursor: pointer;
+    margin-top: 5px;
+    border:1px solid var(--font--color);
+    transition: all .5s;
+   }
+   .contact__right .contact__title i:hover{
+    background-color: var(--font--color);
+    color: white;
    }
  @media (max-width:998px) {
   .header__main .container{
