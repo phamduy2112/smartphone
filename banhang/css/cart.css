@@ -173,8 +173,75 @@ tr .number__count .number__count_pr{
 .thanhtoan_left input{
     width: 100%;
     height: 35px;
+    outline: none;
+    padding: 0 20px;
 }
 .thanhtoan_right{
     border: 1px solid black;
     background-color: white;
+    padding: 20px;
+  height: 360px;
+}
+.thanhtoan_left h3,
+.thanhtoan_right h3{
+    text-align: center;
+    color: var(--font--color);
+}
+.maQR.active{
+    display: none;
+}
+.thanhtoan_left p{
+    color: var(--font--color);
+    font-weight: bold;
+}
+.thanhtoan_right div p{
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+.thanhtoan_right div p span{
+    font-weight: 500;
+}
+.fullname_name{
+    width: 47%;
+}
+.fullname_ho{
+    width: 50%;
+}
+textarea{
+    width: 100%;
+    outline: none;
+    padding: 0 20px;
+}
+.group__form1 span{
+    color: var(--font--color);
+    margin-left: 10px;
+    font-weight: bold;
+}
+.form-check{
+  
+}
+.thanhtoan_right hr{
+    margin: 10px 0;
+}
+.form-check p.check{
+    width: 100%;
+    font-size: 14px;
+    margin-left: 4px;
+}
+.form-check p.check span{
+color: var(--font--color);
+}
+.group__form .btn.mua{
+    width:60%;
+    border: 1px solid black;
+    background: var(--font--color);
+    color: white;
+}
+@media (max-width:1000px){
+.thanhtoan_left .fullname_name,
+.thanhtoan_left .fullname_ho
+{
+    width: 100%;
+}
 }

@@ -32,6 +32,8 @@ header{
         border-bottom: 1px solid black;
         padding: 5px 0;
     text-align: center;
+    color: white;
+    background-color: var(--font--color);
     }
     .header__top_item{
     display: flex;
@@ -39,8 +41,13 @@ header{
     align-items: center;
     
     }
-    .header__top_icon {
+    .header__top_icon a {
+        color: white;
        text-align: center;
+       margin-right: 30px;
+    }
+    .header__top_icon a:last-child{
+        margin-right: 0;
     }
     .header__main {
     
@@ -48,19 +55,27 @@ header{
       border-bottom: 1px solid black;
     
     }
+    .header__main .form__search{
+        border: 1px solid black;
+        border-radius: 5px;
+        overflow: hidden;
+    }
  .header__main form .submit{
-        height: 40px;
-        padding: 0 20px;
-        background-color: #fb6f92;
-        border: 1px solid #fb6f92;
+        height: 39.2px;
+        padding: 0 20.7px;
+        background-color: var(--font--color);
         color: white;
         box-shadow: 0 0 2px rgba(0,0,0,.5);
+        border: 1px solid var(--font--color);
+        font-weight: bold;
     } 
     .header__main form .search{
-    width: 82%;
+    width: 87%;
     height: 40px;
     outline: none;
     padding: 0 20px;
+    border: none;
+
     }
     main{
         position: relative;
@@ -115,6 +130,43 @@ header{
         transform: scale(1);
        transition:all .5s;
     }
+    .banner__hai .row .col-4{
+        padding-right:10px;
+        position: relative;
+        
+    }
+    .banner__hai .row .col-4 img {
+        position: relative;
+    }
+    .banner__hai .row .col-4::after{
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: '';
+        display:inline-block;
+        padding-right:10px ;
+        width: 98%;
+        height: 98%;
+       
+        background-color: rgb(0, 0, 0,.3);
+        
+    }
+    .banner__hai .row .col-4 .banner__hai__text{
+        position: absolute;
+        color: white;
+        top: 20px;
+        
+        z-index: 2;
+    }
+    .banner__hai .row .col-4 .banner__hai__text.left{
+        left: 30px;
+    }
+    .banner__hai .row .col-4 .banner__hai__text.right{
+        right: 30px;
+    }
+    .banner__hai .row .col-4:last-child{
+        padding-right: 0;
+    }
     .banner__bottom .img__title h3{
         font-size: 20px;
     }
@@ -145,21 +197,27 @@ header{
     }
     .shippy__item i{
         font-size: 25px;
-        color: #fb6f92;
+        color: var(--font--color);
+        font-weight: bold;
     }
     .shippy_itemd h3{
         font-size: 15px;
         margin-bottom: 0;
-        color: #fb6f92;
+        color: var(--font--color);
+        font-weight: bold;
     }
     .blog__box{
         display: flex;
         flex-wrap: wrap;
+        justify-content: space-between;
     }
     .blog__item{
         width: 24%;
         margin-right: 1%;
         background-color: #fff;
+    }
+    .blog__box .blog__item:last-child{
+        margin-right: 0;
     }
     .blog__item .blog__header{
         width: 100%;
@@ -197,6 +255,43 @@ header{
     .footer__box .footer__item{
         
     }
+    .footer__item h3{
+        font-size: 16px;
+        font-weight: bold;
+    }
+.footer__bottom .row .col-12 h2{
+text-align: center;
+font-size: 24px;
+}
+.footer__bottom .row .col-4 h3{
+font-size: 20px;
+}
+.footer__bottom{
+    padding: 20px 0;
+}
+footer{
+    background: url('../img/banner/footer.png');
+    color: white;
+    padding-top: 40px;
+}
+.footer__bottom .col-4 i{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    
+    font-size: 20px;
+    text-align: center;
+    line-height: 32px;
+    margin-right: 4px;
+    cursor: pointer;
+    margin-top: 5px;
+    border:1px solid white;
+    transition: all .5s;
+}
+.footer__bottom .col-4 i:hover{
+    background-color: white;
+    color: var(--font--color);
+   }
     /*  contact */ 
     .nut_chinh{
         width: 100%;
@@ -255,6 +350,13 @@ header{
    }
    .contact__right .contact__title i:hover{
     background-color: var(--font--color);
+    color: white;
+   }
+   .header__menu{
+    background-color: var(--font--color);
+    color: white;
+   }
+   .menu__item ul li a{
     color: white;
    }
  @media (max-width:998px) {
@@ -498,7 +600,7 @@ top: 30px;
         font-size: 16px;
         position: relative;
         top:4px;
-        color: #fb6f92;
+        color: #E2FF70;
     }
    
 }

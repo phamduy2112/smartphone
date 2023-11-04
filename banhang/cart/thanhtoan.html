@@ -174,54 +174,48 @@
         <div class="container-md">
          
            <div class="row">
-            <div class="col-6 thanhtoan_left">
-          
+            <div class="col-lg-6 col-sm-12 thanhtoan_left">
+          <h3>Thông tin thanh toán</h3>
                 <form action="" method="post" class="form__thanhtoan">
-                    <div class="fullname d-lg-flex w-100">
-                        <div class="fullname_name w-100">
+                    <div class="fullname d-lg-flex w-100 justify-content-between">
+                        <div class="fullname_name ">
                         <p>Tên*</p>
                         <input type="text" name="ten" class="ten "> 
                         </div>
-                        <div class="fullname_ho w-100">
+                        <div class="fullname_ho">
                             <p>Họ*</p>
                             <input type="text" name="ho" class="ho ">
                         </div>
                         
                     </div>
-                    <div class="form_group">
-                        <p>Quoc Gia*</p>
-                        <input type="text">
-                    </div>
+            
                     <div class="form_group">
                         <p>Địa Chỉ*</p>
                         <input type="text">
                     </div>
-                    <div class="form_group">
-                        <p>Ma buu dien</p>
-                        <input type="text">
-                    </div>
-                    <div class="form_group">
-                        <p>Tinh thanh pho</p>
-                        <input type="text">
-                    </div>
-                    <div class="form_group">
+      
+                    <div class="fullname d-lg-flex w-100 justify-content-between">
+                    <div class="form_group fullname_name ">
                         <p>Số điện thoại</p>
                         <input type="text">
                     </div>
-                    <div class="form_group">
+                    <div class="form_group fullname_ho">
                         <p>Email</p>
                         <input type="text">
                     </div>
+                    </div>
                     <div class="form_group">
-                        <h3>Thông tin Bổ sung</h3>
-                        <p>Ghi chú đơn hàng(tuỳ chọn)</p>
+                        <p>Thông tin Bổ sung</p>
+                        <span>Ghi chú đơn hàng(tuỳ chọn)</span>
                         <textarea name="" id="" cols="62" rows="10"></textarea>
                     </div>
-                    <input type="submit" value="Xác Nhận">
+
+                    
                 
                   </form>
+
             </div>
-            <div class="col-5 thanhtoan_right">
+            <div class="col-lg-4 col-sm-12 thanhtoan_right">
               <h3>Đơn hàng thanh toán</h3>
               <div>
                 <p><span>Số lượng</span>2</p>
@@ -239,18 +233,23 @@
               <form action="">
                 <div class="group__form1 d-flex">
                   <input type="radio" id="check" name="check">
-                  <p>Chuyển khoản ngân hàng</p>
+                  <span>Chuyển khoản ngân hàng</span>
+                </div>
+                <div class="maQR mx-4 active">
+                  <img src="../img/banner/QR.png" alt="" width="150px">
                 </div>
                 <div class="group__form1 d-flex">
                   <input type="radio" id="check" name="check">
-                  <p>Trả tiền mặt khi nhận hàng</p>
+                  <span>Trả tiền mặt khi nhận hàng</span>
                 </div>
+                <hr>
                 <div class="group__form">
                     <div class="mb-3 form-check">
                   <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <p>Tôi đã đọc và đồng ý với điều khoản và điều kiện của cửa hàng </p>
-                </div>  
-                <input type="submit" value="Xác nhận">
+                    <p class="check">Tôi đã đọc và đồng ý với điều khoản và điều kiện của cửa hàng </p>
+              
+                  </div>  
+                  <input type="submit" value="Xác nhận" class="btn mua">
                 </div>
               
               </form>
