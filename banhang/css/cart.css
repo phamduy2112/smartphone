@@ -1,3 +1,4 @@
+@import url('../css/bien.css');
 *{
     margin: 0;
     padding: 0;
@@ -8,14 +9,20 @@
 }
 .cart__right{
     width: 25%;
-    border: 1px solid black;
+    border: 1px solid white;
+    border-top-left-radius:20px ;
     margin-left: 1%;
     background-color: white;
     height: 250px;
     padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.6);
 }
 .cart__right hr{
     margin: 0;
+}
+.cart__right h3{
+    color: var(--font--color);
+    font-weight: bold;
 }
 .cart__right p{
    
@@ -23,19 +30,45 @@
 .cart__right p {
     display: flex;
     justify-content: space-between;
+    font-weight: bold;
+}
+.cart__right span {
+    font-weight: 500;
 }
 .cart__right div{
     padding: 0 20px;
 
 }
+.breadcrumb{
+ --bs-breadcrumb-margin-bottom :0px  
+}
+
+.cart__title .title__text{
+    font-size: 25px;
+    color: var(--font--color);
+}
 .cart__right__deal{
-    width: 100%;
+    width: 99%;
+    border: 1px solid var(--font--color);
 }
 .cart__right__deal input[type="text"]{
-    width: 77%;
+    width: 68%;
+   
+    height: 30px;
+    outline: none;
+    margin-right: 1px;
+    padding: 0 20px;
+    background: transparent;
+    border: none;
 }
 .cart__right__deal input[type="submit"]{
-    width: 19%;
+    width: 30%;
+    font-size: 15px;
+    height: 31px;
+    background-color: var(--font--color);
+    color: white;
+    
+
 }
 .cart__left{
     width: 70%;
@@ -47,6 +80,20 @@
 .image__product img{
     width: 100%;
 }
+.table thead{
+    background-color: var(--font--color);
+    color: white;
+    position: relative;
+}
+.table thead tr th{
+    padding: 5px 30px;
+}
+.table tbody{
+    
+}
+.table tbody tr:nth-child(even) {
+    background:rgba(43, 32, 162, 0.2)
+}
 .table>:not(caption)>*>*{
     border-bottom-width:0;
 }
@@ -56,14 +103,42 @@ width: 60%;
 .cart__left .table tbody tr td{
     width: 20%;
 }
+.cart__left .table tbody tr td>p{
+    color: var(--font--color);
+    font-weight: 600;
+}
 .product__cart{
 display: flex;
 width: 80%;
 }
-
-.cart__left .table tbody tr td:last-child{
-   width: 20%;
+.product__cart .title__product>p{
+    color: var(--font--color);
+    font-weight: 600;
 }
+.product__cart .title__product p:last-child{
+    color: red;
+}
+.carts__links a.mua{
+    border: 1px solid black;
+    border: 1px solid var(--font--color);
+    color: var(--font--color);
+}
+.carts__links a.mua:hover{
+    border: 1px solid var(--font--color);
+    background-color: var(--font--color);
+    color: white;
+}
+.carts__links .xoa{
+    background-color: var(--font--color);
+    color: white;
+}
+.carts__links .xoa:hover{
+    background-color: var(--font--color);
+    color: white;
+}
+/* .cart__left .table tbody tr td:last-child{
+   width: 20%;
+} */
 tr{
     border-bottom: 1px solid black;
 }
@@ -79,8 +154,9 @@ tr .number__count .number__count_pr{
  
 }
 .table{
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
+    border-collapse: collapse;
+    border: 1px solid black;
+  
 }
 /* kênh thanh toan */
 .thanhtoan_left{

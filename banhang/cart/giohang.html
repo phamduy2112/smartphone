@@ -179,11 +179,11 @@
             <div class="cart__title">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                      <li class="breadcrumb-item"><a href="#">Home</a></li>
-                      <li class="breadcrumb-item active" aria-current="page">Library</li>
+                      <li class="breadcrumb-item"><a href="#">Trang chu</a></li>
+                      <li class="breadcrumb-item active" aria-current="page">Gio hang</li>
                     </ol>
                   </nav>
-                    <p>Gio hang cua ban</p>
+                    <p class="title__text">Gio hang cua ban</p>
             </div>
             <div class="cart__flex">
                <div class="cart__left">
@@ -191,17 +191,19 @@
                     <table class="table">
                         <thead>
                         <tr>
+                          
                             <th>
-                                PRODUCT</th>
+                                San pham</th>
                             <th>	
-                                QUANTITY</th>
-                            <th>SUBTOTAL:</th>
+                                Soluong</th>
+                            <th>Gia:</th>
                             <th></th>
                         </tr>
 
                         </thead>
                         <tbody>
                             <tr>
+                              
                                 <td>
                                     <div class="product__cart">
                                          <div class="image__product">
@@ -229,7 +231,7 @@
                                     </div>
                                 </td>
                                 <td>
-                                    7.000.000d
+                                   <p>7.000.000d</p> 
                                 </td>
                                 <td>
                                     <a href=""><i class="fa-solid fa-trash"></i> </a>
@@ -237,46 +239,83 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td>
-                                    <div class="product__cart">
-                                         <div class="image__product">
-                                        <img src="../img/sanpham/products_35_1.webp" alt="" class="">
-                                    </div> 
-                                    <div class="title__product">
-                                        <p>Laptop Apple MacBook Pro M1 16GB/512GB</p>
-                                        <p>2.000.000d</p>
+                              
+                              <td>
+                                  <div class="product__cart">
+                                       <div class="image__product">
+                                      <img src="../img/sanpham/products_35_1.webp" alt="" class="">
+                                  </div> 
+                                  <div class="title__product">
+                                      <p>Laptop Apple MacBook Pro M1 16GB/512GB</p>
+                                      <p>2.000.000d</p>
+                                  </div>
+                                  </div>
+                                
+                                  
+                              </td>
+                              <td>
+                                  <div class="number__count">
+                                      <div class="number__count_pr">
+                                           <i class="fa-solid fa-plus solid"></i>
+                                      <div class="number">
+                                          1
+                                      </div>
+                                      <i class="fa-solid fa-minus solid"></i>  
+                                      </div>
+                                    
+                                    
+                                  </div>
+                              </td>
+                              <td>
+                                 <p>7.000.000d</p> 
+                              </td>
+                              <td>
+                                  <a href=""><i class="fa-solid fa-trash"></i> </a>
+                                  
+                              </td>
+                          </tr>
+                          <tr>
+                              
+                            <td>
+                                <div class="product__cart">
+                                     <div class="image__product">
+                                    <img src="../img/sanpham/products_35_1.webp" alt="" class="">
+                                </div> 
+                                <div class="title__product">
+                                    <p>Laptop Apple MacBook Pro M1 16GB/512GB</p>
+                                    <p>2.000.000d</p>
+                                </div>
+                                </div>
+                              
+                                
+                            </td>
+                            <td>
+                                <div class="number__count">
+                                    <div class="number__count_pr">
+                                         <i class="fa-solid fa-plus solid"></i>
+                                    <div class="number">
+                                        1
                                     </div>
+                                    <i class="fa-solid fa-minus solid"></i>  
                                     </div>
                                   
-                                    
-                                </td>
-                                <td>
-                                    <div class="number__count">
-                                        <div class="number__count_pr">
-                                             <i class="fa-solid fa-plus solid"></i>
-                                        <div class="number">
-                                            1
-                                        </div>
-                                        <i class="fa-solid fa-minus solid"></i>  
-                                        </div>
-                                      
-                                      
-                                    </div>
-                                </td>
-                                <td>
-                                    $230.00
-                                </td>
-                                <td>
-                                <a href=""><i class="fa-solid fa-trash"></i></a>
-                                </td>
-                            </tr>
-                            
+                                  
+                                </div>
+                            </td>
+                            <td>
+                               <p>7.000.000d</p> 
+                            </td>
+                            <td>
+                                <a href=""><i class="fa-solid fa-trash"></i> </a>
+                                
+                            </td>
+                        </tr>
                         </tbody>
                        
                     </table>
                      <div class="carts__links">
-                        <a href="" class="btn btn-danger">Mua hang tiep tuc</a>
-                        <a href="" class="btn btn-danger">Xoa Tat ca</a>
+                        <a href="" class="btn mua">Mua hang tiep tuc</a>
+                        <a href="" class="btn xoa">Xoa Tat ca</a>
                      </div>
                 </div>
             </div>
@@ -289,10 +328,11 @@
               </div>
               <hr>
             <div>
+              <span>Ma giam gia</span> <br>
               <form action="" class="cart__right__deal">
-                  <p>Ma giam gia</p>
-                  <input type="text" name="" placeholder="Mời bạn nhập mã giảm giá">
-                  <input type="submit">
+                  
+                  <input type="text" name="" placeholder="Mời bạn nhập mã">
+                  <input type="submit" value="Xac nhan">
                 </form>
                 <p><span>Tiền Khuyến mãi:</span>0</p>
                 <p><span>Tiền ship:</span>40.000đ</p>
