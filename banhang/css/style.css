@@ -554,7 +554,7 @@ top: 30px;
     .icons .icon_item i{
         font-size: 25px;
         margin-right: 10px;
-        color: black;
+        color: var(--font--color);
     }
     .icon_item_text{
         width: 100%;
