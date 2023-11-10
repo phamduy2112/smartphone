@@ -145,7 +145,7 @@
     </div>
     </div>
    <div class="admin__boxes mt-2">
-    <a href="">
+    <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal">
       <i class="fa-solid fa-plus"></i>
     </a>
     <p class="mx-2">
@@ -176,7 +176,7 @@
             <a href="">
               <i class="fa-solid fa-trash"></i>
             </a>|
-            <a href="">
+            <a href="" data-bs-toggle="modal" data-bs-target="#chinhSuaDM">
               <i class="fa-solid fa-pen"></i>
             </a>
           </p>
@@ -193,6 +193,55 @@
               <i class="fa-solid fa-pen"></i>
             </a>
           </p>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Thêm danh mục</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="recipient-name" class="col-form-label">Mã:</label>
+                <input type="text" class="form-control" id="recipient-name">
+              </div>
+              <div class="mb-3">
+                <label for="message-text" class="col-form-label">Tên:</label>
+                <input type="text" class="form-control" id="recipient-name">
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+            <button type="button" class="btn btn-primary">Thêm</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="chinhSuaDM" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Sửa danh mục</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+          
+              <div class="mb-3">
+                <label for="message-text" class="col-form-label">Tên:</label>
+                <input type="text" class="form-control" id="recipient-name">
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+            <button type="button" class="btn btn-primary">Thêm</button>
+          </div>
         </div>
       </div>
     </div>

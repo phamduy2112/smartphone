@@ -294,7 +294,12 @@ border: 1px solid black;
     }
 }
 @media (max-width:400px){
-    .product__bt{
+    
+  #khung_product_three .product__bt{
+        width: 250px;
+        height: 350px;
+    }
+   .product__bt{
         width: 49%;
         height: 310px;
     }

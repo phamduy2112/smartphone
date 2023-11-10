@@ -250,7 +250,6 @@ header{
     --bs-gutter-x:0
 }
  .footer__top{
-    border-bottom: 1px solid black;
  }
     .footer__box .footer__item{
         
@@ -263,7 +262,7 @@ header{
 text-align: center;
 font-size: 24px;
 }
-.footer__bottom .row .col-4 h3{
+.footer__bottom .row h3{
 font-size: 20px;
 }
 .footer__bottom{
@@ -274,7 +273,7 @@ footer{
     color: white;
     padding-top: 40px;
 }
-.footer__bottom .col-4 i{
+.footer__bottom i{
     width: 35px;
     height: 35px;
     border-radius: 50%;
