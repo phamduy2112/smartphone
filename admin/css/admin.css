@@ -1,4 +1,5 @@
 @import url('../css/mess.css');
+@import url('../css/danhmuc.css');
 *{
     padding: 0;
     margin: 0;
@@ -64,15 +65,27 @@ li{
     padding: 30px 0;
     
 }
+
+
 .menu__item li{
     width: 100%;
-    background-color: black;
+    
    padding: 10px 20px;
    margin: 8px 0;
 }
 .menu__item li>i,
 .menu__item li a{
 color: white;
+}
+.khoi1__admin{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menua{
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 ul{
@@ -157,11 +170,71 @@ position: absolute;
 .admin_body div{
 color: rgb(0, 0, 0);
 }
+.madon p{
+font-weight: bold;
+font-size: 17px;
+}
+
+.madon .ngaythang{
+    font-size: 13px;
+}
+.do{
+    background-color: red;
+}
+.cam{
+    background: orange;
+}
+.xanh{
+    background: chartreuse;
+}
+.tron{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 1px solid black;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+/* xài chug */
+.khoi__admin{display: flex;
+justify-content: space-between;
+background-color: white;
+box-shadow: 0 0 5px rgba(0,0,0,0.4);
+padding: 5px 10px;
+}
+.left__admin{
+    position: absolute;
+    left: 250px;
+    top: 25px;
+    display: flex; 
+    font-size: 17px;
+    
+    
+}
+.tranX{
+    transform:translateX(-600%);
+    transition: all 2s;
+}
+.collapse:not(.show){
+    display: block;
+}
+.transXhidden{
+    transform: translateX(0%);
+    transition: all 2s;
+}
 @media (min-width:200px) {
     .menu__a{
         width:100%;
         
         
+    }
+    .menu__item li.active{
+        width: 100%;
+        background-color: aliceblue;
+        
+    }
+    .navbar{
+        width: 100%;
     }
     .menu__item li{
         width: 220px;
@@ -174,9 +247,10 @@ color: rgb(0, 0, 0);
         top:12%;
     }
     .navbar{
-        position: relative;
-      top: 70px;
+        position: absolute;
+      top: 0;
       z-index: 1000;
+
     }
 }
 @media (min-width:768px) {
@@ -232,5 +306,12 @@ color: rgb(0, 0, 0);
     .admin_body{
         left: 15%;
             
+    }
+  
+}
+@media (min-width:1700px){
+    .menu__item li.active{
+        width: 105%;
+        background-color: aliceblue;
     }
 }
