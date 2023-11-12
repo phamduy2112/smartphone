@@ -1,0 +1,218 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+:root{
+    /* FONT */
+    --Play: 'Play', sans-serif;
+    --Ruda: 'Ruda', sans-serif;
+    /* COLOR */
+    /* Chủ đạo */
+    --CD: #2B20A1;
+    /* Nền */
+    --Nen: #EAE8FF;
+}
+
+
+/* MAIN BEGIN */
+main{
+    padding: 0px;
+    height: fit-content;
+    width: 100%;
+    background-color:var(--Nen);
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+main section{
+    /* background-color: rgba(165, 42, 42, 0.301); */
+    width: 1440px;
+    height: 100%;
+    position: relative;
+}
+main section h3{
+    font-family: var(--Play);
+    color: var(--CD);
+    font-size: 45px;
+    font-weight: bold;
+    position: relative;
+    top: 28px;  
+}
+/* Bảng khách hàng */
+.container .infor-form{
+    position: relative;
+    margin-top: 40px;
+    width: 100%;
+    /* background-color: red; */
+    height: fit-content;
+    display: grid;
+    grid-template-columns: 324px 946px;
+    gap: 10px;
+    padding: 10px 0px;
+}
+.container .infor-form>.user-form{
+    background-color: white;
+    height: 240px;
+}
+.user-form .user{
+    position: relative;
+    background-color: #2B20A1;
+    height: fit-content;
+}
+.user-form .user img{
+    position: absolute;
+    top: 25px;
+    left: 30px;
+    width: 70px;
+    height: 70px;
+    border-radius: 35px;
+}
+.user div{
+    font-family: var(--Play);
+    position: absolute;
+    left: 125px;
+    top: 30px;
+}
+.user div p{
+    color: var(--CD);
+    font-weight: bold;
+    font-size: 35px;
+}
+.user div a{
+    font-size: 20px;
+    text-decoration: none;
+    color: rgba(61, 61, 61, 0.356);
+    font-weight: 600;
+}
+.control{
+    position: relative;
+    top: 120px;
+    font-family: var(--Ruda);
+}
+
+.profile, .order{
+    padding: 10px 0px 10px 20px;
+}
+.profile a,.order a{
+    font-size: 22px ;
+    color: var(--CD);
+    text-decoration: none;
+    transition: 0.3s;
+}
+.profile i{
+    transition: 0.3s;
+}
+.profile i, .order i{
+    color: var(--CD);
+    font-size: 22px;
+    margin-right: 20px;
+    margin-left: 10px;
+}
+.profile:hover a{
+    font-weight: bold;
+    font-size: 28px;
+}
+.profile:hover i{
+    font-size: 28px;
+}
+.order{
+    /* display: flex;
+    align-items: 50px; */
+}
+.order i{
+    font-size: 28px;
+}
+.order a{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+
+/* Bảng đơn hàng */
+.container .infor-form>.order-form{
+    background-color: white;
+    height: fit-content;
+    padding: 20px 25px 30px 25px;
+}
+.order-form h4{
+    font-family: var(--Play);
+    color: var(--CD);
+    font-size: 30px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.order-form p{
+    font-family: var(--Play);
+    color: gray;
+    position: absolute;
+    right: 45px;
+    top: 45px;
+}
+.order-form table{
+    margin-top: 10px;
+    border-spacing: 0 ;
+    width: 100%;
+    font-family: var(--Play);
+}
+.order-form table thead {
+    color:  white;
+    background-color: var(--CD);
+}
+.order-form table thead th{
+    font-size: 20px;
+    padding: 10px 10px;
+    text-align: center;
+}
+.order-form table thead th:nth-child(1){
+   width: 10%; 
+}
+.order-form table thead th:nth-child(2){
+   width: 25%; 
+}
+.order-form table thead th:nth-child(3){
+   width: 15%; 
+}
+.order-form table thead th:nth-child(4){
+   width: 20%; 
+}
+.order-form table thead th:nth-child(5){
+   width: 15%; 
+}
+.order-form  tr{
+    border:none;
+}
+.order-form table tbody{
+    text-align: center;
+}
+.order-form table tbody tr:nth-child(even){
+    background-color: white;
+}
+.order-form table tbody tr:nth-child(odd){
+    background-color: var(--Nen);
+}
+.order-form table tbody tr td{
+    padding: 15px 10px;
+}
+table tbody tr td:nth-child(1),
+table tbody tr td:nth-child(2){
+    font-weight: bold;
+}
+table tbody tr td:nth-child(2){
+    font-size: 20px;
+}
+table tbody tr td:nth-child(3){
+    font-weight: 600;
+}
+table tbody tr td:nth-child(4){
+    font-weight: bold;
+    font-size: 19px;
+
+}
+table tbody tr td:nth-child(5) a{
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--CD);
+}
+
+/* MAIN END */

@@ -4,8 +4,9 @@
 @import url('../css/dangnhap.css');
 @import url('../css/user.css');
 @import url('../css/cart.css');
-@import url('../css/bien.css');
 
+@import url('../css/bien.css');
+@import url('../css/lichsumuahang.css');
 *{
     padding: 0;
     margin: 0;
@@ -77,10 +78,7 @@ header{
     border: none;
 
     }
-    main{
-        position: relative;
-        top: 20px;
-    }
+
     .carousel{
         position: relative;
     }
@@ -462,9 +460,9 @@ ul{
 
 }
 /* carousel */
-main{
+/* main{
 top: 30px;    
-}
+} */
 .container-md{
     width: 100%;
     margin: 0 auto;
