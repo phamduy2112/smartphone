@@ -1,3 +1,4 @@
+@import url('../css/bien.css');
 *{
     margin: 0;
     padding: 0;
@@ -10,6 +11,9 @@
 }
 .productct__right{
     padding: 0 20px;
+}
+.productct__right hr{
+    margin: 1rem 0;
 }
 .productct__flex .productct__right .productct__text h2{
     font-size: 28px;
@@ -46,8 +50,8 @@
     align-items: center;
     text-align: center;
     justify-content: center;
-    border: 1px solid black;
-    padding: 10px 0;
+    border: 1px solid var(--font--color);
+    padding: 8px 0;
     border-radius: 20px;cursor: pointer;
     margin-right: 20px;
 }
@@ -57,7 +61,33 @@ padding: 0 15px;
 .productct__text .mua,
 .productct__text .number__count .addtoCart{
     border-radius: 20px;
+    border: 1px solid black;
+    padding: 8px 0;
+    text-align: center;
 }
+.productct__text .number__count .addtoCart{
+    background: var(--font--color);
+    color: white;
+    border: 2px solid var(--font--color);
+    transition: all .5s;
+}
+.productct__text .number__count .addtoCart:hover{
+    background: transparent;
+    color: var(--font--color);
+    border: 2px solid var(--font--color);
+}
+.productct__text .mua{
+    color: var(--font--color);
+    font-weight: 600;
+    border: 2px solid var(--font--color);
+    transition: all .5s;
+}
+.productct__text .btn:hover.mua{
+    background: var(--font--color);
+    color: white;
+    border: 2px solid var(--font--color);
+}
+
 .productct_thanhtoan{
     background-color: aliceblue;
     text-align: center;
