@@ -16,15 +16,21 @@
     margin: 1rem 0;
 }
 .productct__flex .productct__right .productct__text h2{
-    font-size: 28px;
+    font-size: 30px;
+    color: var(--font--color);
     
 }
 .productct__flex .productct__right .productct__text p{
     font-size: 18px;
     
 }
+.productct__right .stars i{
+    color: yellow;
+    font-size: 18px;
+}
 .productct__flex .productct__right .productct__text p span{
     font-weight: bold;
+    color: var(--font--color);
     
 }
 .pro_img{
@@ -37,7 +43,7 @@
 }
 .productct__flex .productct__right .productct__text .price .price1{
     font-size: 23px;
-    color: #fb6f92;
+    color: red;
 }
 .productct__text .number__count{
     display: flex;
@@ -133,7 +139,8 @@ display: inline-block;
     background: transparent;
     border: none;
     padding: 4px 0;
-    font-size: 20px;
+    font-size: 23px;
+    font-weight: bold;
 }
 .prochitiet .nav-link1.active{
     position: relative;
@@ -146,12 +153,12 @@ bottom: 0;
 left: 0;
 width: 100%;
 height: 3px;
-background-color: #fb6f92;
+background-color: blue;
 display: inline-block;
 z-index: 111;
 }
 .prochitiet .nav-link1.active{
-    color: #fb6f92;
+    color:var(--font--color);
 }
 /* bình luận */
 .prochitiet .image {
@@ -180,4 +187,9 @@ outline: none;
 }
 .fa-gear{
     cursor: pointer;
+}
+@media (max-width:767px){
+    .prochitiet .nav-item .nav-link1{
+    font-size: 15px;
+   } 
 }

@@ -58,10 +58,11 @@
     background-color: white;
     
   }
-  .sign span {
-    
+  .sign span a{
     font-weight: bold;
+    
   }
+  
   a:hover{
     color: var(--font--color);
   }
@@ -124,7 +125,8 @@
   /*  */
   .forget{
     width: 40%;
-    border: 1px solid black;
+    border: 1px solid white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.317);
     position: relative;
   }
   .form__group_one{
@@ -144,8 +146,11 @@
   }
   .form__group_one .form__group_icona{
     padding: 5px;
-    width: 100%;
   
+  
+  }
+  #doimk .form__group_icona{
+    width: 100%;
   }
   .form__group_icona input{
     padding: 3px 14px;
@@ -165,7 +170,7 @@
   }
   .forget_from>div{
     margin-top: 10px;
-   margin-right: 20px;
+   margin-right: 10px;
   }
   .forget_from .btna
 {
@@ -173,22 +178,31 @@
     background-color: var(--font--color);
     color: white;
     border: none;
+    font-weight: bold;
+  border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
   }
 
   .form__group_one a{
     border: 1px solid var(--font--color);
-    padding: 5px 15px;
+    padding: 5px 25px;
     display: inline-block;
     margin: 10px 5px; 
     background: transparent;
+    font-weight: bold;
     color: var(--font--color);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
   }
   .form__group_one input {
-    padding: 5px 15px;
+  padding: 5px 15px;
     cursor: pointer;
-  
+    
   }
-
+.forget .breadcrumb{
+padding: 0 16px;
+margin-top: 3px;
+}
   @media (max-width:1000px){
     .forget,
     .sign{

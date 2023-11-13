@@ -171,9 +171,14 @@
       </header>
   <main>
     <div class="thanhtoan">
-        <div class="container-md">
-         
-           <div class="row">
+        <div class="container">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="#">Giỏ hàng</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Thanh toán</li>
+            </ol>
+          </nav>  
+           <div class="row mt-2">
             <div class="col-lg-6 col-sm-12 thanhtoan_left">
           <h3>Thông tin thanh toán</h3>
                 <form action="" method="post" class="form__thanhtoan">
@@ -189,7 +194,7 @@
                         
                     </div>
             
-                    <div class="form_group">
+                    <div class="form_group mt-2">
                         <p>Địa Chỉ*</p>
                         <input type="text">
                     </div>
@@ -204,10 +209,10 @@
                         <input type="text">
                     </div>
                     </div>
-                    <div class="form_group">
+                    <div class="form_group mt-2">
                         <p>Thông tin Bổ sung</p>
-                        <span>Ghi chú đơn hàng(tuỳ chọn)</span>
-                        <textarea name="" id="" cols="62" rows="10"></textarea>
+                       
+                        <textarea name="" id="" cols="62" rows="10" placeholder="Ghi chú đơn hàng(tuỳ chọn)"></textarea>
                     </div>
 
                     
@@ -216,7 +221,7 @@
 
             </div>
             <div class="col-lg-4 col-sm-12 thanhtoan_right">
-              <h3>Đơn hàng thanh toán</h3>
+              <h3 class="text-center">Đơn hàng thanh toán</h3>
               <div>
                 <p><span>Số lượng</span>2</p>
                 <p><span>Tiền:</span>3.000.000đ</p>
@@ -232,11 +237,11 @@
               <hr>
               <form action="">
                 <div class="group__form1 d-flex">
-                  <input type="radio" id="check" name="check">
+                  <input type="radio" id="check" name="check" checked>
                   <span>Chuyển khoản ngân hàng</span>
                 </div>
-                <div class="maQR mx-4 active">
-                  <img src="../img/banner/QR.png" alt="" width="150px">
+                <div class="maQR">
+                  <img src="../img/banner/QR.png" alt="" width="200px">
                 </div>
                 <div class="group__form1 d-flex">
                   <input type="radio" id="check" name="check">
@@ -246,10 +251,10 @@
                 <div class="group__form">
                     <div class="mb-3 form-check">
                   <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <p class="check">Tôi đã đọc và đồng ý với điều khoản và điều kiện của cửa hàng </p>
+                    <p class="check">Tôi đã đọc và <span>đồng ý</span> với <span>điều khoản và điều kiện</span> của cửa hàng </p>
               
                   </div>  
-                  <input type="submit" value="Xác nhận" class="btn mua">
+                  <input type="submit" value="Thanh toán" class="btn mua">
                 </div>
               
               </form>
