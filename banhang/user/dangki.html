@@ -74,6 +74,7 @@
     
     
           </div>
+          
           <div class="header__menu" style="background-color: white;">
             <div class="container d-lg-flex justify-content-between">
               <div class="header__menu__item">
@@ -178,19 +179,21 @@
   <main>
 <div class="container-md">
     <div class="sign m-auto" id="dangky">
-        <div class="flex">
-          <a href="sign.html"><h3>Đăng nhập</h3></a>/
-          <a href=""><h3 class="active">Đăng Ký</h3></a>
-        </div>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Đăng kí</li>
+        </ol>
+      </nav>  
+      
       
         <form action="" class="sign-up"  onsubmit="return dangki();">
-          
-          
-          <h1>Đăng Kí tai khoan</h1>
+        
+          <h1>Đăng kí tài khoản</h1>
           <div class="form__group">
             <p>Tên tài khoản</p>
             <div class="form__group_icon">
-              <i class="fa fa-user" aria-hidden="true"></i>
+              <!-- <i class="fa fa-user" aria-hidden="true"></i> -->
               <input type="text" placeholder="Mời bạn nhập tên tài khoản" id="ten">
             </div>
             <p for="" id="ten_error"></p>
@@ -198,7 +201,7 @@
           <div class="form__group">
             <p>Email:</p>
             <div class="form__group_icon">
-              <i class="fa-solid fa-envelope"></i>
+              <!-- <i class="fa-solid fa-envelope"></i> -->
               <input type="email" placeholder="Mời bạn nhập tài khoản Gmail" id="gmail">
             </div>
             <p for="" id="gmail_error"></p>
@@ -206,9 +209,9 @@
           <div class="form__group">
             <p>Mật khẩu</p>
             <div class="form__group_icon">
-              <i class="fa fa-lock" aria-hidden="true"></i>
+              <!-- <i class="fa fa-lock" aria-hidden="true"></i> -->
               <input type="password" placeholder="Mời bạn nhập mật khẩu" id="passone">
-              <i class="fa fa-eye" aria-hidden="true"></i>
+              <!-- <i class="fa fa-eye" aria-hidden="true"></i> -->
             </div>
             <p for="" id="passone_error"></p>
           
@@ -216,15 +219,15 @@
           <div class="form__group">
             <p>Xác nhận mật khẩu</p>
             <div class="form__group_icon">
-              <i class="fa fa-lock" aria-hidden="true"></i>
+              <!-- <i class="fa fa-lock" aria-hidden="true"></i> -->
               <input type="password" placeholder="Mời bạn nhập lại mật khẩu" id="passtwo">
-              <i class="fa fa-eye" aria-hidden="true"></i>
+              <!-- <i class="fa fa-eye" aria-hidden="true"></i> -->
             </div>
             <p for="" id="passtwo_error"></p>
           
           </div>
-          <input type="submit" value="Đăng nhập" class="btna"><br>
-          <span>Bạn đã có tài khoản? <a href="sign.html">Đăng nhập ngay</a></span>
+          <input type="submit" value="Đăng kí" class="btna"><br>
+          <span>Bạn đã có tài khoản? <a href="sign.html">Đăng Kí ngay</a></span>
         </form>
       </div>
 </div>
