@@ -128,10 +128,11 @@
   .form__group_one p{
     color: var(--font--color);
     font-weight: 600;
-    padding: 5px 14px;
+    padding: 5px 0;
   }
   .form__group_one .form__group_icona{
     padding: 5px 14px;
+    width: 100%;
   
   }
   .form__group_icona input{
@@ -146,11 +147,17 @@
     margin: 0;
   }
   .forget_from{
+  display: flex;
+  justify-content: right;
   
-  margin-left: 18vw;
+  }
+  .forget_from>div{
+    margin-top: 10px;
+   margin-right: 20px;
   }
   .forget_from .btna
 {
+    padding: 6px 15px;
     background-color: var(--font--color);
     color: white;
     border: none;
