@@ -159,45 +159,7 @@ padding: 0 10px;
     margin: 0;
 }
 /* san pham cac loai */
-.products__flex{
-    display: flex;
-}
-.products__left{
-    width: 20%;
-    background-color: white;
-    padding: 10px 15px;
-    margin-right: 2%;
-}
-.group__fl,
-.group__form {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
 
-}
-.products__item h3{
-    font-size: 15px;
-}
-.group__fl{
-    font-size: 18px;
-
-    
-}
-.productss__item{
-    display: flex;
-
-}
-.productss__item .product__text{
-    font-size: 14px;
-    font-weight:bolder;
-}
-.colors .tron{
-width: 20px;
-height: 20px;
-border-radius: 50%;
-border: 1px solid black;
-
-}
 .products__right{
     width: 100%;
 }
@@ -267,10 +229,112 @@ border: 1px solid black;
 .dot__item.active{
     background-color:red;
 }
+@media (min-width:300px){
+    #desktop__left{
+        display: none;
+    }
+    .mobile__left{
+   
+    }
+    .transition__product{
+     
+         transform: translateX(-100%);
+    }
+    #mobile__left{
+        display: block;
+        background-color: rgb(255, 0, 0);
+        width: 100%;
+    }
+    #desktop__right{
+        display: none;
+    }
+    #mobile__right{
+        display: block;
+    }
+#mobile__left .products__left{
+    background-color: white;
+    box-shadow: 0 0 10px black;
+width: 320px;
+position: fixed;
+top: 0;
+left: 0;
+height: 100vh;
+z-index: 111111111;
+
+}
+#mobile__left .products___title{
+    border-bottom:1px solid black ;
+    background-color: var(--font--color);
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#mobile__left .products__item{
+    padding: 0 20px;
+}
+}
+@media (min-width:1000px){
+    #desktop__left{
+        display: block;
+    }
+    #mobile__left{
+        display: none;
+    }
+    #desktop__right{
+        display: block;
+    }
+    #mobile__right{
+        display: none;
+    }
+    /* san pham ben trai */
+    .products__flex{
+        display: flex;
+    }
+    #desktop__left{
+        width: 20%;
+        background-color: white;
+        padding: 10px 15px;
+        margin-right: 2%;
+    }
+    .group__fl,
+    .group__form {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    
+    }
+    .products__item h3{
+        font-size: 15px;
+    }
+    .group__fl{
+        font-size: 18px;
+    
+        
+    }
+    .productss__item{
+        display: flex;
+    
+    }
+    .productss__item .product__text{
+        font-size: 14px;
+        font-weight:bolder;
+    }
+    .colors .tron{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid black;
+    
+    }
+}
+}
 @media (max-width:1500px){
     .product__bt{
         width: 180px;
     }
+    
 }
 @media (max-width:1000px){
     .product .d-flex .img{
@@ -279,6 +343,8 @@ border: 1px solid black;
     .product__bt{
         width: 230px;
     }
+    
+  
 }
 @media (max-width:700px){
     

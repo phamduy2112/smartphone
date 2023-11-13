@@ -181,8 +181,3 @@ outline: none;
 .fa-gear{
     cursor: pointer;
 }
-@media (max-width:998px){
-    .products__left{
-        display: none;
-    }
-}
