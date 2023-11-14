@@ -135,9 +135,13 @@ transition: all .5s;
     font-size: 13px;
 }
 .product__item .product__text .price{
-    color: #fb6f92;
+    color: red;
     
 }
+.product__item .product__text .price span{
+    color: grey;
+    text-decoration: line-through;
+font-size: 13px;}
 .product__item .product__text{
   z-index:111px;
 position: relative;
