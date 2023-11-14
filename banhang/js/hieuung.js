@@ -17,3 +17,4 @@ bar_nav.onclick=function () {
  document.getElementById('dong').onclick=function(){
   document.getElementById('mobile__left').classList.add('transition__product');
  }
+ 

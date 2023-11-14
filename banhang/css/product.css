@@ -127,7 +127,7 @@ transition: all .5s;
 
 }
 .product__item .product__text .stars{
-    font-size: 11px;
+    font-size: 10px;
     
 }
 .product__item .product__text .stars i{
@@ -329,7 +329,7 @@ z-index: 111111111;
     
     }
 }
-}
+
 @media (max-width:1500px){
     .product__bt{
         width: 180px;
@@ -367,6 +367,6 @@ z-index: 111111111;
     }
    .product__bt{
         width: 49%;
-        height: 310px;
+        height: 300px;
     }
 }

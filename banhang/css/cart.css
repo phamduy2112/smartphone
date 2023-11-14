@@ -8,7 +8,7 @@
 .cart__header{
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content:space-around;
    align-items: center;
     color: white;
     font-weight: bold;
@@ -24,7 +24,7 @@
 .cart__body{
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     background: white;
     padding: 0 20px;
@@ -140,7 +140,10 @@
     display: flex;
    font-size: 20px;
     align-items: center;
- 
+    justify-content: center;
+}
+.number__count i{
+    font-size: 10px;
 }
 .number__count div{
 padding: 0 10px;
@@ -279,5 +282,8 @@ color: var(--font--color);
     }
     .cart__left .table tbody tr td:first-child{
         width: 30%;
+    }
+    .thanhtoan_right{
+        margin-top: 10px;
     }
 }   

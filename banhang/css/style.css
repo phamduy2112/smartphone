@@ -320,12 +320,17 @@ footer{
         background-color: #fff;
         padding: 30px 40px;
     }
+  
     .contact__left input{
         height: 50px;
         outline: none;
         padding: 0 20px;
-        border-radius: 20px;
-        border: 1px solid black;
+        border-radius: 10px;
+        border: 1px solid #2b20a16e;
+    }
+    .contact__left textarea{
+        border-radius: 10px;
+        border: 1px solid #2b20a16e;  
     }
     .contact__left .group_flex .form__group>input{
         width: 96%;
@@ -503,6 +508,9 @@ top: 30px;
         width: 95%;
         margin: auto;
     }
+    .contact__right{
+        margin-top: 15px;
+    }
     .header__main form .submit{
         height: 40px;
         padding: 0 10px;
@@ -528,6 +536,7 @@ top: 30px;
    }
    .banner__hai .row .banner__item{
     width: 100%;
+    margin-top: 10px;
   }
 }   
 @media (min-width:999px){
