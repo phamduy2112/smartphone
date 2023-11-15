@@ -399,10 +399,7 @@ footer{
 .header__main__top .bar__menu{
     font-size: 25px;
 }
-.header__main_top .logo{
-    font-size: 35px;
-    color: #fb6f92;
-}
+
 .header__main_top .icon_item{
     font-size: 25px;
 }
@@ -552,11 +549,7 @@ top: 30px;
         justify-content: space-between;
         
     }
-    .header__main .logo{
-        font-size: 35px;
-        color: #fb6f92;
-    
-    }
+ 
     .header__main form{
       width: 70%;
      

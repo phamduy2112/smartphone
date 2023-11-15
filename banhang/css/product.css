@@ -63,7 +63,7 @@
     display: flex;
     justify-content: space-between;
     padding: 10px 15px;
-    color: #fb6f92;
+   font-weight: bold;
 }
 
 .product .row{
@@ -113,7 +113,7 @@ transition: all .5s;
 transition: all .5s;
 }
 .product__item .icons a:hover{
-    color: #fb6f92;
+    color: var(--font--color);
 }
 .product__item:hover .icons{
     opacity: 1;
