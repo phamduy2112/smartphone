@@ -10,4 +10,11 @@ bar_nav.onclick=function () {
  dongmenu.onclick=function(){
    menu.classList.remove('trans')
  }
+
+ document.getElementById('timKiem').onclick=function(){
+  document.getElementById('mobile__left').classList.remove('transition__product');
+ }
+ document.getElementById('dong').onclick=function(){
+  document.getElementById('mobile__left').classList.add('transition__product');
+ }
  

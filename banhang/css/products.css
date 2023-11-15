@@ -1,3 +1,4 @@
+@import url('../css/bien.css');
 *{
     margin: 0;
     padding: 0;
@@ -8,16 +9,33 @@
     background-color: white;
     padding: 40px 10px;
 }
+.productct__right{
+    padding: 0 20px;
+}
+.productct__right hr{
+    margin: 1rem 0;
+}
 .productct__flex .productct__right .productct__text h2{
-    font-size: 28px;
+    font-size: 30px;
+    color: var(--font--color);
     
 }
 .productct__flex .productct__right .productct__text p{
     font-size: 18px;
     
 }
+.productct__right .stars i{
+    color: yellow;
+    font-size: 18px;
+}
+.productCT__Bottom h2{
+background-color: white;
+color: var(--font--color);
+padding: 10px 5px;
+}
 .productct__flex .productct__right .productct__text p span{
     font-weight: bold;
+    color: var(--font--color);
     
 }
 .pro_img{
@@ -30,7 +48,7 @@
 }
 .productct__flex .productct__right .productct__text .price .price1{
     font-size: 23px;
-    color: #fb6f92;
+    color: red;
 }
 .productct__text .number__count{
     display: flex;
@@ -43,8 +61,8 @@
     align-items: center;
     text-align: center;
     justify-content: center;
-    border: 1px solid black;
-    padding: 10px 0;
+    border: 1px solid var(--font--color);
+    padding: 8px 0;
     border-radius: 20px;cursor: pointer;
     margin-right: 20px;
 }
@@ -54,7 +72,62 @@ padding: 0 15px;
 .productct__text .mua,
 .productct__text .number__count .addtoCart{
     border-radius: 20px;
+    border: 1px solid black;
+    padding: 8px 0;
+    text-align: center;
 }
+.productct__text .number__count .addtoCart{
+    background: var(--font--color);
+    color: white;
+    border: 2px solid var(--font--color);
+    transition: all .5s;
+}
+.binhluan .BinhLuan{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid var(--font--color);
+    width: 100%;
+    background-color: red;
+}
+.binhluan ul{
+    border: 1px solid black;
+ width: 100px;
+ background-color: white;
+
+    position: absolute;
+    top: 25px;
+    right: 0;
+}
+.chinhsua{
+    position: relative;
+   margin-bottom: 10px;
+ 
+}
+
+.binhluan li{
+    width: 100%;
+    border-bottom: 1px solid black;
+    padding: 5px 10px;
+    text-align: center;
+}
+.activeE{
+    display: none;
+}
+.binhluan li:last-child{
+    border-bottom: none;
+}
+.productct__text .mua{
+    color: var(--font--color);
+    font-weight: 600;
+    border: 2px solid var(--font--color);
+    transition: all .5s;
+}
+.productct__text .btn:hover.mua{
+    background: var(--font--color);
+    color: white;
+    border: 2px solid var(--font--color);
+}
+
 .productct_thanhtoan{
     background-color: aliceblue;
     text-align: center;
@@ -100,7 +173,8 @@ display: inline-block;
     background: transparent;
     border: none;
     padding: 4px 0;
-    font-size: 20px;
+    font-size: 23px;
+    font-weight: bold;
 }
 .prochitiet .nav-link1.active{
     position: relative;
@@ -113,12 +187,12 @@ bottom: 0;
 left: 0;
 width: 100%;
 height: 3px;
-background-color: #fb6f92;
+background-color: blue;
 display: inline-block;
 z-index: 111;
 }
 .prochitiet .nav-link1.active{
-    color: #fb6f92;
+    color:var(--font--color);
 }
 /* bình luận */
 .prochitiet .image {
@@ -133,13 +207,25 @@ z-index: 111;
     width: 100%;
     background-size: cover;
 }
-.prochitiet form .binhluan{
-width: 88%;
-padding: 0 10px;
-outline: none;
+
+.BinhLuan .binhluan1{
+    border:none;
+    outline: none;
+    width: 80%;
+    padding: 0 20px;
+}
+.BinhLuan{
+    width: 100%;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    
 }
 .prochitiet form .gui{
-    width: 10%;
+width: 5%;
+background-color: var(--font--color);
+color: white;
+border: 1px solid var(--font--color);
 }
 .prochitiet .binhluan{
     display: flex;
@@ -147,4 +233,19 @@ outline: none;
 }
 .fa-gear{
     cursor: pointer;
+}
+@media (max-width:767px){
+    .prochitiet .nav-item .nav-link1{
+    font-size: 13px;
+   } .prochitiet form .gui{
+    width: 15%;
+
+    }
+    .productct__text .number__count .addtoCart{
+        padding: 10px 20xp;
+    }
+    
+.productct__text img {
+    width: 100%;
+}
 }
