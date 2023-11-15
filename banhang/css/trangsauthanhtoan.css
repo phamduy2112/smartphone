@@ -28,12 +28,16 @@
 
     
 }
+.donhang_main_body h1{
+    font-family: 'Play', sans-serif;
+}
 .sp_main_body{
     width: 150%;
     height: 100%;
     margin-left: 15px;
     font-size: 20px;
     margin-top: 5px;
+    font-family: 'Ruda', sans-serif;
 }
 .sp_main_body > h3{
     display: inline;
@@ -50,6 +54,7 @@
     text-align: center;
     font-size: 25px;
     margin-top: 5px;
+    font-family: 'Ruda', sans-serif;
 }
 .sp1_main_body > p{
     margin-left: 40px;
