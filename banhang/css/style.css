@@ -121,6 +121,10 @@ header{
        margin-right: 1%;
         position: relative;
     }
+    .product__banner_hot >h1{
+        font-family: 'Play', sans-serif;
+    }
+
     .banner__bottom .img__banner img{
         width: 100%;
     }
@@ -215,6 +219,10 @@ header{
         margin-bottom: 0;
         
         font-weight: bold;
+        font-family: 'Ruda', sans-serif;
+    }
+    .shippy_itemd p{
+        font-family: 'Ruda', sans-serif;
     }
     .shippy__item p{
         font-size: 12px;
@@ -242,6 +250,7 @@ header{
     .blog__item .blog__body{
         padding: 5px 15px;
         border-bottom: 1px solid black;
+        font-family: 'Ruda', sans-serif;
     }
     .blog__item .blog__body h3{
         font-size: 20px;
@@ -249,10 +258,14 @@ header{
     .blog__item .blog__body h4{
         font-size: 18px;
      }
+     .blog__item .blog__body p{
+        font-size: 10px;
+     }
      .blog__item .blog__footer{
         padding: 5px 15px;
         display: flex;
         justify-content: space-between;
+        font-family: 'Ruda', sans-serif;
      }
      /* footer */
     footer{
@@ -263,11 +276,7 @@ header{
     margin: 0;
     --bs-gutter-x:0
 }
- .footer__top{
- }
-    .footer__box .footer__item{
-        
-    }
+ 
     .footer__item h3{
         font-size: 16px;
         font-weight: bold;
@@ -380,6 +389,7 @@ footer{
    .contact h1,
    .contact h2{
     color: var(--font--color);
+    font-family: 'Play', sans-serif;
    }
  @media (max-width:998px) {
   .header__main .container{
@@ -516,7 +526,14 @@ top: 30px;
     padding-right: 0;
    }
 }
+<<<<<<< HEAD
 @media (max-width:767px){
+=======
+.text-center{
+    font-family: 'Play', sans-serif;
+}
+@media (max-width:600px){
+>>>>>>> devThai
     .container-md {
         width: 95%;
         margin: auto;
@@ -615,10 +632,7 @@ top: 30px;
       
        display: block;
     }
-    .header__menu .container{}
-    .menu__item{
-     
-    }
+    
     .menu__item ul li{
         display: inline-block;
         margin-right: 15px;
