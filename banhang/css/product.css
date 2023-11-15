@@ -34,6 +34,7 @@
     border-radius: 10px;
     position: relative;
 }
+
 .product__bt{
     width:212px; 
     height: 315px;
@@ -236,6 +237,7 @@ border: 1px solid black;
 .dot__item.active{
     background-color:red;
 }
+
 @media (min-width:300px){
     #desktop__left{
         display: none;
@@ -282,7 +284,7 @@ z-index: 111111111;
     padding: 0 20px;
 }
 }
-@media (min-width:1000px){
+@media (min-width:1300px){
     #desktop__left{
         display: block;
     }
@@ -341,19 +343,24 @@ z-index: 111111111;
     .product__bt{
         width: 180px;
     }
+    #products .product__bt{
+        height: 300px;
+    }
     
 }
 @media (max-width:1000px){
     .product .d-flex .img{
         display: none;
     }
+    #products .product__bt,
     .product__bt{
         width: 230px;
+        height: 335px;
     }
     
-  
+ 
 }
-@media (max-width:700px){
+@media (max-width:767px){
     
     
 
@@ -361,19 +368,55 @@ z-index: 111111111;
         width: 310px;
         height: 410px;
     }
+    #products .product__bt,
     .product__bt{
-        width: 180px;
+        width: 170px;
         height: 310px;
     }
+    .products__right__top form{
+        display: none;
+    }
 }
-@media (max-width:400px){
-    
-  #khung_product_three .product__bt{
+@media (max-width:500px)  {
+    #khung_product_three .product__bt{
         width: 250px;
         height: 350px;
     }
+    #products .product__bt,
+    .product__bt{
+        width: 49%;
+        height: 305px;
+    } 
+}
+@media (max-width:420px) {
+    #products .product__bt,
+    .product__bt{
+        width: 49%;
+        height: 315px;
+    } 
+}
+@media (max-width:400px){
+    
+    .product__item .product__text .stars{
+        font-size: 9px;
+    }
+    #products .product__bt,
    .product__bt{
         width: 49%;
         height: 300px;
     }
+    .product__title p{
+        font-size: 15px;
+    }
 }
+@media (max-width:330px){
+    
+    #products .product__bt,
+     .product__bt{
+          width: 49%;
+          height: 285px;
+      }
+      .product__title p{
+        font-size: 13px;
+    }
+  }
