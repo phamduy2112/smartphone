@@ -41,9 +41,11 @@
     margin:0 50px;
   }
   .breadcrumb-item{
+    font-family: 'Ruda', sans-serif;
     color: #808080;
   }
   .breadcrumb-item.active{
+    font-family: 'Ruda', sans-serif;
     color: var(--font--color);
     font-weight: bold;
   }
@@ -139,7 +141,9 @@
     border-bottom-right-radius:10px;
   }
   .form__group_one{
+    font-family: 'Play', sans-serif;
     width: 100%;
+    
   }
   .form__group_one h1{
     font-size: 23px;
@@ -169,6 +173,9 @@
     margin-bottom: 10px;
     border: 1px solid #2b20a16e;
     border-radius: 5px;
+  }
+  .d-lg-flex p{
+    font-family: 'Ruda', sans-serif;
   }
   hr{
     margin: 0;
@@ -212,6 +219,9 @@
 .forget .breadcrumb{
 padding: 0 16px;
 margin-top: 3px;
+}
+.breadcrumb li{
+  font-family: 'Ruda', sans-serif;
 }
   @media (max-width:1000px){
     .forget,
