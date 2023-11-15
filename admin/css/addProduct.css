@@ -294,17 +294,19 @@ ul {
   display: flex;
   justify-content: space-between;
   padding: 34px 30px;
-  width: 100%;
+ 
   margin-top: 27px;
 }
-.from_input .from_item{
+.from_input .from_item, .from_item1, .from_item2, .from_item3{
+  height: 62px;
+  width: 100%;
   margin-right: 20px;
 }
 .from_input .from_item:last-child{
   margin-right: 0;
 }
 .from_item input {
-  padding: 23px 440px 15px 18px;
+  height: 100%;
   width: 100%;
   border-radius: 5px;
   padding-left: 20px;
@@ -319,7 +321,13 @@ ul {
   border-radius: 5px;
   text-align: center;
   margin-left: 28px;
-  margin-bottom: 10px;
+
+  
+}
+.from_title,.from_title1,.from_title2,.from_title3{
+  margin-top: -12px;
+  position: absolute;
+  background: white;
 }
 .from_input1 {
   display: flex;
@@ -330,7 +338,9 @@ ul {
 
 }
 .from_item1 input {
-  padding: 23px 440px 15px 18px;
+  height: 100%;
+  width: 100%;
+
   border-radius: 5px;
   padding-left: 20px;
   border: none;
@@ -339,14 +349,15 @@ ul {
     rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
 .from_title1 {
-  width: 115px;
-  height: 26px;
+ 
+  
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
     rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+   
   border-radius: 5px;
   text-align: center;
   margin-left: 28px;
-  margin-bottom: 10px;
+  
 }
 
 .from_input2 {
@@ -357,7 +368,7 @@ ul {
   gap: 20px;
 }
 .from_item2 input {
-  padding: 23px 440px 15px 18px;
+  height: 100%;
   border-radius: 5px;
   padding-left: 20px;
   border: none;
@@ -454,6 +465,7 @@ ul {
   margin-left: 20px;
 }
 .from_item input:focus {
+ 
   outline: none; /* Remove the default focus outline */
 }
 
@@ -475,6 +487,8 @@ ul {
   border-bottom-right-radius: 10px;
   border-top-right-radius: 10px;
 }
+
+
 
 @media (min-width: 200px) {
   .menu__a {
