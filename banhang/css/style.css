@@ -137,8 +137,10 @@ header{
       margin-right: 2px;
         position: relative;
         
+        
     }
     .banner__hai .row .banner__item img {
+        height: 150px;
         position: relative;
     }
     .banner__hai .row .banner__item::after{
@@ -188,26 +190,35 @@ header{
     }
     .shippy__box{
         display: flex;
-        background-color: white;
+    
         justify-content: space-between;
         flex-wrap: wrap;
-        padding: 10px 20px;
+        align-items: center;
+    
     }
     .shippy__item{
+        width: 24%;
         display: flex;
         gap: 10px;
       margin: 10px 0;
+      background-color: white;
+      padding: 15px 25px;
+      border-radius: 5px;
     }
     .shippy__item i{
-        font-size: 25px;
+        font-size: 30px;
         color: var(--font--color);
         font-weight: bold;
     }
     .shippy_itemd h3{
         font-size: 15px;
         margin-bottom: 0;
-        color: var(--font--color);
+        
         font-weight: bold;
+    }
+    .shippy__item p{
+        font-size: 12px;
+        color: var(--font--color);
     }
     .blog__box{
         display: flex;
