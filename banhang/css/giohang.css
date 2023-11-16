@@ -1,0 +1,319 @@
+main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+}
+.cart_kh{
+    width:100%;
+    display: flex;
+}
+.cart_kh:nth-child(1){
+    justify-content: start;
+    align-items: center;
+}
+.cart_kh:nth-child(1)>span{
+   margin: 0 110px;
+    font-family: 'Play', sans-serif;
+    font-weight: 600;
+   color: #2B20A1;
+   font-size: 30px;
+}
+.cart_kh:nth-child(2){
+   
+   height: 100%;
+   justify-content: center;
+   
+   gap: 1%;
+   
+}
+.cart_khung{
+    height: 100%;
+}
+.cart_khung:nth-child(1){
+    width: 55%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.cart_khung:nth-child(2){
+    width: 30%;
+    border-radius: 10px;
+    overflow: hidden;
+    gap: 10px;
+    height: 520px;
+    display: flex;
+    flex-direction:column;
+    box-shadow: 0 0 10px hsl(0, 0%, 0%,20%) ;
+    background: white;
+}
+.cart_item{
+    width: 100%;
+    height: 100px; 
+    display: flex;
+    flex-direction: row;
+    background: white;
+    transition: 0.5s;
+}
+
+.cart_item:nth-child(1){
+    background: #2B20A1;
+    justify-content: space-around;
+    align-items: center;
+    height: 40px;
+    
+    font-size: 100%;
+    font-weight: 600;
+    color: white;
+}
+.cart_button{
+    background: white;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 0 20px;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.cart_button>button{
+    
+    font-size: 100%;
+
+    font-weight: 600;
+    border-color:#2B20A1;
+    background: transparent;
+    width: 30%;
+    color: #2B20A1;
+    border-radius: 10px;
+    height: 50px;
+    transition: 0.7s ease;
+  
+}
+.cart_button>button:nth-child(2){
+    width: 20%;
+}
+.cart_button>button:hover{
+    transform: scale(1.05);
+    background: #2B20A1;
+    border: none;
+    color: white;
+    font-weight: 600;
+}
+.cart_item{
+    justify-content: space-between;
+    align-items: center;
+   
+    
+}
+
+.cart_content{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+   
+
+}
+.cart_anh_text:nth-child(1).cart_content:nth-child(1){
+
+    width: 5%;
+   
+}
+.cart_content:nth-child(2){
+    width: 35%;
+    height: 100%;
+   
+    
+}
+.cart_content:nth-child(2)>.cart_anh_text:nth-child(1){
+   
+    width: 30%;
+    height: 100%;
+}
+.cart_content:nth-child(2)>.cart_anh_text:nth-child(2){
+   display: flex;
+   color: #2B20A1;
+   font-weight: 600;
+   flex-direction: column;
+   justify-content: center;
+    padding: 0 10px;
+    font-size: 11px;
+
+    width: 70%;
+    height: 100%;
+}
+.cart_content:nth-child(2)>.cart_anh_text:nth-child(2)>.cart_text:nth-child(2){
+    font-size: 9px;
+    
+    color: rgba(102, 105, 108, 0.676);
+}
+.cart_content:nth-child(2)>.cart_anh_text:nth-child(2)>.cart_text:nth-child(2)>span{
+    font-size: 12px;
+    color: red;
+    font-weight: 800;
+}
+.cart_anh_text:nth-child(1)>img{
+    width: 100%;
+    height: 100%;
+}
+.cart_content:nth-child(3){
+    width: 20%;
+    gap: 10px;
+    
+   
+}
+.cart_sl{
+    font-size: 20px;
+    width: 35px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cart_sl:nth-child(1),.cart_sl:nth-child(3){
+    background: transparent;
+    border-radius: 3px;
+   box-shadow: 0 0 10px hsl(0, 0%, 0%,20%) ;
+    font-size: 15px;
+    width: 25px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.cart_content:nth-child(4){
+    color: #2B20A1;
+    justify-content:flex-end;
+    padding: 0 18px;
+    font-weight: 500;
+    width: 30%;
+}
+.cart_content:nth-child(5){
+ 
+    font-size: 20px;
+    width: 10%;
+}
+.cart_tt{
+    width: 100%;
+    height: calc(100%/8);
+  
+    display: flex;
+   
+}
+.cart_tt:nth-child(1){
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    color: #2B20A1;
+    font-size: 30px;
+}
+.cart_tt:nth-child(2),.cart_tt:nth-child(3),.cart_tt:nth-child(5),.cart_tt:nth-child(6),.cart_tt:nth-child(7){
+    justify-content: space-between;
+    align-items: center;
+    font-size: 17px;
+    padding: 0 20px;
+    font-weight: 650;
+}
+.cart_tt:nth-child(4){
+    font-size: 17px;
+    padding: 0 20px;
+    font-weight: 650;
+    flex-direction: column;
+    gap: 10px;
+    height: 20%;
+}
+.cart_tt:nth-child(4)>form{
+    display: flex;
+    border-radius: 5px;
+    border:solid 1px #2B20A1;
+    overflow: hidden;
+    width: 100%;
+   
+    
+}
+.cart_tt:nth-child(4)>form>input[type=text]{
+    padding: 0 10px;
+    width: 80%;
+    border: none;
+    height: 40px;
+}
+.cart_tt:nth-child(4)>form>input[type=submit]{
+    width: 20%;
+    height: 40px;
+    border: none;
+    background: #2B20A1;
+    color: white;
+}
+.cart_tt:nth-child(8){
+    justify-content: flex-end;
+    align-items: center;
+    padding: 50px 20px;
+}
+.cart_tt:nth-child(8)>button{
+   
+    width: 130px;
+    height: 40px;
+    background: #2B20A1;
+    color: aliceblue;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+}
+
+
+@media only screen and (max-width: 844px) {
+    .cart_kh:nth-child(1){
+        justify-content: center;
+    }
+    .cart_kh:nth-child(1)>span{
+        font-size: 100%;
+    }
+    .cart_kh:nth-child(2){
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+    .cart_khung:nth-child(2), .cart_khung:nth-child(1){
+        width: 95%;
+    }
+    .cart_anh_text:nth-child(1){
+       
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+  
+}
+@media only screen and (max-width: 428px) {
+    .cart_kh:nth-child(1)>span{
+     
+      font-size: 100%;
+    }
+    .cart_content:nth-child(4){
+        padding: 0 0px;
+        font-size: 13px;
+        
+    }
+    .cart_content:nth-child(5){
+        font-size: 15px;
+        width: 30px;
+    }
+    .cart_sl,.cart_sl:nth-child(1),.cart_sl:nth-child(3){
+        width: 15px;
+    }
+    .cart_anh_text:nth-child(1)>img{
+        width: 100%;
+        height: 40%;
+    }
+  
+
+}
+
