@@ -1,0 +1,18 @@
+/* Đơn hàng chi tiết */
+@media only screen and (max-width: 600px) {
+    main section h3{
+      font-size: 18px;
+    }
+    .container .infor-form{
+        grid-template-columns: 100% ;
+    }
+
+
+
+    
+    .order-form h4{
+        font-size: 15px;
+
+    }
+
+}
