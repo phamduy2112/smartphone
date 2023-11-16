@@ -53,7 +53,7 @@ main section h3{
 }
 .container .infor-form>.user-form{
     background-color: white;
-    height: 240px;
+    height: 220px;
 }
 .user-form .user{
     position: relative;
@@ -92,7 +92,7 @@ main section h3{
 }
 
 .profile, .order{
-    padding: 10px 0px 10px 20px;
+    padding: 0px 0px 0px 20px;
 }
 .profile a,.order a{
     font-size: 22px ;
