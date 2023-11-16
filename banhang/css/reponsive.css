@@ -8,11 +8,128 @@
     }
 
 
-
-    
+    .container .infor-form>.order-form{
+        padding: 10px 12px 15px 12px;
+    }
     .order-form h4{
         font-size: 15px;
-
     }
 
+    .order-form .title{
+        right: 7%;
+        top: 10%;
+        font-size: 10px;
+    }
+
+
+    /* Bảng khách hàng */
+    .container .infor-form>.user-form{
+        height: 100px;
+    }
+    .user-form .user{
+        position: relative;
+    }
+    .user-form .user img{
+        top: 30px;
+        left: 30px;
+        width: 35px;
+        height: 35px;
+    }
+    .user div{
+        left: 20%;
+        top: 30px;
+    }
+    .user div p{
+        font-size: 15px;
+    }
+    .user div a{
+        font-size: 10px;
+    }
+    .control{
+        left: 55%;
+        top: 25%;
+    }
+
+    .profile, .order{
+        padding:0px;
+    }
+    .profile a,.order a{
+        font-size: 11px ;
+    }
+    .profile i, .order i{
+        font-size: 11px;
+        margin-right: 1px;
+        margin-left: 0px;
+    }
+    .profile:hover a{
+        font-size: 13px;
+    }
+    .profile:hover i{
+        font-size: 11px;
+    }
+    .order i{
+        font-size: 14px;
+    }
+    .order a{
+        font-size: 13px;
+    }
+
+    .order-form table thead th{
+        font-size: 12px;
+        /* padding: 5px 5px; */
+    }
+    .order-form table thead th:nth-child(3){
+        display: none;
+     }
+     .order-form table thead th:nth-child(1){
+        width: 50%; 
+     }
+     .order-form table thead th:nth-child(2){
+        width: 20%; 
+     }
+     .order-form table thead th:nth-child(4){
+        width: 30%; 
+     }
+
+
+
+     table tbody tr td:nth-child(1){
+         text-align: left;
+         /* background-color: #757575; */
+         position: relative;
+         padding: 5px 5px 10px 5px;
+     }
+     table tbody tr td:nth-child(1) img{
+         width: 25px;
+         height: 60%;
+         position: absolute;
+         left: 10px;
+         bottom: 20%;
+     }
+     table tbody tr td:nth-child(1) span{
+         font-size: 8px;
+         position:absolute;
+         top: 5px;
+         left: 55px;
+     }
+     table tbody tr td:nth-child(1) span del{
+         font-size: 6px;
+         margin-right: 1px;
+     }
+     table tbody tr td:nth-child(1) a{
+         font-size: 8px;
+         /* background-color: red; */
+         display: inline-block;
+     }
+     table tbody tr td:nth-child(1){
+     }
+     table tbody tr td:nth-child(2){
+         font-size: 10px;
+     }
+     table tbody tr td:nth-child(3){
+        display: none;
+     }
+     table tbody tr td:nth-child(4){
+        font-size: 10px;
+     }
 }
