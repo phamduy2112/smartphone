@@ -221,12 +221,12 @@ main{
     align-items: center;
     font-size: 17px;
     padding: 0 20px;
-    font-weight: 650;
+   
 }
 .cart_tt:nth-child(4){
     font-size: 17px;
     padding: 0 20px;
-    font-weight: 650;
+   
     flex-direction: column;
     gap: 10px;
     height: 20%;
