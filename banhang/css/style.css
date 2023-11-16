@@ -256,10 +256,11 @@ header{
         font-size: 20px;
     }
     .blog__item .blog__body h4{
-        font-size: 18px;
+        font-size: 14px;
+        color: grey;
      }
      .blog__item .blog__body p{
-        font-size: 10px;
+        font-size: 15px;
      }
      .blog__item .blog__footer{
         padding: 5px 15px;
@@ -526,14 +527,15 @@ top: 30px;
     padding-right: 0;
    }
 }
-<<<<<<< HEAD
+
 @media (max-width:767px){
-=======
+
 .text-center{
     font-family: 'Play', sans-serif;
 }
+}
 @media (max-width:600px){
->>>>>>> devThai
+
     .container-md {
         width: 95%;
         margin: auto;
