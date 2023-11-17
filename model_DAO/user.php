@@ -18,5 +18,9 @@ function doi_mk($pass,$taikhoan){
   SET matkhau = '$pass' where user_name = '$taikhoan'";
   return pdo_execute($sql);
 }
+function laythongtin_MotKhachHang($name){
+  $sql='SELECT * FROM khachhang where user_name=?';
+  return pdo_query_one($sql,$name);
 
+}
 ?>

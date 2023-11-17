@@ -8,6 +8,9 @@
             case 'user':
                 include_once 'controller/user.php';
                 break;
+            case 'cart':
+                include_once 'controller/cart.php';
+                break;
             default:
             header('loctaion: ?mod=page&act=home');
             break;

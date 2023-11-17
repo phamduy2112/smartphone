@@ -37,9 +37,11 @@ foreach($ten_sp as $item)
    </a>
 
  </div>
+
  <a href="?mod=page&act=sanphamchitiet&id='.$id_sp.'">
  <div class="product__img">
-   <img src="../content/img/product_tachnen/'.$hinhanh.'" alt="">
+ 
+   <img src="../content/img/productachnen/'.$hinhanh.'" alt="">
  </div>
  <div class="product__text">
    <h3>
@@ -58,11 +60,12 @@ foreach($ten_sp as $item)
      <span>11.000.000d</span>
      '.$gia.'
    </div>
+   
    <div class="check">
      <i class="fa-solid fa-check"></i>
      <span>Còn hàng</span>
    </div>
-   <a href="" class="btn btn-danger w-100 my-2">Mua hàng</a>
+   <a href="?mod=cart&act=giohang&id='.$id_sp.'" class="btn btn-danger w-100 my-2">Mua hàng</a>
  </div>
  </a>
  
@@ -96,7 +99,7 @@ function sanpham_thuong($ten_sp){
     </div>
     <a href="?mod=page&act=sanphamchitiet&id='.$id_sp.'">
     <div class="product__img">
-      <img src="../content/img/product_tachnen/'.$hinhanh.'" alt="">
+      <img src="../content/img/productachnen/'.$hinhanh.'" alt="">
     </div>
     <div class="product__text">
       <h3>

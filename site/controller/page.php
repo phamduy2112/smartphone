@@ -13,7 +13,7 @@ ob_start();
          case 'home':
            
             include_once './view/header.php'; 
-            $sanpham_hot=soluong_SanPham(0,10);
+            $sanpham_hot=soluong_SanPham(0,11);
             $sanpham_thuong=soluong_SanPham(8,13);
             $sanpham_thuong_muoihai=soluong_SanPham(13,12);
             include_once './view/trangchu.php';

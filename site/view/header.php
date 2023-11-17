@@ -81,7 +81,7 @@ if(isset($_SESSION['taikhoan'])){
               <a href="">
 
               </a>
-              <a href="" class="icon_item">
+              <a href="?mod=cart&act=list" class="icon_item">
 
                 <i class="fa fa-cart-shopping"></i>
              
