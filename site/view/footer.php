@@ -127,6 +127,7 @@
  <script src="../content/js/hieuung.js"></script>
  <script src="../content/js/producthieuung.js"></script>
  <script src="../content/js/productdienthoai.js"></script>
+ <script src="../content/js/dangky.js"></script>
 </body>
 
 </html>
