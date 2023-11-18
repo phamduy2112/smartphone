@@ -4,6 +4,7 @@ ob_start();
 extract($_REQUEST);
 include_once("../model_DAO/product.php");
 include_once("../model_DAO/user.php");
+include_once("../model_DAO/cart.php");
 if (isset($act)) {
 
   switch ($act) {
@@ -18,8 +19,7 @@ if (isset($act)) {
             'PhanTramGiamGia'=> $sp['khuyenmai'],
             'SL'=>1
         );
-        print_r($_SESSION['cart']);
-    
+       
         
         
     }
@@ -54,16 +54,41 @@ if (isset($act)) {
         
         header('location:?mod=cart&act=list');
         break;
+    case 'xoaHet':
+     
+        header('location:?mod=cart&act=list');
+        break;
     case 'trangthanhtoan':
         if(isset($_SESSION['taikhoan'])){
             include_once('./view/header.php');
             $laythongtin=laythongtin_MotKhachHang($_SESSION['taikhoan']);
-           
-            include_once('./view/trangthanhtoan.php');
-            include_once('./view/footer.php');
-        }else{
+            if(isset($btn_Thanhtoan)){
+                $id_user=lay_iduser($_SESSION['taikhoan']);
+                // extract($id_user);
+                $time = date('Y-m-d H:i:s');  
+                them_donHang($time,$_SESSION['tongtt'],'Đang chuẩn bị hàng',$id_user['id_kh']);
+              
+                foreach( $_SESSION['cart'] as $item){
+                    extract($item);
+                    // echo $id_user['id_kh'];
+                    $id=them_cuoidonct();
+               
+                    them_donhangCT($id['id_dh'],$MaSanPham,$SL);
+               
+                }
+               
+                unset($_SESSION['cart']);
+                
+              
+          
+   }  
+   include_once('./view/trangthanhtoan.php');
+   include_once('./view/footer.php');
+
+   }else{
             header('location:?mod=cart&act=trangchuadangnhap');
         }
+   
         break;
     case 'trangchuadangnhap':
         include_once('./view/header.php');

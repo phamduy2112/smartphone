@@ -3,6 +3,9 @@
 $tongTien=0;
 $tongsl=0;
 $tongtt=0;
+if(isset($_SESSION['cart'])){
+
+
 foreach(  $_SESSION['cart']as $item){
   extract($item);
 
@@ -14,6 +17,7 @@ foreach(  $_SESSION['cart']as $item){
 $_SESSION['tongtt']=$tongtt;
   // $tongTien+=$ThanhTien;
 
+}
 }
 ?>
 <div class="cart">
@@ -37,7 +41,7 @@ $_SESSION['tongtt']=$tongtt;
                 <div></div>
               </div>
               <?php 
-           
+           if(isset($_SESSION['cart'])){
               foreach($_SESSION['cart'] as $item):
                 $i=0;
                extract($item);
@@ -86,10 +90,12 @@ $_SESSION['tongtt']=$tongtt;
               </div>
             
               <?php 
-        
+           
   $i++;
 
-            endforeach;?>
+            endforeach;
+          }
+            ?>
               <div class="cart__buttons mt-3">
                  <a href="">Tiếp tục mua hàng</a>
                  <a href="?mod=cart&act=xoaHet">Xóa tất cả</a>

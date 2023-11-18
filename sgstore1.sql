@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th10 16, 2023 lúc 04:58 PM
+-- Thời gian đã tạo: Th10 18, 2023 lúc 09:11 AM
 -- Phiên bản máy phục vụ: 10.4.28-MariaDB
 -- Phiên bản PHP: 8.2.4
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Cơ sở dữ liệu: `store`
+-- Cơ sở dữ liệu: `sgstore1`
 --
 
 -- --------------------------------------------------------
@@ -119,6 +119,25 @@ CREATE TABLE `ct_donhang` (
   `soluong` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Đang đổ dữ liệu cho bảng `ct_donhang`
+--
+
+INSERT INTO `ct_donhang` (`id_ctdh`, `id_dh`, `id_sp`, `soluong`) VALUES
+(3, 14, 3, 1),
+(4, 15, 3, 1),
+(5, 15, 3, 1),
+(6, 15, 5, 1),
+(7, 15, 4, 1),
+(8, 15, 3, 1),
+(9, 15, 5, 1),
+(10, 15, 3, 1),
+(11, 15, 5, 1),
+(12, 15, 3, 1),
+(13, 15, 5, 1),
+(14, 22, 3, 1),
+(15, 22, 5, 1);
+
 -- --------------------------------------------------------
 
 --
@@ -130,8 +149,31 @@ CREATE TABLE `donhang` (
   `id_kh` int(10) NOT NULL,
   `tongtien` int(10) NOT NULL,
   `ngaydathang` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
-  `trangthai` int(1) NOT NULL DEFAULT 0
+  `trangthai` text NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `donhang`
+--
+
+INSERT INTO `donhang` (`id_dh`, `id_kh`, `tongtien`, `ngaydathang`, `trangthai`) VALUES
+(5, 1, 32670000, '2023-11-17 23:25:29', '0'),
+(7, 1, 1980000, '2023-11-17 23:30:28', '0'),
+(8, 1, 1980000, '2023-11-18 00:14:07', 'Đang chuẩn bị hàng'),
+(9, 1, 50490000, '2023-11-18 00:59:39', 'Đang chuẩn bị hàng'),
+(10, 1, 50490000, '2023-11-18 01:01:03', 'Đang chuẩn bị hàng'),
+(11, 1, 50490000, '2023-11-18 01:01:49', 'Đang chuẩn bị hàng'),
+(12, 1, 50490000, '2023-11-18 01:02:37', 'Đang chuẩn bị hàng'),
+(13, 1, 1980000, '2023-11-18 01:03:28', 'Đang chuẩn bị hàng'),
+(14, 1, 1980000, '2023-11-18 01:04:05', 'Đang chuẩn bị hàng'),
+(15, 1, 1980000, '2023-11-18 01:05:39', 'Đang chuẩn bị hàng'),
+(16, 1, 28215000, '2023-11-18 01:06:04', 'Đang chuẩn bị hàng'),
+(17, 1, 28215000, '2023-11-18 01:14:25', 'Đang chuẩn bị hàng'),
+(18, 1, 1980000, '2023-11-18 01:24:20', 'Đang chuẩn bị hàng'),
+(19, 1, 15345000, '2023-11-18 01:33:42', 'Đang chuẩn bị hàng'),
+(20, 1, 15345000, '2023-11-18 01:34:15', 'Đang chuẩn bị hàng'),
+(21, 1, 15345000, '2023-11-18 01:34:16', 'Đang chuẩn bị hàng'),
+(22, 1, 15345000, '2023-11-18 01:36:50', 'Đang chuẩn bị hàng');
 
 -- --------------------------------------------------------
 
@@ -157,9 +199,10 @@ CREATE TABLE `khachhang` (
   `tenkhachhang` varchar(40) NOT NULL,
   `email` varchar(20) NOT NULL,
   `sdt` int(10) NOT NULL,
+  `hinhAnh` varchar(100) DEFAULT NULL,
   `matkhau` varchar(20) NOT NULL,
   `matkhaucap2` text NOT NULL,
-  `sinhnhat` date DEFAULT NULL,
+  `diaChi` text DEFAULT NULL,
   `trangthai` tinyint(1) NOT NULL DEFAULT 0,
   `gioitinh` tinyint(4) DEFAULT NULL,
   `vaitro` tinyint(1) NOT NULL DEFAULT 0
@@ -169,10 +212,9 @@ CREATE TABLE `khachhang` (
 -- Đang đổ dữ liệu cho bảng `khachhang`
 --
 
-INSERT INTO `khachhang` (`id_kh`, `user_name`, `tenkhachhang`, `email`, `sdt`, `matkhau`, `matkhaucap2`, `sinhnhat`, `trangthai`, `gioitinh`, `vaitro`) VALUES
-(1, 'duyp7454', '', 'duyp7454@gmail.com', 0, 'Ngocduy1', 'Ngocduy12', NULL, 0, NULL, 0),
-(2, 'duyp7454', '', 'duyp7454@gmail.com', 0, 'Ngocduy1', 'Ngocduy12', NULL, 0, NULL, 0),
-(3, 'duypham', '', 'duyp7454@gmail.com', 0, 'Ngocduy1', 'Ngocduy12', NULL, 0, NULL, 0);
+INSERT INTO `khachhang` (`id_kh`, `user_name`, `tenkhachhang`, `email`, `sdt`, `hinhAnh`, `matkhau`, `matkhaucap2`, `diaChi`, `trangthai`, `gioitinh`, `vaitro`) VALUES
+(1, 'duyp7454', 'duypham', 'duyp7454@gmail.com', 2147483647, NULL, 'Ngocduy1', 'Ngocduy12', '15/5 ấp mới 2 xã chunh chánh hóc môn', 0, NULL, 0),
+(3, 'duypham', '', 'duyp7454@gmail.com', 0, NULL, 'Ngocduy1', 'Ngocduy12', NULL, 0, NULL, 0);
 
 -- --------------------------------------------------------
 
@@ -241,13 +283,13 @@ CREATE TABLE `sanpham` (
 --
 
 INSERT INTO `sanpham` (`id_sp`, `id_loai`, `ten_sp`, `gia`, `hinhanh`, `noibat`, `khuyenmai`, `luotxem`, `kichthuoc`, `hedieuhanh`, `ngaythem`, `maudo`, `mauxanh`, `mauden`, `conhang`, `anhmota1`, `text1`, `anhmota2`, `text2`) VALUES
-(1, 1, 'iphone 15 Pro max', 200000, 'ip15pro0.png', 0, 1, 0, '128mb', 'IOS', '2023-11-16 15:33:36', 1, 0, 0, 1, 'ip15pro.jpg', 'Màn hình:OLED6.7\"Super Retina XDR\nHệ điều hành:iOS 17\nCamera sau:Chính 48 MP & Phụ 12 MP, 12 MP\nCamera trước:12 MP\nChip:Apple A17 Pro 6 nhân\nRAM:8 GB\nDung lượng lưu trữ:256 GB\nSIM:1 Nano SIM & 1 eSIMHỗ trợ 5G\nPin, Sạc:4422 mAh20 W', NULL, NULL),
-(2, 1, 'iphone 14', 18000000, 'ip14thuong0.png', 0, 1, 15, '128mb', 'IOS', '2023-11-16 11:42:19', 0, 1, 0, 1, 'ip14thuong1.jpg', 'Màn hình:OLED6.7\"Super Retina XDR\r\nHệ điều hành:iOS 17\r\nCamera sau:Chính 48 MP & Phụ 12 MP, 12 MP\r\nCamera trước:12 MP\r\nChip:Apple A17 Pro 6 nhân\r\nRAM:8 GB\r\nDung lượng lưu trữ:256 GB\r\nSIM:1 Nano SIM & 1 eSIMHỗ trợ 5G\r\nPin, Sạc:4422 mAh20 W', NULL, NULL),
-(3, 1, 'iPhone 14 Pro Max 128GB ', 2000000, 'ip14pro0.png', 0, 1, 45, '128mb', 'IOS', '2023-11-16 11:42:19', 0, 0, 1, 1, 'ip14pro1.jpg', 'Thông số bộ nhớ iPhone 14 Pro Max taiwan\r\nRAM: 6GB\r\nROM: 128GB, 256GB, 512GB và 1TB\r\nKích thước: 160.7 x 77.6 x 7.9 mm.\r\nTrọng lượng: 240g.\r\nChất liệu: Thép không gỉ cao cấp, mặt lưng kính.\r\nChống nước/kháng bụi: IP68.\r\nMàu sắc: Đen Space, Bạc, Vàng và Tím.\r\nNăm ra mắt: 2022.\r\nXuất xứ thương hiệu: taiwan\r\nChipset: Apple A16 Bionic 6 nhân CPU\r\nGPU: Apple GPU 5 nhân\r\nHệ điều hành: iOS 16\r\nPin: Li-ion\r\nDung lượng pin: 4.323 mAh\r\nCổng sạc vào: 1 cổng Lightning, USB 2.0\r\nSố SIM: 2 SIM\r\nLoại SIM: eSIM', NULL, NULL),
-(4, 1, 'Iphone 13 Thường', 13000000, 'ip13thuong0.png', 0, 1, 0, '128mb', 'IOS', '2023-11-16 11:42:19', 0, 0, 1, 1, 'ip13thuong.jpg', 'Cấu hình Điện thoại iPhone 13 256GB\r\n\r\nMàn hình:OLED6.1\"Super Retina XDR\r\nHệ điều hành:iOS 15\r\nCamera sau:2 camera 12 MP\r\nCamera trước:12 MP\r\nChip:Apple A15 Bionic\r\nRAM:4 GB\r\nDung lượng lưu trữ:256 GB\r\nSIM:1 Nano SIM & 1 eSIMHỗ trợ 5G\r\nPin, Sạc:3240 mAh20 W', NULL, NULL),
-(5, 1, 'Iphone 13 Pro Max', 13500000, 'ip13pro0.png', 0, 1, 12, '128mb', 'IOS', '2023-11-16 11:42:19', 1, 0, 0, 1, 'ip13pro1.jpg', 'Cấu hình Điện thoại iPhone 13 128GB\r\n\r\nMàn hình:OLED6.1\"Super Retina XDR\r\nHệ điều hành:iOS 15\r\nCamera sau:2 camera 12 MP\r\nCamera trước:12 MP\r\nChip:Apple A15 Bionic\r\nRAM:4 GB\r\nDung lượng lưu trữ:128 GB\r\nSIM:1 Nano SIM & 1 eSIMHỗ trợ 5G\r\nPin, Sạc:3240 mAh20 W', NULL, NULL),
-(6, 1, 'Iphone 13 mini', 10000000, 'ip13mini0.png', 0, 0, 50, '128mb', 'IOS', '2023-11-16 11:42:19', 0, 0, 1, 1, 'ip13mini1.jpg', 'iện ích	Bảo mật nâng cao:	\r\nMở khoá khuôn mặt Face ID\r\nTính năng đặc biệt:Phát hiện va chạm (Crash Detection)\r\nChạm 2 lần sáng màn hình\r\nApple Pay\r\nMàn hình luôn hiển thị AOD\r\nLoa kép\r\nKháng nước, bụi:IP68\r\nGhi âm:	Ghi âm có microphone chuyên dụng chống ồn\r\nXem phim:MP4, H.264(MPEG4-AVC)\r\nNghe nhạc:AAC, MP3, FLAC', NULL, NULL),
-(7, 1, 'OPPO Renno 10 Pro 5G', 18000000, 'apporeno0.png', 0, 1, 5, '128mb', 'Android', '2023-11-16 11:42:19', 0, 0, 1, 1, 'apporeno.jpg', 'Màn hình:AMOLED6.7\"Full HD+\r\nHệ điều hành:Android 13\r\nCamera sau:Chính 64 MP & Phụ 32 MP, 8 MP\r\nCamera trước:32 MP\r\nChip:MediaTek Dimensity 7050 5G 8 nhân\r\nRAM:8 GB\r\nDung lượng lưu trữ:128 GB\r\nSIM:2 Nano SIM (SIM 2 chung khe thẻ nhớ)Hỗ trợ 5G\r\nPin, Sạc:5000 mAh67 W', NULL, NULL),
+(1, 1, 'iPhone 15 Pro Max 256GB | Chính hãng VN/A | Hàng đặt trước,Màu Titan mới nhất ', 200000, 'ip15pro0.png', 0, 0, 0, '128mb', 'IOS', '2023-11-17 15:53:58', 1, 0, 0, 1, 'ip15pro.jpg', 'Kích thước màn hình\r\n\r\n6.7 inches\r\nCông nghệ màn hình\r\n\r\nSuper Retina XDR OLED\r\nCamera sau\r\n\r\nCamera chính: 48MP, 24 mm, ƒ/1.78,\r\nCamera góc siêu rộng: 12 MP, 13 mm, ƒ/2.2\r\nCamera Tele 5x: 12 MP, 120 mm, ƒ/2.8\r\nCamera Tele 2x: 12 MP, 48 mm, ƒ/1.78\r\nCamera trước\r\n\r\n12MP, ƒ/1.9\r\nChipset\r\n\r\nA17 Pro\r\nDung lượng RAM\r\n\r\n8 GB\r\nBộ nhớ trong\r\n\r\n256 GB\r\nPin\r\n\r\n4422 mAh\r\nThẻ SIM\r\n\r\n2 SIM (nano‑SIM và eSIM)\r\nHệ điều hành\r\n\r\niOS 17\r\nĐộ phân giải màn hình\r\n\r\n2796 x 1290-pixel\r\nTính năng màn hình\r\n\r\nTốc độ làm mới 120Hz\r\n460 ppi\r\nHDR\r\nTrue Tone\r\nDải màu rộng (P3)\r\nHaptic Touch\r\nTỷ lệ tương phản 2.000.000:1', NULL, NULL),
+(2, 1, 'iPhone 14 128GB | Chính hãng VN/A | Màu hồng', 18000000, 'ip14thuong0.png', 0, 1, 15, '128mb', 'IOS', '2023-11-17 05:39:36', 0, 1, 0, 1, 'ip14thuong1.jpg', 'Kích thước màn hình\r\n\r\n6.1 inches\r\nCông nghệ màn hình\r\n\r\nOLED\r\nCamera sau\r\n\r\nCamera góc rộng: 12MP\r\nCamera góc siêu rộng: 12MP\r\nCamera trước\r\n\r\n12MP, ƒ/1.9\r\nChipset\r\n\r\nApple A15 Bionic 6 nhân\r\nDung lượng RAM\r\n\r\n6 GB\r\nBộ nhớ trong\r\n\r\n128 GB\r\nPin\r\n\r\n3,279mAh\r\nThẻ SIM\r\n\r\n2 SIM (nano‑SIM và eSIM)\r\nHệ điều hành\r\n\r\niOS 16\r\nĐộ phân giải màn hình\r\n\r\n2532 x 1170 pixels\r\nTính năng màn hình\r\n\r\nTần số quét 60Hz, 1200 nits, Kính cường lực Ceramic Shield', NULL, NULL),
+(3, 1, 'iPhone 14 Pro 128GB | Chính hãng VN/A | Màu Xanh', 2000000, 'ip14pro0.png', 0, 1, 45, '128mb', 'IOS', '2023-11-17 05:41:21', 0, 0, 1, 1, 'ip14pro1.jpg', 'Kích thước màn hình\r\n\r\n6.1 inches\r\nCông nghệ màn hình\r\n\r\nSuper Retina XDR OLED\r\nCamera sau\r\n\r\nCamera chính: 48 MP, f/1.8, 24mm, OIS\r\nCamera góc siêu rộng: 12 MP, f/2.2, 120˚, 1.4µm\r\nCamera tele: 12 MP, f/2.8, PDAF, OIS, 3x optical zoom\r\nCảm biến độ sâu TOF 3D LiDAR\r\nCamera trước\r\n\r\nCamera selfie: 12 MP, f/1.9, 23mm, PDAF\r\nChipset\r\n\r\nApple A16 Bionic 6 nhân\r\nDung lượng RAM\r\n\r\n6 GB\r\nBộ nhớ trong\r\n\r\n128 GB\r\nPin\r\n\r\n3200 mAh\r\nThẻ SIM\r\n\r\n2 SIM (nano‑SIM và eSIM)\r\nHệ điều hành\r\n\r\niOS 16\r\nĐộ phân giải màn hình\r\n\r\n2556 x 1179 pixels\r\nTính năng màn hình\r\n\r\nCông nghệ ProMotion với tần số quét 120Hz\r\nTỷ lệ tương phản 2.000.000: 1\r\nĐộ sáng tối đa: 1.000 nits (điển hình), 1.600 nits (HDR), 2.000 nits (ngoài trời)', NULL, NULL),
+(4, 1, 'iPhone 13 128GB | Chính hãng VN/A | Màu Xanh Dương', 13000000, 'ip13thuong0.png', 0, 1, 0, '128mb', 'IOS', '2023-11-17 05:44:00', 0, 0, 1, 1, 'ip13thuong.jpg', 'Kích thước màn hình\r\n\r\n6.1 inches\r\nCông nghệ màn hình\r\n\r\nSuper Retina XDR OLED\r\nCamera sau\r\n\r\nCamera góc rộng: 12MP, f/1.6\r\nCamera góc siêu rộng: 12MP, ƒ/2.4\r\nCamera trước\r\n\r\n12MP, f/2.2\r\nChipset\r\n\r\nApple A15\r\nDung lượng RAM\r\n\r\n4 GB\r\nBộ nhớ trong\r\n\r\n128 GB\r\nPin\r\n\r\n3240mAh\r\nThẻ SIM\r\n\r\n2 SIM (nano‑SIM và eSIM)\r\nHệ điều hành\r\n\r\niOS 15\r\nĐộ phân giải màn hình\r\n\r\n2532 x 1170 pixels\r\nTính năng màn hình\r\n\r\nMàn hình super Retina XDR, OLED, 460 ppi, HDR display, công nghệ True Tone Wide color (P3), Haptic Touch, Lớp phủ oleophobic chống bám vân tay', NULL, NULL),
+(5, 1, 'Phone 13 Pro Max 128GB | Chính hãng VN/A | Hàng 99%', 13500000, 'ip13pro0.png', 0, 1, 12, '128mb', 'IOS', '2023-11-17 05:44:40', 1, 0, 0, 1, 'ip13pro1.jpg', 'Cấu hình Điện thoại iPhone 13 128GB\r\n\r\nMàn hình:OLED6.1\"Super Retina XDR\r\nHệ điều hành:iOS 15\r\nCamera sau:2 camera 12 MP\r\nCamera trước:12 MP\r\nChip:Apple A15 Bionic\r\nRAM:4 GB\r\nDung lượng lưu trữ:128 GB\r\nSIM:1 Nano SIM & 1 eSIMHỗ trợ 5G\r\nPin, Sạc:3240 mAh20 W', NULL, NULL),
+(6, 1, 'iPhone 13 mini 128GB - Hàng chính Hãng -Cũ Đẹp', 10000000, 'ip13mini0.png', 0, 0, 50, '128mb', 'IOS', '2023-11-17 05:46:02', 0, 0, 1, 1, 'ip13mini1.jpg', 'Kích thước màn hình\r\n\r\n5.4 inches\r\nCông nghệ màn hình\r\n\r\nOLED\r\nCamera sau\r\n\r\nCamera góc rộng: 12MP, f/1.6\r\nCamera góc siêu rộng: 12MP, ƒ/2.4\r\nCamera trước\r\n\r\n12MP, f/2.2\r\nChipset\r\n\r\nApple A15\r\nDung lượng RAM\r\n\r\n4 GB\r\nBộ nhớ trong\r\n\r\n128 GB\r\nPin\r\n\r\n2,406mAh\r\nThẻ SIM\r\n\r\n2 SIM (nano‑SIM và eSIM)\r\nHệ điều hành\r\n\r\niOS15\r\nĐộ phân giải màn hình\r\n\r\n1080 x 2340 pixels (FullHD+)\r\nTính năng màn hình\r\n\r\nMàn hình super Retina XDR, OLED, 476 ppi, HDR display, công nghệ True Tone Wide color (P3), Haptic Touch, Lớp phủ oleophobic chống bám vân tay', NULL, NULL),
+(7, 1, 'OPPO Reno10 5G 8GB 256GB - Chính Hãng', 18000000, 'apporeno0.png', 0, 1, 5, '128mb', 'Android', '2023-11-17 05:48:25', 0, 0, 1, 1, 'apporeno.jpg', 'Kích thước màn hình\r\n\r\n6.7 inches\r\nCông nghệ màn hình\r\n\r\nAMOLED\r\nCamera sau\r\n\r\nCamera góc rộng: 64MP; f/1.7, PDAF\r\nChụp Telephoto chân dung: 32 MP, f/2.0\r\nCamera góc siêu rộng: 8 MP, f/2.2, Zoom quang lai 2X× và Xoom kỹ thuật số 20X\r\nCamera trước\r\n\r\nCamera góc rộng: 32 MP, f/2.4\r\nChipset\r\n\r\nMediaTek Dimensity 7050\r\nDung lượng RAM\r\n\r\n8 GB\r\nBộ nhớ trong\r\n\r\n256 GB\r\nPin\r\n\r\n5000 mAh\r\nThẻ SIM\r\n\r\n2 SIM (Nano-SIM)\r\nHệ điều hành\r\n\r\nAndroid 13\r\nĐộ phân giải màn hình\r\n\r\n1080 x 2412 pixels\r\nTính năng màn hình\r\n\r\n1.07 tỷ màu, tần số quét 120Hz, HDR10+, tỷ lệ hiển thị 93%, 950 nits , viền cong 3D', NULL, NULL),
 (8, 1, 'Samsung Galaxy Z Fold5', 15131311, 'samsunggalaxy0.png', 0, 1, 0, '128mb', 'Android', '2023-11-16 11:42:19', 0, 0, 1, 1, 'samsunggalaxy1.jpg', 'Công nghệ màn hình:Dynamic AMOLED 2X\r\nĐộ phân giải:Chính: QXGA+ (2176 x 1812 Pixels) & Phụ: HD+ (2316 x 904 Pixels)\r\nMàn hình rộng:Chính 7.6\" & Phụ 6.2\" - Tần số quét 120 Hz\r\nĐộ sáng tối đa:1750 nits\r\nMặt kính cảm ứng:Chính: Ultra Thin Glass & Phụ: Corning Gorilla Glass Victus 2', NULL, NULL),
 (9, 1, 'Samsung Galaxy S23 Ultra', 18000000, 'samsungs23ultra0.png', 1, 1, 88, '128mb', 'Android', '2023-11-16 11:43:55', 0, 0, 1, 1, 'samsungs23ultra.jpg', 'Màn hình:Dynamic AMOLED 2X6.8\"Quad HD+ (2K+)\r\nHệ điều hành:Android 13\r\nCamera sau:Chính 200 MP & Phụ 12 MP, 10 MP, 10 MP\r\nCamera trước:12 MP\r\nChip:Snapdragon 8 Gen 2 for Galaxy\r\nRAM:8 GB\r\nDung lượng lưu trữ:256 GB\r\nSIM:2 Nano SIM hoặc 1 Nano SIM + 1 eSIMHỗ trợ 5G\r\nPin, Sạc:5000 mAh45 W', NULL, NULL),
 (10, 1, 'Điện thoại Xiaomi 13T Pro 5G', 15802000, 'xiaomi0.png', 0, 1, 2, '128mb', 'Android', '2023-11-16 11:43:55', 1, 0, 0, 1, 'xiaomi.jpg', 'Màn hình:AMOLED6.67\"1.5K\r\nHệ điều hành:Android 13\r\nCamera sau:Chính 50 MP & Phụ 50 MP, 12 MP\r\nCamera trước:20 MP\r\nChip:MediaTek Dimensity 9200+ 5G 8 nhân\r\nRAM:12 GB\r\nDung lượng lưu trữ:256 GB\r\nSIM:2 Nano SIMHỗ trợ 5G\r\nPin, Sạc:5000 mAh120 W', NULL, NULL),
@@ -396,13 +438,13 @@ ALTER TABLE `blog`
 -- AUTO_INCREMENT cho bảng `ct_donhang`
 --
 ALTER TABLE `ct_donhang`
-  MODIFY `id_ctdh` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_ctdh` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT cho bảng `donhang`
 --
 ALTER TABLE `donhang`
-  MODIFY `id_dh` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_dh` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT cho bảng `giohang`

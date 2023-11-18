@@ -67,7 +67,7 @@ extract($laythongtin);
 
               </div>
               <hr>
-              <form action="">
+              <form action="" method="post">
                 <div class="group__form1 d-flex">
                   <input type="radio" id="check" name="check" checked>
                   <span>Chuyển khoản ngân hàng</span>
@@ -86,7 +86,7 @@ extract($laythongtin);
                     <p class="check">Tôi đã đọc và <span>đồng ý</span> với <span>điều khoản và điều kiện</span> của cửa hàng </p>
               
                   </div>  
-                  <input type="submit" value="Thanh toán" class="btn mua">
+                  <input type="submit" value="Thanh toán" class="btn mua" name='btn_Thanhtoan'>
                 </div>
               
               </form>

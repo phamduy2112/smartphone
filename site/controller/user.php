@@ -3,6 +3,7 @@ session_start();
 ob_start();
 extract($_REQUEST);
 include_once("../model_DAO/user.php");
+include_once("../model_DAO/cart.php");
 if (isset($act)) {
 
   switch ($act) {
@@ -99,7 +100,27 @@ if (isset($act)) {
         include_once("view/doimk.php");
         include_once("view/footer.php");
         break;
+      case 'thongtinchitiet':
+        include_once("view/header.php");
+        include_once("view/thongtinchitiet.php");
+        include_once("view/footer.php");
+        break;
+      case 'donhang':
+ 
+        include_once("view/header.php");
+        $id_user=lay_iduser($_SESSION['taikhoan']);
+        $donhang=show_donhang($id_user['id_kh']);
+        include_once("view/donhang.php");
+        include_once("view/footer.php");
+        break;
+      case 'donhangct':
+   
+        $lay_SP=lay_hinhSP($idDonHang);
 
+        include_once("view/header.php");
+        include_once("view/donhangct.php");
+        include_once("view/footer.php");
+        break;
   }
 
 }

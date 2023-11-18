@@ -1,9 +1,15 @@
 <?php 
+$taikhoan='';
 if(isset($_SESSION['taikhoan'])){
-  $taikhoan=$_SESSION['taikhoan'];
+  $taikhoan.='
+  <a href="?mod=user&act=thongtinchitiet">'.$_SESSION['taikhoan'].
+  
+  '</a>';
 }else{
-  $taikhoan='Đăng nhập ngay';
+  $taikhoan.='<a href="?mod=user&act=dangnhap">Đăng nhập ngay</a>';
+
 }
+
 ?>
 
 <!doctype html>
@@ -45,7 +51,7 @@ if(isset($_SESSION['taikhoan'])){
       <div class="container header__top_item text-center">
         <p>Khai trương giảm giá 50%</p>
         <div class="header__top_icon d-flex">
-          <a href=""><?=$taikhoan?></a>
+      <?=$taikhoan?>
 <a href="">Định vị cửa hàng</a>
 <a href="">Câu hỏi thường gặp</a>
         </div>
