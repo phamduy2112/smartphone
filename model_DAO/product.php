@@ -83,13 +83,6 @@ return $get;
 }
 
 
-
-
-
-
-
-
-
 // GET SP
 function sanpham_thuong($ten_sp){
   $get= '';
@@ -156,4 +149,9 @@ function sanpham_thuong($ten_sp){
   }
   return $get;
 }
+// function get_hinh($id_sp){
+//   $spl="SELECT * FROM anh_sp where id_sp = $id";
+//   return pdo_query($sql);
+// }
+
 ?>

@@ -25,6 +25,7 @@ ob_start();
                $sl_mot=laymot_sp($id);
           }
           $sanpham_sau=soluong_SanPham(10,16);
+         //  $get_hinh=get_hinh($id);
             include_once './view/sanphamct.php';
             include_once './view/footer.php';
        }
