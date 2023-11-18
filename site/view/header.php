@@ -2,11 +2,12 @@
 $taikhoan='';
 if(isset($_SESSION['taikhoan'])){
   $taikhoan.='
-  <a href="?mod=user&act=thongtinchitiet">'.$_SESSION['taikhoan'].
+  Xin chào bạn, 
+  <a href="?mod=user&act=thongtinchitiet" style="font-weight: bold; margin-left:3px;">'.$_SESSION['taikhoan'].
   
   '</a>';
 }else{
-  $taikhoan.='<a href="?mod=user&act=dangnhap">Đăng nhập ngay</a>';
+  $taikhoan.='<a href="?mod=user&act=dangnhap">Đăng nhập ngay để mua hàng</a>';
 
 }
 
@@ -51,9 +52,11 @@ if(isset($_SESSION['taikhoan'])){
       <div class="container header__top_item text-center">
         <p>Khai trương giảm giá 50%</p>
         <div class="header__top_icon d-flex">
-      <?=$taikhoan?>
-<a href="">Định vị cửa hàng</a>
-<a href="">Câu hỏi thường gặp</a>
+
+          
+        <?=$taikhoan?>
+          <a href="" style="margin-left: 30px;">Định vị cửa hàng</a>
+          <a href="">Câu hỏi thường gặp</a>
         </div>
       </div>
 
@@ -102,11 +105,12 @@ if(isset($_SESSION['taikhoan'])){
       </div>
       <div class="header__menu" style="">
         <div class="container d-lg-flex justify-content-between">
-          <div class="header__menu__item">
+
+          <!-- <div class="header__menu__item">
             <i class="fa-solid fa-bars"></i>
             <p>Tất cả danh mục</p>
+          </div> -->
 
-          </div>
           <nav class="menu__item">
             <ul>
               <li><a href="?mod=page&act=home">Trang chủ</a></li>
