@@ -5,6 +5,10 @@
 @import url('../css/user.css');
 @import url('../css/cart.css');
 @import url('../css/bien.css');
+<<<<<<< HEAD
+=======
+@import url('../css/giohang.css');
+>>>>>>> devTri
 
 *{
     padding: 0;
@@ -219,10 +223,13 @@ header{
         margin-bottom: 0;
         
         font-weight: bold;
+<<<<<<< HEAD
         font-family: 'Ruda', sans-serif;
     }
     .shippy_itemd p{
         font-family: 'Ruda', sans-serif;
+=======
+>>>>>>> devTri
     }
     .shippy__item p{
         font-size: 12px;
@@ -277,11 +284,23 @@ header{
     margin: 0;
     --bs-gutter-x:0
 }
+<<<<<<< HEAD
  
     .footer__item h3{
         font-size: 16px;
         font-weight: bold;
     }
+=======
+ .footer__top{
+ }
+    .footer__box .footer__item{
+        
+    }
+    .footer__item h3{
+        font-size: 16px;
+        font-weight: bold;
+    }
+>>>>>>> devTri
 .footer__bottom .row .col-12 h2{
 text-align: center;
 font-size: 24px;
@@ -390,7 +409,10 @@ footer{
    .contact h1,
    .contact h2{
     color: var(--font--color);
+<<<<<<< HEAD
     font-family: 'Play', sans-serif;
+=======
+>>>>>>> devTri
    }
  @media (max-width:998px) {
   .header__main .container{
@@ -424,9 +446,13 @@ footer{
 .header__main__top .bar__menu{
     font-size: 25px;
 }
+<<<<<<< HEAD
 .footer__bottom{
     text-align: center;
 }
+=======
+
+>>>>>>> devTri
 .header__main_top .icon_item{
     font-size: 25px;
 }
@@ -526,6 +552,7 @@ top: 30px;
  .contact__left{
     padding-right: 0;
    }
+<<<<<<< HEAD
 }
 
 @media (max-width:767px){
@@ -533,6 +560,8 @@ top: 30px;
 .text-center{
     font-family: 'Play', sans-serif;
 }
+=======
+>>>>>>> devTri
 }
 @media (max-width:600px){
 
@@ -575,7 +604,10 @@ top: 30px;
     width: 100%;
     margin-top: 10px;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> devTri
 }   
 @media (min-width:999px){
     .header__mobile{

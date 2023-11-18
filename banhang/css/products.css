@@ -234,7 +234,10 @@ border: 1px solid var(--font--color);
 .fa-gear{
     cursor: pointer;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> devTri
 @media (max-width:767px){
     .prochitiet .nav-item .nav-link1{
     font-size: 13px;
@@ -243,7 +246,11 @@ border: 1px solid var(--font--color);
 
     }
     .productct__text .number__count .addtoCart{
+<<<<<<< HEAD
         padding: 10px 20px;
+=======
+        padding: 10px 20xp;
+>>>>>>> devTri
     }
     
 .productct__text img {

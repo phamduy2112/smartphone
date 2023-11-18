@@ -41,11 +41,17 @@
     margin:0 50px;
   }
   .breadcrumb-item{
+<<<<<<< HEAD
     font-family: 'Ruda', sans-serif;
     color: #808080;
   }
   .breadcrumb-item.active{
     font-family: 'Ruda', sans-serif;
+=======
+    color: #808080;
+  }
+  .breadcrumb-item.active{
+>>>>>>> devTri
     color: var(--font--color);
     font-weight: bold;
   }
@@ -174,9 +180,12 @@
     border: 1px solid #2b20a16e;
     border-radius: 5px;
   }
+<<<<<<< HEAD
   .d-lg-flex p{
     font-family: 'Ruda', sans-serif;
   }
+=======
+>>>>>>> devTri
   hr{
     margin: 0;
   }
@@ -220,9 +229,12 @@
 padding: 0 16px;
 margin-top: 3px;
 }
+<<<<<<< HEAD
 .breadcrumb li{
   font-family: 'Ruda', sans-serif;
 }
+=======
+>>>>>>> devTri
   @media (max-width:1000px){
     .forget,
     .sign{

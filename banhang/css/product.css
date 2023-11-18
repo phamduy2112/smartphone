@@ -238,7 +238,10 @@ border: 1px solid black;
 .dot__item.active{
     background-color:red;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> devTri
 @media (min-width:300px){
     #desktop__left{
         display: none;
@@ -285,7 +288,11 @@ z-index: 111111111;
     padding: 0 20px;
 }
 }
+<<<<<<< HEAD
 @media (min-width:1300px){
+=======
+@media (min-width:1000px){
+>>>>>>> devTri
     #desktop__left{
         display: block;
     }
@@ -344,9 +351,12 @@ z-index: 111111111;
     .product__bt{
         width: 180px;
     }
+<<<<<<< HEAD
     #products .product__bt{
         height: 300px;
     }
+=======
+>>>>>>> devTri
     
 }
 @media (max-width:1000px){
@@ -359,7 +369,11 @@ z-index: 111111111;
         height: 335px;
     }
     
+<<<<<<< HEAD
  
+=======
+  
+>>>>>>> devTri
 }
 @media (max-width:767px){
     
@@ -374,6 +388,7 @@ z-index: 111111111;
         width: 170px;
         height: 310px;
     }
+<<<<<<< HEAD
     .products__right__top form{
         display: none;
     }
@@ -402,10 +417,20 @@ z-index: 111111111;
         font-size: 9px;
     }
     #products .product__bt,
+=======
+}
+@media (max-width:400px){
+    
+  #khung_product_three .product__bt{
+        width: 250px;
+        height: 350px;
+    }
+>>>>>>> devTri
    .product__bt{
         width: 49%;
         height: 300px;
     }
+<<<<<<< HEAD
     .product__title p{
         font-size: 15px;
     }
@@ -421,3 +446,6 @@ z-index: 111111111;
         font-size: 13px;
     }
   }
+=======
+}
+>>>>>>> devTri

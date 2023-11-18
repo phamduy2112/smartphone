@@ -28,7 +28,7 @@ function dangki(){
         ten_error.style.visibility="visible";
         ten_error.innerHTML = `Tên độ dài quá lớn`;
         return false;
-    }else if(!isNaN(ten.value)){
+    }else if(isNaN(ten.value)){
         ten_error.style.opacity="1";
         ten_error.style.visibility="visible";
         ten_error.innerHTML = 'Định nhập số hết à sai rồi nhập lại đi nhớ có chữ ok!';
@@ -52,7 +52,7 @@ function dangki(){
         passone_error.style.visibility="visible";
         passone_error.innerHTML = `Bạn còn thiếu ${6-passtest} kí tự dễ bị hack lắm đó nhập lại dài hơn đi.`;    
         return false;
-    }else if(!isNaN(passone.value)){
+    }else if(isNaN(passone.value)){
         passone_error.style.opacity="1";
         passone_error.style.visibility="visible";
         passone_error.innerHTML = 'Tính nhập mật khẩu toàn là số à dễ bị hack đó nhập lại đi!';
