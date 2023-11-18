@@ -15,12 +15,25 @@
     padding: 10px 25px;
     background-color: var(--font--color);
 }
+<<<<<<< HEAD
 .cart__header .icon{
     width: 20px;
+=======
+.cart__right{
+    width: 25%;
+    border: 1px solid white;
+    border-top-left-radius:20px ;
+    margin-left: 1%;
+    background-color: white;
+    height: 250px;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.6);
+>>>>>>> devVinh
 }
 .cart__header .sp{
     width: 250px;
 }
+<<<<<<< HEAD
 .cart__body{
     display: flex;
     flex-direction: row;
@@ -28,6 +41,14 @@
     align-items: center;
     background: white;
     padding: 0 20px;
+=======
+.cart__right h3{
+    color: var(--font--color);
+    font-weight: bold;
+}
+.cart__right p{
+   
+>>>>>>> devVinh
 }
 .cart__body:nth-child(odd){
     background: #2b20a113;
@@ -41,7 +62,12 @@
 .cart__buttons{
     display: flex;
     justify-content: space-between;
+    font-weight: bold;
 }
+.cart__right span {
+    font-weight: 500;
+}
+<<<<<<< HEAD
 .cart__buttons a{
     border: 1px solid var(--font--color);
     padding: 5px 15px;
@@ -49,6 +75,45 @@
     font-weight: bold;
     }
 .cart__buttons a:first-child{
+=======
+.cart__right div{
+    padding: 0 20px;
+
+}
+.breadcrumb{
+ --bs-breadcrumb-margin-bottom :0px  
+}
+
+.cart__title .title__text{
+    font-size: 25px;
+    color: var(--font--color);
+}
+.cart__right__deal{
+    width: 99%;
+    border: 1px solid var(--font--color);
+}
+.cart__right__deal input[type="text"]{
+    width: 68%;
+   
+    height: 30px;
+    outline: none;
+    margin-right: 1px;
+    padding: 0 20px;
+    background: transparent;
+    border: none;
+}
+.cart__right__deal input[type="submit"]{
+    width: 30%;
+    font-size: 15px;
+    height: 31px;
+    background-color: var(--font--color);
+    color: white;
+    
+
+}
+.cart__left{
+    width: 70%;
+>>>>>>> devVinh
     background-color: white;
     color: var(--font--color);
 }
@@ -56,6 +121,7 @@
     background-color: var(--font--color);
     color: white;
 }
+<<<<<<< HEAD
 .title__sp .price__sp .gia_def{
     font-weight: 400;
     color: gray;
@@ -68,6 +134,72 @@
     color: red;
     font-size: 15px;
     text-decoration: none;
+=======
+.image__product img{
+    width: 100%;
+}
+.table thead{
+    background-color: var(--font--color);
+    color: white;
+    position: relative;
+}
+.table thead tr th{
+    padding: 5px 30px;
+}
+.table tbody{
+    
+}
+.table tbody tr:nth-child(even) {
+    background:rgba(43, 32, 162, 0.2)
+}
+.table>:not(caption)>*>*{
+    border-bottom-width:0;
+}
+.cart__left .table tbody tr td:first-child{
+width: 60%;
+}
+.cart__left .table tbody tr td{
+    width: 20%;
+}
+.cart__left .table tbody tr td>p{
+    color: var(--font--color);
+    font-weight: 600;
+}
+.product__cart{
+display: flex;
+width: 80%;
+}
+.product__cart .title__product>p{
+    color: var(--font--color);
+    font-weight: 600;
+}
+.product__cart .title__product p:last-child{
+    color: red;
+}
+.carts__links a.mua{
+    border: 1px solid black;
+    border: 1px solid var(--font--color);
+    color: var(--font--color);
+}
+.carts__links a.mua:hover{
+    border: 1px solid var(--font--color);
+    background-color: var(--font--color);
+    color: white;
+}
+.carts__links .xoa{
+    background-color: var(--font--color);
+    color: white;
+}
+.carts__links .xoa:hover{
+    background-color: var(--font--color);
+    color: white;
+}
+/* .cart__left .table tbody tr td:last-child{
+   width: 20%;
+} */
+tr{
+    border-bottom: 1px solid black;
+>>>>>>> devVinh
 }
 .cart__body .checkbox{
 
@@ -202,6 +334,7 @@ background-color: white;
     padding: 20px;
  
 }
+<<<<<<< HEAD
 .thanhtoan_left h3,
 .thanhtoan_right h3{
    
@@ -212,11 +345,57 @@ background-color: white;
 .thanhtoan_left p{
     color: var(--font--color);
     font-weight: 600;
+=======
+.table{
+    border-collapse: collapse;
+    border: 1px solid black;
+  
+}
+/* kênh thanh toan */
+.thanhtoan_left{
+ border: 1px solid black;
+    background-color: white;
+  padding: 20px 30px;
+  margin-right: 7%;
+    
+}
+.form__thanhtoan{   
+    
+   
+}
+.thanhtoan_left input{
+    width: 100%;
+    height: 35px;
+    outline: none;
+    padding: 0 20px;
+}
+.thanhtoan_right{
+    border: 1px solid black;
+    background-color: white;
+    padding: 20px;
+  height: 360px;
+}
+.thanhtoan_left h3,
+.thanhtoan_right h3{
+    text-align: center;
+    color: var(--font--color);
+}
+.maQR.active{
+    display: none;
+}
+.thanhtoan_left p{
+    color: var(--font--color);
+    font-weight: bold;
+>>>>>>> devVinh
 }
 .thanhtoan_right div p{
     display: flex;
     justify-content: space-between;
+<<<<<<< HEAD
    font-weight: bold
+=======
+    font-weight: bold;
+>>>>>>> devVinh
 }
 .thanhtoan_right div p span{
     font-weight: 500;
@@ -230,7 +409,11 @@ background-color: white;
 textarea{
     width: 100%;
     outline: none;
+<<<<<<< HEAD
     padding: 10px 20px;
+=======
+    padding: 0 20px;
+>>>>>>> devVinh
 }
 .group__form1 span{
     color: var(--font--color);
@@ -247,11 +430,15 @@ textarea{
     width: 100%;
     font-size: 14px;
     margin-left: 4px;
+<<<<<<< HEAD
     color: gray;
     font-weight: 400;
     display: block;
 }
 
+=======
+}
+>>>>>>> devVinh
 .form-check p.check span{
 color: var(--font--color);
 }
@@ -267,6 +454,7 @@ color: var(--font--color);
 {
     width: 100%;
 }
+<<<<<<< HEAD
 
 
 }
@@ -288,3 +476,6 @@ color: var(--font--color);
         margin-top: 10px;
     }
 }   
+=======
+}
+>>>>>>> devVinh

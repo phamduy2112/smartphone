@@ -4,8 +4,14 @@
 @import url('../css/dangnhap.css');
 @import url('../css/user.css');
 @import url('../css/cart.css');
+<<<<<<< HEAD
 @import url('../css/bien.css');
 
+=======
+
+@import url('../css/bien.css');
+@import url('../css/lichsumuahang.css');
+>>>>>>> devVinh
 *{
     padding: 0;
     margin: 0;
@@ -58,11 +64,18 @@ header{
     .header__main .form__search{
         border: 1px solid black;
         border-radius: 5px;
+<<<<<<< HEAD
         display: flex;
         justify-content: space-between;
     }
  .header__main form .submit{
         height: 39.5px;
+=======
+        overflow: hidden;
+    }
+ .header__main form .submit{
+        height: 39.2px;
+>>>>>>> devVinh
         padding: 0 20.7px;
         background-color: var(--font--color);
         color: white;
@@ -78,10 +91,7 @@ header{
     border: none;
 
     }
-    main{
-        position: relative;
-        top: 20px;
-    }
+
     .carousel{
         position: relative;
     }
@@ -135,6 +145,7 @@ header{
         transform: scale(1);
        transition:all .5s;
     }
+<<<<<<< HEAD
 
     .banner__hai .row .banner__item{
    width: 33%;
@@ -148,6 +159,17 @@ header{
         position: relative;
     }
     .banner__hai .row .banner__item::after{
+=======
+    .banner__hai .row .col-4{
+        padding-right:10px;
+        position: relative;
+        
+    }
+    .banner__hai .row .col-4 img {
+        position: relative;
+    }
+    .banner__hai .row .col-4::after{
+>>>>>>> devVinh
         position: absolute;
         top: 0;
         left: 0;
@@ -160,13 +182,18 @@ header{
         background-color: rgb(0, 0, 0,.3);
         
     }
+<<<<<<< HEAD
     .banner__hai .row .banner__item .banner__hai__text{
+=======
+    .banner__hai .row .col-4 .banner__hai__text{
+>>>>>>> devVinh
         position: absolute;
         color: white;
         top: 20px;
         
         z-index: 2;
     }
+<<<<<<< HEAD
     .banner__hai .row .banner__item .banner__hai__text.left{
         left: 30px;
     }
@@ -174,6 +201,15 @@ header{
         right: 30px;
     }
     .banner__hai .row .banner__item:last-child{
+=======
+    .banner__hai .row .col-4 .banner__hai__text.left{
+        left: 30px;
+    }
+    .banner__hai .row .col-4 .banner__hai__text.right{
+        right: 30px;
+    }
+    .banner__hai .row .col-4:last-child{
+>>>>>>> devVinh
         padding-right: 0;
     }
     .banner__bottom .img__title h3{
@@ -210,13 +246,18 @@ header{
       border-radius: 5px;
     }
     .shippy__item i{
+<<<<<<< HEAD
         font-size: 30px;
+=======
+        font-size: 25px;
+>>>>>>> devVinh
         color: var(--font--color);
         font-weight: bold;
     }
     .shippy_itemd h3{
         font-size: 15px;
         margin-bottom: 0;
+<<<<<<< HEAD
         
         font-weight: bold;
         font-family: 'Ruda', sans-serif;
@@ -227,6 +268,10 @@ header{
     .shippy__item p{
         font-size: 12px;
         color: var(--font--color);
+=======
+        color: var(--font--color);
+        font-weight: bold;
+>>>>>>> devVinh
     }
     .blog__box{
         display: flex;
@@ -282,11 +327,22 @@ header{
         font-size: 16px;
         font-weight: bold;
     }
+<<<<<<< HEAD
+=======
+    .footer__item h3{
+        font-size: 16px;
+        font-weight: bold;
+    }
+>>>>>>> devVinh
 .footer__bottom .row .col-12 h2{
 text-align: center;
 font-size: 24px;
 }
+<<<<<<< HEAD
 .footer__bottom .row h3{
+=======
+.footer__bottom .row .col-4 h3{
+>>>>>>> devVinh
 font-size: 20px;
 }
 .footer__bottom{
@@ -297,7 +353,11 @@ footer{
     color: white;
     padding-top: 40px;
 }
+<<<<<<< HEAD
 .footer__bottom i{
+=======
+.footer__bottom .col-4 i{
+>>>>>>> devVinh
     width: 35px;
     height: 35px;
     border-radius: 50%;
@@ -341,17 +401,25 @@ footer{
         background-color: #fff;
         padding: 30px 40px;
     }
+<<<<<<< HEAD
   
+=======
+>>>>>>> devVinh
     .contact__left input{
         height: 50px;
         outline: none;
         padding: 0 20px;
+<<<<<<< HEAD
         border-radius: 10px;
         border: 1px solid #2b20a16e;
     }
     .contact__left textarea{
         border-radius: 10px;
         border: 1px solid #2b20a16e;  
+=======
+        border-radius: 20px;
+        border: 1px solid black;
+>>>>>>> devVinh
     }
     .contact__left .group_flex .form__group>input{
         width: 96%;
@@ -387,11 +455,14 @@ footer{
    .menu__item ul li a{
     color: white;
    }
+<<<<<<< HEAD
    .contact h1,
    .contact h2{
     color: var(--font--color);
     font-family: 'Play', sans-serif;
    }
+=======
+>>>>>>> devVinh
  @media (max-width:998px) {
   .header__main .container{
         width: 90%;
@@ -497,9 +568,9 @@ ul{
 
 }
 /* carousel */
-main{
+/* main{
 top: 30px;    
-}
+} */
 .container-md{
     width: 100%;
     margin: 0 auto;
@@ -526,6 +597,7 @@ top: 30px;
  .contact__left{
     padding-right: 0;
    }
+<<<<<<< HEAD
 }
 
 @media (max-width:767px){
@@ -533,6 +605,8 @@ top: 30px;
 .text-center{
     font-family: 'Play', sans-serif;
 }
+=======
+>>>>>>> devVinh
 }
 @media (max-width:600px){
 
@@ -571,11 +645,15 @@ top: 30px;
    .img__banner{
     width: 100%;
    }
+<<<<<<< HEAD
    .banner__hai .row .banner__item{
     width: 100%;
     margin-top: 10px;
   }
 
+=======
+  
+>>>>>>> devVinh
 }   
 @media (min-width:999px){
     .header__mobile{
@@ -654,14 +732,7 @@ top: 30px;
     height: 300px;
    }
 }
-label{
-    color: red;
-    opacity: 0;
-    visibility:hidden;
-    transition: 0.5s ease;
- 
- 
- }
+
  @media (min-width:1668px){
     .header__menu{
         top: 10%;

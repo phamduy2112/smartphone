@@ -132,7 +132,19 @@ transition: all .5s;
 
 }
 .product__item .product__text .stars{
+<<<<<<< HEAD
     font-size: 10px;
+=======
+    font-size: 11px;
+    
+}
+.product__item .product__text .stars i{
+    color: #FFCE31;
+    font-size: 13px;
+}
+.product__item .product__text .price{
+    color: #fb6f92;
+>>>>>>> devVinh
     
 }
 .product__item .product__text .stars i{
@@ -374,6 +386,7 @@ z-index: 111111111;
         width: 170px;
         height: 310px;
     }
+<<<<<<< HEAD
     .products__right__top form{
         display: none;
     }
@@ -421,3 +434,12 @@ z-index: 111111111;
         font-size: 13px;
     }
   }
+=======
+}
+@media (max-width:400px){
+    .product__bt{
+        width: 49%;
+        height: 310px;
+    }
+}
+>>>>>>> devVinh
