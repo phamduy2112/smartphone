@@ -1,0 +1,25 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.right-sauthanhtoan,
+.left-sauthanhtoan{
+    padding:0 15px;
+}
+.thanhtoan-box{
+    padding: 10px 30px;
+}
+.thanhtoan-box .price,
+.thanhtoan-box h3{
+    color: #2B20A1;
+    font-weight: bold;
+}
+.thanhtoan-box h4{
+    color: grey;
+}
+.thanhtoan-box .thanhtoan{
+    color: black;
+font-weight: bold;
+}
