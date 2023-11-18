@@ -1,0 +1,206 @@
+@import url("../css/bien.css");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.background_image {
+  background-image: url("http://gg.gg/17iovh");
+  height: 645px;
+  background-size: cover;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 200px;
+}
+
+.title {
+  font-size: 96px;
+  font-weight: 700;
+  line-height: 111px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #ffa41a;
+}
+
+.title_one {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 39px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: white;
+}
+
+/* For smaller screens */
+@media only screen and (max-width: 956px) {
+  .background_image {
+    padding: 0 20px;
+  }
+
+  .title {
+    font-size: 48px;
+    line-height: 60px;
+    padding: 10px;
+  }
+
+  .title_one {
+    font-size: 24px;
+    line-height: 30px;
+    padding: 10px;
+  }
+}
+
+/* Add more media queries as needed for other screen sizes */
+
+.parameter {
+  margin: 0 auto;
+  margin-top: -80px;
+}
+
+.parameter_item {
+  padding: 3% 5%; /* Sử dụng phần trăm thay vì pixel */
+}
+
+.number {
+  color: #2b20a1;
+  font-weight: 600;
+  font-size: 4vw; /* Sử dụng vw cho kích thước font-size */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.parameter_text {
+  color: #565656;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.sg_store {
+  background-color: white;
+  margin: 0 auto;
+  margin-top: 10px;
+  padding: 24px;
+}
+
+.sg_store_title {
+  color: #2b20a1;
+  font-size: 70px;
+  font-weight: 700;
+  line-height: 111px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+.customer_care {
+  background-color: white;
+  margin-top: 18px !important;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.customer_care_title {
+  color: #2b20a1;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 46px;
+  letter-spacing: 0em;
+}
+
+.customer_care_content {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.customer_care_item {
+  flex: 0 1 calc(33.33% - 20px);
+  padding: 10px;
+  border-radius: 8px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items vertically and horizontally */
+}
+
+.img_customer_care {
+  width: 60px;
+  height: 60px;
+}
+
+.content_title,
+.content_title_car {
+  margin-top: 10px; /* Adjust margin for spacing */
+  font-weight: bold;
+}
+
+.contnet {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.member {
+  margin-top: 30px !important;
+  background-color: white;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.member_title {
+  font-size: 25px;
+  font-weight: 900;
+  line-height: 30px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #244ad3;
+  margin-bottom: 50px;
+}
+
+.member_content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.member_item {
+  flex: 0 1 calc(20% - 20px);
+  padding: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items horizontally */
+  text-align: center; /* Center text within the item */
+}
+
+.member_item img {
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  margin-bottom: 8px; /* Add some space below the image */
+}
+
+.member_item p {
+  margin: 5px 0; /* Adjust margin for spacing between paragraphs */
+}
+.member_name {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+.member_rank {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #00000080;
+}
