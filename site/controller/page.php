@@ -22,7 +22,12 @@ ob_start();
          case 'timkiemsp':
             
             include_once './view/header.php'; 
-            $sp=laytatca_SP();
+            if(isset($key)&&$key!=null){
+                     $sp=timKiemSP($key);
+            }
+       
+      
+          
             include_once './view/timkiem.php';
             include_once './view/footer.php';
             

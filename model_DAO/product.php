@@ -15,9 +15,7 @@ function laytatca_SP(){
 
 }
 function timKiemSP($key){
-$sql="SELECT *
-FROM sanpham
-WHERE name LIKE % $key %";
+$sql="SELECT * FROM sanpham WHERE ten_sp LIKE '%$key%' or gia like '%$key%'";
 return pdo_query($sql);
 }
 function sanpham($ten_sp){
