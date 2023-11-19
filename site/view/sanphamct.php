@@ -60,7 +60,7 @@ function get_price($gia, $khuyenmai){
                     </div>
                     <div class="pro_img mt-2">
 
-
+                    
 
                          <div class="img_small">
                             <img class="img-thumbnail" src="../content/img/product_tachnen/<?=$hinhanh?>" alt="">
@@ -139,7 +139,7 @@ function get_price($gia, $khuyenmai){
         <i class="fa-solid fa-plus solid"></i>  
         </div>
       
-        <a href="" class="addtoCart w-100">Thêm vào giỏ hàng</a>
+        <a href="?mod=cart&act=giohang&id=<?=$id_sp?>" class="addtoCart w-100">Thêm vào giỏ hàng</a>
     </div>
 
     <a href="" class="btn w-100 mt-2 mua">Mua ngay</a>
@@ -246,7 +246,7 @@ function get_price($gia, $khuyenmai){
            
               <div class="product__box mt-2">
              
-                    <div class="product__item product__bt" style=>
+                    <!-- <div class="product__item product__bt" style=>
                       <div class="count">
                         New
                       </div>
@@ -507,8 +507,10 @@ function get_price($gia, $khuyenmai){
                         </div>
                         <a href="" class="btn btn-danger w-100 my-2">Mua hàng</a>
                       </div>
-                    </div>
+                    </div> -->
                  
+
+                    <?=sanpham_thuong($sanpham_sau);?>
                 
                    
           

@@ -135,8 +135,7 @@ function sanpham_thuong($ten_sp){
     </div>
     <div class="product__text">
       <h3>
-      Apple Airpod Pro MWP22A M/A Bluetooth
-
+      '.$ten_sp.'
       </h3>
       <div class="stars">
         <i class="fa fa-star" aria-hidden="true"></i>
@@ -144,16 +143,21 @@ function sanpham_thuong($ten_sp){
         <i class="fa fa-star" aria-hidden="true"></i>
         <i class="fa fa-star" aria-hidden="true"></i>
         <i class="fa fa-star" aria-hidden="true"></i>
-        <span>(2 lượt đánh giá)</span>
+        <span>('.$danhgia.' lượt đánh giá)</span>
       </div>
       <div class="price">
-      '.$gia.'
-      </div>
+      <span>
+      '.number_format($gia,0,',','.').'đ
+      </span>
+      '.number_format($gia*((100-$khuyenmai)/100),0,',','.').'đ
+    </div>
       <div class="check">
         <i class="fa-solid fa-check"></i>
         <span>Còn hàng</span>
       </div>
+      <div class="container-btn">
       <a href="?mod=cart&act=giohang&id='.$id_sp.'" class="btn btn-danger w-100 my-2">Mua hàng</a>
+      </div>
     </div>
     </a>
   </div>';

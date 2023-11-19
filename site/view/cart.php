@@ -8,7 +8,7 @@ if(isset($_SESSION['cart'])){
 
 foreach(  $_SESSION['cart']as $item){
   extract($item);
-
+  
   // $ThanhTien=$SL*$TT;
   $tongsl+=$SL;
   $_SESSION['tongsl']=$tongsl;
@@ -42,11 +42,13 @@ $_SESSION['tongtt']=$tongtt;
               </div>
               <?php 
            if(isset($_SESSION['cart'])){
+            $tongsp=0;
               foreach($_SESSION['cart'] as $item):
                 $i=0;
                extract($item);
-               
+               $TT=$GiaSanPham*((100-$PhanTramGiamGia)/100)
                 ?>
+                
               <div class="cart__body">
                 <div class="checkbox">
                   <input type="checkbox" name="" id="" class="">
@@ -57,10 +59,10 @@ $_SESSION['tongtt']=$tongtt;
                   <div class="title__sp">
                     <?=$TenSanPham?>
                     <div class="price__sp">
-                      <p> <span class="gia_def"><?=$GiaSanPham?></span><span><?=
-                    $TT=$GiaSanPham*((100-$PhanTramGiamGia)/100)
-                      
-                      ?></span></p>
+
+                      <p> <span class="gia_def"><?=number_format($GiaSanPham,0,',','.')?>đ</span><span><?=
+                        number_format($TT,0,',','.')
+                      ?>đ</span></p>
                     </div>
                   </div>
                 </div>
@@ -77,9 +79,10 @@ $_SESSION['tongtt']=$tongtt;
                 </div>
                 <div class="price_all">
                  <?=
-                 $ThanhTien=$SL*$TT;
+
+                 number_format($ThanhTien=$SL*$TT,0,',','.');
                  ?>
-             
+                  đ
                 </div>
                 <div>
                   <a href="?mod=cart&act=xoaMotSP&id=<?=$MaSanPham?>">
@@ -109,9 +112,8 @@ $_SESSION['tongtt']=$tongtt;
                   <p>Số lượng: <span><?=$tongsl?></span></p>
                   <p>Thành tiền: <span>
                   <?=
-                    $tongtt
-             
-                 ?>
+                  number_format($tongtt,0,',','.')             
+                 ?>đ
                   </span></p>
                 </div>
                 <hr>
@@ -125,7 +127,9 @@ $_SESSION['tongtt']=$tongtt;
                 <p>Giao hàng: <span>0đ</span></p>
                 </div>
                <div>
-                <p>Tổng thanh toán: <span><?=$tongtt?></span></p>
+                <p>Tổng thanh toán: <span><?=                  
+                number_format($tongtt,0,',','.')             
+                  ?>đ</span></p>
             
               </div>
               <div class="right__carts_buton my-2">

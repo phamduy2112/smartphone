@@ -10,6 +10,28 @@ if(isset($_SESSION['taikhoan'])){
   $taikhoan.='<a href="?mod=user&act=dangnhap">Đăng nhập ngay để mua hàng</a>';
 
 }
+$dangnhap='';
+if(isset($_SESSION['taikhoan'])){
+  $dangnhap.=
+  '               
+  <a href="?mod=user&act=thongtinchitiet">
+ <i class="fa fa-user" aria-hidden="true"></i>
+ <div class="icon_item_text">
+
+ </div>
+</a>'
+;
+}else{
+  $dangnhap.='               
+   <a href="?mod=user&act=dangnhap">
+  <i class="fa fa-user" aria-hidden="true"></i>
+  <div class="icon_item_text">
+
+  </div>
+</a>'
+;
+
+}
 
 ?>
 
@@ -76,12 +98,8 @@ if(isset($_SESSION['taikhoan'])){
             </form>
             <div class="icons d-flex">
               <div class="icon_item">
-                <a href="?mod=user&act=dangnhap">
-                  <i class="fa fa-user" aria-hidden="true"></i>
-                  <div class="icon_item_text">
+                <?=$dangnhap?>
 
-                  </div>
-                </a>
 
               </div>
               <div class="icon_item">
@@ -93,7 +111,7 @@ if(isset($_SESSION['taikhoan'])){
               <a href="?mod=cart&act=list" class="icon_item">
 
                 <i class="fa fa-cart-shopping"></i>
-             
+
               </a>
 
             </div>
