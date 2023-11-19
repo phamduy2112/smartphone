@@ -136,13 +136,13 @@ function sanpham_thuong($ten_sp){
         <span>(2 lượt đánh giá)</span>
       </div>
       <div class="price">
-        12.000.000đ
+      '.$gia.'
       </div>
       <div class="check">
         <i class="fa-solid fa-check"></i>
         <span>Còn hàng</span>
       </div>
-      <a href="" class="btn btn-danger w-100 my-2">Mua hàng</a>
+      <a href="?mod=cart&act=giohang&id='.$id_sp.'" class="btn btn-danger w-100 my-2">Mua hàng</a>
     </div>
     </a>
   </div>';
