@@ -59,6 +59,10 @@ if(isset($_SESSION['taikhoan'])){
   <link rel="stylesheet" href="../content/css/product.css">
   <link rel="stylesheet" href="../content/css/dangnhap1.css">
   <link rel="stylesheet" href="../content/css/cart1.css">
+<<<<<<< HEAD
+=======
+
+>>>>>>> lamphp
   <link rel="stylesheet" href="../content/css/style.css">
 <style>
   .breadcrumb{
@@ -93,9 +97,9 @@ if(isset($_SESSION['taikhoan'])){
             <div class="logo">
               <img src="../content/img/icon/LOGO.png" alt="" width="150px">
             </div>
-            <form action="" class="form__search">
-              <input type="text" placeholder="Tìm kiếm sản phẩm" class="search">
-              <input type="submit" value="Tìm kiếm" class="submit">
+            <form action="?mod=page&act=timkiemsp" class="form__search" method='post'>
+              <input type="text" placeholder="Tìm kiếm sản phẩm" class="search" name='key'>
+              <input type="submit" value="Tìm kiếm" class="submit" name='nut_timkiem'>
             </form>
             <div class="icons d-flex">
               <div class="icon_item">
