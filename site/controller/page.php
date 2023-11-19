@@ -19,6 +19,14 @@ ob_start();
             include_once './view/trangchu.php';
             include_once './view/footer.php';
             break;
+         case 'timkiemsp':
+            
+            include_once './view/header.php'; 
+            $sp=laytatca_SP();
+            include_once './view/timkiem.php';
+            include_once './view/footer.php';
+            
+            break;
          case 'sanphamchitiet':
             include_once './view/header.php'; 
           if(isset($id)){

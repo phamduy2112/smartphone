@@ -9,6 +9,17 @@ function laymot_sp($id){
   $sql="SELECT * FROM sanpham where id_sp=$id";
   return pdo_query_one($sql);
 }
+function laytatca_SP(){
+  $sql="SELECT * FROM sanpham";
+  return pdo_query($sql);
+
+}
+function timKiemSP($key){
+$sql="SELECT *
+FROM sanpham
+WHERE name LIKE % $key %";
+return pdo_query($sql);
+}
 function sanpham($ten_sp){
 $get="";
 
