@@ -16,6 +16,7 @@
     background-color: var(--font--color);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 .cart__header .icon{
     width: 20px;
 =======
@@ -29,11 +30,18 @@
     padding: 10px 0;
     box-shadow: 0 2px 5px rgba(0,0,0,0.6);
 >>>>>>> devVinh
+=======
+.cart__header .icon{
+    width: 20px;
+>>>>>>> main
 }
 .cart__header .sp{
     width: 250px;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> main
 .cart__body{
     display: flex;
     flex-direction: row;
@@ -41,6 +49,7 @@
     align-items: center;
     background: white;
     padding: 0 20px;
+<<<<<<< HEAD
 =======
 .cart__right h3{
     color: var(--font--color);
@@ -49,6 +58,8 @@
 .cart__right p{
    
 >>>>>>> devVinh
+=======
+>>>>>>> main
 }
 .cart__body:nth-child(odd){
     background: #2b20a113;
@@ -62,12 +73,14 @@
 .cart__buttons{
     display: flex;
     justify-content: space-between;
-    font-weight: bold;
 }
+<<<<<<< HEAD
 .cart__right span {
     font-weight: 500;
 }
 <<<<<<< HEAD
+=======
+>>>>>>> main
 .cart__buttons a{
     border: 1px solid var(--font--color);
     padding: 5px 15px;
@@ -75,6 +88,7 @@
     font-weight: bold;
     }
 .cart__buttons a:first-child{
+<<<<<<< HEAD
 =======
 .cart__right div{
     padding: 0 20px;
@@ -114,6 +128,8 @@
 .cart__left{
     width: 70%;
 >>>>>>> devVinh
+=======
+>>>>>>> main
     background-color: white;
     color: var(--font--color);
 }
@@ -122,6 +138,9 @@
     color: white;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> main
 .title__sp .price__sp .gia_def{
     font-weight: 400;
     color: gray;
@@ -134,6 +153,7 @@
     color: red;
     font-size: 15px;
     text-decoration: none;
+<<<<<<< HEAD
 =======
 .image__product img{
     width: 100%;
@@ -200,6 +220,8 @@ width: 80%;
 tr{
     border-bottom: 1px solid black;
 >>>>>>> devVinh
+=======
+>>>>>>> main
 }
 .cart__body .checkbox{
 
@@ -335,6 +357,9 @@ background-color: white;
  
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> main
 .thanhtoan_left h3,
 .thanhtoan_right h3{
    
@@ -345,6 +370,7 @@ background-color: white;
 .thanhtoan_left p{
     color: var(--font--color);
     font-weight: 600;
+<<<<<<< HEAD
 =======
 .table{
     border-collapse: collapse;
@@ -387,15 +413,21 @@ background-color: white;
     color: var(--font--color);
     font-weight: bold;
 >>>>>>> devVinh
+=======
+>>>>>>> main
 }
 .thanhtoan_right div p{
     display: flex;
     justify-content: space-between;
 <<<<<<< HEAD
+<<<<<<< HEAD
    font-weight: bold
 =======
     font-weight: bold;
 >>>>>>> devVinh
+=======
+   font-weight: bold
+>>>>>>> main
 }
 .thanhtoan_right div p span{
     font-weight: 500;
@@ -410,10 +442,14 @@ textarea{
     width: 100%;
     outline: none;
 <<<<<<< HEAD
+<<<<<<< HEAD
     padding: 10px 20px;
 =======
     padding: 0 20px;
 >>>>>>> devVinh
+=======
+    padding: 10px 20px;
+>>>>>>> main
 }
 .group__form1 span{
     color: var(--font--color);
@@ -431,14 +467,20 @@ textarea{
     font-size: 14px;
     margin-left: 4px;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> main
     color: gray;
     font-weight: 400;
     display: block;
 }
 
+<<<<<<< HEAD
 =======
 }
 >>>>>>> devVinh
+=======
+>>>>>>> main
 .form-check p.check span{
 color: var(--font--color);
 }
@@ -455,6 +497,9 @@ color: var(--font--color);
     width: 100%;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> main
 
 
 }
@@ -475,7 +520,11 @@ color: var(--font--color);
     .thanhtoan_right{
         margin-top: 10px;
     }
+<<<<<<< HEAD
 }   
 =======
 }
 >>>>>>> devVinh
+=======
+}   
+>>>>>>> main

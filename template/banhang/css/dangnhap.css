@@ -61,6 +61,9 @@
     
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> main
   .sign span a{
     color: var(--font--color);
     transition: all .5s;
@@ -70,12 +73,15 @@
     font-weight: bold;
   }
   
+<<<<<<< HEAD
 =======
   .sign span {
     
     font-weight: bold;
   }
 >>>>>>> devVinh
+=======
+>>>>>>> main
   a:hover{
     color: var(--font--color);
   }
@@ -113,20 +119,29 @@
     margin-top: 13px;
     width: 100%;
 <<<<<<< HEAD
+<<<<<<< HEAD
     padding: 7px 0;
 =======
     padding: 6px 0;
 >>>>>>> devVinh
+=======
+    padding: 7px 0;
+>>>>>>> main
     background-color: var(--font--color);
     color: white;
     border: none;
     box-shadow: 0 2px 4px rgba(0,0,0,.5);
     margin-bottom: 5px;
 <<<<<<< HEAD
+<<<<<<< HEAD
     border-radius: 5px;
     font-weight: bold;
 =======
 >>>>>>> devVinh
+=======
+    border-radius: 5px;
+    font-weight: bold;
+>>>>>>> main
   }
   .sign h1,
   .sign-up h1{
@@ -170,10 +185,14 @@
     color: var(--font--color);
     font-weight: 600;
 <<<<<<< HEAD
+<<<<<<< HEAD
     padding: 5px 0;
 =======
     padding: 5px 14px;
 >>>>>>> devVinh
+=======
+    padding: 5px 0;
+>>>>>>> main
   }
   .form__group_one .form__group_icona{
     padding: 5px;
@@ -190,20 +209,29 @@
     height: 40px;
     margin-bottom: 10px;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> main
     border: 1px solid #2b20a16e;
     border-radius: 5px;
   }
   .d-lg-flex p{
     font-family: 'Ruda', sans-serif;
+<<<<<<< HEAD
 =======
   
 >>>>>>> devVinh
+=======
+>>>>>>> main
   }
   hr{
     margin: 0;
   }
   .forget_from{
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> main
   display: flex;
   justify-content: right;
   
@@ -246,6 +274,7 @@ margin-top: 3px;
 .breadcrumb li{
   font-family: 'Ruda', sans-serif;
 }
+<<<<<<< HEAD
 =======
   
   margin-left: 18vw;
@@ -272,6 +301,8 @@ margin-top: 3px;
   }
 
 >>>>>>> devVinh
+=======
+>>>>>>> main
   @media (max-width:1000px){
     .forget,
     .sign{

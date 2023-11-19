@@ -5,6 +5,7 @@
 @import url('../css/user.css');
 @import url('../css/cart.css');
 <<<<<<< HEAD
+<<<<<<< HEAD
 @import url('../css/bien.css');
 
 =======
@@ -12,6 +13,10 @@
 @import url('../css/bien.css');
 @import url('../css/lichsumuahang.css');
 >>>>>>> devVinh
+=======
+@import url('../css/bien.css');
+
+>>>>>>> main
 *{
     padding: 0;
     margin: 0;
@@ -65,17 +70,23 @@ header{
         border: 1px solid black;
         border-radius: 5px;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> main
         display: flex;
         justify-content: space-between;
     }
  .header__main form .submit{
         height: 39.5px;
+<<<<<<< HEAD
 =======
         overflow: hidden;
     }
  .header__main form .submit{
         height: 39.2px;
 >>>>>>> devVinh
+=======
+>>>>>>> main
         padding: 0 20.7px;
         background-color: var(--font--color);
         color: white;
@@ -91,7 +102,10 @@ header{
     border: none;
 
     }
-
+    main{
+        position: relative;
+        top: 20px;
+    }
     .carousel{
         position: relative;
     }
@@ -146,6 +160,9 @@ header{
        transition:all .5s;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> main
 
     .banner__hai .row .banner__item{
    width: 33%;
@@ -159,6 +176,7 @@ header{
         position: relative;
     }
     .banner__hai .row .banner__item::after{
+<<<<<<< HEAD
 =======
     .banner__hai .row .col-4{
         padding-right:10px;
@@ -170,6 +188,8 @@ header{
     }
     .banner__hai .row .col-4::after{
 >>>>>>> devVinh
+=======
+>>>>>>> main
         position: absolute;
         top: 0;
         left: 0;
@@ -183,10 +203,14 @@ header{
         
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
     .banner__hai .row .banner__item .banner__hai__text{
 =======
     .banner__hai .row .col-4 .banner__hai__text{
 >>>>>>> devVinh
+=======
+    .banner__hai .row .banner__item .banner__hai__text{
+>>>>>>> main
         position: absolute;
         color: white;
         top: 20px;
@@ -194,6 +218,9 @@ header{
         z-index: 2;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> main
     .banner__hai .row .banner__item .banner__hai__text.left{
         left: 30px;
     }
@@ -201,6 +228,7 @@ header{
         right: 30px;
     }
     .banner__hai .row .banner__item:last-child{
+<<<<<<< HEAD
 =======
     .banner__hai .row .col-4 .banner__hai__text.left{
         left: 30px;
@@ -210,6 +238,8 @@ header{
     }
     .banner__hai .row .col-4:last-child{
 >>>>>>> devVinh
+=======
+>>>>>>> main
         padding-right: 0;
     }
     .banner__bottom .img__title h3{
@@ -247,10 +277,14 @@ header{
     }
     .shippy__item i{
 <<<<<<< HEAD
+<<<<<<< HEAD
         font-size: 30px;
 =======
         font-size: 25px;
 >>>>>>> devVinh
+=======
+        font-size: 30px;
+>>>>>>> main
         color: var(--font--color);
         font-weight: bold;
     }
@@ -258,6 +292,9 @@ header{
         font-size: 15px;
         margin-bottom: 0;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> main
         
         font-weight: bold;
         font-family: 'Ruda', sans-serif;
@@ -268,10 +305,13 @@ header{
     .shippy__item p{
         font-size: 12px;
         color: var(--font--color);
+<<<<<<< HEAD
 =======
         color: var(--font--color);
         font-weight: bold;
 >>>>>>> devVinh
+=======
+>>>>>>> main
     }
     .blog__box{
         display: flex;
@@ -328,21 +368,28 @@ header{
         font-weight: bold;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     .footer__item h3{
         font-size: 16px;
         font-weight: bold;
     }
 >>>>>>> devVinh
+=======
+>>>>>>> main
 .footer__bottom .row .col-12 h2{
 text-align: center;
 font-size: 24px;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 .footer__bottom .row h3{
 =======
 .footer__bottom .row .col-4 h3{
 >>>>>>> devVinh
+=======
+.footer__bottom .row h3{
+>>>>>>> main
 font-size: 20px;
 }
 .footer__bottom{
@@ -354,10 +401,14 @@ footer{
     padding-top: 40px;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 .footer__bottom i{
 =======
 .footer__bottom .col-4 i{
 >>>>>>> devVinh
+=======
+.footer__bottom i{
+>>>>>>> main
     width: 35px;
     height: 35px;
     border-radius: 50%;
@@ -402,24 +453,34 @@ footer{
         padding: 30px 40px;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
   
 =======
 >>>>>>> devVinh
+=======
+  
+>>>>>>> main
     .contact__left input{
         height: 50px;
         outline: none;
         padding: 0 20px;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> main
         border-radius: 10px;
         border: 1px solid #2b20a16e;
     }
     .contact__left textarea{
         border-radius: 10px;
         border: 1px solid #2b20a16e;  
+<<<<<<< HEAD
 =======
         border-radius: 20px;
         border: 1px solid black;
 >>>>>>> devVinh
+=======
+>>>>>>> main
     }
     .contact__left .group_flex .form__group>input{
         width: 96%;
@@ -456,13 +517,19 @@ footer{
     color: white;
    }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> main
    .contact h1,
    .contact h2{
     color: var(--font--color);
     font-family: 'Play', sans-serif;
    }
+<<<<<<< HEAD
 =======
 >>>>>>> devVinh
+=======
+>>>>>>> main
  @media (max-width:998px) {
   .header__main .container{
         width: 90%;
@@ -568,9 +635,9 @@ ul{
 
 }
 /* carousel */
-/* main{
+main{
 top: 30px;    
-} */
+}
 .container-md{
     width: 100%;
     margin: 0 auto;
@@ -597,10 +664,13 @@ top: 30px;
  .contact__left{
     padding-right: 0;
    }
+<<<<<<< HEAD
 <<<<<<< HEAD:banhang/css/style.css
 <<<<<<< HEAD
 =======
 >>>>>>> lamphp:template/banhang/css/style.css
+=======
+>>>>>>> main
 }
 
 @media (max-width:767px){
@@ -608,11 +678,14 @@ top: 30px;
 .text-center{
     font-family: 'Play', sans-serif;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD:banhang/css/style.css
 =======
 >>>>>>> devVinh
 =======
 >>>>>>> lamphp:template/banhang/css/style.css
+=======
+>>>>>>> main
 }
 @media (max-width:600px){
 
@@ -652,14 +725,20 @@ top: 30px;
     width: 100%;
    }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> main
    .banner__hai .row .banner__item{
     width: 100%;
     margin-top: 10px;
   }
 
+<<<<<<< HEAD
 =======
   
 >>>>>>> devVinh
+=======
+>>>>>>> main
 }   
 @media (min-width:999px){
     .header__mobile{
@@ -738,7 +817,14 @@ top: 30px;
     height: 300px;
    }
 }
-
+label{
+    color: red;
+    opacity: 0;
+    visibility:hidden;
+    transition: 0.5s ease;
+ 
+ 
+ }
  @media (min-width:1668px){
     .header__menu{
         top: 10%;
