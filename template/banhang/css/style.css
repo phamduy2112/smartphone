@@ -6,6 +6,13 @@
 @import url('../css/cart.css');
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:banhang/css/style.css
+
+=======
+>>>>>>> lamphp:template/banhang/css/style.css
+>>>>>>> devVinh
 @import url('../css/bien.css');
 
 =======
@@ -71,13 +78,23 @@ header{
         border-radius: 5px;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> main
+=======
+<<<<<<< HEAD:banhang/css/style.css
+        overflow: hidden;
+    }
+ .header__main form .submit{
+        height: 39.2px;
+=======
+>>>>>>> devVinh
         display: flex;
         justify-content: space-between;
     }
  .header__main form .submit{
         height: 39.5px;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
         overflow: hidden;
@@ -87,6 +104,9 @@ header{
 >>>>>>> devVinh
 =======
 >>>>>>> main
+=======
+>>>>>>> lamphp:template/banhang/css/style.css
+>>>>>>> devVinh
         padding: 0 20.7px;
         background-color: var(--font--color);
         color: white;
@@ -161,8 +181,22 @@ header{
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> main
+=======
+<<<<<<< HEAD:banhang/css/style.css
+    .banner__hai .row .col-4{
+        padding-right:10px;
+        position: relative;
+        
+    }
+    .banner__hai .row .col-4 img {
+        position: relative;
+    }
+    .banner__hai .row .col-4::after{
+=======
+>>>>>>> devVinh
 
     .banner__hai .row .banner__item{
    width: 33%;
@@ -177,6 +211,7 @@ header{
     }
     .banner__hai .row .banner__item::after{
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     .banner__hai .row .col-4{
         padding-right:10px;
@@ -190,6 +225,9 @@ header{
 >>>>>>> devVinh
 =======
 >>>>>>> main
+=======
+>>>>>>> lamphp:template/banhang/css/style.css
+>>>>>>> devVinh
         position: absolute;
         top: 0;
         left: 0;
@@ -204,6 +242,7 @@ header{
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     .banner__hai .row .banner__item .banner__hai__text{
 =======
     .banner__hai .row .col-4 .banner__hai__text{
@@ -211,6 +250,13 @@ header{
 =======
     .banner__hai .row .banner__item .banner__hai__text{
 >>>>>>> main
+=======
+<<<<<<< HEAD:banhang/css/style.css
+    .banner__hai .row .col-4 .banner__hai__text{
+=======
+    .banner__hai .row .banner__item .banner__hai__text{
+>>>>>>> lamphp:template/banhang/css/style.css
+>>>>>>> devVinh
         position: absolute;
         color: white;
         top: 20px;
@@ -219,8 +265,20 @@ header{
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> main
+=======
+<<<<<<< HEAD:banhang/css/style.css
+    .banner__hai .row .col-4 .banner__hai__text.left{
+        left: 30px;
+    }
+    .banner__hai .row .col-4 .banner__hai__text.right{
+        right: 30px;
+    }
+    .banner__hai .row .col-4:last-child{
+=======
+>>>>>>> devVinh
     .banner__hai .row .banner__item .banner__hai__text.left{
         left: 30px;
     }
@@ -228,6 +286,7 @@ header{
         right: 30px;
     }
     .banner__hai .row .banner__item:last-child{
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     .banner__hai .row .col-4 .banner__hai__text.left{
@@ -240,6 +299,9 @@ header{
 >>>>>>> devVinh
 =======
 >>>>>>> main
+=======
+>>>>>>> lamphp:template/banhang/css/style.css
+>>>>>>> devVinh
         padding-right: 0;
     }
     .banner__bottom .img__title h3{
@@ -278,6 +340,7 @@ header{
     .shippy__item i{
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         font-size: 30px;
 =======
         font-size: 25px;
@@ -285,6 +348,13 @@ header{
 =======
         font-size: 30px;
 >>>>>>> main
+=======
+<<<<<<< HEAD:banhang/css/style.css
+        font-size: 25px;
+=======
+        font-size: 30px;
+>>>>>>> lamphp:template/banhang/css/style.css
+>>>>>>> devVinh
         color: var(--font--color);
         font-weight: bold;
     }
@@ -293,8 +363,15 @@ header{
         margin-bottom: 0;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> main
+=======
+<<<<<<< HEAD:banhang/css/style.css
+        color: var(--font--color);
+        font-weight: bold;
+=======
+>>>>>>> devVinh
         
         font-weight: bold;
         font-family: 'Ruda', sans-serif;
@@ -306,12 +383,16 @@ header{
         font-size: 12px;
         color: var(--font--color);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         color: var(--font--color);
         font-weight: bold;
 >>>>>>> devVinh
 =======
 >>>>>>> main
+=======
+>>>>>>> lamphp:template/banhang/css/style.css
+>>>>>>> devVinh
     }
     .blog__box{
         display: flex;
@@ -369,18 +450,28 @@ header{
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD:banhang/css/style.css
+>>>>>>> devVinh
     .footer__item h3{
         font-size: 16px;
         font-weight: bold;
     }
+<<<<<<< HEAD
 >>>>>>> devVinh
 =======
 >>>>>>> main
+=======
+=======
+>>>>>>> lamphp:template/banhang/css/style.css
+>>>>>>> devVinh
 .footer__bottom .row .col-12 h2{
 text-align: center;
 font-size: 24px;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 .footer__bottom .row h3{
@@ -390,6 +481,13 @@ font-size: 24px;
 =======
 .footer__bottom .row h3{
 >>>>>>> main
+=======
+<<<<<<< HEAD:banhang/css/style.css
+.footer__bottom .row .col-4 h3{
+=======
+.footer__bottom .row h3{
+>>>>>>> lamphp:template/banhang/css/style.css
+>>>>>>> devVinh
 font-size: 20px;
 }
 .footer__bottom{
@@ -402,6 +500,7 @@ footer{
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 .footer__bottom i{
 =======
 .footer__bottom .col-4 i{
@@ -409,6 +508,13 @@ footer{
 =======
 .footer__bottom i{
 >>>>>>> main
+=======
+<<<<<<< HEAD:banhang/css/style.css
+.footer__bottom .col-4 i{
+=======
+.footer__bottom i{
+>>>>>>> lamphp:template/banhang/css/style.css
+>>>>>>> devVinh
     width: 35px;
     height: 35px;
     border-radius: 50%;
@@ -454,20 +560,34 @@ footer{
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   
 =======
 >>>>>>> devVinh
 =======
   
 >>>>>>> main
+=======
+<<<<<<< HEAD:banhang/css/style.css
+=======
+  
+>>>>>>> lamphp:template/banhang/css/style.css
+>>>>>>> devVinh
     .contact__left input{
         height: 50px;
         outline: none;
         padding: 0 20px;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> main
+=======
+<<<<<<< HEAD:banhang/css/style.css
+        border-radius: 20px;
+        border: 1px solid black;
+=======
+>>>>>>> devVinh
         border-radius: 10px;
         border: 1px solid #2b20a16e;
     }
@@ -475,12 +595,16 @@ footer{
         border-radius: 10px;
         border: 1px solid #2b20a16e;  
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         border-radius: 20px;
         border: 1px solid black;
 >>>>>>> devVinh
 =======
 >>>>>>> main
+=======
+>>>>>>> lamphp:template/banhang/css/style.css
+>>>>>>> devVinh
     }
     .contact__left .group_flex .form__group>input{
         width: 96%;
@@ -518,18 +642,27 @@ footer{
    }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> main
+=======
+<<<<<<< HEAD:banhang/css/style.css
+=======
+>>>>>>> devVinh
    .contact h1,
    .contact h2{
     color: var(--font--color);
     font-family: 'Play', sans-serif;
    }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> devVinh
 =======
 >>>>>>> main
+=======
+>>>>>>> lamphp:template/banhang/css/style.css
+>>>>>>> devVinh
  @media (max-width:998px) {
   .header__main .container{
         width: 90%;
@@ -665,12 +798,17 @@ top: 30px;
     padding-right: 0;
    }
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:banhang/css/style.css
 <<<<<<< HEAD
 =======
 >>>>>>> lamphp:template/banhang/css/style.css
 =======
 >>>>>>> main
+=======
+<<<<<<< HEAD:banhang/css/style.css
+=======
+>>>>>>> devVinh
 }
 
 @media (max-width:767px){
@@ -679,6 +817,7 @@ top: 30px;
     font-family: 'Play', sans-serif;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:banhang/css/style.css
 =======
 >>>>>>> devVinh
@@ -686,6 +825,9 @@ top: 30px;
 >>>>>>> lamphp:template/banhang/css/style.css
 =======
 >>>>>>> main
+=======
+>>>>>>> lamphp:template/banhang/css/style.css
+>>>>>>> devVinh
 }
 @media (max-width:600px){
 
@@ -726,19 +868,29 @@ top: 30px;
    }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> main
+=======
+<<<<<<< HEAD:banhang/css/style.css
+  
+=======
+>>>>>>> devVinh
    .banner__hai .row .banner__item{
     width: 100%;
     margin-top: 10px;
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   
 >>>>>>> devVinh
 =======
 >>>>>>> main
+=======
+>>>>>>> lamphp:template/banhang/css/style.css
+>>>>>>> devVinh
 }   
 @media (min-width:999px){
     .header__mobile{

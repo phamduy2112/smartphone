@@ -1,5 +1,4 @@
 <main>
-
 <div class="carousel">
   <div class="container-md d-lg-flex">
     <div class="danhmuc">
@@ -86,15 +85,6 @@
   <div class="container-md">
     <div class="shippy__box ">
 
-      <!-- <div class="shippy__item">
-        <i class="bi bi-chat-right-dots"></i>
-        <div class="shippy_itemd">
-          <h3>TRUNG TÂM TRỢ GIÚP</h3>
-          <p>Hỗ trợ tận tình 24/7</p>
-        </div>
-
-      </div> -->
-
       <div class="shippy__item">
         <i class="fa fa-truck" aria-hidden="true"></i>
         <div class="shippy_itemd">
@@ -135,11 +125,11 @@
   </div>
 </div>
 
-<!-- sản phẩm product -->
 
+<!-- sản phẩm product -->
 <div class="container-md mt-2">
   <div class="product__banner_hot">
-      <h1 class="text-center text-white">Deal Ngập Sàn - Mua ngập sàn</h1>
+      <h1 class="text-center text-white" style="font-weight:bold;" >Deal sập sàn - Mua ngập tràn</h1>
      
       <div class="product__box">
         <div class="khung_product" id="khung_product">
@@ -150,9 +140,6 @@
       
        
       
-         
-
-
       </div>
         <div class="nut">
            <div class="next" id="next" onclick="luilai();">
@@ -175,19 +162,14 @@
   </div>
 </div>
 <!-- dien thoai -->
-
 <div class="product mt-3">
 <div class="container-md">
 <div class="product__title">
   <p>Những sản phẩm ưu đãi khác</p>
   <a href="">Xem thêm</a>
 </div>
-
 <div class="product__box mt-2 ">
-
-
    <!---->
-
     <div class="khung_product" id="khung_product_three">
 <?=sanpham_thuong($sanpham_thuong);?>
 
@@ -197,16 +179,12 @@
        <i class="fa-solid fa-angle-left"></i>
      
      </div>
-     <div class="pre" id="pre">
+     <div class="pre nut_two" id="pre">
          <i class="fa-solid fa-angle-right" onclick="nexttoi_three();"></i>
      </div> 
      </div>
 
-   
-     
-     
-
-
+  
     </div>
 
 
@@ -228,7 +206,7 @@
 </div> 
 <div class="col-lg-4 col-sm-12 banner__item">
 <img src="../content/img/banner/BR LAPTOP.jpg" alt="" width="100%">
-<div class="banner__hai__text left">
+<div class="banner__hai__text right">
   <h3>Smart Phone</h3>
   <p>Ưu đãi lớn hàng tháng!!!</p>
 </div>
@@ -264,73 +242,80 @@
 </div>
 </div>
 <div class="blog mt-3">
-<div class="container-md">
-<div class="product__title">
-  <p>Bài Viết</p>
-  <a href="">Xem thêm</a>
-</div>
-<div class="blog__box mt-2">
-  <div class="blog__item">
-    <div class="blog__header">
-      <img src="https://demo-uminex.myshopify.com/cdn/shop/articles/5_f75a4b19-2ba7-4f01-aa01-dd535a40219c_1920x.png?v=1677830028" alt="">
+  <div class="container-md">
+    <!-- TITLE -->
+    <div class="product__title">
+      <p>Bài Viết</p>
+      <a href="">Xem thêm</a>
     </div>
-    <div class="blog__body">
-      <p>TECHNOLOGY</p>
-      <h3>The Smartphone Has Just Launched in Sep 2022</h3>
-      <h4>Đăng bài bởi admin</h4>
-      <p>iPad Pro is the fastest device of its kind. It’s designed to take full advantage of next‑level....</p>
-    </div>
-    <div class="blog__footer">
-      <a href="">Read more</a>
-      <p>Mar 2023</p>
+  <!-- Content -->
+
+    <div class="blog__box mt-2">
+      <div class="blog__item">
+        <div class="blog__header">
+          <img src="https://demo-uminex.myshopify.com/cdn/shop/articles/5_f75a4b19-2ba7-4f01-aa01-dd535a40219c_1920x.png?v=1677830028" alt="">
+        </div>
+        <div class="blog__body">
+          <p>TECHNOLOGY</p>
+          <h3>The Smartphone Has Just Launched in Sep 2022</h3>
+          <h4>Đăng bài bởi<strong> Admin</strong></h4>
+          <p>iPad Pro is the fastest device of its kind. It’s designed to take full advantage of next‑level....</p>
+        </div>
+        <div class="blog__footer">
+          <a href="">Read more</a>
+          <p>Mar 2023</p>
+        </div>
+      </div>
+    
+      <div class="blog__item">
+        <div class="blog__header">
+          <img src="https://demo-uminex.myshopify.com/cdn/shop/articles/5_f75a4b19-2ba7-4f01-aa01-dd535a40219c_1920x.png?v=1677830028" alt="">
+        </div>
+        <div class="blog__body">
+          <p>TECHNOLOGY</p>
+          <h3>The Smartphone Has Just Launched in Sep 2022</h3>
+          <h4>Đăng bài bởi<strong> Admin</strong></h4>
+          <p>iPad Pro is the fastest device of its kind. It’s designed to take full advantage of next‑level....</p>
+        </div>
+        <div class="blog__footer">
+          <a href="">Read more</a>
+          <p>Mar 2023</p>
+        </div>
+      </div>
+      
+      <div class="blog__item">
+        <div class="blog__header">
+          <img src="https://demo-uminex.myshopify.com/cdn/shop/articles/5_f75a4b19-2ba7-4f01-aa01-dd535a40219c_1920x.png?v=1677830028" alt="">
+        </div>
+        <div class="blog__body">
+          <p>TECHNOLOGY</p>
+          <h3>The Smartphone Has Just Launched in Sep 2022</h3>
+          <h4>Đăng bài bởi<strong> Admin</strong></h4>
+          <p>iPad Pro is the fastest device of its kind. It’s designed to take full advantage of next‑level....</p>
+        </div>
+        <div class="blog__footer">
+          <a href="">Read more</a>
+          <p>Mar 2023</p>
+        </div>
+      </div>
+    
+      <div class="blog__item">
+        <div class="blog__header">
+          <img src="https://demo-uminex.myshopify.com/cdn/shop/articles/5_f75a4b19-2ba7-4f01-aa01-dd535a40219c_1920x.png?v=1677830028" alt="">
+        </div>
+        <div class="blog__body">
+          <p>TECHNOLOGY</p>
+          <h3>The Smartphone Has Just Launched in Sep 2022</h3>
+          <h4>Đăng bài bởi<strong> Admin</strong></h4>
+          <p>iPad Pro is the fastest device of its kind. It’s designed to take full advantage of next‑level....</p>
+        </div>
+        <div class="blog__footer">
+          <a href="">Read more</a>
+          <p>Mar 2023</p>
+        </div>
+      </div>
+      
     </div>
   </div>
-  <div class="blog__item">
-    <div class="blog__header">
-      <img src="https://demo-uminex.myshopify.com/cdn/shop/articles/5_f75a4b19-2ba7-4f01-aa01-dd535a40219c_1920x.png?v=1677830028" alt="">
-    </div>
-    <div class="blog__body">
-      <p>TECHNOLOGY</p>
-      <h3>The Smartphone Has Just Launched in Sep 2022</h3>
-      <h4>Đăng bài bởi admin</h4>
-      <p>iPad Pro is the fastest device of its kind. It’s designed to take full advantage of next‑level....</p>
-    </div>
-    <div class="blog__footer">
-      <a href="">Read more</a>
-      <p>Mar 2023</p>
-    </div>
-  </div>
-  <div class="blog__item">
-    <div class="blog__header">
-      <img src="https://demo-uminex.myshopify.com/cdn/shop/articles/5_f75a4b19-2ba7-4f01-aa01-dd535a40219c_1920x.png?v=1677830028" alt="">
-    </div>
-    <div class="blog__body">
-      <p>TECHNOLOGY</p>
-      <h3>The Smartphone Has Just Launched in Sep 2022</h3>
-      <h4>Đăng bài bởi admin</h4>
-      <p>iPad Pro is the fastest device of its kind. It’s designed to take full advantage of next‑level....</p>
-    </div>
-    <div class="blog__footer">
-      <a href="">Read more</a>
-      <p>Mar 2023</p>
-    </div>
-  </div>
-  <div class="blog__item">
-    <div class="blog__header">
-      <img src="https://demo-uminex.myshopify.com/cdn/shop/articles/5_f75a4b19-2ba7-4f01-aa01-dd535a40219c_1920x.png?v=1677830028" alt="">
-    </div>
-    <div class="blog__body">
-      <p>TECHNOLOGY</p>
-      <h3>The Smartphone Has Just Launched in Sep 2022</h3>
-      <h4>Đăng bài bởi admin</h4>
-      <p>iPad Pro is the fastest device of its kind. It’s designed to take full advantage of next‑level....</p>
-    </div>
-    <div class="blog__footer">
-      <a href="">Read more</a>
-      <p>Mar 2023</p>
-    </div>
-  </div>
-</div>
-</div>
 </div>
 </main>

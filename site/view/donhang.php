@@ -42,14 +42,26 @@
                     <tbody>
                         <?php foreach($donhang as $item):
                                 extract($item);
+                                $text_stt='';
+                                if($trangthai==0){
+                                $text_stt='<td style="color: red;">Đang chuẩn bị hàng</td>';
+                                }
+                                elseif($trangthai==1){
+                                $text_stt='<td style="color: yellow;">Đang giao hàng</td>';
+                                }
+                                else{
+                                $text_stt='<td style="color: green;">Đã giao hàng</td>';
+
+                                }
                                 
                             ?>
                         <tr>
-                            <td>1</td>
-                            <td><?=$tongtien?></td>
+                            <td><?=$id_dh?></td>
+                            <td><?=number_format($tongtien,0,',','.')?>đ</td>
                             <td><?=$ngaydathang?></td>
-                            <td style="color: red;"><?=$trangthai?></td>
-                           
+
+                            
+                           <?=$text_stt?>
                             <td><a href="?mod=user&act=donhangct&idDonHang=<?=$id_dh?>">Xem chi tiết</a></td>
                         </tr>
 
