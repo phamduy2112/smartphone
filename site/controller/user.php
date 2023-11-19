@@ -38,19 +38,26 @@ if (isset($act)) {
       && isset($matkhauhai)&&($matkhauhai!='') 
       && isset($matkhaucap2)&&($matkhaucap2!='')
       ) {
+        $kt_TK=kt_TaiKhoanTonTai($taikhoan);
+        $tb='';
+        if($kt_TK){
+          $tb.= 'tên tài khoản đã tồn tại';
+        }else{
           if($matkhaumot===$matkhauhai){
             $matkhau=$matkhaumot;
            $_SESSION['taikhoan'] = $taikhoan;
            $result=themTaiKhoan($taikhoan,$email,$matkhau,$matkhaucap2);
-           if($result){
+        
             
              header('Location: ?mod=page&act=home');
-           } 
+         
           
           }else{
-            $tb.= "that bai";
+            
           }
           echo $tb;
+        }
+         
           // echo $taikhoan . "-" . $email .''.$matkhaumot.''.$matkhauhai.''.$matkhaucap2;
         } else {
           echo "lỗi rồi";

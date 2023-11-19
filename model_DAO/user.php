@@ -27,4 +27,8 @@ function lay_iduser($name){
   $sql='SELECT id_kh FROM khachhang where user_name=?';
   return pdo_query_one($sql,$name);
 }
+function kt_TaiKhoanTonTai($taikhoan){
+  $sql= "SELECT * FROM khachhang where user_name=?";
+  return pdo_query_one($sql,$taikhoan,);
+}
 ?>
