@@ -1,0 +1,158 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.prochitiet,
+.productct__flex{
+    background-color: white;
+    padding: 40px 10px;
+}
+.productct__right{
+    padding: 0 20px;
+}
+.productct__flex .productct__right .productct__text h2{
+    font-size: 28px;
+    
+}
+.productct__flex .productct__right .productct__text p{
+    font-size: 18px;
+    
+}
+.productct__flex .productct__right .productct__text p span{
+    font-weight: bold;
+    
+}
+.pro_img{
+    display: flex;
+    justify-content: space-between;
+}
+.pro_img .img_small{
+    width: 19%;
+    cursor: pointer;
+}
+.productct__flex .productct__right .productct__text .price .price1{
+    font-size: 23px;
+    color: #fb6f92;
+}
+.productct__text .number__count{
+    display: flex;
+    align-items: center;
+ 
+ 
+}
+.productct__text .number__count .number__count_pr{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    border: 1px solid black;
+    padding: 10px 0;
+    border-radius: 20px;cursor: pointer;
+    margin-right: 20px;
+}
+.number__count_pr .solid{
+padding: 0 15px;
+}
+.productct__text .mua,
+.productct__text .number__count .addtoCart{
+    border-radius: 20px;
+}
+.productct_thanhtoan{
+    background-color: aliceblue;
+    text-align: center;
+    padding: 10px 0;
+}
+/* productchitiet__bottom */
+.productchitiet__bottom .prochitiet .nav-tabs{
+    --bs-nav-tabs-border-width:none;
+}
+.prochitiet{
+    padding: 40px 50px;
+}
+.prochitiet .nav{
+
+    width: 100%;
+    align-items: center;
+   justify-content: center; 
+   position: relative;
+   
+}
+.prochitiet .nav::after{
+content:"";
+position: absolute;
+bottom: 0;
+left: 0;
+width: 100%;
+height: 3px;
+background-color: black;
+display: inline-block;
+
+
+}
+.prochitiet .nav-item{
+    width: 33.33%; 
+   
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    position: relative;
+}
+.prochitiet .nav-item .nav-link1{
+    width: 100%;
+    background: transparent;
+    border: none;
+    padding: 4px 0;
+    font-size: 20px;
+}
+.prochitiet .nav-link1.active{
+    position: relative;
+}
+
+.prochitiet .nav-link1.active::before{
+    content:"";
+position: absolute;
+bottom: 0;
+left: 0;
+width: 100%;
+height: 3px;
+background-color: #fb6f92;
+display: inline-block;
+z-index: 111;
+}
+.prochitiet .nav-link1.active{
+    color: #fb6f92;
+}
+/* bình luận */
+.prochitiet .image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1px solid black;
+    margin-right: 1%;
+}
+.prochitiet .image img{
+    width: 100%;
+    background-size: cover;
+}
+.prochitiet form .binhluan{
+width: 88%;
+padding: 0 10px;
+outline: none;
+}
+.prochitiet form .gui{
+    width: 10%;
+}
+.prochitiet .binhluan{
+    display: flex;
+    justify-content: space-between;
+}
+.fa-gear{
+    cursor: pointer;
+}
+@media (max-width:998px){
+    .products__left{
+        display: none;
+    }
+}
