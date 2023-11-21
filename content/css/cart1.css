@@ -34,18 +34,13 @@
 .cart__header .icon{
     width: 20px;
 
-=======
+}
 .cart__header .icon{
     width: 20px;
->>>>>>> devVinh:content/css/cart1.css
 }
 .cart__header .sp{
     width: 250px;
 }
-<<<<<<< HEAD:content/css/cart.css
-
-=======
->>>>>>> devVinh:content/css/cart1.css
 .cart__body{
     display: flex;
     flex-direction: row;
@@ -53,17 +48,6 @@
     align-items: center;
     background: white;
     padding: 0 20px;
-<<<<<<< HEAD:content/css/cart.css
-    }
-.cart__right h3{
-    color: var(--font--color);
-    font-weight: bold;
-}
-.cart__right p{
-   
-
-=======
->>>>>>> devVinh:content/css/cart1.css
 }
 .cart__body:nth-child(odd){
     background: #2b20a113;
@@ -132,8 +116,7 @@
 .cart__left{
     width: 70%;
 
-=======
->>>>>>> devVinh:content/css/cart1.css
+
     background-color: white;
     color: var(--font--color);
 }
@@ -141,10 +124,9 @@
     background-color: var(--font--color);
     color: white;
 }
-<<<<<<< HEAD:content/css/cart.css
 
-=======
->>>>>>> devVinh:content/css/cart1.css
+
+
 .title__sp .price__sp .gia_def{
     font-weight: 400;
     color: gray;
@@ -157,7 +139,7 @@
     color: red;
     font-size: 15px;
     text-decoration: none;
-<<<<<<< HEAD:content/css/cart.css
+
 }
 .image__product img{
     width: 100%;
@@ -224,8 +206,7 @@ width: 80%;
 tr{
     border-bottom: 1px solid black;
 
-=======
->>>>>>> devVinh:content/css/cart1.css
+
 }
 .cart__body .checkbox{
 
@@ -360,10 +341,7 @@ background-color: white;
     padding: 20px;
  
 }
-<<<<<<< HEAD:content/css/cart.css
 
-=======
->>>>>>> devVinh:content/css/cart1.css
 .thanhtoan_left h3,
 .thanhtoan_right h3{
    
@@ -374,7 +352,8 @@ background-color: white;
 .thanhtoan_left p{
     color: var(--font--color);
     font-weight: 600;
-<<<<<<< HEAD:content/css/cart.css
+
+}
     .table{
     border-collapse: collapse;
     border: 1px solid black;
@@ -416,23 +395,18 @@ background-color: white;
     color: var(--font--color);
     font-weight: bold;
 
-=======
->>>>>>> devVinh:content/css/cart1.css
+
 }
 .thanhtoan_right div p{
     display: flex;
     justify-content: space-between;
-<<<<<<< HEAD:content/css/cart.css
+
 
 
 
     font-weight: bold;
 
-   font-weight: bold
 
-=======
-   font-weight: bold
->>>>>>> devVinh:content/css/cart1.css
 }
 .thanhtoan_right div p span{
     font-weight: 500;
@@ -446,7 +420,7 @@ background-color: white;
 textarea{
     width: 100%;
     outline: none;
-<<<<<<< HEAD:content/css/cart.css
+
 
     padding: 10px 20px;
 
@@ -455,9 +429,8 @@ textarea{
 
     padding: 10px 20px;
 
-=======
+
     padding: 10px 20px;
->>>>>>> devVinh:content/css/cart1.css
 }
 .group__form1 span{
     color: var(--font--color);
@@ -474,21 +447,16 @@ textarea{
     width: 100%;
     font-size: 14px;
     margin-left: 4px;
-<<<<<<< HEAD:content/css/cart.css
 
-=======
->>>>>>> devVinh:content/css/cart1.css
     color: gray;
     font-weight: 400;
     display: block;
 }
 
-<<<<<<< HEAD:content/css/cart.css
-}
 
 
-=======
->>>>>>> devVinh:content/css/cart1.css
+
+
 .form-check p.check span{
 color: var(--font--color);
 }
@@ -524,10 +492,6 @@ color: var(--font--color);
     .thanhtoan_right{
         margin-top: 10px;
     }
-<<<<<<< HEAD:content/css/cart.css
+
 }
 
-
-=======
-}   
->>>>>>> devVinh:content/css/cart1.css
