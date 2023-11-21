@@ -205,7 +205,7 @@ function get_price($gia, $khuyenmai){
               <div class="binhluan">
                 <div class="bl d-flex w-75">
                   <div class="image">
-                  <img src="../img/service/hinhtoi5.jpg" alt="">
+                  <img src="../content/img/service/hinhtoi5.jpg" alt="">
 
                 </div>
                 <div class="binhluan__d">
@@ -221,7 +221,7 @@ function get_price($gia, $khuyenmai){
                 <div class="chinhsua ">
                    <i class="fa-solid fa-gear" id="fa-gear"></i>
                    <ul class="activeE" id="chinh">
-                    <li><a href="">Chỉnh sửa</a></li>
+                    <li><a href="?mod=page&act=sanphamct&id=<?$id_bl['id_bl']?>">Chỉnh sửa</a></li>
                     <li><a href="">Xoá</a></li>
                    </ul>
                 </div>
@@ -231,7 +231,7 @@ function get_price($gia, $khuyenmai){
               <?php endforeach;?>
               <div class="d-flex mt-5">
                 <div class="image">
-                  <img src="../img/service/hinhtoi5.jpg" alt="">
+                  <img src="../content/img/service/hinhtoi5.jpg" alt="">
 
                 </div>
           <form action="" class="BinhLuan" method="post">
