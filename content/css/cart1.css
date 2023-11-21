@@ -15,7 +15,7 @@
     padding: 10px 25px;
     background-color: var(--font--color);
 }
-<<<<<<< HEAD:content/css/cart.css
+
 
 .cart__header .icon{
     width: 20px;
@@ -62,13 +62,12 @@
     display: flex;
     justify-content: space-between;
 }
-<<<<<<< HEAD:content/css/cart.css
+
 
 .cart__right span {
     font-weight: 500;
 }
-=======
->>>>>>> devVinh:content/css/cart1.css
+
 .cart__buttons a{
     border: 1px solid var(--font--color);
     padding: 5px 15px;
@@ -76,7 +75,7 @@
     font-weight: bold;
     }
 .cart__buttons a:first-child{
-<<<<<<< HEAD:content/css/cart.css
+
 }
 .cart__right div{
     padding: 0 20px;

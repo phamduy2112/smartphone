@@ -125,91 +125,7 @@ ul{
     font-size: 15px;
 }
 
-<<<<<<< HEAD
-/* BANNER */
-.banner{
-    margin-left: 1%;
-    width: 78%;
-}
-.banner .carousel-caption{
-    font-family: var(--Play);
-    top: 0;
-}
-.banner img{
-    width: 100%;
-}
-.banner__bottom{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-.banner__bottom .img__banner{
-    width:33.33%;
-    margin: 0px 3px;
-    margin-top: 5px;
-    position: relative;
-}
-.product__banner_hot >h1{
-    font-family: var(--Play);
-}
-.banner__bottom .img__banner img{
-    width: 100%;
-    height: 100%;
-}
-.banner__bottom .img__title{
-    position: absolute;
-    padding: 20px 20px;
-    width: 70%;
-    transform: scale(1);
-    transition:all .5s;
-}
-.banner__bottom .img__title h3{
-    font-size: 20px;
-}
-.banner__bottom .img__title p{
-    font-size: 16px;
-}
-.banner__bottom .img__banner {
-    width: 100%;
-}
-/* TITLE SHIPPY */
-.shippy{
-    margin-top: 5px;
-}
-.shippy__box{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-items: center;
-}
-.shippy__item{
-    width: 24%;
-    display: flex;
-    gap: 5px;
-    margin: 5px 0;
-    background-color: white;
-    padding: 15px 25px;
-    border-radius: 5px;
-}
-.shippy__item i{
-    font-size: 30px;
-    color: var(--font--color);
-    font-weight: bold;
-    margin-right: 10px;
-}
-.shippy_itemd h3{
-    font-size: 15px;
-    margin-bottom: 0;
-    font-weight: bold;
-    font-family: var(--Ruda);
-}
-.shippy__item p{
-    font-family: var(--Ruda);
-    font-size: 12px;
-    color: var(--font--color);
-}
-=======
-    }
+    
     main{
         position: relative;
         top: 20px;
@@ -258,7 +174,6 @@ ul{
     .product__banner_hot >h1{
         font-family: 'Play', sans-serif;
     }
->>>>>>> devTri
 
 /* BANNER DANH MỤC */
 .banner__hai .row .banner__item{

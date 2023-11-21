@@ -5,12 +5,9 @@ ob_start();
 
 
    // include_once '../model_DAO/category.php';
-<<<<<<< HEAD
-=======
    include_once '../model_DAO/user.php';
    include_once '../model_DAO/product.php';
 //    include_once '../model_DAO/user.php'; 
->>>>>>> devVinh
    include_once '../model_DAO/product.php'; 
    include_once '../model_DAO/user.php';
    include_once '../model_DAO/comment.php';
@@ -64,19 +61,12 @@ ob_start();
                }
                
           }
-<<<<<<< HEAD
-            $sanpham_sau=soluong_SanPham(10,6);
-
-           $load_binhluan=load_comment($id);
-           
-=======
           $sanpham_sau=soluong_SanPham(10,6);
          //  $get_hinh=get_hinh($id);
             $sanpham_sau=soluong_SanPham(10,16);
             $load_binhluan=load_comment($id);
            
            
->>>>>>> devVinh
             include_once './view/sanphamct.php';
             include_once './view/footer.php';
             break;
