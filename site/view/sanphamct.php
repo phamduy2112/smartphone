@@ -201,6 +201,7 @@ function get_price($gia, $khuyenmai){
             <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">..</div>
             <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
               <h4>Bình luận</h4>
+              <?php foreach($load_binhluan as $id_bl):?>
               <div class="binhluan">
                 <div class="bl d-flex w-75">
                   <div class="image">
@@ -208,9 +209,12 @@ function get_price($gia, $khuyenmai){
 
                 </div>
                 <div class="binhluan__d">
-                  <div class="name">Duy</div>
-                  <div class="ngaythang">21/12/2003</div>
-                  <div class="title">Hàng tốt lắm</div>
+                  <div class="name"><?=$id_bl['id_kh']?></div>
+                  <div class="ngaythang"><?=$id_bl['ngaydang']?></div>
+                  <div class="title"><?=$id_bl['noidung']?></div>
+                  <div>
+                  <span>Phản hồi</span>
+                </div>
                 </div>
                 
                 </div>
@@ -222,15 +226,17 @@ function get_price($gia, $khuyenmai){
                    </ul>
                 </div>
                
+               
               </div>
+              <?php endforeach;?>
               <div class="d-flex mt-5">
                 <div class="image">
                   <img src="../img/service/hinhtoi5.jpg" alt="">
 
                 </div>
-          <form action="" class="BinhLuan">
-             <input type="text" placeholder="Bình luận" class="binhluan1">
-                <input type="submit" value="gửi" class="gui">
+          <form action="" class="BinhLuan" method="post">
+             <input type="text" placeholder="Bình luận" class="binhluan1" name="noidung">
+                <input type="submit" value="gửi" class="gui" name="gui">
           </form>
 
                 </div>
