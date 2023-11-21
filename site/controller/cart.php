@@ -76,8 +76,14 @@ if (isset($act)) {
                 //     them_donhangCT($id['id_dh'],$MaSanPham,$SL);
                
                 // }
+
+                if($check==="chuyenkhoan"){
+                 $_SESSION['check']='Chuyển khoản ngân hàng';
+                }else{
+                 $_SESSION['check']='Trả tiền mặt khi nhận hàng';
+                }
                 header('location:?mod=cart&act=trangsauthanhtoan');
-                unset($_SESSION['cart']);
+                // unset($_SESSION['cart']);
                 
               
           

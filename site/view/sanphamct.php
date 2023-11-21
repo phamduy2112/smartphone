@@ -125,7 +125,7 @@ function get_price($gia, $khuyenmai){
                             <a href="?mod=cart&act=giohang&id=<?=$id_sp?>" class="addtoCart w-100">THÊM VÀO GIỎ HÀNG</a>
                         </div>
                         <!-- BUY NOW -->
-                        <a href="" class="btn w-100 mt-2 mua">MUA NGAY</a>
+                        <a href="?mod=cart&act=trangthanhtoan" class="btn w-100 mt-2 mua">MUA NGAY</a>
 
                         <div class="productct__bottom">
                             <!-- ADD LIKE -->

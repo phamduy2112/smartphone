@@ -23,7 +23,12 @@ ob_start();
             include_once './view/trangchu.php';
             include_once './view/footer.php';
             break;
-
+         case 'cacloaisp':
+            include_once './view/header.php'; 
+           $sp=laytatca_SP();
+            include_once './view/cacloaisp.php';
+            include_once './view/footer.php';
+            //
          case 'yeuthich':
          
             include_once './view/header.php';
@@ -31,7 +36,7 @@ ob_start();
             if(isset($_SESSION['taikhoan'])){
                $id_user=lay_iduser($_SESSION['taikhoan']);
 
-             
+         
               $sp=layRaSanPhamYT($id_user['id_kh']);
 
                include_once './view/yeuthich.php';
@@ -79,30 +84,50 @@ ob_start();
             include_once './view/header.php'; 
           if(isset($id)){
                $sl_mot=laymot_sp($id);
+              
                if(isset($gui)){
-                  if($sl_mot){
+                 if(isset($_SESSION['taikhoan'])){
+                         if($sl_mot){
+            
                      $id_kh = lay_iduser($_SESSION['taikhoan']);
                      extract($id_kh);
                      $binhluan=comment($id_kh,$id,$noidung);
                      $ten_kh = lay_ten_kh($id_kh);
-                     
+                  
                   }
+                 }else{
+                  // echo '<p class="text-center">Bạn muốn Bình luận? </p> ';
+                  include_once './view/.php';  
+                  
+               }
+           
                  
                }
-
                
           }
           $sanpham_sau=soluong_SanPham(10,6);
          //  $get_hinh=get_hinh($id);
-            $sanpham_sau=soluong_SanPham(10,6);
+            $sanpham_sau=soluong_SanPham(10,16);
             $load_binhluan=load_comment($id);
            
            
             include_once './view/sanphamct.php';
             include_once './view/footer.php';
             break;
+          
+         case 'xoabl':
+            $sl_mot=laymot_sp($id);
+            print_r($sl_mot);
+            if(isset($id)){
+              
+               xoaBinhLuan($id); 
+               header('Location:?mod=page&act=sanphamchitiet&id='.$sl_mot['id_sp'].'');
+            }
          
+         
+            break;
          }
+
        
    }else{
 

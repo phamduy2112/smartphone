@@ -19,18 +19,23 @@
             </div>
             <hr>
             <div class="d-flex justify-content-between">
-              <h4>ASDASDASDASDASD</h4> 
+              <h4>Sản phẩm 1</h4> 
+              <h4 class="price">200000000</h4> 
+            </div>
+            <hr>
+            <div class="d-flex justify-content-between">
+              <h4>Sản phẩm 1</h4> 
               <h4 class="price">200000000</h4> 
             </div>
             <hr>
             <div class="d-flex justify-content-between">
               <h4>Phương thước thanh toán</h4> 
-              <h4 class="thanhtoan">Trả tiền mặt sau khi nhận hàng</h4> 
+              <h4 class="thanhtoan"><?=$_SESSION['check']?></h4> 
             </div>
             <hr>
             <div class="d-flex justify-content-between">
               <h4>Tổng cộng</h4> 
-              <h4 class="price">20000000</h4> 
+              <h4 class="price"><?=$_SESSION['tongtt']?></h4> 
             </div>
             <hr>
           </div>
@@ -43,8 +48,8 @@
               <li>Mã đơn hàng :185</li>
               <li>Ngày tháng:</li>
               <li>Địa chỉ:</li>
-              <li>Tổng cộng:</li>
-              <li>Phương thước thanh toán: trả tiền mặt sau khi nhận hàng</li>
+              <li>Tổng cộng:<?=$_SESSION['tongtt']?></li>
+              <li>Phương thước thanh toán:<?=$_SESSION['check']?></li>
             </ul>
           </div>
 

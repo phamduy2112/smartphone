@@ -20,6 +20,9 @@
              
                    
               <?php 
+              if(isset($sp)){
+
+              
                     foreach($sp as $item){
                 
                         $sale="";
@@ -86,6 +89,7 @@
                         </a>
                       </div>';
                       }
+                    }
                    ?>
                 
                    

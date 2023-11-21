@@ -69,14 +69,14 @@ extract($laythongtin);
               <hr>
               <form action="" method="post">
                 <div class="group__form1 d-flex">
-                  <input type="radio" id="check" name="check" checked>
+                  <input type="radio" id="check" name="check" checked value="chuyenkhoan">
                   <span>Chuyển khoản ngân hàng</span>
                 </div>
                 <div class="maQR">
                   <img src="../content/img/banner/QR.png" alt="" width="200px">
                 </div>
                 <div class="group__form1 d-flex">
-                  <input type="radio" id="check" name="check">
+                  <input type="radio" id="check" name="check" value="tratien">
                   <span>Trả tiền mặt khi nhận hàng</span>
                 </div>
                 <hr>

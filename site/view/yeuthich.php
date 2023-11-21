@@ -15,6 +15,9 @@
              
                    
               <?php 
+              if(empty($sp)){
+                echo ' <h3 class="text-center">Bạn chưa thêm sản phẩm vào trang yêu thích</h3> ';
+              }else{
                     foreach($sp as $item){
                 
                         $sale="";
@@ -81,6 +84,7 @@
                         </a>
                       </div>';
                       }
+                    }
                    ?>
                 
                    
