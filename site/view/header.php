@@ -58,6 +58,8 @@ if(isset($_SESSION['taikhoan'])){
 
   <link rel="stylesheet" href="../content/css/product.css">
   <link rel="stylesheet" href="../content/css/dangnhap1.css">
+  <link rel="stylesheet" href="../content/css/cart1.css">
+
   <link rel="stylesheet" href="../content/css/style.css">
 <style>
   .breadcrumb{
