@@ -51,6 +51,7 @@
     font-family: var(--Ruda);
     font-size: 20px;
     color: gray;
+    /* background-color: red; */
 }
 .productct__flex .productct__right .productct__text p span{
     font-weight: 900;
@@ -81,7 +82,6 @@ padding: 10px 5px;
 .productct__flex .productct__right .productct__text .price{
     font-family: var(--Ruda);
 }
-
 /* BUTTON SL - ADD CART - BUY NOW */
 .productct__text .number__count{
     display: flex;
@@ -149,24 +149,99 @@ padding: 10px 5px;
 .icon__productct a:hover i{
     color: red;
 }
+.productct__tt{
+    margin: 10px 0px;
+}
+.productct__tt p{
+    margin: 3px 0px;
+}
+/* INFOR SHIP COMMET */
+.prochitiet{
+    padding: 40px 50px;
+}
+.prochitiet .nav{
+    width: 100%;
+    align-items: center;
+    justify-content: center; 
+    position: relative;
+}
+.prochitiet .nav::after{
+    content:"";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    display: inline-block;
+}
+/* productchitiet__bottom */
+.productchitiet__bottom .prochitiet .nav-tabs{
+    --bs-nav-tabs-border-width:none;
+}
+.prochitiet .nav-item{
+    width: 33.33%; 
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    position: relative;
+}
+.nav-link1{
+    font-family: var(--Play);
+    font-weight: bold;
+    font-size: 30px;
+    width: 100%;
+    background: transparent;
+    border: none;
+    padding: 4px 0;
+}
+.prochitiet .nav-link1.active{
+    position: relative;
+    color:var(--font--color);
+}
+.prochitiet .nav-link1.active::before{
+    content:"";
+    position: absolute;
+    bottom: 0;
+    left: 0px;
+    width: 100%;
+    height: 2px;
+    background-color: var(--CD);
+    display: inline-block;
+}
+/* SHOW INFOR */
+.tab-infor {
+    padding-top: 20px;
+}
+.tab-infor div{
+    font-family: var(--Ruda);
+    font-size: 20px;
+    padding: 8px 3px;
 
+}
+.tag{
+    color: var(--CD);
+    font-weight: 900;
+    font-size: 22px;
+}
 
+/* SHOW SHIP */
+/* SHOW CMT */
+.tab-cmt {
+    /* padding: 5px 0px; */
+}
+.tab-cmt h4{
+    font-family: var(--Play);
+}
+.binhluan{
+    display: flex;
+    justify-content: space-between;   
+    margin-top: 10px;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.chinhsua{
+    position: relative;
+   margin-bottom: 10px;
+}
 .binhluan .BinhLuan{
     display: flex;
     justify-content: space-between;
@@ -176,18 +251,13 @@ padding: 10px 5px;
 }
 .binhluan ul{
     border: 1px solid black;
- width: 100px;
- background-color: white;
-
+    width: 100px;
+    background-color: white;
     position: absolute;
     top: 25px;
     right: 0;
 }
-.chinhsua{
-    position: relative;
-   margin-bottom: 10px;
- 
-}
+
 
 .binhluan li{
     width: 100%;
@@ -206,67 +276,8 @@ padding: 10px 5px;
     text-align: center;
     padding: 10px 0;
 }
-/* productchitiet__bottom */
-.productchitiet__bottom .prochitiet .nav-tabs{
-    --bs-nav-tabs-border-width:none;
-}
-.prochitiet{
-    padding: 40px 50px;
-}
-.prochitiet .nav{
-
-    width: 100%;
-    align-items: center;
-   justify-content: center; 
-   position: relative;
-   
-}
-.prochitiet .nav::after{
-content:"";
-position: absolute;
-bottom: 0;
-left: 0;
-width: 100%;
-height: 3px;
-background-color: black;
-display: inline-block;
 
 
-}
-.prochitiet .nav-item{
-    width: 33.33%; 
-   
-    display: flex;
-    align-items: center;
-    justify-content: center; 
-    position: relative;
-}
-.prochitiet .nav-item .nav-link1{
-    width: 100%;
-    background: transparent;
-    border: none;
-    padding: 4px 0;
-    font-size: 23px;
-    font-weight: bold;
-}
-.prochitiet .nav-link1.active{
-    position: relative;
-}
-
-.prochitiet .nav-link1.active::before{
-    content:"";
-position: absolute;
-bottom: 0;
-left: 0;
-width: 100%;
-height: 3px;
-background-color: blue;
-display: inline-block;
-z-index: 111;
-}
-.prochitiet .nav-link1.active{
-    color:var(--font--color);
-}
 /* bình luận */
 .prochitiet .image {
     width: 50px;
@@ -300,10 +311,7 @@ background-color: var(--font--color);
 color: white;
 border: 1px solid var(--font--color);
 }
-.prochitiet .binhluan{
-    display: flex;
-    justify-content: space-between;
-}
+
 .fa-gear{
     cursor: pointer;
 }
