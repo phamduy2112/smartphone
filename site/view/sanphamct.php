@@ -1,6 +1,5 @@
 <?php 
 extract($sl_mot);
-
 ?>
 <main>
     <!-- product left -->
