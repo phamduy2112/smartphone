@@ -102,12 +102,13 @@ if(isset($_SESSION['taikhoan'])){
 
 
               </div>
-              <div class="icon_item">
+                <a href="?mod=page&act=yeuthich">
+ <div class="icon_item">
                 <i class="fa fa-heart" aria-hidden="true"></i>
               </div>
-              <a href="">
-
               </a>
+             
+            
               <a href="?mod=cart&act=list" class="icon_item">
 
                 <i class="fa fa-cart-shopping"></i>

@@ -5,6 +5,7 @@ ob_start();
 
 
    // include_once '../model_DAO/category.php';
+   include_once '../model_DAO/user.php';
    include_once '../model_DAO/product.php';
 //    include_once '../model_DAO/user.php'; 
 //    include_once '../model_DAO/giohang.php'; 
@@ -19,6 +20,45 @@ ob_start();
             include_once './view/trangchu.php';
             include_once './view/footer.php';
             break;
+
+         case 'yeuthich':
+            
+            include_once './view/header.php';
+        
+            if(isset($_SESSION['taikhoan'])){
+               $id_user=lay_iduser($_SESSION['taikhoan']);
+
+             
+              $sp=layRaSanPhamYT($id_user['id_kh']);
+
+               include_once './view/yeuthich.php';
+            }else{
+               include_once './view/trangchuadangnhap.php';            }
+            
+            include_once './view/footer.php';
+            break;
+         case 'themYeuThich':
+            if(isset($_SESSION['taikhoan'])){
+               if(isset($id)){
+                    $id_user=lay_iduser($_SESSION['taikhoan']);
+               themVaoYeuThich($id_user['id_kh'],$id); 
+               header('location:?mod=page&act=yeuthich'); 
+               }
+           
+             
+            
+
+              
+            }else{
+               include_once './view/trangchuadangnhap.php';            }
+            
+            include_once './view/footer.php';
+            break;
+         case 'xoayeuthich':
+            xoaSanPhamYeuThich($id);
+            header('location:?mod=page&act=yeuthich');
+            break;
+         
          case 'timkiemsp':
             
             include_once './view/header.php'; 
