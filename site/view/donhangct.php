@@ -52,7 +52,9 @@
                         </td>
                         <td><?=$item['soluong']?></td>
                         <td><?=$item['gia']*$item['soluong']?></td>
-                        <td>03/10/2023</td>
+                        <td><?=
+                        $item['ngaydathang']
+                        ?></td>
                 
                     </tr>
                     <?php endforeach;?>
