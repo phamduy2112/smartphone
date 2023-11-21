@@ -86,7 +86,7 @@ gap: 1px;
 }
 .input_item{
    
-    width: 545px;
+    width: 700px;
     height: 53px;
     border-radius: 5px;
     overflow: hidden;
@@ -179,12 +179,13 @@ input[type="file"]::file-selector-button {
     border-radius: 4px;
     border-style: none;
     padding: 0 15px;
-    padding-right: 300px;
+    padding-right: 10px;
     margin: 0px 5px;
     height: 100%;
     font-size: 13px;
     cursor: pointer;
     background-color: white;
+  
     
     
   }
@@ -203,13 +204,16 @@ input[type="file"]::file-selector-button {
     display: flex;
     justify-content: center;
     align-items: center;
+  
   }
 
 
 .add_item:nth-child(3)>.input_item{
-    width: 1115px;
+    background: red;
+   width: 89rem;
     height: 90%;
 }
+
 .add_item:nth-child(3)>.input_item>textarea{
     padding: 20px 20px;
     width: 100%;

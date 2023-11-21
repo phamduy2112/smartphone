@@ -5,6 +5,7 @@
 @import url('../css/add_blog.css');
 @import url('../css/content.css');
 @import url('../css/qlbl.css');
+@import url('../css/qlbl_ct.css');
 
 *{
     padding: 0;
@@ -169,6 +170,8 @@ position: absolute;
 }
 /* body */
 .admin_body{
+
+
     width: 80%;
     position: absolute;
   
