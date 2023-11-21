@@ -103,18 +103,12 @@ padding: 0 15px;
     border: 2px solid var(--font--color);
     transition: all .5s;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
-=======
+
 .productct__text .number__count .addtoCart:hover{
     background: transparent;
     color: var(--font--color);
     border: 2px solid var(--font--color);
 }
->>>>>>> devVinh
 .binhluan .BinhLuan{
     display: flex;
     justify-content: space-between;
@@ -148,18 +142,12 @@ padding: 0 15px;
 }
 .binhluan li:last-child{
     border-bottom: none;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+}
 .productct__text .number__count .addtoCart:hover{
     background: transparent;
     color: var(--font--color);
     border: 2px solid var(--font--color);
->>>>>>> devVinh
-=======
->>>>>>> main
-=======
->>>>>>> devVinh
+
 }
 .productct__text .mua{
     color: var(--font--color);
