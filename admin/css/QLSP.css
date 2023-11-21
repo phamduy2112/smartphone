@@ -10,9 +10,9 @@
 .header_binhluan_body{
     width: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
     margin: 10px;
+    align-items: center;
+    justify-content: center;
 }
 .header_binhluan_body:nth-child(1){
     border-radius: 8px;
@@ -30,21 +30,31 @@
     
     height: 90%;
 }
+.header_timkiem_body1{
+    background-color: white;
+}
+
 .header_khung_body{
-    width: 89.6% ;
+    width: 30% ;
     height: 60px;
     box-shadow: 0 0 10px hsl(0, 0%, 0%,20%);
     border-radius: 8px;
+    margin-left: 20px;
 }
 .header_timkiem_body{
-    width: 7% ;
-    height: 60px;
+    width: 6% ;
+    height: 55px;
     background-color: rgb(0, 0, 0);
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 25px;
    
+}
+.header_khung_body1{
+    width: 400px;
+   
+    
 }
 .header_timkiem_body>i{
     color: white;
@@ -57,12 +67,13 @@
     padding: 0 20px;
 }
 .trang_body{
-    width: 20%;
+    width: 22%;
     height: 60%;
     display: flex;
     font-size: 17px;
     align-items: center;
     gap: 15px ;
+    justify-content: center;
     
 }
 .trang_body>p{
@@ -78,17 +89,95 @@
     align-items: center;
    
 }
+.dm_sp_body1{
+    display: flex;
+    gap: 130px;
+    line-height: 500%;
+    
+    
+}
 .dm_sp_body{
     display: flex;
-    gap: 270px;
-    line-height: 500%;
+    gap: 10%;
+    font-size: 14px;
+    text-align: left;
+    justify-content: center;
+
+  
+    
 }
 .khung1{
     width: 100% ;
     height: 7%;
     box-shadow: 0 0 10px hsl(0, 0%, 0%,20%);
     border-radius: 8px;
-    
     padding: 0 20px;
+   
+}
+.khung_sp{ 
+    margin-left: 15px;
+}
+.khung2{
+    width: 50% ;
+    height: 70%;
+    box-shadow: 0 0 10px hsl(0, 0%, 0%,20%);
+    border-radius: 8px;
+    padding: 0 20px;
+    margin-right: 350px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+   
+}
+.trangthai{
+    align-items: center;
+    font-size: 16px;
+    height: 50px;
+    gap: 50px   ;
+    display: flex;
+    margin-left: 0;
+    justify-content: center;
+}
+.trangthai i{
+    font-size: 10px;
+}
+.trangthai .mauxanh{
+    color: rgb(57, 233, 57);
+}
+.trangthai .maudo{
+    color: rgb(233, 57, 57);
+}
+.trangthai .maucam{
+    color: rgb(233, 186, 57);
+}
+.ma_sp{
+    margin-left: -20px;
+}
+.kho_trangthai{
+   
+    margin-left: 20px;
     
+}
+ .tukhoa_sp{
+    margin-left: 30px;
+    text-align: right;
+}
+table {
+    width: 100%;
+    margin: 10px;
+   
+}
+table tr th,
+table tr td{
+    padding: 17px;
+
+}
+table tr {
+    
+    box-shadow: 0 0 10px hsl(0, 0%, 0%,20%);
+    border-radius: 10px;
+}
+table tr td a{
+    font-size: 20px;
+    color: black;
 }
