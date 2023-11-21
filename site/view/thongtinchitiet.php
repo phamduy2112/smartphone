@@ -70,6 +70,7 @@
               <div class="container-btn">
                 <input type="button" value="Chỉnh sửa">
                 <input type="button" value="Cập nhật">
+                <input type="button" value="Đăng xuất">
               </div>
             </form>
         </div>

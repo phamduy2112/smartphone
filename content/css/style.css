@@ -125,55 +125,52 @@ ul{
     font-size: 15px;
 }
 
-    
-    main{
-        position: relative;
-        top: 20px;
-    }
-    .carousel{
-        position: relative;
-    }
-    .danhmuc{
-        background-color: white;
-        
-        width: 21%;
-    }
-  
-    ul{
-        padding-left: 0;
-
-    }
-    .danhmuc nav ul li{
-        width: 100%;
-        list-style: none;
-        padding: 5px 10px;
-        border-bottom: 1px solid black;
-        font-size: 15px;
-    }
-    .banner{
-        margin-left: 3%;
-        width: 76%;
-    }
-    .banner img{
-        width: 100%;
-    }
-    .banner .carousel-caption{
-        top: 0;
-    }
-    .banner__bottom{
-        width: 100%;
-        display: flex;
-    }
-    .banner__bottom .img__banner{
-        width:33.33%;
-        margin-top: 5px;
-       
-       margin-right: 1%;
-        position: relative;
-    }
-    .product__banner_hot >h1{
-        font-family: 'Play', sans-serif;
-    }
+/* BANNER */
+.banner{
+    margin-left: 1%;
+    width: 78%;
+}
+.banner .carousel-caption{
+    font-family: var(--Play);
+    top: 0;
+}
+.banner img{
+    width: 100%;
+}
+.banner__bottom{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.banner__bottom .img__banner{
+    width:33.33%;
+    margin: 0px 3px;
+    margin-top: 5px;
+    position: relative;
+}
+.product__banner_hot >h1{
+    font-family: var(--Play);
+}
+.banner__bottom .img__banner img{
+    width: 100%;
+    height: 100%;
+}
+.banner__bottom .img__title{
+    position: absolute;
+    padding: 20px 20px;
+    width: 70%;
+    transform: scale(1);
+    transition:all .5s;
+}
+.banner__bottom .img__title h3{
+    font-size: 20px;
+}
+.banner__bottom .img__title p{
+    font-size: 16px;
+}
+.banner__bottom .img__banner {
+    width: 100%;
+}
 /* TITLE SHIPPY */
 .shippy{
     margin-top: 5px;
