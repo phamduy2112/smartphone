@@ -89,7 +89,7 @@ ob_start();
                   }
                  }else{
                   // echo '<p class="text-center">Bạn muốn Bình luận? </p> ';
-                  include_once './view/trangchuadangnhap.php';  
+                  include_once './view/.php';  
                   
                }
            
@@ -104,7 +104,17 @@ ob_start();
             include_once './view/sanphamct.php';
             include_once './view/footer.php';
             break;
-   
+         case 'xoabl':
+            $sl_mot=laymot_sp($id);
+            print_r($sl_mot);
+            if(isset($id)){
+              
+               xoaBinhLuan($id); 
+               header('Location:?mod=page&act=sanphamchitiet&id='.$sl_mot['id_sp'].'');
+            }
+         
+         
+            break;
          }
 
        
