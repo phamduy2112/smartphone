@@ -15,5 +15,8 @@ function lay_ten_kh($id_kh){
     return pdo_query($sql);
 }
 
-
+function xoaBinhLuan($id_bl){
+$sql='DELETE from binhluan where id_bl=?';
+return pdo_query_one($sql,$id_bl);
+}
 ?>

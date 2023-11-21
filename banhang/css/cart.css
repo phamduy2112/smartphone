@@ -1,0 +1,247 @@
+@import url('../css/bien.css');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.cart__flex{
+    display: flex;
+}
+.cart__right{
+    width: 25%;
+    border: 1px solid white;
+    border-top-left-radius:20px ;
+    margin-left: 1%;
+    background-color: white;
+    height: 250px;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.6);
+}
+.cart__right hr{
+    margin: 0;
+}
+.cart__right h3{
+    color: var(--font--color);
+    font-weight: bold;
+}
+.cart__right p{
+   
+}
+.cart__right p {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+.cart__right span {
+    font-weight: 500;
+}
+.cart__right div{
+    padding: 0 20px;
+
+}
+.breadcrumb{
+ --bs-breadcrumb-margin-bottom :0px  
+}
+
+.cart__title .title__text{
+    font-size: 25px;
+    color: var(--font--color);
+}
+.cart__right__deal{
+    width: 99%;
+    border: 1px solid var(--font--color);
+}
+.cart__right__deal input[type="text"]{
+    width: 68%;
+   
+    height: 30px;
+    outline: none;
+    margin-right: 1px;
+    padding: 0 20px;
+    background: transparent;
+    border: none;
+}
+.cart__right__deal input[type="submit"]{
+    width: 30%;
+    font-size: 15px;
+    height: 31px;
+    background-color: var(--font--color);
+    color: white;
+    
+
+}
+.cart__left{
+    width: 70%;
+    background-color: white;
+}
+.cart__left .image__product{
+    width: 100px;
+}
+.image__product img{
+    width: 100%;
+}
+.table thead{
+    background-color: var(--font--color);
+    color: white;
+    position: relative;
+}
+.table thead tr th{
+    padding: 5px 30px;
+}
+.table tbody{
+    
+}
+.table tbody tr:nth-child(even) {
+    background:rgba(43, 32, 162, 0.2)
+}
+.table>:not(caption)>*>*{
+    border-bottom-width:0;
+}
+.cart__left .table tbody tr td:first-child{
+width: 60%;
+}
+.cart__left .table tbody tr td{
+    width: 20%;
+}
+.cart__left .table tbody tr td>p{
+    color: var(--font--color);
+    font-weight: 600;
+}
+.product__cart{
+display: flex;
+width: 80%;
+}
+.product__cart .title__product>p{
+    color: var(--font--color);
+    font-weight: 600;
+}
+.product__cart .title__product p:last-child{
+    color: red;
+}
+.carts__links a.mua{
+    border: 1px solid black;
+    border: 1px solid var(--font--color);
+    color: var(--font--color);
+}
+.carts__links a.mua:hover{
+    border: 1px solid var(--font--color);
+    background-color: var(--font--color);
+    color: white;
+}
+.carts__links .xoa{
+    background-color: var(--font--color);
+    color: white;
+}
+.carts__links .xoa:hover{
+    background-color: var(--font--color);
+    color: white;
+}
+/* .cart__left .table tbody tr td:last-child{
+   width: 20%;
+} */
+tr{
+    border-bottom: 1px solid black;
+}
+
+tr .number__count .number__count_pr{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    
+   
+  
+  cursor: pointer;
+ 
+}
+.table{
+    border-collapse: collapse;
+    border: 1px solid black;
+  
+}
+/* kênh thanh toan */
+.thanhtoan_left{
+ border: 1px solid black;
+    background-color: white;
+  padding: 20px 30px;
+  margin-right: 7%;
+    
+}
+.form__thanhtoan{   
+    
+   
+}
+.thanhtoan_left input{
+    width: 100%;
+    height: 35px;
+    outline: none;
+    padding: 0 20px;
+}
+.thanhtoan_right{
+    border: 1px solid black;
+    background-color: white;
+    padding: 20px;
+  height: 360px;
+}
+.thanhtoan_left h3,
+.thanhtoan_right h3{
+    text-align: center;
+    color: var(--font--color);
+}
+.maQR.active{
+    display: none;
+}
+.thanhtoan_left p{
+    color: var(--font--color);
+    font-weight: bold;
+}
+.thanhtoan_right div p{
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+.thanhtoan_right div p span{
+    font-weight: 500;
+}
+.fullname_name{
+    width: 47%;
+}
+.fullname_ho{
+    width: 50%;
+}
+textarea{
+    width: 100%;
+    outline: none;
+    padding: 0 20px;
+}
+.group__form1 span{
+    color: var(--font--color);
+    margin-left: 10px;
+    font-weight: bold;
+}
+.form-check{
+  
+}
+.thanhtoan_right hr{
+    margin: 10px 0;
+}
+.form-check p.check{
+    width: 100%;
+    font-size: 14px;
+    margin-left: 4px;
+}
+.form-check p.check span{
+color: var(--font--color);
+}
+.group__form .btn.mua{
+    width:60%;
+    border: 1px solid black;
+    background: var(--font--color);
+    color: white;
+}
+@media (max-width:1000px){
+.thanhtoan_left .fullname_name,
+.thanhtoan_left .fullname_ho
+{
+    width: 100%;
+}
+}

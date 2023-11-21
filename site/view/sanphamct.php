@@ -1,5 +1,45 @@
 <?php 
 extract($sl_mot);
+function get_loai($id_loai){
+  if($id_loai == 1){
+    $loai="Điện thoại";
+    echo $loai;
+  }
+  elseif($id_loai == 2){
+    $loai="Laptop";
+    echo $loai;
+
+  }
+  elseif($id_loai == 3){
+    $loai="TV";
+    echo $loai;
+  }
+  elseif($id_loai == 4){
+    $loai="Tai nghe";
+    echo $loai;
+  }
+  elseif($id_loai == 5){
+    $loai="Ipad";
+    echo $loai;
+  }else{
+    $loai="Chuột máy tính";
+    echo $loai;
+  }
+}
+
+function get_price($gia, $khuyenmai){
+  if($khuyenmai <=1){
+    $f_price = number_format($gia,0,',','.');
+    echo "<p><span>Giá: </span> <span class='price1'>".$f_price."đ</span></p>";
+  }
+  else{
+    $f_price = number_format($gia*((100-$khuyenmai)/100),0,',','.');
+    echo "<p><span>Giá: <del style='color: gray;'>".number_format($gia,0,',','.')."đ</del></span> <span class='price1'>".$f_price."đ</span></p>";
+  }
+}
+
+
+
 ?>
 <main>
     <!-- product left -->
@@ -19,26 +59,37 @@ extract($sl_mot);
 
                     </div>
                     <div class="pro_img mt-2">
+
+                    
+
                          <div class="img_small">
                             <img class="img-thumbnail" src="../content/img/product_tachnen/<?=$hinhanh?>" alt="">
 
                          </div> 
+
                          <div class="img_small">
                             <img class="img-thumbnail" src="../content/img/product_tachnen/<?=$hinhanh?>" alt="">
 
                          </div> 
+
                          <div class="img_small">
                             <img class="img-thumbnail" src="../content/img/product_tachnen/<?=$hinhanh?>" alt="">
 
                          </div> 
+
                          <div class="img_small">
                             <img class="img-thumbnail" src="../content/img/product_tachnen/<?=$hinhanh?>" alt="">
 
                          </div> 
+
                          <div class="img_small">
                             <img class="img-thumbnail" src="../content/img/product_tachnen/<?=$hinhanh?>" alt="">
 
                          </div> 
+
+
+
+
                     </div>
         
                   
@@ -52,13 +103,16 @@ extract($sl_mot);
         <i class="fa fa-star" aria-hidden="true"></i>
         <i class="fa fa-star" aria-hidden="true"></i>
         <i class="fa fa-star" aria-hidden="true"></i>
-        / <span>1 người nhận xét</span>
+        / <span><?=$danhgia?> lượt đánh giá</span>
       
     </div>
     <hr>
     <div class="loai mt-1">
-       <p><span>Danh mục:</span> Điện thoại</p> 
+       <p><span>Danh mục:</span>
+       <?php get_loai($id_loai);?>
+      </p> 
     </div>
+
     <div class="theloai">
     <p class="mt-1"><span>Kích thước:</span> màn hình 10,9 inch</p>
        <p  class="mt-1" ><span>Hệ điều hành:</span> iOS 14.0</p>
@@ -66,20 +120,26 @@ extract($sl_mot);
 
     </div>
     <div class="price mt-1">
-        <p><span>Giá: </span> <span class="price1"><?=$gia?></span></p>
+        <?php 
+        get_price($gia,$khuyenmai);?>
     </div>
+
+
+
+
+
     <hr>
     <hr>
     <div class="number__count">
         <div class="number__count_pr">
-             <i class="fa-solid fa-plus solid"></i>
+             <i class="fa-solid fa-minus solid"></i>
         <div class="number">
             1
         </div>
-        <i class="fa-solid fa-minus solid"></i>  
+        <i class="fa-solid fa-plus solid"></i>  
         </div>
       
-        <a href="" class="addtoCart w-100">Thêm vào giỏ hàng</a>
+        <a href="?mod=cart&act=giohang&id=<?=$id_sp?>" class="addtoCart w-100">Thêm vào giỏ hàng</a>
     </div>
 
     <a href="" class="btn w-100 mt-2 mua">Mua ngay</a>
@@ -145,25 +205,34 @@ extract($sl_mot);
               <div class="binhluan">
                 <div class="bl d-flex w-75">
                   <div class="image">
-                  <img src="../img/service/hinhtoi5.jpg" alt="">
+                  <img src="../content/img/service/hinhtoi5.jpg" alt="">
 
                 </div>
-                <div class="binhluan__d">
+                
+                   <div class="binhluan__d">
+                    <form action="">
                   <div class="name"><?=$id_bl['id_kh']?></div>
                   <div class="ngaythang"><?=$id_bl['ngaydang']?></div>
                   <div class="title"><?=$id_bl['noidung']?></div>
                   <div>
                   <span>Phản hồi</span>
                 </div>
+              </form>
                 </div>
                 
+               
+                
                 </div>
-                <div class="chinhsua ">
+               
+                <div class="chinhsua">
+          
                    <i class="fa-solid fa-gear" id="fa-gear"></i>
                    <ul class="activeE" id="chinh">
-                    <li><a href="">Chỉnh sửa</a></li>
-                    <li><a href="">Xoá</a></li>
+                    <li><a href="?mod=page&act=chinhsuabl&id=<?=$id_bl['id_bl']?>">Chỉnh sửa</a></li>
+                    <li><a href="?mod=page&act=xoabl&id=<?=$id_bl['id_bl']?>">Xoá</a></li>
                    </ul>
+           
+                  
                 </div>
                
                
@@ -171,7 +240,7 @@ extract($sl_mot);
               <?php endforeach;?>
               <div class="d-flex mt-5">
                 <div class="image">
-                  <img src="../img/service/hinhtoi5.jpg" alt="">
+                  <img src="../content/img/service/hinhtoi5.jpg" alt="">
 
                 </div>
           <form action="" class="BinhLuan" method="post">
@@ -192,269 +261,10 @@ extract($sl_mot);
            
               <div class="product__box mt-2">
              
-                    <div class="product__item product__bt" style=>
-                      <div class="count">
-                        New
-                      </div>
-                      <div class="icons">
-                        <a href="">
-                          <i class="fa-regular fa-heart"></i>
-          
-                        </a>
-                        <a href="">
-          
-                          <i class="fas fa-layer-group"></i>
-                        </a>
-                        <a href="">
-                          <i class="fa fa-eye" aria-hidden="true"></i>
-                        </a>
-          
-                      </div>
-                      <div class="product__img">
-                        <img src="../img/sanpham/tainghe1.webp" alt="">
-                      </div>
-                      <div class="product__text">
-                        <h3>
-                          Apple Airpod Pro MWP22A M/A Bluetooth 7.1
-                        </h3>
-                        <div class="stars">
-                          <i class="fa fa-star" aria-hidden="true"></i>
-                          <i class="fa fa-star" aria-hidden="true"></i>
-                          <i class="fa fa-star" aria-hidden="true"></i>
-                          <i class="fa fa-star" aria-hidden="true"></i>
-                          <i class="fa fa-star" aria-hidden="true"></i>
-                          <span>(2 lượt đánh giá)</span>
-                        </div>
-                        <div class="price">
-                          12.000.000đ
-                        </div>
-                        <div class="check">
-                          <i class="fa-solid fa-check"></i>
-                          <span>Còn hàng</span>
-                        </div>
-                        <a href="" class="btn btn-danger w-100 my-2">Mua hàng</a>
-                      </div>
-                    </div>
+      
                  
-                    <div class="product__item product__bt" style="">
-                      <div class="count">
-                        New
-                      </div>
-                      <div class="icons">
-                        <a href="">
-                          <i class="fa-regular fa-heart"></i>
-          
-                        </a>
-                        <a href="">
-          
-                          <i class="fas fa-layer-group"></i>
-                        </a>
-                        <a href="">
-                          <i class="fa fa-eye" aria-hidden="true"></i>
-                        </a>
-          
-                      </div>
-                      <div class="product__img">
-                        <img src="../img/sanpham/tainghe1.webp" alt="">
-                      </div>
-                      <div class="product__text">
-                        <h3>
-                          Apple Airpod Pro MWP22A M/A Bluetooth
-                        </h3>
-                        <div class="stars">
-                          <i class="fa fa-star" aria-hidden="true"></i>
-                          <i class="fa fa-star" aria-hidden="true"></i>
-                          <i class="fa fa-star" aria-hidden="true"></i>
-                          <i class="fa fa-star" aria-hidden="true"></i>
-                          <i class="fa fa-star" aria-hidden="true"></i>
-                          <span>(2 lượt đánh giá)</span>
-                        </div>
-                        <div class="price">
-                          12.000.000đ
-                        </div>
-                        <div class="check">
-                          <i class="fa-solid fa-check"></i>
-                          <span>Còn hàng</span>
-                        </div>
-                        <a href="" class="btn btn-danger w-100 my-2">Mua hàng</a>
-                      </div>
-                    </div>
-                 
-                    <div class="product__item product__bt" style="">
-                      <div class="count">
-                        New
-                      </div>
-                      <div class="icons">
-                        <a href="">
-                          <i class="fa-regular fa-heart"></i>
-          
-                        </a>
-                        <a href="">
-          
-                          <i class="fas fa-layer-group"></i>
-                        </a>
-                        <a href="">
-                          <i class="fa fa-eye" aria-hidden="true"></i>
-                        </a>
-          
-                      </div>
-                      <div class="product__img">
-                        <img src="../img/sanpham/tainghe1.webp" alt="">
-                      </div>
-                      <div class="product__text">
-                        <h3>
-                          Apple Airpod Pro MWP22A M/A Bluetooth 7.1
-                        </h3>
-                        <div class="stars">
-                          <i class="fa fa-star" aria-hidden="true"></i>
-                          <i class="fa fa-star" aria-hidden="true"></i>
-                          <i class="fa fa-star" aria-hidden="true"></i>
-                          <i class="fa fa-star" aria-hidden="true"></i>
-                          <i class="fa fa-star" aria-hidden="true"></i>
-                          <span>(2 lượt đánh giá)</span>
-                        </div>
-                        <div class="price">
-                          12.000.000đ
-                        </div>
-                        <div class="check">
-                          <i class="fa-solid fa-check"></i>
-                          <span>Còn hàng</span>
-                        </div>
-                        <a href="" class="btn btn-danger w-100 my-2">Mua hàng</a>
-                      </div>
-                    </div>
-                 
-                    <div class="product__item product__bt" style="">
-                      <div class="count">
-                        New
-                      </div>
-                      <div class="icons">
-                        <a href="">
-                          <i class="fa-regular fa-heart"></i>
-          
-                        </a>
-                        <a href="">
-          
-                          <i class="fas fa-layer-group"></i>
-                        </a>
-                        <a href="">
-                          <i class="fa fa-eye" aria-hidden="true"></i>
-                        </a>
-          
-                      </div>
-                      <div class="product__img">
-                        <img src="../img/sanpham/tainghe1.webp" alt="">
-                      </div>
-                      <div class="product__text">
-                        <h3>
-                          Apple Airpod Pro MWP22A M/A Bluetooth 7.1
-                        </h3>
-                        <div class="stars">
-                          <i class="fa fa-star" aria-hidden="true"></i>
-                          <i class="fa fa-star" aria-hidden="true"></i>
-                          <i class="fa fa-star" aria-hidden="true"></i>
-                          <i class="fa fa-star" aria-hidden="true"></i>
-                          <i class="fa fa-star" aria-hidden="true"></i>
-                          <span>(2 lượt đánh giá)</span>
-                        </div>
-                        <div class="price">
-                          12.000.000đ
-                        </div>
-                        <div class="check">
-                          <i class="fa-solid fa-check"></i>
-                          <span>Còn hàng</span>
-                        </div>
-                        <a href="" class="btn btn-danger w-100 my-2">Mua hàng</a>
-                      </div>
-                    </div>
-                 
-                    <div class="product__item product__bt" style="">
-                      <div class="count">
-                        New
-                      </div>
-                      <div class="icons">
-                        <a href="">
-                          <i class="fa-regular fa-heart"></i>
-          
-                        </a>
-                        <a href="">
-          
-                          <i class="fas fa-layer-group"></i>
-                        </a>
-                        <a href="">
-                          <i class="fa fa-eye" aria-hidden="true"></i>
-                        </a>
-          
-                      </div>
-                      <div class="product__img">
-                        <img src="../img/sanpham/tainghe1.webp" alt="">
-                      </div>
-                      <div class="product__text">
-                        <h3>
-                          Apple Airpod Pro MWP22A M/A Bluetooth 7.1
-                        </h3>
-                        <div class="stars">
-                          <i class="fa fa-star" aria-hidden="true"></i>
-                          <i class="fa fa-star" aria-hidden="true"></i>
-                          <i class="fa fa-star" aria-hidden="true"></i>
-                          <i class="fa fa-star" aria-hidden="true"></i>
-                          <i class="fa fa-star" aria-hidden="true"></i>
-                          <span>(2 lượt đánh giá)</span>
-                        </div>
-                        <div class="price">
-                          12.000.000đ
-                        </div>
-                        <div class="check">
-                          <i class="fa-solid fa-check"></i>
-                          <span>Còn hàng</span>
-                        </div>
-                        <a href="" class="btn btn-danger w-100 my-2">Mua hàng</a>
-                      </div>
-                    </div>
-                    <div class="product__item product__bt" style="">
-                      <div class="count">
-                        New
-                      </div>
-                      <div class="icons">
-                        <a href="">
-                          <i class="fa-regular fa-heart"></i>
-          
-                        </a>
-                        <a href="">
-          
-                          <i class="fas fa-layer-group"></i>
-                        </a>
-                        <a href="">
-                          <i class="fa fa-eye" aria-hidden="true"></i>
-                        </a>
-          
-                      </div>
-                      <div class="product__img">
-                        <img src="../img/sanpham/tainghe1.webp" alt="">
-                      </div>
-                      <div class="product__text">
-                        <h3>
-                          Apple Airpod Pro MWP22A M/A Bluetooth 7.1
-                        </h3>
-                        <div class="stars">
-                          <i class="fa fa-star" aria-hidden="true"></i>
-                          <i class="fa fa-star" aria-hidden="true"></i>
-                          <i class="fa fa-star" aria-hidden="true"></i>
-                          <i class="fa fa-star" aria-hidden="true"></i>
-                          <i class="fa fa-star" aria-hidden="true"></i>
-                          <span>(2 lượt đánh giá)</span>
-                        </div>
-                        <div class="price">
-                          12.000.000đ
-                        </div>
-                        <div class="check">
-                          <i class="fa-solid fa-check"></i>
-                          <span>Còn hàng</span>
-                        </div>
-                        <a href="" class="btn btn-danger w-100 my-2">Mua hàng</a>
-                      </div>
-                    </div>
-                 
+
+                    <?=sanpham_thuong($sanpham_sau);?>
                 
                    
           
@@ -470,3 +280,10 @@ extract($sl_mot);
     </div>
 
 </main>
+
+<script>
+    document.getElementById('fa-gear').onclick=function () {
+ document.getElementById('chinh').classList.toggle('activeE');
+
+}
+ </script>

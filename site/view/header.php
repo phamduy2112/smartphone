@@ -2,11 +2,34 @@
 $taikhoan='';
 if(isset($_SESSION['taikhoan'])){
   $taikhoan.='
-  <a href="?mod=user&act=thongtinchitiet">'.$_SESSION['taikhoan'].
+  Xin chào bạn, 
+  <a href="?mod=user&act=thongtinchitiet" style="font-weight: bold; margin-left:3px;">'.$_SESSION['taikhoan'].
   
   '</a>';
 }else{
-  $taikhoan.='<a href="?mod=user&act=dangnhap">Đăng nhập ngay</a>';
+  $taikhoan.='<a href="?mod=user&act=dangnhap">Đăng nhập ngay để mua hàng</a>';
+
+}
+$dangnhap='';
+if(isset($_SESSION['taikhoan'])){
+  $dangnhap.=
+  '               
+  <a href="?mod=user&act=thongtinchitiet">
+ <i class="fa fa-user" aria-hidden="true"></i>
+ <div class="icon_item_text">
+
+ </div>
+</a>'
+;
+}else{
+  $dangnhap.='               
+   <a href="?mod=user&act=dangnhap">
+  <i class="fa fa-user" aria-hidden="true"></i>
+  <div class="icon_item_text">
+
+  </div>
+</a>'
+;
 
 }
 
@@ -35,6 +58,8 @@ if(isset($_SESSION['taikhoan'])){
 
   <link rel="stylesheet" href="../content/css/product.css">
   <link rel="stylesheet" href="../content/css/dangnhap1.css">
+  <link rel="stylesheet" href="../content/css/cart1.css">
+
   <link rel="stylesheet" href="../content/css/style.css">
 <style>
   .breadcrumb{
@@ -51,14 +76,10 @@ if(isset($_SESSION['taikhoan'])){
       <div class="container header__top_item text-center">
         <p>Khai trương giảm giá 50%</p>
         <div class="header__top_icon d-flex">
-<<<<<<< HEAD
-      <?=$taikhoan?>
-=======
        <?=$taikhoan?>
->>>>>>> 8146f052da5538020f6363259d7677b9c91da0b3
 <a href="">Định vị cửa hàng</a>
 <a href="">Câu hỏi thường gặp</a>
-        </div>
+      </div>
       </div>
 
     </div>
@@ -71,30 +92,27 @@ if(isset($_SESSION['taikhoan'])){
             <div class="logo">
               <img src="../content/img/icon/LOGO.png" alt="" width="150px">
             </div>
-            <form action="" class="form__search">
-              <input type="text" placeholder="Tìm kiếm sản phẩm" class="search">
-              <input type="submit" value="Tìm kiếm" class="submit">
+            <form action="?mod=page&act=timkiemsp" class="form__search" method='post'>
+              <input type="text" placeholder="Tìm kiếm sản phẩm" class="search" name='key'>
+              <input type="submit" value="Tìm kiếm" class="submit" name='nut_timkiem'>
             </form>
             <div class="icons d-flex">
               <div class="icon_item">
-                <a href="?mod=user&act=dangnhap">
-                  <i class="fa fa-user" aria-hidden="true"></i>
-                  <div class="icon_item_text">
+                <?=$dangnhap?>
 
-                  </div>
-                </a>
 
               </div>
-              <div class="icon_item">
+                <a href="?mod=page&act=yeuthich">
+ <div class="icon_item">
                 <i class="fa fa-heart" aria-hidden="true"></i>
               </div>
-              <a href="">
-
               </a>
+             
+            
               <a href="?mod=cart&act=list" class="icon_item">
 
                 <i class="fa fa-cart-shopping"></i>
-             
+
               </a>
 
             </div>
@@ -106,11 +124,12 @@ if(isset($_SESSION['taikhoan'])){
       </div>
       <div class="header__menu" style="">
         <div class="container d-lg-flex justify-content-between">
-          <div class="header__menu__item">
+
+          <!-- <div class="header__menu__item">
             <i class="fa-solid fa-bars"></i>
             <p>Tất cả danh mục</p>
+          </div> -->
 
-          </div>
           <nav class="menu__item">
             <ul>
               <li><a href="?mod=page&act=home">Trang chủ</a></li>

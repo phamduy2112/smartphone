@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Title</title>
+  <title>Thông tin của bạn</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -15,15 +15,12 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
   <!-- link slider -->
-
-  <link rel="stylesheet" href="css/product.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/trangsauthanhtoan.css">
-
-  
-  
+  <!-- PLAY -->
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&family=M+PLUS+Rounded+1c:wght@300&family=Play:wght@400;700&family=Ruda:wght@400;500;600;800&display=swap" rel="stylesheet">
+  <!-- RUDA -->
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&family=M+PLUS+Rounded+1c:wght@300&family=Play:wght@400;700&family=Ruda:wght@400;500;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
 </head>
-
 <body>
   <header>
     <div class="header__top">
@@ -182,52 +179,80 @@
   </header>
   <!-- Viết lệnh ở đây -->
   <main>
-    <div class="container-md">
-      <div class="thanhtoan-dau">Đặt hàng thành công!Kiểm tra thông tin của bạn</div>
+    <link rel="stylesheet" href="../css/thongtinkhachhang.css">
+    <section class="container">
+        <h3>Thông tin cá nhân</h3>
+        <div class="infor-form">
+            <!-- USER -->
+            <div class="user-form">
+                <div class="user">
 
-      <div class="sauthanhtoan row">
-        <div class="col-8 left-sauthanhtoan mt-2">
-          <div class="bg-white thanhtoan-box">
-            <h3>Chi tiết đơn hàng</h3>
-            <div class="d-flex justify-content-between">
-             <h4>Sản phẩm</h4> 
-             <h4>Thanh toán</h4> 
+                        <img src="../../admin/img/duan/us.jpg" alt="">
+                    <div>
+                        <p>Name</p>
+                        <a href="">Sửa hồ sơ</a>
+                    </div>
+                </div>
+                <div class="control">
+                    <div class="order">
+                        <i class="fa-regular fa-user"></i>
+                        <a href="">Tài khoản của tôi </a>
+                    </div>
+
+                    <div class="profile">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <a href="">Đơn hàng của tôi</a>
+                    </div>
+                </div>
             </div>
-            <hr>
-            <div class="d-flex justify-content-between">
-              <h4>ASDASDASDASDASD</h4> 
-              <h4 class="price">200000000</h4> 
-            </div>
-            <hr>
-            <div class="d-flex justify-content-between">
-              <h4>Phương thước thanh toán</h4> 
-              <h4 class="thanhtoan">Trả tiền mặt sau khi nhận hàng</h4> 
-            </div>
-            <hr>
-            <div class="d-flex justify-content-between">
-              <h4>Tổng cộng</h4> 
-              <h4 class="price">20000000</h4> 
-            </div>
-            <hr>
-          </div>
+            <!-- INFOR -->
+            <form class="main-form">
+              <!-- Avatar -->
+              <div class="container-avt">
+                <div class="avt">
+                    <img src="../../admin/img/duan/us.jpg" alt="">
+                    <input type="file" placeholder="Chọn ảnh" id="imgfile">
+                    <label for="imgfile" class="btn-update">Tải ảnh lên</label>
+                </div>
+              </div>
+
+              <!-- INFOR SHOW -->
+              <div class="container-infor">
+
+                <div class="infor-show">
+                  <p>Tên của bạn:</p>
+                  <input type="text" placeholder="Nguyễn Văn A" disabled>
+                </div>
+
+                <div class="infor-show">
+                  <p>Email:</p>
+                  <input type="text" placeholder="vana123@gmail.com" disabled>
+                </div>
+
+                <div class="infor-show">
+                  <p>Số điện thoại:</p>
+                  <input type="text" placeholder="0832182xxx" disabled>
+                </div>
+
+                <div class="infor-show">
+                  <p>Mật khẩu:</p>
+                  <input type="text" placeholder="**********" disabled>
+                </div>
+
+                <div class="infor-show">
+                  <p>Mật khẩu cấp 2:</p>
+                  <input type="text" placeholder="******" disabled>
+                </div>
+              </div>
+
+              <!-- BUTTON -->
+              <div class="container-btn">
+                <input type="button" value="Chỉnh sửa">
+                <input type="button" value="Cập nhật">
+              </div>
+            </form>
         </div>
-        <div class="col-4 right-sauthanhtoan mt-2">
-          <div class="bg-white">
-            <h4>Cảm ơn bạn đơn hàng đang được chờ duyệt</h4>
-            <ul>
-          
-              <li>Mã đơn hàng :185</li>
-              <li>Ngày tháng:</li>
-              <li>Địa chỉ:</li>
-              <li>Tổng cộng:</li>
-              <li>Phương thước thanh toán: trả tiền mặt sau khi nhận hàng</li>
-            </ul>
-          </div>
-
-        </div>
-    </div>
-
-   </div>
+        </section>
   </main>
   <footer class="mt-5">
     <div class="container-md">

@@ -4,10 +4,21 @@
     padding: 0;
     box-sizing: border-box;
 }
+:root{
+    --font--color:#2B20A1;
+    /* FONT */
+    --Play: 'Play', sans-serif;
+    --Ruda: 'Ruda', sans-serif;
+    /* COLOR */
+    /* Chủ đạo */
+    --CD: #2B20A1;
+    /* Nền */
+    --Nen: #EAE8FF;
+}
 .prochitiet,
 .productct__flex{
     background-color: white;
-    padding: 40px 10px;
+    padding: 30px 10px;
 }
 .productct__right{
     padding: 0 20px;
@@ -15,9 +26,15 @@
 .productct__right hr{
     margin: 1rem 0;
 }
+.productct__text{
+    /* background-color: red; */
+    margin-top: 0px !important
+}
 .productct__flex .productct__right .productct__text h2{
     font-size: 30px;
     color: var(--font--color);
+    font-family: var(--Play);
+    font-weight: bold;
     
 }
 .productct__flex .productct__right .productct__text p{
@@ -46,6 +63,10 @@ padding: 10px 5px;
     width: 19%;
     cursor: pointer;
 }
+.productct__flex .productct__right .productct__text .price{
+    font-family: var(--Ruda);
+}
+
 .productct__flex .productct__right .productct__text .price .price1{
     font-size: 23px;
     color: red;
@@ -82,6 +103,13 @@ padding: 0 15px;
     border: 2px solid var(--font--color);
     transition: all .5s;
 }
+
+.productct__text .number__count .addtoCart:hover{
+    background: transparent;
+    color: var(--font--color);
+    border: 2px solid var(--font--color);
+}
+
 .binhluan .BinhLuan{
     display: flex;
     justify-content: space-between;
@@ -115,6 +143,13 @@ padding: 0 15px;
 }
 .binhluan li:last-child{
     border-bottom: none;
+
+}
+.productct__text .number__count .addtoCart:hover{
+    background: transparent;
+    color: var(--font--color);
+    border: 2px solid var(--font--color);
+
 }
 .productct__text .mua{
     color: var(--font--color);
@@ -122,10 +157,12 @@ padding: 0 15px;
     border: 2px solid var(--font--color);
     transition: all .5s;
 }
+.productct__text .btn{
+    
+}
 .productct__text .btn:hover.mua{
     background: var(--font--color);
     color: white;
-    border: 2px solid var(--font--color);
 }
 
 .productct_thanhtoan{

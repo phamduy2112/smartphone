@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+@import url('../css/bien.css');
 .product__item{
     background-color: rgb(255, 255, 255);
 
@@ -15,25 +15,31 @@
   
     
 }
+.product__item .btn{
+    border: 1px solid black;
+    background-color: var(--font--color);
+    color: white;
+    border-radius: 20px;
+}
 
+.product__item .btn:hover{
+    border: 1px solid black;
+    background-color: var(--font--color);
+    color: white;  
+}
 .product__banner_hot{
     
     background-image: url('../img/banner/x.jpg');
     padding: 50px 20px;
     position: relative;
 }
-
-#product .product__item.product__bt{
+.product__bt{
     width:212px; 
     height: 315px;
 }
- .product__bt{
-    width:212px; 
-    height: 320px;
-}
 .product___hot{
     width: 250px;
-    height: 360px;
+    height: 350px;
 }
 .product__box{
     display: flex;
@@ -71,13 +77,22 @@
 }
 .product__item .count{
     position: absolute;
-    top: 0;
-    left: 0;
-    background-color: #fb6f92;
+    top: 10px;
+    left: 10px;
+    background-color: red;
     color: white;
-    padding: 2px 6px;
+    padding: 1px 12px;
+    font-weight: bold;
 }
-
+.product__item .new{
+    position: absolute;
+    top: 40px;
+    left: 10px;
+    background-color: rgb(0, 255, 76);
+    color: white;
+    padding: 1px 14px;
+    font-weight: bold;
+}
 .product__item .icons{
 position: absolute;
 top: 20px;
@@ -107,38 +122,17 @@ transition: all .5s;
 .product__item .product__text h3{
     font-size: 15px;
     font-weight: bold;
-    font-family: 'Ruda', sans-serif;
 }
 .product__item .icons{
 
 }
 .product__item .product__text .stars{
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    font-size: 10px;
-=======
     font-size: 11px;
     
 }
 .product__item .product__text .stars i{
     color: #FFCE31;
     font-size: 13px;
-}
-.product__item .product__text .price{
-    color: #fb6f92;
->>>>>>> devVinh
-=======
-    font-size: 10px;
->>>>>>> main
-    
-}
-.product__item .product__text .stars i{
-    color: #FFCE31;
-    font-size: 13px;
-=======
-    font-size: 11px;
->>>>>>> devTri
 }
 .product__item .product__text .price{
     color: #fb6f92;
@@ -158,7 +152,7 @@ padding: 0 10px;
 }
 .product__item .product__text .check{
     font-size: 12px;
-    color: #fb6f92;
+    color: #57E923;
 }
 .product .row >*{
     padding: 0;
@@ -273,140 +267,20 @@ border: 1px solid black;
 .dot__item.active{
     background-color:red;
 }
-<<<<<<<< HEAD:template/banhang/css/product.css
-
-@media (min-width:300px){
-    #desktop__left{
-        display: none;
-    }
-    .mobile__left{
-   
-    }
-    .transition__product{
-     
-         transform: translateX(-100%);
-    }
-    #mobile__left{
-        display: block;
-        background-color: rgb(255, 0, 0);
-        width: 100%;
-    }
-    #desktop__right{
-        display: none;
-    }
-    #mobile__right{
-        display: block;
-    }
-#mobile__left .products__left{
-    background-color: white;
-    box-shadow: 0 0 10px black;
-width: 320px;
-position: fixed;
-top: 0;
-left: 0;
-height: 100vh;
-z-index: 111111111;
-
-}
-#mobile__left .products___title{
-    border-bottom:1px solid black ;
-    background-color: var(--font--color);
-    color: white;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-#mobile__left .products__item{
-    padding: 0 20px;
-}
-}
-@media (min-width:1300px){
-    #desktop__left{
-        display: block;
-    }
-    #mobile__left{
-        display: none;
-    }
-    #desktop__right{
-        display: block;
-    }
-    #mobile__right{
-        display: none;
-    }
-    /* san pham ben trai */
-    .products__flex{
-        display: flex;
-    }
-    #desktop__left{
-        width: 20%;
-        background-color: white;
-        padding: 10px 15px;
-        margin-right: 2%;
-    }
-    .group__fl,
-    .group__form {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    
-    }
-    .products__item h3{
-        font-size: 15px;
-    }
-    .group__fl{
-        font-size: 18px;
-    
-        
-    }
-    
-    .productss__item{
-        display: flex;
-    
-    }
-    .productss__item .product__text{
-        font-size: 14px;
-        font-weight:bolder;
-    }
-    .colors .tron{
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    border: 1px solid black;
-    
-    }
-}
-
-========
->>>>>>>> 8146f052da5538020f6363259d7677b9c91da0b3:banhang/css/product.css
 @media (max-width:1500px){
     .product__bt{
         width: 180px;
     }
-<<<<<<<< HEAD:template/banhang/css/product.css
-    #products .product__bt{
-        height: 300px;
-    }
-    
-========
->>>>>>>> 8146f052da5538020f6363259d7677b9c91da0b3:banhang/css/product.css
 }
 @media (max-width:1000px){
     .product .d-flex .img{
         display: none;
     }
-    #products .product__bt,
     .product__bt{
         width: 230px;
-        height: 335px;
     }
-<<<<<<<< HEAD:template/banhang/css/product.css
-    
- 
-========
->>>>>>>> 8146f052da5538020f6363259d7677b9c91da0b3:banhang/css/product.css
 }
-@media (max-width:767px){
+@media (max-width:700px){
     
     
 
@@ -414,69 +288,10 @@ z-index: 111111111;
         width: 310px;
         height: 410px;
     }
-    #product .product__item.product__bt,
     .product__bt{
-        width: 170px;
+        width: 180px;
         height: 310px;
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
-=======
-<<<<<<<< HEAD:template/banhang/css/product.css
->>>>>>> devTri
-    .products__right__top form{
-        display: none;
-    }
-}
-@media (max-width:500px)  {
-    #khung_product_three .product__bt{
-        width: 250px;
-        height: 350px;
-    }
-    #product .product__item.product__bt,
-    .product__bt{
-        width: 49%;
-        height: 305px;
-    } 
-}
-@media (max-width:420px) {
-    #product .product__item.product__bt,
-    .product__bt{
-        width: 49%;
-        height: 315px;
-    } 
-}
-@media (max-width:400px){
-    
-    .product__item .product__text .stars{
-        font-size: 9px;
-    }
-    #product .product__item.product__bt,
-   .product__bt{
-        width: 49%;
-        height: 300px;
-    }
-    .product__title p{
-        font-size: 15px;
-    }
-}
-@media (max-width:330px){
-    
-    #product .product__item.product__bt,
-     .product__bt{
-          width: 49%;
-          height: 285px;
-      }
-      .product__title p{
-        font-size: 13px;
-    }
-  }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
 @media (max-width:400px){
     .product__bt{
@@ -484,11 +299,3 @@ z-index: 111111111;
         height: 310px;
     }
 }
->>>>>>> devVinh
-=======
->>>>>>> main
-=======
-========
-}
->>>>>>>> 8146f052da5538020f6363259d7677b9c91da0b3:banhang/css/product.css
->>>>>>> devTri

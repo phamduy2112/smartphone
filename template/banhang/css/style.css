@@ -5,10 +5,31 @@
 @import url('../css/user.css');
 <<<<<<<< HEAD:template/banhang/css/style.css
 @import url('../css/cart.css');
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:banhang/css/style.css
+
+=======
+>>>>>>> lamphp:template/banhang/css/style.css
+>>>>>>> devVinh
 @import url('../css/bien.css');
 
+<<<<<<< HEAD
+=======
+
+@import url('../css/bien.css');
+@import url('../css/lichsumuahang.css');
+>>>>>>> devVinh
+=======
+@import url('../css/bien.css');
+
+>>>>>>> main
+=======
 ========
 >>>>>>>> 8146f052da5538020f6363259d7677b9c91da0b3:banhang/css/style.css
+>>>>>>> devTri
 *{
     padding: 0;
     margin: 0;
@@ -51,11 +72,50 @@ header{
       border-bottom: 1px solid black;
     
     }
+<<<<<<< HEAD
+    .header__main .form__search{
+        border: 1px solid black;
+        border-radius: 5px;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> main
+=======
+<<<<<<< HEAD:banhang/css/style.css
+        overflow: hidden;
+    }
+ .header__main form .submit{
+        height: 39.2px;
+=======
+>>>>>>> devVinh
+        display: flex;
+        justify-content: space-between;
+    }
+ .header__main form .submit{
+        height: 39.5px;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        overflow: hidden;
+    }
+ .header__main form .submit{
+        height: 39.2px;
+>>>>>>> devVinh
+=======
+>>>>>>> main
+=======
+>>>>>>> lamphp:template/banhang/css/style.css
+>>>>>>> devVinh
+        padding: 0 20.7px;
+        background-color: var(--font--color);
+=======
  .header__main form .submit{
         height: 40px;
         padding: 0 20px;
         background-color: #fb6f92;
         border: 1px solid #fb6f92;
+>>>>>>> devTri
         color: white;
         box-shadow: 0 0 2px rgba(0,0,0,.5);
     } 
@@ -122,6 +182,134 @@ header{
         transform: scale(1);
        transition:all .5s;
     }
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> main
+=======
+<<<<<<< HEAD:banhang/css/style.css
+    .banner__hai .row .col-4{
+        padding-right:10px;
+        position: relative;
+        
+    }
+    .banner__hai .row .col-4 img {
+        position: relative;
+    }
+    .banner__hai .row .col-4::after{
+=======
+>>>>>>> devVinh
+
+    .banner__hai .row .banner__item{
+   width: 33%;
+      margin-right: 2px;
+        position: relative;
+        
+        
+    }
+    .banner__hai .row .banner__item img {
+        height: 150px;
+        position: relative;
+    }
+    .banner__hai .row .banner__item::after{
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    .banner__hai .row .col-4{
+        padding-right:10px;
+        position: relative;
+        
+    }
+    .banner__hai .row .col-4 img {
+        position: relative;
+    }
+    .banner__hai .row .col-4::after{
+>>>>>>> devVinh
+=======
+>>>>>>> main
+=======
+>>>>>>> lamphp:template/banhang/css/style.css
+>>>>>>> devVinh
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: '';
+        display:inline-block;
+        padding-right:10px ;
+        width: 98%;
+        height: 98%;
+       
+        background-color: rgb(0, 0, 0,.3);
+        
+    }
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    .banner__hai .row .banner__item .banner__hai__text{
+=======
+    .banner__hai .row .col-4 .banner__hai__text{
+>>>>>>> devVinh
+=======
+    .banner__hai .row .banner__item .banner__hai__text{
+>>>>>>> main
+=======
+<<<<<<< HEAD:banhang/css/style.css
+    .banner__hai .row .col-4 .banner__hai__text{
+=======
+    .banner__hai .row .banner__item .banner__hai__text{
+>>>>>>> lamphp:template/banhang/css/style.css
+>>>>>>> devVinh
+        position: absolute;
+        color: white;
+        top: 20px;
+        
+        z-index: 2;
+    }
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> main
+=======
+<<<<<<< HEAD:banhang/css/style.css
+    .banner__hai .row .col-4 .banner__hai__text.left{
+        left: 30px;
+    }
+    .banner__hai .row .col-4 .banner__hai__text.right{
+        right: 30px;
+    }
+    .banner__hai .row .col-4:last-child{
+=======
+>>>>>>> devVinh
+    .banner__hai .row .banner__item .banner__hai__text.left{
+        left: 30px;
+    }
+    .banner__hai .row .banner__item .banner__hai__text.right{
+        right: 30px;
+    }
+    .banner__hai .row .banner__item:last-child{
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    .banner__hai .row .col-4 .banner__hai__text.left{
+        left: 30px;
+    }
+    .banner__hai .row .col-4 .banner__hai__text.right{
+        right: 30px;
+    }
+    .banner__hai .row .col-4:last-child{
+>>>>>>> devVinh
+=======
+>>>>>>> main
+=======
+>>>>>>> lamphp:template/banhang/css/style.css
+>>>>>>> devVinh
+        padding-right: 0;
+    }
+=======
+>>>>>>> devTri
     .banner__bottom .img__title h3{
         font-size: 20px;
     }
@@ -151,13 +339,49 @@ header{
       margin: 10px 0;
     }
     .shippy__item i{
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+        font-size: 30px;
+=======
+        font-size: 25px;
+>>>>>>> devVinh
+=======
+        font-size: 30px;
+>>>>>>> main
+=======
+<<<<<<< HEAD:banhang/css/style.css
+        font-size: 25px;
+=======
+        font-size: 30px;
+>>>>>>> lamphp:template/banhang/css/style.css
+>>>>>>> devVinh
+        color: var(--font--color);
+        font-weight: bold;
+=======
         font-size: 25px;
         color: #fb6f92;
+>>>>>>> devTri
     }
     .shippy_itemd h3{
         font-size: 15px;
         margin-bottom: 0;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> main
+=======
+<<<<<<< HEAD:banhang/css/style.css
+        color: var(--font--color);
+        font-weight: bold;
+=======
+>>>>>>> devVinh
+=======
 <<<<<<<< HEAD:template/banhang/css/style.css
+>>>>>>> devTri
         
         font-weight: bold;
         font-family: 'Ruda', sans-serif;
@@ -168,9 +392,23 @@ header{
     .shippy__item p{
         font-size: 12px;
         color: var(--font--color);
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        color: var(--font--color);
+        font-weight: bold;
+>>>>>>> devVinh
+=======
+>>>>>>> main
+=======
+>>>>>>> lamphp:template/banhang/css/style.css
+>>>>>>> devVinh
+=======
 ========
         color: #fb6f92;
 >>>>>>>> 8146f052da5538020f6363259d7677b9c91da0b3:banhang/css/style.css
+>>>>>>> devTri
     }
     .blog__box{
         display: flex;
@@ -223,11 +461,46 @@ header{
         font-size: 16px;
         font-weight: bold;
     }
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD:banhang/css/style.css
+>>>>>>> devVinh
+    .footer__item h3{
+        font-size: 16px;
+        font-weight: bold;
+    }
+<<<<<<< HEAD
+>>>>>>> devVinh
+=======
+>>>>>>> main
+=======
+=======
+>>>>>>> lamphp:template/banhang/css/style.css
+>>>>>>> devVinh
 .footer__bottom .row .col-12 h2{
 text-align: center;
 font-size: 24px;
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 .footer__bottom .row h3{
+=======
+.footer__bottom .row .col-4 h3{
+>>>>>>> devVinh
+=======
+.footer__bottom .row h3{
+>>>>>>> main
+=======
+<<<<<<< HEAD:banhang/css/style.css
+.footer__bottom .row .col-4 h3{
+=======
+.footer__bottom .row h3{
+>>>>>>> lamphp:template/banhang/css/style.css
+>>>>>>> devVinh
 font-size: 20px;
 }
 .footer__bottom{
@@ -238,7 +511,23 @@ footer{
     color: white;
     padding-top: 40px;
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 .footer__bottom i{
+=======
+.footer__bottom .col-4 i{
+>>>>>>> devVinh
+=======
+.footer__bottom i{
+>>>>>>> main
+=======
+<<<<<<< HEAD:banhang/css/style.css
+.footer__bottom .col-4 i{
+=======
+.footer__bottom i{
+>>>>>>> lamphp:template/banhang/css/style.css
+>>>>>>> devVinh
     width: 35px;
     height: 35px;
     border-radius: 50%;
@@ -282,17 +571,53 @@ footer{
         background-color: #fff;
         padding: 30px 40px;
     }
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
   
+=======
+>>>>>>> devVinh
+=======
+  
+>>>>>>> main
+=======
+<<<<<<< HEAD:banhang/css/style.css
+=======
+  
+>>>>>>> lamphp:template/banhang/css/style.css
+>>>>>>> devVinh
     .contact__left input{
         height: 50px;
         outline: none;
         padding: 0 20px;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> main
+=======
+<<<<<<< HEAD:banhang/css/style.css
+        border-radius: 20px;
+        border: 1px solid black;
+=======
+>>>>>>> devVinh
         border-radius: 10px;
         border: 1px solid #2b20a16e;
     }
     .contact__left textarea{
         border-radius: 10px;
         border: 1px solid #2b20a16e;  
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        border-radius: 20px;
+        border: 1px solid black;
+>>>>>>> devVinh
+=======
+>>>>>>> main
+=======
+>>>>>>> lamphp:template/banhang/css/style.css
+>>>>>>> devVinh
     }
     .contact__left .group_flex .form__group>input{
         width: 96%;
@@ -328,11 +653,31 @@ footer{
    .menu__item ul li a{
     color: white;
    }
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> main
+=======
+<<<<<<< HEAD:banhang/css/style.css
+=======
+>>>>>>> devVinh
    .contact h1,
    .contact h2{
     color: var(--font--color);
     font-family: 'Play', sans-serif;
    }
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> devVinh
+=======
+>>>>>>> main
+=======
+>>>>>>> lamphp:template/banhang/css/style.css
+>>>>>>> devVinh
+=======
 ========
  .footer__top{
     border-bottom: 1px solid black;
@@ -342,6 +687,7 @@ footer{
     }
     
 >>>>>>>> 8146f052da5538020f6363259d7677b9c91da0b3:banhang/css/style.css
+>>>>>>> devTri
  @media (max-width:998px) {
   .header__main .container{
         width: 90%;
@@ -479,6 +825,24 @@ top: 30px;
 .blog__item .blog__body h4{
     font-size: 15px;
  }
+<<<<<<< HEAD
+ .contact__left{
+    padding-right: 0;
+   }
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD:banhang/css/style.css
+<<<<<<< HEAD
+=======
+>>>>>>> lamphp:template/banhang/css/style.css
+=======
+>>>>>>> main
+=======
+<<<<<<< HEAD:banhang/css/style.css
+=======
+>>>>>>> devVinh
+=======
+>>>>>>> devTri
 }
 
 @media (max-width:767px){
@@ -486,6 +850,18 @@ top: 30px;
 .text-center{
     font-family: 'Play', sans-serif;
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD:banhang/css/style.css
+=======
+>>>>>>> devVinh
+=======
+>>>>>>> lamphp:template/banhang/css/style.css
+=======
+>>>>>>> main
+=======
+>>>>>>> lamphp:template/banhang/css/style.css
+>>>>>>> devVinh
 }
 @media (max-width:600px){
 
@@ -521,14 +897,40 @@ top: 30px;
    .img__banner{
     width: 100%;
    }
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> main
+=======
+<<<<<<< HEAD:banhang/css/style.css
+  
+=======
+>>>>>>> devVinh
+=======
 <<<<<<<< HEAD:template/banhang/css/style.css
+>>>>>>> devTri
    .banner__hai .row .banner__item{
     width: 100%;
     margin-top: 10px;
   }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  
+>>>>>>> devVinh
+=======
+>>>>>>> main
+=======
+>>>>>>> lamphp:template/banhang/css/style.css
+>>>>>>> devVinh
+=======
 ========
 >>>>>>>> 8146f052da5538020f6363259d7677b9c91da0b3:banhang/css/style.css
+>>>>>>> devTri
 }   
 @media (min-width:999px){
     .header__mobile{
