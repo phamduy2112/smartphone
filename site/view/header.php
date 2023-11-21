@@ -74,11 +74,21 @@ if(isset($_SESSION['taikhoan'])){
       <div class="container header__top_item text-center">
         <p>Khai trương giảm giá 50%</p>
         <div class="header__top_icon d-flex">
+<<<<<<< HEAD
 
           
         <?=$taikhoan?>
           <a href="" style="margin-left: 30px;">Định vị cửa hàng</a>
           <a href="">Câu hỏi thường gặp</a>
+=======
+<<<<<<< HEAD
+      <?=$taikhoan?>
+=======
+       <?=$taikhoan?>
+>>>>>>> 8146f052da5538020f6363259d7677b9c91da0b3
+<a href="">Định vị cửa hàng</a>
+<a href="">Câu hỏi thường gặp</a>
+>>>>>>> devTri
         </div>
       </div>
 

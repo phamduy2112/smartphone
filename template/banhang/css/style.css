@@ -3,6 +3,7 @@
 @import url('../css/product.css');
 @import url('../css/dangnhap.css');
 @import url('../css/user.css');
+<<<<<<<< HEAD:template/banhang/css/style.css
 @import url('../css/cart.css');
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -15,6 +16,7 @@
 >>>>>>> devVinh
 @import url('../css/bien.css');
 
+<<<<<<< HEAD
 =======
 
 @import url('../css/bien.css');
@@ -24,6 +26,10 @@
 @import url('../css/bien.css');
 
 >>>>>>> main
+=======
+========
+>>>>>>>> 8146f052da5538020f6363259d7677b9c91da0b3:banhang/css/style.css
+>>>>>>> devTri
 *{
     padding: 0;
     margin: 0;
@@ -31,7 +37,7 @@
 }
 
 body{
-    background-color: #9086fb23;
+    background-color: #f1f5f6;
 }
 p{
     margin-bottom: 0;
@@ -50,8 +56,6 @@ header{
         border-bottom: 1px solid black;
         padding: 5px 0;
     text-align: center;
-    color: white;
-    background-color: var(--font--color);
     }
     .header__top_item{
     display: flex;
@@ -59,13 +63,8 @@ header{
     align-items: center;
     
     }
-    .header__top_icon a {
-        color: white;
+    .header__top_icon {
        text-align: center;
-       margin-right: 30px;
-    }
-    .header__top_icon a:last-child{
-        margin-right: 0;
     }
     .header__main {
     
@@ -73,6 +72,7 @@ header{
       border-bottom: 1px solid black;
     
     }
+<<<<<<< HEAD
     .header__main .form__search{
         border: 1px solid black;
         border-radius: 5px;
@@ -109,18 +109,21 @@ header{
 >>>>>>> devVinh
         padding: 0 20.7px;
         background-color: var(--font--color);
+=======
+ .header__main form .submit{
+        height: 40px;
+        padding: 0 20px;
+        background-color: #fb6f92;
+        border: 1px solid #fb6f92;
+>>>>>>> devTri
         color: white;
         box-shadow: 0 0 2px rgba(0,0,0,.5);
-        border: 1px solid var(--font--color);
-        font-weight: bold;
     } 
     .header__main form .search{
-    width: 87%;
+    width: 82%;
     height: 40px;
     outline: none;
     padding: 0 20px;
-    border: none;
-
     }
     main{
         position: relative;
@@ -179,6 +182,7 @@ header{
         transform: scale(1);
        transition:all .5s;
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -304,6 +308,8 @@ header{
 >>>>>>> devVinh
         padding-right: 0;
     }
+=======
+>>>>>>> devTri
     .banner__bottom .img__title h3{
         font-size: 20px;
     }
@@ -322,22 +328,18 @@ header{
     }
     .shippy__box{
         display: flex;
-    
+        background-color: white;
         justify-content: space-between;
         flex-wrap: wrap;
-        align-items: center;
-    
+        padding: 10px 20px;
     }
     .shippy__item{
-        width: 24%;
         display: flex;
         gap: 10px;
       margin: 10px 0;
-      background-color: white;
-      padding: 15px 25px;
-      border-radius: 5px;
     }
     .shippy__item i{
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -357,10 +359,15 @@ header{
 >>>>>>> devVinh
         color: var(--font--color);
         font-weight: bold;
+=======
+        font-size: 25px;
+        color: #fb6f92;
+>>>>>>> devTri
     }
     .shippy_itemd h3{
         font-size: 15px;
         margin-bottom: 0;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -372,6 +379,9 @@ header{
         font-weight: bold;
 =======
 >>>>>>> devVinh
+=======
+<<<<<<<< HEAD:template/banhang/css/style.css
+>>>>>>> devTri
         
         font-weight: bold;
         font-family: 'Ruda', sans-serif;
@@ -384,6 +394,7 @@ header{
         color: var(--font--color);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         color: var(--font--color);
         font-weight: bold;
@@ -393,19 +404,20 @@ header{
 =======
 >>>>>>> lamphp:template/banhang/css/style.css
 >>>>>>> devVinh
+=======
+========
+        color: #fb6f92;
+>>>>>>>> 8146f052da5538020f6363259d7677b9c91da0b3:banhang/css/style.css
+>>>>>>> devTri
     }
     .blog__box{
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
     }
     .blog__item{
         width: 24%;
         margin-right: 1%;
         background-color: #fff;
-    }
-    .blog__box .blog__item:last-child{
-        margin-right: 0;
     }
     .blog__item .blog__header{
         width: 100%;
@@ -443,6 +455,7 @@ header{
     margin: 0;
     --bs-gutter-x:0
 }
+<<<<<<<< HEAD:template/banhang/css/style.css
  
     .footer__item h3{
         font-size: 16px;
@@ -656,6 +669,7 @@ footer{
    }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> devVinh
 =======
@@ -663,6 +677,17 @@ footer{
 =======
 >>>>>>> lamphp:template/banhang/css/style.css
 >>>>>>> devVinh
+=======
+========
+ .footer__top{
+    border-bottom: 1px solid black;
+ }
+    .footer__box .footer__item{
+        
+    }
+    
+>>>>>>>> 8146f052da5538020f6363259d7677b9c91da0b3:banhang/css/style.css
+>>>>>>> devTri
  @media (max-width:998px) {
   .header__main .container{
         width: 90%;
@@ -695,20 +720,26 @@ footer{
 .header__main__top .bar__menu{
     font-size: 25px;
 }
+<<<<<<<< HEAD:template/banhang/css/style.css
 .footer__bottom{
     text-align: center;
+========
+.header__main_top .logo{
+    font-size: 35px;
+    color: #fb6f92;
+>>>>>>>> 8146f052da5538020f6363259d7677b9c91da0b3:banhang/css/style.css
 }
 .header__main_top .icon_item{
     font-size: 25px;
 }
 .header__main form{
-    width: 100%;
+    width: 100vw;
 }
 .header__main form .submit{
     height: 40px;
-    padding: 0 10px;
-    background-color:var(--font--color);
-    border: 1px solid var(--font--color);
+    padding: 0 20px;
+    background-color: #fb6f92;
+    border: 1px solid #fb6f92;
     color: white;
     
     box-shadow: 0 0 2px rgba(0,0,0,.5);
@@ -720,7 +751,7 @@ outline: none;
 padding: 0 20px;
 }
 .header__menu{
-    background-color: var(--font--color);
+    background-color: white;
     height: 100vh;
     box-shadow: 0 0 1px black;
     width: 320px;
@@ -756,7 +787,7 @@ ul{
 }
 .menu__item ul li {
     list-style: none;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid black;
     width: 100%;
     padding: 5px 0;
 }
@@ -794,6 +825,7 @@ top: 30px;
 .blog__item .blog__body h4{
     font-size: 15px;
  }
+<<<<<<< HEAD
  .contact__left{
     padding-right: 0;
    }
@@ -809,6 +841,8 @@ top: 30px;
 <<<<<<< HEAD:banhang/css/style.css
 =======
 >>>>>>> devVinh
+=======
+>>>>>>> devTri
 }
 
 @media (max-width:767px){
@@ -835,14 +869,11 @@ top: 30px;
         width: 95%;
         margin: auto;
     }
-    .contact__right{
-        margin-top: 15px;
-    }
     .header__main form .submit{
         height: 40px;
         padding: 0 10px;
-        background-color: var(--font--color);
-        border: 1px solid var(--font--color);
+        background-color: #fb6f92;
+        border: 1px solid #fb6f92;
         color: white;
         
         box-shadow: 0 0 2px rgba(0,0,0,.5);
@@ -869,6 +900,7 @@ top: 30px;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> main
 =======
@@ -876,11 +908,15 @@ top: 30px;
   
 =======
 >>>>>>> devVinh
+=======
+<<<<<<<< HEAD:template/banhang/css/style.css
+>>>>>>> devTri
    .banner__hai .row .banner__item{
     width: 100%;
     margin-top: 10px;
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -891,6 +927,10 @@ top: 30px;
 =======
 >>>>>>> lamphp:template/banhang/css/style.css
 >>>>>>> devVinh
+=======
+========
+>>>>>>>> 8146f052da5538020f6363259d7677b9c91da0b3:banhang/css/style.css
+>>>>>>> devTri
 }   
 @media (min-width:999px){
     .header__mobile{
@@ -905,7 +945,11 @@ top: 30px;
         justify-content: space-between;
         
     }
- 
+    .header__main .logo{
+        font-size: 35px;
+        color: #fb6f92;
+    
+    }
     .header__main form{
       width: 70%;
      
@@ -920,7 +964,7 @@ top: 30px;
     .icons .icon_item i{
         font-size: 25px;
         margin-right: 10px;
-        color: var(--font--color);
+        color: black;
     }
     .icon_item_text{
         width: 100%;
@@ -963,7 +1007,7 @@ top: 30px;
         font-size: 16px;
         position: relative;
         top:4px;
-        color: #E2FF70;
+        color: #fb6f92;
     }
     #product .product__bt{
     height: 300px;
