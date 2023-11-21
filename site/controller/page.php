@@ -19,6 +19,12 @@ ob_start();
             include_once './view/trangchu.php';
             include_once './view/footer.php';
             break;
+         case 'cacloaisp':
+            include_once './view/header.php'; 
+    
+            include_once './view/cacloaisp.php';
+            include_once './view/footer.php';
+            break;
          case 'timkiemsp':
             
             include_once './view/header.php'; 
