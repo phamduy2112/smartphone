@@ -11,7 +11,7 @@
 .admin__box .timkiem{
     background-color: rgb(255, 255, 255);
     box-shadow: 0 0 5px rgba(0,0,0,.5);
-    height: 35px;
+    height: 40px;
 }
 .admin__box .tim_kiem{
     display: flex;
@@ -42,18 +42,18 @@
     display: flex;
 }
 .admin__box .timkiem .xacnhan{
-    height: 36px;
+    height: 41px;
     border: none;
     outline: none;
-    width: 5%;
+    width: 10%;
     background-color: black;
     color: white;
 }
 .admin__box .timkiem .lookfor{
-    height: 35px;
+    height: 40px;
     border: none;
     outline: none;
-    width: 94%;
+    width: 100%;
     padding: 0 30px;
 }
 .admin__boxes .number__list i{

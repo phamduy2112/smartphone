@@ -65,7 +65,7 @@ li{
 .menu__a{
   
    width: 100%;
-    background-color: brown;
+    background-color:#F6FCFF;
     height: 100vh;
 
     padding: 30px 0;
@@ -81,7 +81,7 @@ li{
 }
 .menu__item li>i,
 .menu__item li a{
-color: white;
+color: black;
 }
 .khoi1__admin{
     display: flex;
@@ -107,7 +107,7 @@ ul{
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: white;
+    color: black;
 }
 .right__admin .img,
 .temer{
@@ -127,8 +127,8 @@ ul{
 position: absolute;
     width: 100%;
     height: 70px; 
-    border-bottom: 1px solid black;
-   background-color: white;
+    border-bottom: 1px solid #F6FCFF;
+   background-color: #F6FCFF;
 
 }
 .admin__body__top>i{
@@ -318,6 +318,7 @@ padding: 5px 10px;
 @media (min-width:1700px){
     .menu__item li.active{
         width: 105%;
-        background-color: aliceblue;
+        background-color: #F4F4F4;
+        box-shadow: 0 0 5px rgba(255,255,255,0.5);
     }
 }
