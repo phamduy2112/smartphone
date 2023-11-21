@@ -53,13 +53,19 @@ if(isset($_SESSION['taikhoan'])){
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&family=Ruda:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- GET FONT RUDA + PLAY -->
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&family=M+PLUS+Rounded+1c:wght@300&family=Play:wght@400;700
+&family=Ruda:wght@400;500;600;800;900&display=swap" rel="stylesheet">
+
+
   <!-- link slider -->
 
   <link rel="stylesheet" href="../content/css/product.css">
   <link rel="stylesheet" href="../content/css/dangnhap1.css">
   <link rel="stylesheet" href="../content/css/cart1.css">
-
   <link rel="stylesheet" href="../content/css/style.css">
 <style>
   .breadcrumb{
@@ -81,6 +87,9 @@ if(isset($_SESSION['taikhoan'])){
         <?=$taikhoan?>
           <a href="" style="margin-left: 30px;">Định vị cửa hàng</a>
           <a href="">Câu hỏi thường gặp</a>
+
+            <!-- <a href="">Định vị cửa hàng</a> -->
+            <!-- <a href="">Câu hỏi thường gặp</a> -->
         </div>
       </div>
 
@@ -104,12 +113,13 @@ if(isset($_SESSION['taikhoan'])){
 
 
               </div>
-              <div class="icon_item">
+                <a href="?mod=page&act=yeuthich">
+ <div class="icon_item">
                 <i class="fa fa-heart" aria-hidden="true"></i>
               </div>
-              <a href="">
-
               </a>
+             
+            
               <a href="?mod=cart&act=list" class="icon_item">
 
                 <i class="fa fa-cart-shopping"></i>
@@ -140,7 +150,7 @@ if(isset($_SESSION['taikhoan'])){
               <li><a href="">Liên hệ</a></li>
             </ul>
           </nav>
-          <div class="header__menu__end">
+          <div class="header__menu__end" style="font-weight: bold;">
             Giảm giá 20% khi bạn mua lần đầu
           </div>
         </div>

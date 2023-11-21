@@ -44,13 +44,13 @@
                                 extract($item);
                                 $text_stt='';
                                 if($trangthai==0){
-                                $text_stt='<td style="color: red;">Đang chuẩn bị hàng</td>';
+                                $text_stt='<td style="color: #FF0303;">Đang chuẩn bị hàng</td>';
                                 }
                                 elseif($trangthai==1){
-                                $text_stt='<td style="color: yellow;">Đang giao hàng</td>';
+                                $text_stt='<td style="color: #FF9900;">Đang giao hàng</td>';
                                 }
                                 else{
-                                $text_stt='<td style="color: green;">Đã giao hàng</td>';
+                                $text_stt='<td style="color: #57E923;">Đã giao hàng</td>';
 
                                 }
                                 

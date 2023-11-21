@@ -18,6 +18,21 @@ function timKiemSP($key){
 $sql="SELECT * FROM sanpham WHERE ten_sp LIKE '%$key%' or gia like '%$key%'";
 return pdo_query($sql);
 }
+function themVaoYeuThich($id_kh,$id_sp){
+  $sql="INSERT INTO yeuthich(id_kh,id_sp)
+  VALUES (?,?)";
+  return pdo_execute($sql,$id_kh,$id_sp);
+}
+function layRaSanPhamYT($id_kh){
+  $sql='SELECT * FROM sanpham JOIN yeuthich ON sanpham.id_sp = yeuthich.id_sp
+  where id_kh=?';
+return pdo_query($sql,$id_kh);
+
+}
+function xoaSanPhamYeuThich($id_sp){
+  $sql="DELETE FROM yeuthich where id_sp=?";
+  return pdo_query_one($sql,$id_sp);
+}
 function sanpham($ten_sp){
 $get="";
 
@@ -38,7 +53,7 @@ foreach($ten_sp as $item)
 
  <div class="icons">
 
-   <a href="">
+   <a href="?mod=page&act=themYeuThich&id='.$id_sp.'">
      <i class="fa-regular fa-heart"></i>
    </a>
 
@@ -114,7 +129,7 @@ function sanpham_thuong($ten_sp){
     </div>
 
     <div class="icons">
-      <a href="">
+      <a href="?mod=page&act=themYeuThich&id='.$id_sp.'">
         <i class="fa-regular fa-heart"></i>
 
       </a>

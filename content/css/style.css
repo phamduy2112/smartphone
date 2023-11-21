@@ -3,10 +3,8 @@
 @import url('../css/product.css');
 @import url('dangnhap1.css');
 @import url('../css/user.css');
-
 @import url('../css/bien.css');
 @import url('reponsive.css');
-
 :root{
     --font--color:#2B20A1;
     /* FONT */
@@ -33,7 +31,6 @@ a{
     color: black;
     text-decoration: none;
 }
-
 /* BEGIN HEADER */
 header{
     background-color: white;
@@ -116,6 +113,7 @@ main{
     width: 21%;
     margin: 0px;
 }
+
 ul{
     padding-left: 0;
 }
@@ -209,7 +207,6 @@ ul{
     font-size: 12px;
     color: var(--font--color);
 }
-
 /* BANNER DANH MỤC */
 .banner__hai .row .banner__item{
     width: 33%;
@@ -259,8 +256,6 @@ ul{
 .banner__hai .row .banner__item:last-child{
     padding-right: 0;
 }
-
-
 /* BLOG BEGIN */
 .blog__box{
     display: flex;
