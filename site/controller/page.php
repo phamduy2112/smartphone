@@ -5,15 +5,12 @@ ob_start();
 
 
    // include_once '../model_DAO/category.php';
-<<<<<<< HEAD
    include_once '../model_DAO/user.php';
    include_once '../model_DAO/product.php';
 //    include_once '../model_DAO/user.php'; 
-=======
    include_once '../model_DAO/product.php'; 
    include_once '../model_DAO/user.php';
    include_once '../model_DAO/comment.php';
->>>>>>> devTri
 //    include_once '../model_DAO/giohang.php'; 
    if(isset($act)){
        switch($act){
@@ -28,7 +25,7 @@ ob_start();
             break;
 
          case 'yeuthich':
-            
+         
             include_once './view/header.php';
         
             if(isset($_SESSION['taikhoan'])){
@@ -95,15 +92,12 @@ ob_start();
 
                
           }
-<<<<<<< HEAD
           $sanpham_sau=soluong_SanPham(10,6);
          //  $get_hinh=get_hinh($id);
-=======
             $sanpham_sau=soluong_SanPham(10,16);
             $load_binhluan=load_comment($id);
            
            
->>>>>>> devTri
             include_once './view/sanphamct.php';
             include_once './view/footer.php';
             break;

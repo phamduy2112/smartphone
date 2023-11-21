@@ -30,6 +30,15 @@
     /* background-color: red; */
     margin-top: 0px !important
 }
+.productct__right .stars i{
+    color: #FFCE31;
+    font-size: 18px;
+}
+.productct__right .stars span{
+    font-size: 14px;
+    font-family: var(--Play);
+    color: gray;
+}
 .productct__flex .productct__right .productct__text h2{
     font-size: 30px;
     color: var(--font--color);
@@ -38,22 +47,28 @@
     
 }
 .productct__flex .productct__right .productct__text p{
-    font-size: 18px;
-    
-}
-.productct__right .stars i{
-    color: yellow;
-    font-size: 18px;
-}
-.productCT__Bottom h2{
-background-color: white;
-color: var(--font--color);
-padding: 10px 5px;
+    font-weight: 600;
+    font-family: var(--Ruda);
+    font-size: 20px;
+    color: gray;
 }
 .productct__flex .productct__right .productct__text p span{
-    font-weight: bold;
+    font-weight: 900;
     color: var(--font--color);
-    
+}
+.productct__flex .productct__right .productct__text p span del{
+    font-weight: 600;
+    color: rgba(128, 128, 128, 0.63);
+}
+.productct__flex .productct__right .productct__text .price .price1{
+    font-size: 23px;
+    color: red;
+}
+/* TITLE SP TUONG TU */
+.productCT__Bottom h2{
+background-color: rgb(221, 19, 19);
+color: var(--font--color);
+padding: 10px 5px;
 }
 .pro_img{
     display: flex;
@@ -67,48 +82,91 @@ padding: 10px 5px;
     font-family: var(--Ruda);
 }
 
-.productct__flex .productct__right .productct__text .price .price1{
-    font-size: 23px;
-    color: red;
-}
+/* BUTTON SL - ADD CART - BUY NOW */
 .productct__text .number__count{
     display: flex;
     align-items: center;
- 
- 
 }
 .productct__text .number__count .number__count_pr{
     display: flex;
     align-items: center;
     text-align: center;
     justify-content: center;
-    border: 1px solid var(--font--color);
-    padding: 8px 0;
-    border-radius: 20px;cursor: pointer;
+    border: 2px solid var(--font--color);
+    padding: 5px 0;
+    border-radius: 13px;cursor: pointer;
     margin-right: 20px;
 }
 .number__count_pr .solid{
-padding: 0 15px;
+    padding: 0 15px;
 }
-.productct__text .mua,
-.productct__text .number__count .addtoCart{
-    border-radius: 20px;
-    border: 1px solid black;
-    padding: 8px 0;
+.productct__text .number__count .addtoCart,
+.productct__text .mua{
+    font-family:var(--Play);
+    font-weight: bold;
+    border-radius: 13px;
+    padding: 5px 0;
     text-align: center;
 }
 .productct__text .number__count .addtoCart{
+    background: white;
+    color: var(--CD);
+    border: 2px solid var(--font--color);
+    transition: all .7s;
+}
+.productct__text .number__count .addtoCart:hover{
+    background: var(--CD);
+    color: white;
+    border-radius: 15px;
+}
+.productct__text .mua{
+    font-size: 18px;
     background: var(--font--color);
     color: white;
     border: 2px solid var(--font--color);
-    transition: all .5s;
+    transition: all .4s;
+}
+.productct__text .btn:hover.mua{
+    background: red;
+    color: white;
+    border-radius: 15px;
+}
+.icon__productct{
+    padding: 5px 5px;
+    font-size: 20px;
+    /* background-color: #2B20A1; */
+    font-family: var(--Ruda);
+    margin-bottom: 0px;
+}
+.icon__productct a{
+    font-weight: 600;
+    transition: 0.5s;
+}
+.icon__productct a i{
+    font-size: 25px;
+    transition: 0.3s;
+}
+.icon__productct a:hover i{
+    color: red;
 }
 
-.productct__text .number__count .addtoCart:hover{
-    background: transparent;
-    color: var(--font--color);
-    border: 2px solid var(--font--color);
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .binhluan .BinhLuan{
     display: flex;
     justify-content: space-between;
@@ -143,26 +201,6 @@ padding: 0 15px;
 .binhluan li:last-child{
     border-bottom: none;
 }
-.productct__text .number__count .addtoCart:hover{
-    background: transparent;
-    color: var(--font--color);
-    border: 2px solid var(--font--color);
-
-}
-.productct__text .mua{
-    color: var(--font--color);
-    font-weight: 600;
-    border: 2px solid var(--font--color);
-    transition: all .5s;
-}
-.productct__text .btn{
-    
-}
-.productct__text .btn:hover.mua{
-    background: var(--font--color);
-    color: white;
-}
-
 .productct_thanhtoan{
     background-color: aliceblue;
     text-align: center;
