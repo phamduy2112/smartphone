@@ -174,7 +174,42 @@ ul{
     .product__banner_hot >h1{
         font-family: 'Play', sans-serif;
     }
-
+/* TITLE SHIPPY */
+.shippy{
+    margin-top: 5px;
+}
+.shippy__box{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.shippy__item{
+    width: 24%;
+    display: flex;
+    gap: 5px;
+    margin: 5px 0;
+    background-color: white;
+    padding: 15px 25px;
+    border-radius: 5px;
+}
+.shippy__item i{
+    font-size: 30px;
+    color: var(--font--color);
+    font-weight: bold;
+    margin-right: 10px;
+}
+.shippy_itemd h3{
+    font-size: 15px;
+    margin-bottom: 0;
+    font-weight: bold;
+    font-family: var(--Ruda);
+}
+.shippy__item p{
+    font-family: var(--Ruda);
+    font-size: 12px;
+    color: var(--font--color);
+}
 /* BANNER DANH MỤC */
 .banner__hai .row .banner__item{
     width: 33%;
