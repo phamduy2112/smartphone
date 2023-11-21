@@ -5,14 +5,9 @@ ob_start();
 
 
    // include_once '../model_DAO/category.php';
-<<<<<<< HEAD
-   include_once '../model_DAO/product.php';
-//    include_once '../model_DAO/user.php'; 
-=======
    include_once '../model_DAO/product.php'; 
    include_once '../model_DAO/user.php';
    include_once '../model_DAO/comment.php';
->>>>>>> 8146f052da5538020f6363259d7677b9c91da0b3
 //    include_once '../model_DAO/giohang.php'; 
    if(isset($act)){
        switch($act){
@@ -29,13 +24,6 @@ ob_start();
             include_once './view/header.php'; 
           if(isset($id)){
                $sl_mot=laymot_sp($id);
-<<<<<<< HEAD
-          }
-          $sanpham_sau=soluong_SanPham(10,16);
-            include_once './view/sanphamct.php';
-            include_once './view/footer.php';
-       }
-=======
                if(isset($gui)){
                   if($sl_mot){
                      $id_kh = lay_iduser($_SESSION['taikhoan']);
@@ -58,7 +46,6 @@ ob_start();
             break;
          
          }
->>>>>>> 8146f052da5538020f6363259d7677b9c91da0b3
        
    }else{
 
