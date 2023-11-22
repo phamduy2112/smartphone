@@ -130,7 +130,7 @@ function get_price($gia, $khuyenmai){
                         <div class="productct__bottom">
                             <!-- ADD LIKE -->
                             <div class="icon__productct">
-                                <a href="">
+                                <a href="?mod=page&act=themYeuThich&id='.$id_sp.'">
                                     <i class="fa fa-heart " aria-hidden="true"></i>
                                     Thêm vào yêu thích
                                 </a>
@@ -183,7 +183,7 @@ function get_price($gia, $khuyenmai){
                     </li>
                     <li class="nav-item" role="presentation">
                         <button class="nav-link1" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile"
-                            type="button" role="tab" aria-controls="profile" aria-selected="false">Vật chuyển</button>
+                            type="button" role="tab" aria-controls="profile" aria-selected="false">Vận chuyển</button>
                     </li>
                     <li class="nav-item" role="presentation">
                         <button class="nav-link1" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact"
@@ -208,6 +208,16 @@ function get_price($gia, $khuyenmai){
                     <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">..</div>
                     <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
                         <h4>Đánh giá của khách hàng</h4>
+                        <?php
+                            $cmt='';
+                            if(isset($_SESSION['taikhoan'])){
+                            $cmt.='
+                            ';
+                            }else{
+                            $cmt.='style="display:none !important;"';
+
+                            }
+                            ?>
                         <?php foreach($load_binhluan as $id_bl):?>
                         <div class="binhluan">
                             <div class="bl d-flex w-75">
@@ -228,7 +238,7 @@ function get_price($gia, $khuyenmai){
                                 </div>
                             </div>
 
-                            <div class="chinhsua">
+                            <div class="chinhsua" <?=$cmt?>>
 
                                 <i class="fa-solid fa-gear" id="fa-gear"></i>
                                 <ul class="activeE" id="chinh">
@@ -237,12 +247,20 @@ function get_price($gia, $khuyenmai){
                             </div>
                         </div>
                         <?php endforeach;?>
-                        <div class="d-flex mt-5">
+                        
+
+
+                        
+
+                        <div class="d-flex mt-5" <?=$cmt?>>
                             <div class="image">
                                 <img src="../content/img/service/hinhtoi5.jpg" alt="">
 
                             </div>
-                            <form action="" class="BinhLuan" method="post">
+
+
+
+                            <form action="" class="BinhLuan" method="post" >
                                 <input type="text" placeholder="Bình luận" class="binhluan1" name="noidung">
                                 <input type="submit" value="gửi" class="gui" name="gui">
                             </form>

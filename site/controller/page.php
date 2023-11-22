@@ -137,7 +137,7 @@ ob_start();
           }
           $sanpham_sau=soluong_SanPham(10,6);
          //  $get_hinh=get_hinh($id);
-            $sanpham_sau=soluong_SanPham(10,16);
+            $sanpham_sau=soluong_SanPham(10,6);
             $load_binhluan=load_comment($id);
            
            
