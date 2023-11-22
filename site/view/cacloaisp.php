@@ -99,7 +99,7 @@
                     <div class="group__form">
                             <a href="">
                               <input type="checkbox" value="dienthoai"> 
-                              Giảm giá
+                              Giảm giáa
                             </a>
                              
                           </div>
@@ -143,7 +143,7 @@
                       <h3>Danh mục</h3>
                       <form action="">
                           <div class="group__form">
-                            <a href="<?=$_SERVER['REQUEST_URI']?>?>">
+                            <a href="">
                               <input type="checkbox" value="dienthoai" id="tatca"> 
                             Tat ca
                             </a>
@@ -191,7 +191,7 @@
                          
                       </div>
                       <div class="group__form">
-                        <a href="<?=$_SERVER['REQUEST_URI']?>&min_price=3000000&max=5000000">
+                        <a href="<?=$_SERVER['REQUEST_URI']?>&min_price=3000000&max_price=5000000">
                           <input type="checkbox" value="dienthoai" id="dienthoai"> 
                           3.000.000đ- 5.000.000đ
                         </a>
@@ -221,7 +221,7 @@
                    <form action="">
              
                   <select name="" id="">
-                  <a href="<?=$_SERVER['REQUEST_URI']?>&order=new">
+                  <a href="">
                   <option value="">Mới</option>
                   </a>
                     <a href="">

@@ -25,9 +25,24 @@ ob_start();
             break;
          case 'cacloaisp':
             include_once './view/header.php'; 
-           $sp=laytatca_SP();
-            include_once './view/cacloaisp.php';
+            if(!isset($min_price)) $min_price=0;
+            if(!isset($max_price)) $max_price=0;
+            // if(!isset($order)) $order='';
+            $sp=soluong_SanPham(0,16);
+            print_r($sp);
+         //  if(isset($min_price)&&isset($max_price)){
+
+          
+         //    echo $max_price;
+         //    echo $min_price;
+         //   $sp=loc_sanpham($min_price,$max_price);
+         //   print_r($sp);
+         //  }else{
+         //    $sp=soluong_SanPham(0,16);
+         //  }
+           include_once './view/cacloaisp.php';
             include_once './view/footer.php';
+            break;
             //
          case 'yeuthich':
          
