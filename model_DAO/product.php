@@ -33,8 +33,8 @@ function xoaSanPhamYeuThich($id_sp){
   $sql="DELETE FROM yeuthich where id_sp=?";
   return pdo_query_one($sql,$id_sp);
 }
-function loc_sanpham($min_price,$max_price){
-  $sql="SELECT * FROM sanpham where gia > ? and gia < ?";
+function loc_sanpham($min_price,$max_price,$order,$order_ten){
+$sql="SELECT * FROM sanpham where gia > ? and gia < ? ORDER BY gia $order,ten_sp $order_ten";
   return pdo_query($sql,$min_price,$max_price);
 }
 function sanpham($ten_sp){

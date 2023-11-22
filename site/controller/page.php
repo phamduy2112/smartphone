@@ -26,20 +26,20 @@ ob_start();
          case 'cacloaisp':
             include_once './view/header.php'; 
             if(!isset($min_price)) $min_price=0;
-            if(!isset($max_price)) $max_price=0;
+            if(!isset($max_price)) $max_price=99999999999999999;
+            if(!isset($order)) $order='';
+            if(!isset($order_ten)) $order_ten='';
             // if(!isset($order)) $order='';
-            $sp=soluong_SanPham(0,16);
-            print_r($sp);
-         //  if(isset($min_price)&&isset($max_price)){
+            // $sp=soluong_SanPham(0,16);
+           
+          if(isset($min_price)&&isset($max_price)){
 
-          
-         //    echo $max_price;
-         //    echo $min_price;
-         //   $sp=loc_sanpham($min_price,$max_price);
-         //   print_r($sp);
-         //  }else{
-         //    $sp=soluong_SanPham(0,16);
-         //  }
+         
+           $sp=loc_sanpham($min_price,$max_price,$order,$order_ten);
+           
+          }else{
+            $sp=soluong_SanPham(0,16);
+          }
            include_once './view/cacloaisp.php';
             include_once './view/footer.php';
             break;

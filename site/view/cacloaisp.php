@@ -104,28 +104,28 @@
                              
                           </div>
                     <div class="group__form">
-                            <a href="">
+                            <a href="<?=$_SERVER['REQUEST_URI']?>&order_ten=ASC">
                               <input type="checkbox" value="dienthoai"> 
                               Sắp xếp tên A-Z
                             </a>
                              
                           </div>
                     <div class="group__form">
-                            <a href="">
+                            <a href="<?=$_SERVER['REQUEST_URI']?>&order_ten=DESC">
                               <input type="checkbox" value="dienthoai"> 
                               Sắp xếp tên Z-A
                             </a>
                              
                           </div>
                     <div class="group__form">
-                            <a href="">
+                            <a href="<?=$_SERVER['REQUEST_URI']?>&order=ASC">
                               <input type="checkbox" value="dienthoai"> 
                               Sắp xếp giá cao dần
                             </a>
                              
                           </div>
                     <div class="group__form">
-                            <a href="">
+                            <a href="<?=$_SERVER['REQUEST_URI']?>&order=DESC">
                               <input type="checkbox" value="dienthoai"> 
                               Sắp xếp giá thấp dần
                             </a>
@@ -184,14 +184,14 @@
                     </div>
                     <form action="">
                       <div class="group__form">
-                        <a href="<?=$_SERVER['REQUEST_URI']?>&max_price=3000000">
+                        <a href="<?=$_SERVER['REQUEST_URI']?>&min_price=0&max_price=3000000">
                           <input type="checkbox" value="dienthoai" id="dienthoai"> 
                           3.000.000đ
                         </a>
                          
                       </div>
                       <div class="group__form">
-                        <a href="<?=$_SERVER['REQUEST_URI']?>&min_price=3000000&max_price=5000000">
+                        <a href="<?=$_SERVER['REQUEST_URI']?>&min_price=3000000&max_price=50000000">
                           <input type="checkbox" value="dienthoai" id="dienthoai"> 
                           3.000.000đ- 5.000.000đ
                         </a>
@@ -270,7 +270,73 @@
            
                   <div class="product__box mt-2">
                  
-             <?=sanpham_thuong($sp);?>
+            <?php 
+             foreach($sp as $item){
+              $sale="";
+              extract($item);
+              if($khuyenmai <=1){
+                $sale='style="display:none;"';
+              }else{
+                $sale='';
+              }
+              echo '  
+              <div class="product__item product__bt mt-2">
+              <div class="ctn-notify">
+          
+              <div class="count" '.$sale.'>
+               -'.$khuyenmai.'%
+              </div>
+          
+              </div>
+          
+              <div class="icons">
+                <a href="?mod=page&act=themYeuThich&id='.$id_sp.'">
+                  <i class="fa-regular fa-heart"></i>
+          
+                </a>
+                <a href="">
+          
+                  <i class="fas fa-layer-group"></i>
+                </a>
+                <a href="">
+                  <i class="fa fa-eye" aria-hidden="true"></i>
+                </a>
+          
+              </div>
+              <a href="?mod=page&act=sanphamchitiet&id='.$id_sp.'">
+              <div class="product__img">
+                <img src="../content/img/productachnen/'.$hinhanh.'" alt="">
+              </div>
+              <div class="product__text">
+                <h3>
+                '.$ten_sp.'
+                </h3>
+                <div class="stars">
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <span>('.$danhgia.' lượt đánh giá)</span>
+                </div>
+                <div class="price">
+                <span>
+                '.number_format($gia,0,',','.').'đ
+                </span>
+                '.number_format($gia*((100-$khuyenmai)/100),0,',','.').'đ
+              </div>
+                <div class="check">
+                  <i class="fa-solid fa-check"></i>
+                  <span>Còn hàng</span>
+                </div>
+                <div class="container-btn">
+                <a href="?mod=cart&act=giohang&id='.$id_sp.'" class="btn btn-danger w-100 my-2">Mua hàng</a>
+                </div>
+              </div>
+              </a>
+            </div>';
+            }
+            ?>
                     
                        
               
