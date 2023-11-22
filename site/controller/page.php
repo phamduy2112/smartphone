@@ -29,8 +29,7 @@ ob_start();
             if(!isset($max_price)) $max_price=99999999999999999;
             if(!isset($order)) $order='';
             if(!isset($order_ten)) $order_ten='';
-            // if(!isset($order)) $order='';
-            // $sp=soluong_SanPham(0,16);
+            // asdsad
            
           if(isset($min_price)&&isset($max_price)){
 
