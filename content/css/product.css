@@ -288,8 +288,6 @@
     background-color:red;
 }
 
-<<<<<<< HEAD
-=======
 @media (min-width:300px){
     #desktop__left{
         display: none;
@@ -401,10 +399,7 @@ z-index: 111111111;
     }
     
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> 8146f052da5538020f6363259d7677b9c91da0b3
 @media (max-width:1000px){
     .product .d-flex .img{
         display: none;
@@ -477,4 +472,3 @@ z-index: 111111111;
         font-size: 13px;
     }
   }
->>>>>>> devTri

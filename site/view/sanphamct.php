@@ -108,24 +108,24 @@ function get_price($gia, $khuyenmai){
                         <div class="price mt-1">
                             <?php 
         get_price($gia,$khuyenmai);?>
-                        </div>
-                        <hr>
-                        <!-- Button Count - ADD CART - BUY NOW -->
-                        <!-- COUNT -->
-                        <div class="number__count">
-                            <div class="number__count_pr">
-                                <i class="fa-solid fa-minus solid"></i>
-                                <div class="number">
-                                    1
-                                </div>
-                                <i class="fa-solid fa-plus solid"></i>
-                            </div>
-
-                            <!-- ADD CART -->
-                            <a href="?mod=cart&act=giohang&id=<?=$id_sp?>" class="addtoCart w-100">THÊM VÀO GIỎ HÀNG</a>
-                        </div>
-                        <!-- BUY NOW -->
-                        <a href="" class="btn w-100 mt-2 mua">MUA NGAY</a>
+    </div>
+    <hr>
+    <!-- Button Count - ADD CART - BUY NOW -->
+    <!-- COUNT -->
+    <div class="number__count">
+        <div class="number__count_pr">
+             <i class="fa-solid fa-minus solid"></i>
+        <div class="number">
+            1
+        </div>
+            <i class="fa-solid fa-plus solid"></i>  
+        </div>
+      
+      <!-- ADD CART -->
+        <a href="?mod=cart&act=giohang&id=<?=$id_sp?>" class="addtoCart w-100">THÊM VÀO GIỎ HÀNG</a>
+    </div>
+    <!-- BUY NOW -->
+    <a href="" class="btn w-100 mt-2 mua">MUA NGAY</a>
 
                         <div class="productct__bottom">
                             <!-- ADD LIKE -->
@@ -137,16 +137,16 @@ function get_price($gia, $khuyenmai){
                                 <!-- <a href="">
                 <i class="fa fa-share" aria-hidden="true"></i>
                 Chia sẽ ngay
-                </a> -->
-                            </div>
-                            <hr style="margin: 0px;">
-                            <!-- Thông tin 2 -->
-                            <div class="productct__tt">
-                                <p> <span>Khả dụng:</span> In Stock</p>
-                                <p> <span>Mã hàng:</span> N/A-01</p>
-                                <p> <span>Hãng:</span> Samsung</p>
-                                <p> <span>Loại:</span> Điện thoại</p>
-                            </div>
+            </a> -->
+        </div>
+        <hr style="margin: 0px;">
+    <!-- Thông tin 2 -->
+      <div class="productct__tt">
+        <p> <span>Khả dụng:</span>In Stock</p>
+        <p> <span>Mã hàng:</span>N/A-01</p>
+        <p> <span>Hãng:</span>Samsung</p>
+        <p> <span>Loại:</span>Điện thoại</p>
+      </div>
 
                             <!-- Can PAY -->
                             <div class="productct_thanhtoan mt-2">
@@ -175,83 +175,57 @@ function get_price($gia, $khuyenmai){
     <!-- Bình luận -->
     <div class="productchitiet__bottom mt-4">
         <div class="container-md">
-            <div class="prochitiet">
+          <div class="prochitiet">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link1 active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Thông tin</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link1" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Vật chuyển</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link1" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Đánh giá</button>
+            </li>
+          </ul>
+          <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+            <p><?=$text1?></p>
+              
+            </div>
+            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">..</div>
+            <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+              <h4>Bình luận</h4>
+              <?php foreach($load_binhluan as $id_bl):?>
+              <div class="binhluan">
+                <div class="bl d-flex w-75">
+                  <div class="image">
+                  <img src="../img/service/hinhtoi5.jpg" alt="">
 
-
-                <ul class="nav nav-tabs" id="myTab" role="tablist">
-
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link1 active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home"
-                            type="button" role="tab" aria-controls="home" aria-selected="true">Thông tin</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link1" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile"
-                            type="button" role="tab" aria-controls="profile" aria-selected="false">Vận chuyển</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link1" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact"
-                            type="button" role="tab" aria-controls="contact" aria-selected="false">Đánh giá</button>
-                    </li>
-                </ul>
-
-                <div class="tab-content" id="myTabContent">
-
-                    <!-- SHOW INFOR -->
-                    <div class="tab-pane fade show active tab-infor" id="home" role="tabpanel" aria-labelledby="home-tab">
-                        <?php
-                          $lines = explode("\n", $text1);
-                          foreach ($lines as $line) {
-                            $pos = strpos($line, ':');
-                            if ($pos !== false) {
-                                $tag = substr($line, 0, $pos);
-                                $value = substr($line, $pos + 1);
-                                echo '<div><span class="tag">' . $tag . ':</span><span class="value">' . $value . '</span></div>';
-                            }
-                        }
-                        ?>
-                    </div>
-
-                    <!-- SHOW SHIP-->
-                    <div class="tab-pane fade tab-ship" id="profile" role="tabpanel" aria-labelledby="profile-tab">..</div>
-
-
-
-
-                    <!-- SHOW ĐÁNH GIÁ -->
-                    <div class="tab-pane fade tab-cmt" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-                        <h4>Đánh giá của khách hàng</h4>
-                        
-                        <?php foreach($load_binhluan as $id_bl):?>
-                        <div class="binhluan">
-                            <div class="bl d-flex w-75">
-                                <div class="image">
-                                    <img src="../img/service/hinhtoi5.jpg" alt="">
-
-                                </div>
-                                <div class="binhluan__d">
-                                    <div class="name"><?=$id_bl['id_kh']?></div>
-                                    <div class="ngaythang"><?=$id_bl['ngaydang']?></div>
-                                    <div class="title"><?=$id_bl['noidung']?></div>
-                                    <div>
-                                        <span>Phản hồi</span>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="chinhsua ">
-                                <i class="fa-solid fa-gear" id="fa-gear"></i>
-                                <ul class="activeE" id="chinh">
-                                    <li><a href="">Chỉnh sửa</a></li>
-                                    <li><a href="">Xoá</a></li>
-                                </ul>
-                            </div>
-
-
-                        </div>
-                        <?php endforeach;?>
-                        <div class="d-flex mt-5">
-                            <div class="image">
-                                <img src="../img/service/hinhtoi5.jpg" alt="">
+                </div>
+                <div class="binhluan__d">
+                  <div class="name"><?=$id_bl['id_kh']?></div>
+                  <div class="ngaythang"><?=$id_bl['ngaydang']?></div>
+                  <div class="title"><?=$id_bl['noidung']?></div>
+                  <div>
+                  <span>Phản hồi</span>
+                </div>
+                </div>
+                
+                </div>
+                <div class="chinhsua ">
+                   <i class="fa-solid fa-gear" id="fa-gear"></i>
+                   <ul class="activeE" id="chinh">
+                    <li><a href="">Chỉnh sửa</a></li>
+                    <li><a href="">Xoá</a></li>
+                   </ul>
+                </div>
+               
+               
+              </div>
+              <?php endforeach;?>
+              <div class="d-flex mt-5">
+                <div class="image">
+                  <img src="../img/service/hinhtoi5.jpg" alt="">
 
                             </div>
                             <form action="" class="BinhLuan" method="post">
@@ -259,24 +233,20 @@ function get_price($gia, $khuyenmai){
                                 <input type="submit" value="gửi" class="gui" name="gui">
                             </form>
 
-                        </div>
-
-                        </form>
-                    </div>
                 </div>
+               
+              </form>
             </div>
-
-
-
-
-            <div class="productCT__Bottom mt-3">
-                <h2>Sản phẩm tương tự</h2>
-                <div class="product mt-2 w-100">
-
-
-                    <div class="product__box mt-2">
-
-                        <!-- <div class="product__item product__bt" style=>
+          </div>    
+          </div>
+          <div class="productCT__Bottom mt-3">
+             <h2>Sản phẩm tương tự</h2> 
+             <div class="product mt-2 w-100">
+       
+           
+              <div class="product__box mt-2">
+             
+                    <!-- <div class="product__item product__bt" style=>
                       <div class="count">
                         New
                       </div>
@@ -538,7 +508,7 @@ function get_price($gia, $khuyenmai){
                         <a href="" class="btn btn-danger w-100 my-2">Mua hàng</a>
                       </div>
                     </div> -->
-
+                 
 
                         <?=sanpham_thuong($sanpham_sau);?>
 
@@ -556,3 +526,10 @@ function get_price($gia, $khuyenmai){
     </div>
 
 </main>
+
+<script>
+document.getElementById('fa-gear').onclick = function() {
+    document.getElementById('chinh').classList.toggle('activeE');
+
+}
+</script>

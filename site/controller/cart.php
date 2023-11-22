@@ -55,7 +55,7 @@ if (isset($act)) {
         header('location:?mod=cart&act=list');
         break;
     case 'xoaHet':
-     
+        unset($_SESSION['cart']);
         header('location:?mod=cart&act=list');
         break;
     case 'trangthanhtoan':
@@ -65,19 +65,25 @@ if (isset($act)) {
             if(isset($btn_Thanhtoan)){
                 $id_user=lay_iduser($_SESSION['taikhoan']);
                 // extract($id_user);
-                $time = date('Y-m-d H:i:s');  
-                them_donHang($time,$_SESSION['tongtt'],'Đang chuẩn bị hàng',$id_user['id_kh']);
+                // $time = date('Y-m-d H:i:s');  
+                // them_donHang($time,$_SESSION['tongtt'],'Đang chuẩn bị hàng',$id_user['id_kh']);
               
-                foreach( $_SESSION['cart'] as $item){
-                    extract($item);
-                    // echo $id_user['id_kh'];
-                    $id=them_cuoidonct();
+                // foreach( $_SESSION['cart'] as $item){
+                //     extract($item);
+                //     // echo $id_user['id_kh'];
+                //     $id=them_cuoidonct();
                
-                    them_donhangCT($id['id_dh'],$MaSanPham,$SL);
+                //     them_donhangCT($id['id_dh'],$MaSanPham,$SL);
                
+                // }
+
+                if($check==="chuyenkhoan"){
+                 $_SESSION['check']='Chuyển khoản ngân hàng';
+                }else{
+                 $_SESSION['check']='Trả tiền mặt khi nhận hàng';
                 }
-               
-                unset($_SESSION['cart']);
+                header('location:?mod=cart&act=trangsauthanhtoan');
+                // unset($_SESSION['cart']);
                 
               
           
@@ -95,7 +101,14 @@ if (isset($act)) {
         include_once('./view/trangchuadangnhap.php');
         include_once('./view/footer.php');
         break;
+    case 'trangsauthanhtoan':
+
+        include_once('./view/header.php');
+        include_once('./view/trangsauthanhtoan.php');
+        include_once('./view/footer.php');
+        break;
     }
+    
    
 }
 ?>
