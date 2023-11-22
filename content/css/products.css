@@ -67,7 +67,7 @@
 }
 /* TITLE SP TUONG TU */
 .productCT__Bottom h2{
-background-color: rgb(221, 19, 19);
+background-color: white;
 color: var(--font--color);
 padding: 10px 5px;
 }
