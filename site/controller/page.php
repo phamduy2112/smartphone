@@ -46,6 +46,8 @@ ob_start();
             include_once './view/footer.php';
             break;
          case 'themYeuThich':
+            include_once './view/header.php';
+        
             if(isset($_SESSION['taikhoan'])){
                if(isset($id)){
                     $id_user=lay_iduser($_SESSION['taikhoan']);
@@ -58,7 +60,7 @@ ob_start();
 
               
             }else{
-               include_once './view/trangchuadangnhap.php';            }
+               include_once './view/trangchuadangnhap.php';          }
             
             include_once './view/footer.php';
             break;
@@ -97,7 +99,7 @@ ob_start();
                   }
                  }else{
                   // echo '<p class="text-center">Bạn muốn Bình luận? </p> ';
-                  include_once './view/.php';  
+                
                   
                }
            

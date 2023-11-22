@@ -112,6 +112,10 @@ if (isset($act)) {
         include_once("view/thongtinchitiet.php");
         include_once("view/footer.php");
         break;
+      case 'dangxuat':
+        unset($_SESSION['taikhoan']);
+        header('Location:?mod=page&act=home');
+break;
       case 'donhang':
  
         include_once("view/header.php");
