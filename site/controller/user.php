@@ -70,22 +70,23 @@ if (isset($act)) {
       include_once("view/footer.php");
       break;
       case 'timtaikhoan':
+        $kq=" ";
         if(isset($nutTimTK)){
           if (isset($taikhoan)&&($taikhoan!='')
           && isset($matkhaucap2)&&($matkhaucap2!='')
           
           ){
-            echo $taikhoan;
-            echo $matkhaucap2;
+         
+          
           $result=ktTaiKhoan2($taikhoan,$matkhaucap2);
           if($result){
-            $_SESSION['taikhoan'] = $taikhoan;
+            $_SESSION['taikhoan1'] = $taikhoan;
             header("Location:?mod=user&act=doimk");   
           }else{
-            echo "Thất bại";
+            $kq.="Bạn vừa nhập tài khoản và mật khẩu cấp 2 không đúng";
           }
             }else{
-              echo "Lỗi rồi";
+              $kq.= "Không được bỏ trống tài khoản hoặc mật khẩu cấp 2";
             }
         }
 
@@ -94,11 +95,15 @@ if (isset($act)) {
         include_once("view/footer.php");
         break;
       case 'doimk':
-        $taikhoan= $_SESSION['taikhoan'];
+        $taikhoan= $_SESSION['taikhoan1'];
         if(isset($nutDoiMK)){
           if (isset($matkhau)&&($matkhau!='')){
             $result=doi_mk($matkhau,$taikhoan);
-            echo "Đổi mật khẩu thành công";
+            $_SESSION['taikhoan']=$taikhoan;
+
+            header("Location:?mod=page&act=home"); 
+
+
           }else{
             
           }

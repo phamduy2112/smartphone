@@ -33,9 +33,17 @@ function xoaSanPhamYeuThich($id_sp){
   $sql="DELETE FROM yeuthich where id_sp=?";
   return pdo_query_one($sql,$id_sp);
 }
-function loc_sanpham($min_price,$max_price,$order,$order_ten){
-$sql="SELECT * FROM sanpham where gia > ? and gia < ? ORDER BY gia $order,ten_sp $order_ten";
-  return pdo_query($sql,$min_price,$max_price);
+function loc_sanpham($min_price,$max_price,$order,$order_ten,$id_loai,$limit,$number){
+$sql="SELECT * FROM sanpham where gia > ? and gia < ? ";
+if($id_loai>0){
+$sql.="and id_loai=$id_loai";
+}  
+$sql.=" ORDER BY gia $order,ten_sp $order_ten Limit $limit,$number";
+return pdo_query($sql,$min_price,$max_price);
+}
+function dem_SP(){
+  $sql='SELECT COUNT(*) FROM sanpham';
+  return pdo_query_value($sql);
 }
 function sanpham($ten_sp){
 $get="";

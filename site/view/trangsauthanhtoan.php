@@ -10,7 +10,7 @@
       <div class="thanhtoan-dau">Đặt hàng thành công!Kiểm tra thông tin của bạn</div>
 
       <div class="sauthanhtoan row justify-content-between">
-        <div class="col-7 left-sauthanhtoan mt-2">
+        <div class="col-lg-7 col-sm-12 left-sauthanhtoan mt-2">
           <div class="bg-white thanhtoan-box">
             <h3>Chi tiết đơn hàng</h3>
             <div class="d-flex justify-content-between ">
@@ -40,7 +40,7 @@
             <hr>
           </div>
         </div>
-        <div class="col-4 right-sauthanhtoan mt-2">
+        <div class="col-lg-4 col-sm-12 right-sauthanhtoan mt-2">
           <div class="bg-white">
             <h4>Cảm ơn bạn đơn hàng đang được chờ duyệt</h4>
             <ul>

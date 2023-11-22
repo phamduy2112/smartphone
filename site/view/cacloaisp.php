@@ -10,36 +10,75 @@
                     <i class="fa-solid fa-xmark" id="dong"></i>
                   </div>
                   <div class="products__item">
+                    <div class="group__fl">
+                      <h3>Tuỳ chọn</h3>
+                      <i class="fa-solid fa-minus"></i>
+                    </div>
+                    <form action="">
+                  
+                    <div class="group__form">
+                            <a href="">
+                              <input type="checkbox" value="dienthoai"> 
+                              Mới
+                            </a>
+                             
+                          </div>
+                    <div class="group__form">
+                            <a href="">
+                              <input type="checkbox" value="dienthoai"> 
+                              Giảm giáa
+                            </a>
+                             
+                          </div>
+                    <div class="group__form">
+                            <a href="<?=$_SERVER['REQUEST_URI']?>&order_ten=ASC">
+                              <input type="checkbox" value="dienthoai"> 
+                              Sắp xếp tên A-Z
+                            </a>
+                             
+                          </div>
+                    <div class="group__form">
+                            <a href="<?=$_SERVER['REQUEST_URI']?>&order_ten=DESC">
+                              <input type="checkbox" value="dienthoai"> 
+                              Sắp xếp tên Z-A
+                            </a>
+                             
+                          </div>
+                    <div class="group__form">
+                            <a href="<?=$_SERVER['REQUEST_URI']?>&order=ASC">
+                              <input type="checkbox" value="dienthoai"> 
+                              Sắp xếp giá cao dần
+                            </a>
+                             
+                          </div>
+                    <div class="group__form">
+                            <a href="<?=$_SERVER['REQUEST_URI']?>&order=DESC">
+                              <input type="checkbox" value="dienthoai"> 
+                              Sắp xếp giá thấp dần
+                            </a>
+                             
+                          </div>
+                
+                 
+                    
+                  
+                    </form>
+                  </div>
+                  <hr>
+                  <div class="products__item">
                       <h3>Danh mục</h3>
                       <form action="">
+                        <?php foreach($danhmuc as $item):?>
                           <div class="group__form">
-                            <a href="">
+                            <a href="<?=$_SERVER['REQUEST_URI']?>&id_loai=<?=$item['id_loai']?>">
                               <input type="checkbox" value="dienthoai" id="tatca"> 
-                            Tat ca
+                           <?=$item['tenloai']?>
                             </a>
-                             
+                           
                           </div>
-                          <div class="group__form">
-                            <a href="">
-                              <input type="checkbox" value="dienthoai" id="dienthoai"> 
-                              Laptop và desktop
-                            </a>
-                             
-                          </div>
-                          <div class="group__form">
-                            <a href="">
-                              <input type="checkbox" value="dienthoai"> 
-                              Điện thoại(35)
-                            </a>
-                             
-                          </div>
-                          <div class="group__form">
-                            <a href="">
-                              <input type="checkbox" value="dienthoai"> 
-                              Tv và tai nghe
-                            </a>
-                            
-                          </div>
+                          <?php endforeach;?>
+                          
+                          
                   
                          
                           
@@ -48,35 +87,37 @@
                
                  
                   <hr>
-                  <div class="products__item">
-                    <div class="group__fl">
-                      <h3>Màu sắc</h3>
-                      <i class="fa-solid fa-minus"></i>
-                    </div>
-                    <form action="">
-                      <div class="group__form">
-                        <a href="">
-                          <input type="checkbox" value="dienthoai" id="dienthoai"> 
-                          128MB
-                        </a>
-                         
-                      </div>
-                      <div class="group__form">
-                        <a href="">
-                          <input type="checkbox" value="dienthoai" id="dienthoai"> 
-                          128MB
-                        </a>
-                         
-                      </div>
-                      <div class="group__form">
-                        <a href="">
-                          <input type="checkbox" value="dienthoai" id="dienthoai"> 
-                          128MB
-                        </a>
-                         
-                      </div>
-                    </form>
+                  <hr>
+              
+              <div class="products__item">
+                <div class="group__fl">
+                  <h3>Giá</h3>
+                  <i class="fa-solid fa-minus"></i>
+                </div>
+                <form action="">
+                  <div class="group__form">
+                    <a href="<?=$_SERVER['REQUEST_URI']?>&min_price=0&max_price=3000000">
+                      <input type="checkbox" value="dienthoai" id="dienthoai"> 
+                      3.000.000đ
+                    </a>
+                     
                   </div>
+                  <div class="group__form">
+                    <a href="<?=$_SERVER['REQUEST_URI']?>&min_price=3000000&max_price=50000000">
+                      <input type="checkbox" value="dienthoai" id="dienthoai"> 
+                      3.000.000đ- 5.000.000đ
+                    </a>
+                     
+                  </div>
+                  <!-- <div class="group__form">
+                    <a href="<?=$_SERVER['REQUEST_URI']?>&max_price=3000000">
+                      <input type="checkbox" value="dienthoai" id="dienthoai"> 
+                      1000000-1200000
+                    </a>
+                     
+                  </div> -->
+                </form>
+              </div>
                 
               </div>
               </div>
@@ -142,34 +183,17 @@
 
                       <h3>Danh mục</h3>
                       <form action="">
+                        <?php foreach($danhmuc as $item):?>
                           <div class="group__form">
-                            <a href="">
+                            <a href="<?=$_SERVER['REQUEST_URI']?>&id_loai=<?=$item['id_loai']?>">
                               <input type="checkbox" value="dienthoai" id="tatca"> 
-                            Tat ca
+                           <?=$item['tenloai']?>
                             </a>
-                             
+                           
                           </div>
-                          <div class="group__form">
-                            <a href="">
-                              <input type="checkbox" value="dienthoai" id="dienthoai"> 
-                              Laptop và desktop
-                            </a>
-                             
-                          </div>
-                          <div class="group__form">
-                            <a href="">
-                              <input type="checkbox" value="dienthoai"> 
-                              Điện thoại(35)
-                            </a>
-                             
-                          </div>
-                          <div class="group__form">
-                            <a href="">
-                              <input type="checkbox" value="dienthoai"> 
-                              Tv và tai nghe
-                            </a>
-                            
-                          </div>
+                          <?php endforeach;?>
+                          
+                          
                   
                          
                           
@@ -346,8 +370,17 @@
              
               </div>
             </div> 
-            </div>
             
+            </div>
+            <nav aria-label="..." class="d-flex justify-content-center mt-2">
+  <ul class="pagination pagination-sm">
+    <?php for($i=1;$i<=$number_page;$i++):?>
+    <li class="page-item" aria-current="page">
+      <span class="page-link"><a href="?mod=page&act=cacloaisp&page=<?=$i?>"><?php echo $i?></a></span>
+    </li>
+   <?php endfor;?>
+  </ul>
+</nav>
         </div>
     </div>
   </main>

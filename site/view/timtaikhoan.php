@@ -17,23 +17,26 @@
                   <div class="form__group_icona mx-1">
                     <p>Nhập tài khoản:</p>
 
-                    <input type="text" placeholder="Mời bạn nhập tài khoản" name="email">
+                    <input type="text" placeholder="Mời bạn nhập tài khoản" name="taikhoan">
                   </div>
                   <div class="form__group_icona mx-1">
-                    <p>Nhập tài khoản:</p>
+                    <p>Nhập mật khẩu cấp 2:</p>
 
-                    <input type="text" placeholder="Mời bạn nhập tài khoản" name="email">
+                    <input type="password" placeholder="*******" name="matkhaucap2">
                   </div>
                 </div>
-      
+                <p class="form__group_icona mx-1"><?=$kq?></p>
                   <hr>
                   <div class="forget_from">
                         <a href="">Huỷ</a>
                         <div>
-                          <input type="submit" value="Tìm kiếm" class="btna">
+                          <input type="submit" value="Tìm kiếm" class="btna" name="nutTimTK">
 
                         </div>
+
                   </div>
+          
+                
             
                 </div>
         </div>

@@ -145,7 +145,7 @@ if(isset($_SESSION['taikhoan'])){
             <ul>
               <li><a href="?mod=page&act=home">Trang chủ</a></li>
               <li><a href="">Giới thiệu</a></li>
-              <li><a href="?mod=page&act=cacloaisp">Sản phẩm</a></li>
+              <li><a href="?mod=page&act=cacloaisp&page=1">Sản phẩm</a></li>
               <li><a href="">Blog</a></li>
               <li><a href="">Liên hệ</a></li>
             </ul>
@@ -173,8 +173,9 @@ if(isset($_SESSION['taikhoan'])){
               <div class="icons d-flex">
 
 
-                <a href="" class="icon_item">
+                <a href="?mod=cart&act=list" class="icon_item">
 
+                
                   <i class="fa fa-cart-shopping"></i>
 
                  
@@ -219,9 +220,9 @@ if(isset($_SESSION['taikhoan'])){
                     Đăng nhập
                   </a>
                 </li>
-                <li><a href="">Trang chủ</a></li>
+                <li><a href="?mod=page&act=home">Trang chủ</a></li>
                 <li><a href="">Giới thiệu</a></li>
-                <li><a href="">Sản phẩm</a></li>
+                <li><a href="?mod=page&act=cacloaisp&page=1">Sản phẩm</a></li>
                 <li><a href="">Blog</a></li>
                 <li><a href="">Liên hệ</a></li>
               </ul>

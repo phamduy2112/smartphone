@@ -8,7 +8,7 @@ ob_start();
    include_once '../model_DAO/user.php';
    include_once '../model_DAO/product.php';
 //    include_once '../model_DAO/user.php'; 
-   include_once '../model_DAO/product.php'; 
+   include_once '../model_DAO/danhmuc.php'; 
    include_once '../model_DAO/user.php';
    include_once '../model_DAO/comment.php';
 //    include_once '../model_DAO/giohang.php'; 
@@ -24,21 +24,35 @@ ob_start();
             include_once './view/footer.php';
             break;
          case 'cacloaisp':
+
             include_once './view/header.php'; 
+            $danhmuc=laytatca_DM();
+            $tong_SP=dem_SP();
+           
+            $number_page=ceil($tong_SP/15);
+            
+            if(isset($page)){
+               $start=($page-1)*15;
+            // $sp=soluong_SanPham($start,15);
             if(!isset($min_price)) $min_price=0;
             if(!isset($max_price)) $max_price=99999999999999999;
             if(!isset($order)) $order='';
             if(!isset($order_ten)) $order_ten='';
+            // if(!isset($khuyenmai)) $khuyenmai=0;
+            if(!isset($id_loai)) $id_loai=0;
             // asdsad
            
-          if(isset($min_price)&&isset($max_price)){
+         
 
          
-           $sp=loc_sanpham($min_price,$max_price,$order,$order_ten);
+           $sp=loc_sanpham($min_price,$max_price,$order,$order_ten,$id_loai,$start,15);
+            
+         }
+       
            
-          }else{
-            $sp=soluong_SanPham(0,16);
-          }
+         //  }else{
+         //    $sp=soluong_SanPham(0,16);
+         //  }
            include_once './view/cacloaisp.php';
             include_once './view/footer.php';
             break;
