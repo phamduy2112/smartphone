@@ -2,8 +2,9 @@
 @import url('../css_admin/danhmuc.css');
 
 @import url('../css_admin/add_blog.css');
-@import url('../css_admin/content.css');
-@import url('../css/qlbl.css');
+@import url('../css_admin/blog.css');
+@import url('../css_admin/qlbl.css');
+@import url('../css_admin/qlbl_ct.css');
 
 *{
     padding: 0;

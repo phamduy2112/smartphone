@@ -1,41 +1,33 @@
-var top_blog_content_one = document.getElementById('top_blog_content_one');
-var top_blog_content_two = document.getElementById('top_blog_content_two');
-var top_blog_content_three = document.getElementById('top_blog_content_three');
-var top_blog_content_four = document.getElementById('top_blog_content_four');
-var top_blog_content_five = document.getElementById('top_blog_content_five');
-var top_blog_content_six = document.getElementById('top_blog_content_six');
-var top_blog_content_seven = document.getElementById('top_blog_content_seven');
-var top_xem_them_bs = document.getElementById('top_xem_them_bs');
-var top_blog = document.getElementById('top_blog');
+var top_blog_content = document.querySelectorAll('.top_blog_content');
+var top_xem_them = document.querySelector('.top_xem_them');
+var top_blog = document.querySelector('.top_blog');
 var number=0;
-
-function my_click(){
+top_xem_them.addEventListener('click' , ()=>{
     if(number==0){
-        top_blog.style.height = "2000px";
-        top_blog_content_one.style.display="flex";
-        top_blog_content_two.style.display="flex";
-        top_blog_content_three.style.display="flex";
-        top_blog_content_four.style.display="flex";
-        top_blog_content_five.style.display="flex";
-        top_blog_content_six.style.display="flex";
-        top_blog_content_seven.style.display="flex";
-        top_xem_them_bs.innerHTML="Thu hồi";
+        top_blog_content.forEach(element => {
+            top_blog.style.height = "2000px";
+          
+            top_xem_them .innerHTML="Thu hồi";
+            top_xem_them.style.color="red";
+            element.style.display="flex";
+           
+        });
         number++;
     }else{
-
-        top_blog.style.height = "550px";
-        top_blog_content_one.style.display="none";
-        top_blog_content_two.style.display="none";
-        top_blog_content_three.style.display="none";
-        top_blog_content_four.style.display="none";
-        top_blog_content_five.style.display="none";
-        top_blog_content_six.style.display="none";
-        top_blog_content_seven.style.display="none";
-        top_xem_them_bs.innerHTML="Xem thêm";
-
+        top_blog_content.forEach(element => {
+            top_blog.style.height = "550px";
+            top_xem_them .innerHTML="Xem thêm";
+            top_xem_them.style.color="black";
+            if(element>2){
+               element.style.display="none";
+            
+            }
+           
+        });
         number--;
     }
-}
+})
+
 
 var blog_content_one = document.getElementById('blog_content_one');
 var blog_xr_one = document.getElementById('blog_xr_one');

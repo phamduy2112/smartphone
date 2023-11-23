@@ -9,7 +9,9 @@
           </section>
         </form>
         <section class="icon_add">
-          <i class="bi bi-plus-circle"></i>
+         
+         <i class="bi bi-plus-circle"></i>
+        
         </section>
       </section>
       <section class="content_item">
@@ -38,21 +40,21 @@
             Blog gần đây
           </section>
           <section class="top_blog" id="top_blog">
-
+            <?php foreach($array_blog as $blog): ?>
             <section class="top_blog_content">
               <section class="blog_top_content_tw">
-                <img src="/admin/img//blog/a.webp" alt="">
+                <img src="/content/img//<?=$blog['hinhanh']?>" alt="">
 
               </section>
               <section class="blog_top_content_tw">
                 <section class="blog_top_content_xr">
                   <section class="blog_top_content_xs"">
-                    <label for="">Iphone 14 bán chạy nhất 2023</label>
-                    <label for="">8:00 AM 22/12/2012</label>
+                    <label for=""><?=$blog['tieude']?></label>
+                    <label for=""><?=$blog['ngaydang']?></label>
                   </section>
                   <section class="blog_top_content_xs">
                     <section class="blog_top_content_xs_top">
-                      1
+                     <?=$blog['id_blog']?>
                     </section>
 
                   </section>
@@ -64,236 +66,12 @@
 
               </section>
             </section>
-            <section class="top_blog_content">
-              <section class="blog_top_content_tw">
-                <img src="/admin/img//blog/a.webp" alt="">
-
-              </section>
-              <section class="blog_top_content_tw">
-                <section class="blog_top_content_xr">
-                  <section class="blog_top_content_xs">
-                    <label for="">Iphone 14 bán chạy nhất 2023</label>
-                    <label for="">8:00 AM 22/12/2012</label>
-                  </section>
-                  <section class="blog_top_content_xs">
-                    <section class="blog_top_content_xs_top">
-                      2
-                    </section>
-
-                  </section>
-
-                </section>
-
-              </section>
-              <section>
-
-              </section>
-            </section>
-            <section class="top_blog_content">
-              <section class="blog_top_content_tw">
-                <img src="/admin/img//blog/a.webp" alt="">
-
-              </section>
-              <section class="blog_top_content_tw">
-                <section class="blog_top_content_xr">
-                  <section class="blog_top_content_xs">
-                    <label for="">Iphone 14 bán chạy nhất 2023</label>
-                    <label for="">8:00 AM 22/12/2012</label>
-                  </section>
-                  <section class="blog_top_content_xs">
-                    <section class="blog_top_content_xs_top">
-                      3
-                    </section>
-
-                  </section>
-
-                </section>
-
-              </section>
-              <section>
-
-              </section>
-            </section>
-            <section class="top_blog_content" id="top_blog_content_one">
-              <section class="blog_top_content_tw">
-                <img src="/admin/img//blog/a.webp" alt="">
-
-              </section>
-              <section class="blog_top_content_tw">
-                <section class="blog_top_content_xr">
-                  <section class="blog_top_content_xs">
-                    <label for="">Iphone 14 bán chạy nhất 2023</label>
-                    <label for="">8:00 AM 22/12/2012</label>
-                  </section>
-                  <section class="blog_top_content_xs">
-                    <section class="blog_top_content_xs_top">
-                      3
-                    </section>
-
-                  </section>
-
-                </section>
-
-              </section>
-              <section>
-
-              </section>
-            </section>
-            <section class="top_blog_content" id="top_blog_content_two">
-              <section class="blog_top_content_tw">
-                <img src="/admin/img//blog/a.webp" alt="">
-
-              </section>
-              <section class="blog_top_content_tw">
-                <section class="blog_top_content_xr">
-                  <section class="blog_top_content_xs">
-                    <label for="">Iphone 14 bán chạy nhất 2023</label>
-                    <label for="">8:00 AM 22/12/2012</label>
-                  </section>
-                  <section class="blog_top_content_xs">
-                    <section class="blog_top_content_xs_top">
-                      3
-                    </section>
-
-                  </section>
-
-                </section>
-
-              </section>
-              <section>
-
-              </section>
-            </section>
-            <section class="top_blog_content" id="top_blog_content_three">
-              <section class="blog_top_content_tw">
-                <img src="/admin/img//blog/a.webp" alt="">
-
-              </section>
-              <section class="blog_top_content_tw">
-                <section class="blog_top_content_xr">
-                  <section class="blog_top_content_xs">
-                    <label for="">Iphone 14 bán chạy nhất 2023</label>
-                    <label for="">8:00 AM 22/12/2012</label>
-                  </section>
-                  <section class="blog_top_content_xs">
-                    <section class="blog_top_content_xs_top">
-                      3
-                    </section>
-
-                  </section>
-
-                </section>
-
-              </section>
-              <section>
-
-              </section>
-            </section>
-            <section class="top_blog_content" id="top_blog_content_four">
-              <section class="blog_top_content_tw">
-                <img src="/admin/img//blog/a.webp" alt="">
-
-              </section>
-              <section class="blog_top_content_tw">
-                <section class="blog_top_content_xr">
-                  <section class="blog_top_content_xs">
-                    <label for="">Iphone 14 bán chạy nhất 2023</label>
-                    <label for="">8:00 AM 22/12/2012</label>
-                  </section>
-                  <section class="blog_top_content_xs">
-                    <section class="blog_top_content_xs_top">
-                      3
-                    </section>
-
-                  </section>
-
-                </section>
-
-              </section>
-              <section>
-
-              </section>
-            </section>
-            <section class="top_blog_content" id="top_blog_content_five">
-              <section class="blog_top_content_tw">
-                <img src="/admin/img//blog/a.webp" alt="">
-
-              </section>
-              <section class="blog_top_content_tw">
-                <section class="blog_top_content_xr">
-                  <section class="blog_top_content_xs">
-                    <label for="">Iphone 14 bán chạy nhất 2023</label>
-                    <label for="">8:00 AM 22/12/2012</label>
-                  </section>
-                  <section class="blog_top_content_xs">
-                    <section class="blog_top_content_xs_top">
-                      3
-                    </section>
-
-                  </section>
-
-                </section>
-
-              </section>
-              <section>
-
-              </section>
-            </section>
-            <section class="top_blog_content" id="top_blog_content_six">
-              <section class="blog_top_content_tw">
-                <img src="/admin/img//blog/a.webp" alt="">
-
-              </section>
-              <section class="blog_top_content_tw">
-                <section class="blog_top_content_xr">
-                  <section class="blog_top_content_xs">
-                    <label for="">Iphone 14 bán chạy nhất 2023</label>
-                    <label for="">8:00 AM 22/12/2012</label>
-                  </section>
-                  <section class="blog_top_content_xs">
-                    <section class="blog_top_content_xs_top">
-                      3
-                    </section>
-
-                  </section>
-
-                </section>
-
-              </section>
-              <section>
-
-              </section>
-            </section>
-            <section class="top_blog_content" id="top_blog_content_seven">
-              <section class="blog_top_content_tw">
-                <img src="/admin/img//blog/a.webp" alt="">
-
-              </section>
-              <section class="blog_top_content_tw">
-                <section class="blog_top_content_xr">
-                  <section class="blog_top_content_xs">
-                    <label for="">Iphone 14 bán chạy nhất 2023</label>
-                    <label for="">8:00 AM 22/12/2012</label>
-                  </section>
-                  <section class="blog_top_content_xs">
-                    <section class="blog_top_content_xs_top">
-                      3
-                    </section>
-
-                  </section>
-
-                </section>
-
-              </section>
-              <section>
-
-              </section>
-            </section>
-
+            <?php endforeach; ?>
+           
 
 
           </section>
-          <section class="top_xem_them" id="top_xem_them_bs" onclick="my_click()">Xem Thêm</section>
+          <section class="top_xem_them">Xem Thêm</section>
         </section>
       </section>
       <section class="content_blog">
@@ -301,14 +79,15 @@
         <section class="max_background"></section>
         <section class="blog_time">
           <section class="blog_tin_moi_hienthi">
-            <section class="top_blog_content" id="blog_content_one" onclick="bam_one()">
+          <?php if(isset($moinhat)){ foreach($array_blog_moinhat as $blog_time): ?>
+            <section class="top_blog_content">
               <section class="blog_xr">
                 <section class="blog_content_xrl">
-                  <img src="img/blog/a.webp" alt="">
+                  <img src="img/blog/<?=$blog_time['hinhanh']?>" alt="">
                 </section>
                 <section class="blog_content_xrl">
-                  <label for="">Sản phẩm bán chạy nhất</label>
-                  <label for="">8:00 AM - 22/3/2023</label>
+                  <label for=""><?=$blog_time['tieude']?></label>
+                  <label for=""><?=$blog_time['ngaydang']?></label>
                 </section>
                 <section class="blog_content_xrl">
                   <section>
@@ -327,22 +106,21 @@
                   Nội dung
                 </section>
                 <section class="blog_text">
-                  Thông thường, để cảm thấy tự tin khi mua hàng, khách hàng thường có xu hướng tìm những bài review sản
-                  phẩm trên các trang web trực tuyến. Cho dù là sản phẩm gì – một trong những cách dễ nhất để chúng được
-                  đánh giá cao là viết bài review về sản phẩm. Như vậy, một bài đánh giá sản phẩm sẽ cần những bước nào?
-                  Beelancer hôm nay xin giới thiệu đến bạn đọc 8 bước đơn giản để có một bài review sản phẩm “xịn”...
+                <?=$blog_time['noidung']?>
                 </section>
               </section>
 
             </section>
-            <section class="top_blog_content" id="blog_content_two" onclick="bam_two()">
+          <?php endforeach;} ?>
+          <?php if(isset($tatca)){ foreach($array_blog_tatca as $blog_time): ?>
+            <section class="top_blog_content">
               <section class="blog_xr">
                 <section class="blog_content_xrl">
-                  <img src="img/blog/a.webp" alt="">
+                  <img src="img/blog/<?=$blog_time['hinhanh']?>" alt="">
                 </section>
                 <section class="blog_content_xrl">
-                  <label for="">Sản phẩm bán chạy nhất</label>
-                  <label for="">8:00 AM - 22/3/2023</label>
+                  <label for=""><?=$blog_time['tieude']?></label>
+                  <label for=""><?=$blog_time['ngaydang']?></label>
                 </section>
                 <section class="blog_content_xrl">
                   <section>
@@ -356,27 +134,29 @@
                   </section>
                 </section>
               </section>
-              <section class="blog_xr" id="blog_xr_two">
+              <section class="blog_xr">
                 <section class="blog_text">
                   Nội dung
                 </section>
                 <section class="blog_text">
-                  Thông thường, để cảm thấy tự tin khi mua hàng, khách hàng thường có xu hướng tìm những bài review sản
-                  phẩm trên các trang web trực tuyến. Cho dù là sản phẩm gì – một trong những cách dễ nhất để chúng được
-                  đánh giá cao là viết bài review về sản phẩm. Như vậy, một bài đánh giá sản phẩm sẽ cần những bước nào?
-                  Beelancer hôm nay xin giới thiệu đến bạn đọc 8 bước đơn giản để có một bài review sản phẩm “xịn”...
+                <?=$blog_time['noidung']?>
                 </section>
               </section>
+       
+       s
+           
 
             </section>
-            <section class="top_blog_content" id="blog_content_three" onclick="bam_three()">
+          <?php endforeach;} ?>
+          <?php if(isset($cunhat)){ foreach($array_blog_cunhat as $blog_time): ?>
+            <section class="top_blog_content">
               <section class="blog_xr">
                 <section class="blog_content_xrl">
-                  <img src="img/blog/a.webp" alt="">
+                  <img src="img/blog/<?=$blog_time['hinhanh']?>" alt="">
                 </section>
                 <section class="blog_content_xrl">
-                  <label for="">Sản phẩm bán chạy nhất</label>
-                  <label for="">8:00 AM - 22/3/2023</label>
+                  <label for=""><?=$blog_time['tieude']?></label>
+                  <label for=""><?=$blog_time['ngaydang']?></label>
                 </section>
                 <section class="blog_content_xrl">
                   <section>
@@ -390,274 +170,36 @@
                   </section>
                 </section>
               </section>
-              <section class="blog_xr" id="blog_xr_three">
-                <section class="blog_text">
-                  Nội dung
-                </section>
-                <section class="blog_text">
-                  Thông thường, để cảm thấy tự tin khi mua hàng, khách hàng thường có xu hướng tìm những bài review sản
-                  phẩm trên các trang web trực tuyến. Cho dù là sản phẩm gì – một trong những cách dễ nhất để chúng được
-                  đánh giá cao là viết bài review về sản phẩm. Như vậy, một bài đánh giá sản phẩm sẽ cần những bước nào?
-                  Beelancer hôm nay xin giới thiệu đến bạn đọc 8 bước đơn giản để có một bài review sản phẩm “xịn”...
-                </section>
-              </section>
-
-            </section>
-            <section class="top_blog_content" id="blog_content_four" onclick="bam_four()">
               <section class="blog_xr">
-                <section class="blog_content_xrl">
-                  <img src="img/blog/a.webp" alt="">
-                </section>
-                <section class="blog_content_xrl">
-                  <label for="">Sản phẩm bán chạy nhất</label>
-                  <label for="">8:00 AM - 22/3/2023</label>
-                </section>
-                <section class="blog_content_xrl">
-                  <section>
-                    <i class="fa-solid fa-trash"></i>
-                  </section>
-                  <section>
-                    <i class="bi bi-pencil"></i>
-                  </section>
-                  <section>
-
-                  </section>
-                </section>
-              </section>
-              <section class="blog_xr" id="blog_xr_four">
                 <section class="blog_text">
                   Nội dung
                 </section>
                 <section class="blog_text">
-                  Thông thường, để cảm thấy tự tin khi mua hàng, khách hàng thường có xu hướng tìm những bài review sản
-                  phẩm trên các trang web trực tuyến. Cho dù là sản phẩm gì – một trong những cách dễ nhất để chúng được
-                  đánh giá cao là viết bài review về sản phẩm. Như vậy, một bài đánh giá sản phẩm sẽ cần những bước nào?
-                  Beelancer hôm nay xin giới thiệu đến bạn đọc 8 bước đơn giản để có một bài review sản phẩm “xịn”...
+                <?=$blog_time['noidung']?>
                 </section>
               </section>
 
             </section>
-            <section class="top_blog_content" id="blog_content_five" onclick="bam_five()">
-              <section class="blog_xr">
-                <section class="blog_content_xrl">
-                  <img src="img/blog/a.webp" alt="">
-                </section>
-                <section class="blog_content_xrl">
-                  <label for="">Sản phẩm bán chạy nhất</label>
-                  <label for="">8:00 AM - 22/3/2023</label>
-                </section>
-                <section class="blog_content_xrl">
-                  <section>
-                    <i class="fa-solid fa-trash"></i>
-                  </section>
-                  <section>
-                    <i class="bi bi-pencil"></i>
-                  </section>
-                  <section>
-
-                  </section>
-                </section>
-              </section>
-              <section class="blog_xr" id="blog_xr_five">
-                <section class="blog_text">
-                  Nội dung
-                </section>
-                <section class="blog_text">
-                  Thông thường, để cảm thấy tự tin khi mua hàng, khách hàng thường có xu hướng tìm những bài review sản
-                  phẩm trên các trang web trực tuyến. Cho dù là sản phẩm gì – một trong những cách dễ nhất để chúng được
-                  đánh giá cao là viết bài review về sản phẩm. Như vậy, một bài đánh giá sản phẩm sẽ cần những bước nào?
-                  Beelancer hôm nay xin giới thiệu đến bạn đọc 8 bước đơn giản để có một bài review sản phẩm “xịn”...
-                </section>
-              </section>
-
-            </section>
-            <section class="top_blog_content" id="blog_content_six" onclick="bam_six()">
-              <section class="blog_xr">
-                <section class="blog_content_xrl">
-                  <img src="img/blog/a.webp" alt="">
-                </section>
-                <section class="blog_content_xrl">
-                  <label for="">Sản phẩm bán chạy nhất</label>
-                  <label for="">8:00 AM - 22/3/2023</label>
-                </section>
-                <section class="blog_content_xrl">
-                  <section>
-                    <i class="fa-solid fa-trash"></i>
-                  </section>
-                  <section>
-                    <i class="bi bi-pencil"></i>
-                  </section>
-                  <section>
-
-                  </section>
-                </section>
-              </section>
-              <section class="blog_xr" id="blog_xr_six">
-                <section class="blog_text">
-                  Nội dung
-                </section>
-                <section class="blog_text">
-                  Thông thường, để cảm thấy tự tin khi mua hàng, khách hàng thường có xu hướng tìm những bài review sản
-                  phẩm trên các trang web trực tuyến. Cho dù là sản phẩm gì – một trong những cách dễ nhất để chúng được
-                  đánh giá cao là viết bài review về sản phẩm. Như vậy, một bài đánh giá sản phẩm sẽ cần những bước nào?
-                  Beelancer hôm nay xin giới thiệu đến bạn đọc 8 bước đơn giản để có một bài review sản phẩm “xịn”...
-                </section>
-              </section>
-
-            </section>
-            <section class="top_blog_content" id="blog_content_seven" onclick="bam_seven()">
-              <section class="blog_xr">
-                <section class="blog_content_xrl">
-                  <img src="img/blog/a.webp" alt="">
-                </section>
-                <section class="blog_content_xrl">
-                  <label for="">Sản phẩm bán chạy nhất</label>
-                  <label for="">8:00 AM - 22/3/2023</label>
-                </section>
-                <section class="blog_content_xrl">
-                  <section>
-                    <i class="fa-solid fa-trash"></i>
-                  </section>
-                  <section>
-                    <i class="bi bi-pencil"></i>
-                  </section>
-                  <section>
-
-                  </section>
-                </section>
-              </section>
-              <section class="blog_xr" id="blog_xr_seven">
-                <section class="blog_text">
-                  Nội dung
-                </section>
-                <section class="blog_text">
-                  Thông thường, để cảm thấy tự tin khi mua hàng, khách hàng thường có xu hướng tìm những bài review sản
-                  phẩm trên các trang web trực tuyến. Cho dù là sản phẩm gì – một trong những cách dễ nhất để chúng được
-                  đánh giá cao là viết bài review về sản phẩm. Như vậy, một bài đánh giá sản phẩm sẽ cần những bước nào?
-                  Beelancer hôm nay xin giới thiệu đến bạn đọc 8 bước đơn giản để có một bài review sản phẩm “xịn”...
-                </section>
-              </section>
-
-            </section>
-            <section class="top_blog_content" id="blog_content_eye" onclick="bam_eye()">
-              <section class="blog_xr">
-                <section class="blog_content_xrl">
-                  <img src="img/blog/a.webp" alt="">
-                </section>
-                <section class="blog_content_xrl">
-                  <label for="">Sản phẩm bán chạy nhất</label>
-                  <label for="">8:00 AM - 22/3/2023</label>
-                </section>
-                <section class="blog_content_xrl">
-                  <section>
-                    <i class="fa-solid fa-trash"></i>
-                  </section>
-                  <section>
-                    <i class="bi bi-pencil"></i>
-                  </section>
-                  <section>
-
-                  </section>
-                </section>
-              </section>
-              <section class="blog_xr" id="blog_xr_eye">
-                <section class="blog_text">
-                  Nội dung
-                </section>
-                <section class="blog_text">
-                  Thông thường, để cảm thấy tự tin khi mua hàng, khách hàng thường có xu hướng tìm những bài review sản
-                  phẩm trên các trang web trực tuyến. Cho dù là sản phẩm gì – một trong những cách dễ nhất để chúng được
-                  đánh giá cao là viết bài review về sản phẩm. Như vậy, một bài đánh giá sản phẩm sẽ cần những bước nào?
-                  Beelancer hôm nay xin giới thiệu đến bạn đọc 8 bước đơn giản để có một bài review sản phẩm “xịn”...
-                </section>
-              </section>
-
-            </section>
-            <section class="top_blog_content" id="blog_content_night" onclick="bam_night()">
-              <section class="blog_xr">
-                <section class="blog_content_xrl">
-                  <img src="img/blog/a.webp" alt="">
-                </section>
-                <section class="blog_content_xrl">
-                  <label for="">Sản phẩm bán chạy nhất</label>
-                  <label for="">8:00 AM - 22/3/2023</label>
-                </section>
-                <section class="blog_content_xrl">
-                  <section>
-                    <i class="fa-solid fa-trash"></i>
-                  </section>
-                  <section>
-                    <i class="bi bi-pencil"></i>
-                  </section>
-                  <section>
-
-                  </section>
-                </section>
-              </section>
-              <section class="blog_xr" id="blog_xr_night">
-                <section class="blog_text">
-                  Nội dung
-                </section>
-                <section class="blog_text">
-                  Thông thường, để cảm thấy tự tin khi mua hàng, khách hàng thường có xu hướng tìm những bài review sản
-                  phẩm trên các trang web trực tuyến. Cho dù là sản phẩm gì – một trong những cách dễ nhất để chúng được
-                  đánh giá cao là viết bài review về sản phẩm. Như vậy, một bài đánh giá sản phẩm sẽ cần những bước nào?
-                  Beelancer hôm nay xin giới thiệu đến bạn đọc 8 bước đơn giản để có một bài review sản phẩm “xịn”...
-                </section>
-              </section>
-
-            </section>
-            <section class="top_blog_content" id="blog_content_ten" onclick="bam_ten()">
-              <section class="blog_xr">
-                <section class="blog_content_xrl">
-                  <img src="img/blog/a.webp" alt="">
-                </section>
-                <section class="blog_content_xrl">
-                  <label for="">Sản phẩm bán chạy nhất</label>
-                  <label for="">8:00 AM - 22/3/2023</label>
-                </section>
-                <section class="blog_content_xrl">
-                  <section>
-                    <i class="fa-solid fa-trash"></i>
-                  </section>
-                  <section>
-                    <i class="bi bi-pencil"></i>
-                  </section>
-                  <section>
-
-                  </section>
-                </section>
-              </section>
-              <section class="blog_xr" id="blog_xr_ten">
-                <section class="blog_text">
-                  Nội dung
-                </section>
-                <section class="blog_text">
-                  Thông thường, để cảm thấy tự tin khi mua hàng, khách hàng thường có xu hướng tìm những bài review sản
-                  phẩm trên các trang web trực tuyến. Cho dù là sản phẩm gì – một trong những cách dễ nhất để chúng được
-                  đánh giá cao là viết bài review về sản phẩm. Như vậy, một bài đánh giá sản phẩm sẽ cần những bước nào?
-                  Beelancer hôm nay xin giới thiệu đến bạn đọc 8 bước đơn giản để có một bài review sản phẩm “xịn”...
-                </section>
-              </section>
-
-            </section>
-
-
-          </section>
+          <?php endforeach;} ?>
           <section class="blog_tin_moi_time">
+            <form action="" method="post">
             <section class="blog_tin" id="blog_tin_one" onclick="bamluachon_one()">
+              <input type="submit" name="tatca">
               <span>Tất cả</span>
 
             </section>
             <section class="blog_tin" id="blog_tin_two" onclick="bamluachon_two()">
               <span class="vongtron"></span>
               <span>Mới nhất</span>
+              <input type="submit" name="moinhat">
 
             </section>
             <section class="blog_tin" id="blog_tin_three" onclick="bamluachon_three()">
               <span class="vongtron"></span>
               <span>Cũ nhất</span>
+              <input type="submit" name="cunhat">
             </section>
+            </form>
 
           </section>
         </section>
@@ -666,3 +208,23 @@
     </section>
 
   </section>
+
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
+  <script src="js/jquery-3.7.1.min.js"></script>
+  <script src="js/jquery.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
+
+  <script src="../content/js/hienan.js"></script>
+
+
+
+
+
+</body>
+
+</html>

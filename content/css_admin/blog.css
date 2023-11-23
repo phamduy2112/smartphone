@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: column;
     font-family: Play;
-
+    background: red;
 
 }
 
@@ -175,7 +175,8 @@ form>.icon_search {
 }
 
 .khung_blog {
-    width: 475px;
+  
+    width: 575px;
     height: 691px;
     position: absolute;
     border-radius: 5px;
@@ -189,7 +190,7 @@ form>.icon_search {
 
 .top_blog {
     z-index: 10px;
-    width: 480px;
+    width: 575px;
     height: 550px;
     border-radius: 5px;
     gap: 30px;
@@ -243,23 +244,14 @@ form>.icon_search {
     align-items: center;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.10);
     border-radius: 5px;
-    width: 475px;
+    width: 575px;
     background: rgb(255, 255, 255);
     height: 153px;
 
 
 }
 
-.top_blog_content:nth-child(4),
-.top_blog_content:nth-child(5),
-.top_blog_content:nth-child(6),
-.top_blog_content:nth-child(7),
-.top_blog_content:nth-child(8),
-.top_blog_content:nth-child(9),
-.top_blog_content:nth-child(10) {
-    display: none;
 
-}
 
 .blog_top_content_tw:nth-child(1) {
     width: 153px;
@@ -368,7 +360,8 @@ form>.icon_search {
 }
 
 .blog_time {
-    width: 600px;
+    width: 720px;
+ 
     position: absolute;
     height: 690px;
     border-radius: 5px;
@@ -381,7 +374,8 @@ form>.icon_search {
 
 .blog_tin_moi_hienthi {
     display: flex;
-    width: 600px;
+    width: 720px;
+    height: 700px;
     padding-bottom: 80px;
     flex-direction: column;
     border-radius: 5px;
@@ -407,7 +401,7 @@ form>.icon_search {
     display: flex;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.20);
     border-radius: 5px;
-    width: 565px;
+    width: 670px;
     background: rgb(255, 255, 255);
     display: flex;
     flex-direction: column;
@@ -419,7 +413,9 @@ form>.icon_search {
     width: 100%;
     height: calc(100%/2);
     display: flex;
+    gap: 30px;
     flex-direction: row;
+   
 }
 
 .blog_content_xrl:nth-child(1) {
@@ -504,7 +500,7 @@ form>.icon_search {
     font-size: 11px;
     font-weight: 400;
     letter-spacing: 1.1px;
-    opacity:0;
+    opacity:1;
     visibility: hidden;
     transition: 1.3s ease;
 }
@@ -516,23 +512,35 @@ form>.icon_search {
 }
 
 .blog_tin_moi_time {
-    width: 600px;
+    width: 720px;
     height: 63px;
-    top: 91%;
     position: absolute;
+    top: 41rem;
+    box-shadow: 0 0 10px 0px hsl(0, 0%, 0%, 0.20);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+   
+    flex-direction: row;
+    overflow: hidden;
+    left: 5px;
+    background: white;
+
+}
+.blog_tin_moi_time>form{
+   width: 100%;
+     height: 63px;
     box-shadow: 0 0 10px 0px hsl(0, 0%, 0%, 0.20);
     border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: row;
+    flex-direction:row;
     overflow: hidden;
-    background: white;
-
 }
 
 .blog_tin {
-    width: 200px;
+    width:calc(720px/3);
     height: 63px;
     display: flex;
     justify-content: center;
@@ -543,6 +551,12 @@ form>.icon_search {
 
 
 
+}
+.blog_tin input{
+    position: absolute;
+    width: 200px;
+    height: 50px;
+    opacity: 0;
 }
 
 .blog_tin:nth-child(2) {

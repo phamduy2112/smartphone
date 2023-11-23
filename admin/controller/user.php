@@ -1,5 +1,5 @@
 <?php 
-
+include_once("../model_DAO/blog.php");
 extract($_REQUEST);
 
 if(isset($act)){
@@ -63,15 +63,32 @@ if(isset($act)){
 
     // blog
     case 'blog':
+        $array_blog = load_blog();
+        if(isset($moinhat)){
+          $array_blog_moinhat =load_blog_moi_nhat();
+        }else if(isset($tatca)){
+            $array_blog_tatca =load_blog_tatca();
+        }else if(isset($cunhat)){
+            $array_blog_cunhat =load_blog_cu_nhat();
+        }
         include_once "./view/header.php";
         include_once "./view/blog.php";
             
         break;
     case 'themblog':
+    
         include_once "./view/header.php";
         include_once "./view/themblog.php";
         break;
     case 'chinhsuablog':
+        if(isset($capnhat)){
+            var_dump($ten_blog);
+            var_dump($time_blog);
+            var_dump($loai_blog);
+            var_dump($anh_blog);
+            var_dump($mota_blog);
+            $add_blog=chinhsua_blog($ten_blog,$time_blog,$loai_blog,$anh_blog,$mota_blog);
+        }
         include_once "./view/header.php";
         include_once "./view/chinhsuablog.php";
     case 'xoablog':
