@@ -1,5 +1,14 @@
 <?php 
 include_once('pdo.php');
+function laytatcathongtin($limit){
+
+  $sql="SELECT * FROM khachhang ";
+  if($limit==1){
+    $sql.="ORDER BY id_kh DESC LIMIT 3";
+  }
+  
+  return pdo_query($sql);
+}
 function themTaiKhoan($taikhoan,$email,$matkhau,$matkhaucap2){
   $sql="INSERT INTO khachhang(user_name,email,matkhau,matkhaucap2)
   VALUES (?,?,?,?)";

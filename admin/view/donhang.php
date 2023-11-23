@@ -56,15 +56,33 @@
                 </tbody> -->
               </table>
               <!-- SHOW -->
+              <!-- <a href=""></a> -->
+              <?php foreach($tatcaDh as $item):
+                extract($item);
+                $trangThai='';
+                if($trangthai===0){
+                  $trangThai='<span class="circle" style="background-color: #FF0000; "></span>                 ';
+                }else if($trangthai===1){
+                  $trangThai='<span class="circle" style="background-color: #FF9900; "></span>                 ';
+
+                }else{
+                  $trangThai='<span class="circle" style="background-color: #00FF19; "></span>                 ';
+                }
+                ?>
               <div class="order-check">
+                <a href="?mod=user&act=donhangchitiet&id_dh=<?=$id_dh?>">
                 <ul>
-                  <li>1</li>
-                  <li><span class="circle" style="background-color: #00FF19; "></span></li>
-                  <li>10.000.00đ</li>
-                  <li>23/10/2023</li>
+                
+                <li>1</li>
+                  <li><?=$trangThai?></li>
+                  <li><?=number_format($tongtien)?></li>
+                  <li><?=$ngaydathang?></li>
                 </ul>
+                </a>
+             
               </div>
-              <div class="order-check">
+              <?php endforeach;?>
+              <!-- <div class="order-check">
                 <ul>
                   <li>1</li>
                   <li><span class="circle" style="background-color: #FF9900; "></span></li>
@@ -87,7 +105,7 @@
                   <li>10.000.00đ</li>
                   <li>23/10/2023</li>
                 </ul>
-              </div>
+              </div> -->
               
 
               <div class="control">
