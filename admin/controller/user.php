@@ -406,3 +406,5 @@ if(isset($act)){
 } else {
     header('location: ?mod=user&act=thongke');
 }
+}
+}
