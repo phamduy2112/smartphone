@@ -74,25 +74,13 @@ if(isset($act)){
         }
        
         break;
-    case 'timkiem':
-       
-      $array_sp=timKiemSP($sanpham_timkiem);
-        include_once "./view/header.php";
-        include_once "./view/timkiemsp.php";
-        break;
     case 'sanpham':
-      
-        $tong_SP=dem_SP();
-           
-        $number_page=ceil($tong_SP/10);
-        if(isset($page)){
-            $start=($page-1)*15;
-            $array_sp = soluong_SanPham($start,10);
-        }
+        $array_sp = load_sp();
+          
         include_once "./view/header.php";
         include_once "./view/sanpham.php";
         break;
-   
+        break;
     
     case 'themsanpham':
         if(isset($tiep_sp)){
@@ -220,7 +208,18 @@ if(isset($act)){
 
             break;
             // sản phẩm
- 
+        case 'sanpham':
+            $array_sp = load_sp();
+            if (isset($add_sp)) {
+
+                header('location: ?mod=user&act=add_sp');
+            } else {
+                include_once "./view/header.php";
+                include_once "./view/sanpham.php";
+            }
+
+
+            break;
 
         case 'chinhsuasp':
            
@@ -344,7 +343,8 @@ if(isset($act)){
         case 'binhluanchitiet':
             $array_binhluanct = binhluanchitiet($id_sp);
             if (isset($nut_sow)) {
-            } else if (isset($search_bl)) {
+            }
+             else if (isset($search_bl)) {
                 $search_bl = search_bl($ma_bl);
             }
             include_once "./view/header.php";
@@ -394,4 +394,6 @@ if(isset($act)){
     }
 } else {
     header('location: ?mod=user&act=thongke');
+}
+}
 }
