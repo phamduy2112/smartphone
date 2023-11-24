@@ -74,37 +74,31 @@ if(isset($act)){
         }
        
         break;
+
+    case 'timkiem':
+        $array_sp=timKiemSP($sanpham_timkiem);
+        include_once "./view/header.php";
+        include_once "./view/timkiemsp.php";
+        break;
     case 'sanpham':
-        $array_sp = load_sp();
-          
+      
+        $danhmuc=laytatca_DM();
+        $tong_SP=dem_SP();
+       
+        $number_page=ceil($tong_SP/10);
+        
+        if(isset($page)){
+           $start=($page-1)*10;
+           $array_sp = soluong_SanPham($start,10);
+        }
         include_once "./view/header.php";
         include_once "./view/sanpham.php";
         break;
-        break;
+   
     
-    case 'themsanpham':
-        if(isset($tiep_sp)){
-            var_dump($danhmuc_sp);
-            var_dump($ten_sp);
-            var_dump($tukhoa_sp);
-            var_dump($trangthai_sp);
-            var_dump($gia_sp);
-            var_dump($w3review);
-            
-          
-           
-        }
-        include_once "./view/header.php";
-        include_once "./view/themsanpham.php";
-       
-        break;
-    case 'chinhsuasp':
-        include_once "./view/header.php";
-        include_once "./view/chinhsuasp.php";
-        break;
-    case 'xoasp':
-        
-        break;
+  
+
+ 
     // khach hang
     case 'khachhang':
         $khachhang_moi=laytatcathongtin(1);
@@ -208,18 +202,7 @@ if(isset($act)){
 
             break;
             // sản phẩm
-        case 'sanpham':
-            $array_sp = load_sp();
-            if (isset($add_sp)) {
-
-                header('location: ?mod=user&act=add_sp');
-            } else {
-                include_once "./view/header.php";
-                include_once "./view/sanpham.php";
-            }
-
-
-            break;
+   
 
         case 'chinhsuasp':
            
@@ -394,6 +377,4 @@ if(isset($act)){
     }
 } else {
     header('location: ?mod=user&act=thongke');
-}
-}
 }
