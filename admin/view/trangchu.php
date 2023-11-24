@@ -58,7 +58,7 @@
               </p>
             </div>
 
-            <div id="myPlot" style="width:100%;"></div>
+            <div id="piechart"></div>
             <a href="#">Xem thông tin chi tiết</a>
           </div>
 
@@ -72,7 +72,7 @@
           <div class="card-body">
             <h5 class="card-title">Thống kê doanh thu trong ngày</h5>
             <p class="card-text">Doanh thu các sản phẩm trong 1 ngày</p>
-            <div id="myPlot2" style="width:100%;"></div>
+            <div id="piechart1"></div>
 
           </div>
         
@@ -88,7 +88,7 @@
           <div class="card-body">
             <h5 class="card-title">Special title treatment</h5>
             <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-
+            <div id="piechart2"></div>
           </div>
         </div>
       </div>
@@ -114,29 +114,30 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Duy</td>
-            <td>Duyp7484@gmail.com</td>
-            <td>0334491141</td>
-            <td>Khách hàng</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Duy</td>
-            <td>Duyp7484@gmail.com</td>
-            <td>0334491141</td>
-            <td>Khách hàng</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>Duy</td>
-            <td>Duyp7484@gmail.com</td>
-            <td>0334491141</td>
-            <td>Khách hàng</td>
-          </tr>
-        
-        </tbody>
+
+<?php 
+$stt=1;
+foreach($khachhang_moi as $item):
+  extract($item);
+
+    
+  $ten= $tenkhachhang==''?'chưa cập nhận':$tenkhachhang;
+  $sdt= $sdt==''?'chưa cập nhận':$sdt;
+  $diaChi= $diaChi==''?'chưa cập nhận':$diaChi;
+ $vaitro=$vaitro===1?'admin':'khách hàng';?>
+<tr>
+<th scope="row"><?=$stt?></th>
+    <td><?=$ten?></td>
+    <td><?=$email?></td>
+    <td><?=$sdt?></td>
+ 
+    <td><?=$vaitro?></td>
+</tr>
+<?php 
+$stt++;
+endforeach;?>
+
+</tbody>
       </table>
         </div>
         <div class="col-lg-6 col-sm-12">
@@ -218,29 +219,30 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Duy</td>
-            <td>Duyp7484@gmail.com</td>
-            <td>0334491141</td>
-            <td>Khách hàng</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Duy</td>
-            <td>Duyp7484@gmail.com</td>
-            <td>0334491141</td>
-            <td>Khách hàng</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>Duy</td>
-            <td>Duyp7484@gmail.com</td>
-            <td>0334491141</td>
-            <td>Khách hàng</td>
-          </tr>
-        
-        </tbody>
+
+<?php 
+$stt=1;
+foreach($khachhang_moi as $item):
+  extract($item);
+
+    
+  $ten= $tenkhachhang==''?'chưa cập nhận':$tenkhachhang;
+  $sdt= $sdt==''?'chưa cập nhận':$sdt;
+  $diaChi= $diaChi==''?'chưa cập nhận':$diaChi;
+ $vaitro=$vaitro===1?'admin':'khách hàng';?>
+<tr>
+<th scope="row"><?=$stt?></th>
+    <td><?=$ten?></td>
+    <td><?=$email?></td>
+    <td><?=$sdt?></td>
+
+    <td><?=$vaitro?></td>
+</tr>
+<?php 
+$stt++;
+endforeach;?>
+
+</tbody>
       </table>
         </div>
         <div class="col-lg-6 col-sm-12">
@@ -314,7 +316,7 @@
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
   <script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
 
-  <script src="../content/js/cot.js"></script>
+
   <script type="text/javascript">
 
 window.onload = function () {
@@ -335,7 +337,7 @@ var chart = new CanvasJS.Chart("chartContainer", {
       { y: 460 },
       { y: 450 },
       { y: 500 },
-      { y: 480 },
+      { y: 600 },
       { y: 480 },
       { y: 410 , indexLabel: "\u2193 lowest",markerColor: "DarkSlateGrey", markerType: "cross" },
       { y: 500 },
@@ -348,7 +350,106 @@ chart.render();
 
 }
     </script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
+<script type="text/javascript">
+// Load google charts
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+// Draw the chart and set the chart values
+function drawChart() {
+  var data = google.visualization.arrayToDataTable([
+  ['Trạng thái', 'Số lượng'],
+  
+  <?php 
+foreach ($trangThaiDH as $item){
+    extract($item);
+    $trangThai='';
+    if($trangthai==0){
+      $trangThai='Đang chuẩn bị';
+    }else if($trangthai==1){
+      $trangThai='Đang giao';
+    }
+    else if($trangthai==2){
+      $trangThai='Đã giao hoàn thành';
+    }
+  
+   
+    echo "['$trangThai',$Soluong],";
+}
+?>
+ 
+]);
+
+  // Optional; add a title and set the width and height of the chart
+  var options = {'title':'Trạng thái đơn hàng', 'width':460, 'height':250};
+
+  // Display the chart inside the <div> element with id="piechart"
+  var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+  chart.draw(data, options);
+}
+
+
+</script>
+<script type="text/javascript">
+// Load google charts
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+// Draw the chart and set the chart values
+function drawChart() {
+  var data = google.visualization.arrayToDataTable([
+    
+  ['Tổng tiền', 'một ngày'],
+  <?php foreach($thongke_motngay as $item){
+    extract($item);
+
+     echo "['$tongtien', '$tongtien'],";
+  }
+  
+   
+    ?>
+ 
+ 
+]);
+
+  // Optional; add a title and set the width and height of the chart
+  var options = {'title':'Doanh thu 1 ngày', 'width':460, 'height':250};
+
+  // Display the chart inside the <div> element with id="piechart"
+  var chart = new google.visualization.PieChart(document.getElementById('piechart1'));
+  chart.draw(data, options);
+}
+</script>
+<script type="text/javascript">
+// Load google charts
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+// Draw the chart and set the chart values
+function drawChart() {
+  var data = google.visualization.arrayToDataTable([
+  ['Task', 'Hours per Day'],
+  <?php 
+  foreach($thongke_slsp as $item){
+    extract($item);
+    echo "['$ten_sp', $Soluong],";
+  }
+  
+  ?>
+
+
+]);
+
+  // Optional; add a title and set the width and height of the chart
+  var options = {'title':'Số sản phẩm mua nhiều', 'width':460, 'height':250};
+
+  // Display the chart inside the <div> element with id="piechart"
+  var chart = new google.visualization.PieChart(document.getElementById('piechart2'));
+  chart.draw(data, options);
+}
+</script>
 </body>
 
 </html>

@@ -47,7 +47,11 @@
           </tbody>
         </table>
           </div>
-          <div id="myPlot2" style="width:100%;"></div>
+          <div class="col-4">
+             <div id="piechart"></div>
+          </div>
+         
+
 
            
             </div>
@@ -95,3 +99,54 @@
        
      
       </section>
+      <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+      <script type="text/javascript">
+// Load google charts
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+// Draw the chart and set the chart values
+function drawChart() {
+  var data = google.visualization.arrayToDataTable([
+  ['ngay', 'soluong'],
+  <?php 
+foreach ($thongke_dangki as $item){
+    extract($item);
+    $ngay='';
+    if($NgayHienTai===0){
+      $ngay='Ngày hôm nay';
+    }else if($NgayHienTai===1){
+      $ngay='Một ngày trước';
+    }
+    else if($NgayHienTai===2){
+      $ngay='Hai ngày trước';
+    }
+    else if($NgayHienTai===3){
+      $ngay='Ba ngày trước';
+    }
+    else if($NgayHienTai===4){
+      $ngay='Bốn ngày trước';
+    }
+    else if($NgayHienTai===5){
+      $ngay='Năm ngày trước';
+    }
+    else if($NgayHienTai===6){
+      $ngay='Sáu ngày trước';
+    }
+    else if($NgayHienTai===7){
+      $ngay='Bảy ngày trước';
+    }
+    echo "['$ngay',$Soluong],";
+}
+?>
+]);
+
+  // Optional; add a title and set the width and height of the chart
+  var options = {'title':'Khách hàng đăng kí 1 tuần', 'width':450, 'height':200};
+
+  // Display the chart inside the <div> element with id="piechart"
+  var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+  chart.draw(data, options);
+}
+</script>

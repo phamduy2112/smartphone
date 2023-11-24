@@ -3,9 +3,13 @@
 include_once("../model_DAO/blog.php");
 include_once "../model_DAO/user.php";
 include_once "../model_DAO/cart.php";
+<<<<<<< HEAD
 include_once "../model_DAO/admin_sp.php";
 include_once "../model_DAO/binhluan.php";
 
+=======
+include_once "../model_DAO/thongke.php";
+>>>>>>> ba9e4357ddb626fd36e0866e5b5cb23fc3f69105
 
 extract($_REQUEST);
 
@@ -13,12 +17,17 @@ if(isset($act)){
     switch($act){
      // trang chủ
      case 'trangchu':
+        $khachhang_moi=laytatcathongtin(1);
+        $trangThaiDH=thongke_donhang();
+        $thongke_motngay=thongke_motngay();
+        $thongke_slsp=thongke_soluotmua_sp();
         include_once "./view/header.php";
         include_once "./view/trangchu.php";
             
         break;
     // danh muc
     case 'danhmuc':
+
         include_once "./view/header.php";
         include_once "./view/danhmuc.php";
             
@@ -58,6 +67,7 @@ if(isset($act)){
     case 'khachhang':
         $khachhang_moi=laytatcathongtin(1);
         $khachhang=laytatcathongtin(0);
+        $thongke_dangki=thongke_ngaydangki();
         include_once "./view/header.php";
         include_once "./view/khachhang.php";
             
