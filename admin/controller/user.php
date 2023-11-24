@@ -16,20 +16,7 @@ session_start();
 extract($_REQUEST);
 
 
-if (isset($act)) {
-    switch ($act) {
-            // trang chủ
-        case 'trangchu':
-            $khachhang_moi = laytatcathongtin(1);
-            $trangThaiDH = thongke_donhang();
-            $thongke_motngay = thongke_motngay();
-            $thongke_slsp = thongke_soluotmua_sp();
-            include_once "./view/header.php";
-            include_once "./view/trangchu.php";
 
-            break;
-            // danh muc
-        case 'danhmuc':
 
 if(isset($act)){
     switch($act){
@@ -86,37 +73,8 @@ if(isset($act)){
         }
        
         break;
-    case 'sanpham':
-        $array_sp = load_sp();
-          
-        include_once "./view/header.php";
-        include_once "./view/sanpham.php";
-        break;
-        break;
-    
-    case 'themsanpham':
-        if(isset($tiep_sp)){
-            var_dump($danhmuc_sp);
-            var_dump($ten_sp);
-            var_dump($tukhoa_sp);
-            var_dump($trangthai_sp);
-            var_dump($gia_sp);
-            var_dump($w3review);
-            
-          
-           
-        }
-        include_once "./view/header.php";
-        include_once "./view/themsanpham.php";
-       
-        break;
-    case 'chinhsuasp':
-        include_once "./view/header.php";
-        include_once "./view/chinhsuasp.php";
-        break;
-    case 'xoasp':
-        
-        break;
+
+
     // khach hang
     case 'khachhang':
         $khachhang_moi=laytatcathongtin(1);
@@ -223,6 +181,7 @@ if(isset($act)){
         case 'sanpham':
             $array_sp = load_sp();
             if (isset($add_sp)) {
+                
 
                 header('location: ?mod=user&act=add_sp');
             } else {
@@ -355,7 +314,8 @@ if(isset($act)){
         case 'binhluanchitiet':
             $array_binhluanct = binhluanchitiet($id_sp);
             if (isset($nut_sow)) {
-            } else if (isset($search_bl)) {
+            }
+             else if (isset($search_bl)) {
                 $search_bl = search_bl($ma_bl);
             }
             include_once "./view/header.php";
@@ -404,7 +364,7 @@ if(isset($act)){
             break;
     }
 } else {
-    header('location: ?mod=user&act=thongke');
+    header('location: ?mod=user&act=sanpham');
 }
-}
-}
+
+
