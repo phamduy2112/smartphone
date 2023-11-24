@@ -3,6 +3,7 @@
 include_once("../model_DAO/blog.php");
 include_once "../model_DAO/user.php";
 include_once "../model_DAO/cart.php";
+include_once "../model_DAO/danhmuc.php";
 
 include_once "../model_DAO/admin_sp.php";
 include_once "../model_DAO/binhluan.php";
@@ -26,12 +27,47 @@ if(isset($act)){
         break;
     // danh muc
     case 'danhmuc':
-
+        $danhmuc=laytatca_DM();
+        // if($ten)
+        
+       
         include_once "./view/header.php";
         include_once "./view/danhmuc.php";
             
         break;
+    case 'xoadanhmuc':
+        if(isset($id_danhmuc)){
+            $xoa_dm=xoa_DM($id_danhmuc);
+            header('Location:?mod=user&act=danhmuc');
+
+        }
+        break;
+
+    case 'chinhsuadm':
+       
+            if(isset($chinhsuadanhmuc)){
+            //    echo $id_danhmuc;
+            //    echo $ten; 
+            $chinhsua=chinhsua_DM($ten,$id_danhmuc);
+            header('Location:?mod=user&act=danhmuc');
+    
+        }
+        include_once "./view/header.php";
+        include_once "./view/chinhsuadm.php";
+        break;
     // sản phẩm
+    case 'themdanhmuc':
+        if(isset($themDanhMuc)){
+            if(isset($ten)){
+             $themdanhmuc=them_DM($ten);
+        
+                header('Location:?mod=user&act=danhmuc');
+            
+            }
+           
+        }
+       
+        break;
     case 'sanpham':
         $array_sp = load_sp();
           
@@ -39,6 +75,7 @@ if(isset($act)){
         include_once "./view/sanpham.php";
         break;
         break;
+    
     case 'themsanpham':
         if(isset($tiep_sp)){
             var_dump($danhmuc_sp);

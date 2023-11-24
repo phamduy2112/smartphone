@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="../content/css_admin/quanly_sp.css">
+
 <section class="admin_body">
     <section class="ql_sp_k">
     <form action="">
