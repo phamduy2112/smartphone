@@ -1,6 +1,13 @@
 
      <!-- lên chữ -->
-
+<style>
+  p{
+    margin-bottom: 0;
+  }
+  .admin__box .timkiem {
+  height: 40px;
+  }
+</style>
   <section class="admin_body">
     <div class="admin__box">
        <div class="timkiem">
@@ -31,10 +38,32 @@
         <div class="header__table">
           <p>STT</p>
           <p>Tên</p>
-          <p>Mã</p>
+         
           <p></p>
         </div>
+        <?php
+        $stt=1; 
+        foreach($danhmuc as $item):
+        extract($item);
+        ?>
         <div class="header__body mt-2">
+          <p><?=$stt?></p>
+          <p><?=$tenloai?></p>
+        
+          <p>
+          <a href="?mod=user&act=chinhsuadm&id_danhmuc=<?=$id_loai?>">
+              <i class="fa-solid fa-pen"></i>
+            </a>|
+            <a href="?mod=user&act=xoadanhmuc&id_danhmuc=<?=$id_loai?>">
+              <i class="fa-solid fa-trash"></i>
+            </a>
+          
+          </p>
+        </div>
+        <?php 
+      $stt++;
+      endforeach;?>
+        <!-- <div class="header__body mt-2">
           <p>1</p>
           <p>Điện thoại</p>
           <p>#D001</p>
@@ -42,24 +71,11 @@
             <a href="">
               <i class="fa-solid fa-trash"></i>
             </a>|
-            <a href="" data-bs-toggle="modal" data-bs-target="#chinhSuaDM">
-              <i class="fa-solid fa-pen"></i>
-            </a>
-          </p>
-        </div>
-        <div class="header__body mt-2">
-          <p>1</p>
-          <p>Điện thoại</p>
-          <p>#D001</p>
-          <p>
-            <a href="">
-              <i class="fa-solid fa-trash"></i>
-            </a>|
             <a href="">
               <i class="fa-solid fa-pen"></i>
             </a>
           </p>
-        </div>
+        </div> -->
       </div>
     </div>
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -70,47 +86,23 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <form>
-              <div class="mb-3">
-                <label for="recipient-name" class="col-form-label">Mã:</label>
-                <input type="text" class="form-control" id="recipient-name">
-              </div>
+            <form action="?mod=user&act=themdanhmuc" method="post">
+             
               <div class="mb-3">
                 <label for="message-text" class="col-form-label">Tên:</label>
-                <input type="text" class="form-control" id="recipient-name">
+                <input type="text" class="form-control" id="recipient-name" name="ten">
               </div>
-            </form>
+           
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
-            <button type="button" class="btn btn-primary">Thêm</button>
+            <input type="submit" class="btn btn-secondary" data-bs-dismiss="modal" value="Đóng">
+            <input type="submit" class="btn btn-primary" value="Thêm" name="themDanhMuc">
           </div>
+          </form>
         </div>
       </div>
     </div>
-    <div class="modal fade" id="chinhSuaDM" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Sửa danh mục</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <form>
-          
-              <div class="mb-3">
-                <label for="message-text" class="col-form-label">Tên:</label>
-                <input type="text" class="form-control" id="recipient-name">
-              </div>
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
-            <button type="button" class="btn btn-primary">Thêm</button>
-          </div>
-        </div>
-      </div>
-    </div>
+ 
   </section>
 
 
