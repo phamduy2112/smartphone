@@ -83,7 +83,13 @@
         <div> <section>Danh Mục</section></div>
         <div> <section>Từ khóa</section></div>
       </section>
-      <?php foreach($array_sp as $sp): ?>
+      <?php
+      if(empty($array_sp)){
+        echo "<div> <section class='text-center'>Không tìm thấy từ khoá</section></div>";
+      }else{
+        
+      }
+      foreach($array_sp as $sp): ?>
         
       <section class="text_ql_sp_sp">
         <div>
@@ -116,15 +122,7 @@
       </section>
       <?php endforeach; ?>
     </section>
-    <nav aria-label="..." class="d-flex justify-content-center mt-2">
-  <ul class="pagination pagination-sm">
-    <?php for($i=1;$i<=$number_page;$i++):?>
-    <li class="page-item" aria-current="page">
-      <span class="page-link"><a href="?mod=user&act=sanpham&page=<?=$i?>"><?php echo $i?></a></span>
-    </li>
-   <?php endfor;?>
-  </ul>
-</nav>
+  
  
   </section>
 

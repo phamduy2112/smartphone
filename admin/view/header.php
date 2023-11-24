@@ -59,7 +59,7 @@
                                                 Quản lí đơn hàng</a>
                                         </li>
                                         <li>
-                                            <a href="?mod=user&act=sanpham" class="">
+                                            <a href="?mod=user&act=sanpham&page=1" class="">
                                                 <i class="fa-solid fa-house"></i>
                                                 Quản lý sản phẩm</a>
                                         </li>

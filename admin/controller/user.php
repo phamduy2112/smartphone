@@ -4,6 +4,7 @@ include_once("../model_DAO/blog.php");
 include_once "../model_DAO/user.php";
 include_once "../model_DAO/cart.php";
 include_once "../model_DAO/danhmuc.php";
+include_once "../model_DAO/product.php";
 
 include_once "../model_DAO/admin_sp.php";
 include_once "../model_DAO/binhluan.php";
@@ -16,20 +17,7 @@ session_start();
 extract($_REQUEST);
 
 
-if (isset($act)) {
-    switch ($act) {
-            // trang chủ
-        case 'trangchu':
-            $khachhang_moi = laytatcathongtin(1);
-            $trangThaiDH = thongke_donhang();
-            $thongke_motngay = thongke_motngay();
-            $thongke_slsp = thongke_soluotmua_sp();
-            include_once "./view/header.php";
-            include_once "./view/trangchu.php";
 
-            break;
-            // danh muc
-        case 'danhmuc':
 
 if(isset($act)){
     switch($act){
@@ -78,7 +66,7 @@ if(isset($act)){
         if(isset($themDanhMuc)){
             if(isset($ten)){
              $themdanhmuc=them_DM($ten);
-        
+                
                 header('Location:?mod=user&act=danhmuc');
             
             }
@@ -86,13 +74,25 @@ if(isset($act)){
         }
        
         break;
+    case 'timkiem':
+       
+      $array_sp=timKiemSP($sanpham_timkiem);
+        include_once "./view/header.php";
+        include_once "./view/timkiemsp.php";
+        break;
     case 'sanpham':
-        $array_sp = load_sp();
-          
+      
+        $tong_SP=dem_SP();
+           
+        $number_page=ceil($tong_SP/10);
+        if(isset($page)){
+            $start=($page-1)*15;
+            $array_sp = soluong_SanPham($start,10);
+        }
         include_once "./view/header.php";
         include_once "./view/sanpham.php";
         break;
-        break;
+   
     
     case 'themsanpham':
         if(isset($tiep_sp)){
@@ -220,18 +220,7 @@ if(isset($act)){
 
             break;
             // sản phẩm
-        case 'sanpham':
-            $array_sp = load_sp();
-            if (isset($add_sp)) {
-
-                header('location: ?mod=user&act=add_sp');
-            } else {
-                include_once "./view/header.php";
-                include_once "./view/sanpham.php";
-            }
-
-
-            break;
+ 
 
         case 'chinhsuasp':
            
@@ -405,6 +394,4 @@ if(isset($act)){
     }
 } else {
     header('location: ?mod=user&act=thongke');
-}
-}
 }
