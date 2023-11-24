@@ -43,7 +43,11 @@ function lay_iduser($name){
 
 function kt_TaiKhoanTonTai($taikhoan){
   $sql= "SELECT * FROM khachhang where user_name=?";
-  return pdo_query_one($sql,$taikhoan,);
+  return pdo_query_one($sql,$taikhoan);
+}
+function kt_EmailTonTai($email){
+  $sql= "SELECT * FROM khachhang where email=?";
+  return pdo_query_one($sql,$email);
 }
 
 ?>

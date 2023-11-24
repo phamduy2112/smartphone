@@ -42,10 +42,14 @@ if (isset($act)) {
       && isset($matkhaucap2)&&($matkhaucap2!='')
       ) {
         $kt_TK=kt_TaiKhoanTonTai($taikhoan);
+        $kt_email=kt_EmailTonTai($email);
         $tb='';
         if($kt_TK){
           $tb.= 'tên tài khoản đã tồn tại';
-        }else{
+        }else if($kt_email){
+          $tb.= 'email đã tồn tại';
+        } 
+        else{
           if($matkhaumot===$matkhauhai){
             $matkhau=$matkhaumot;
            $_SESSION['taikhoan'] = $taikhoan;
@@ -53,7 +57,7 @@ if (isset($act)) {
              header('Location: ?mod=page&act=home');
           }else{
           }
-          echo $tb;
+        
         }
           // echo $taikhoan . "-" . $email .''.$matkhaumot.''.$matkhauhai.''.$matkhaucap2;
         } else {
