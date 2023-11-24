@@ -70,6 +70,7 @@
     height: 100%;
 }
 .ql_sp_k:nth-child(2){
+
     border-radius: 5px;
     width: 100%;
     display: flex;
@@ -82,7 +83,7 @@
 .ql_sp_set:nth-child(1){
     width: 45%;
     height: 50%;
-    box-shadow: 0 0 10px 0 hsl(0, 0%,0%, 20%);
+   
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -104,6 +105,26 @@
     height: 15px;
     border-radius: 100px;
     background: red;
+}
+.ql_sp_set_two:nth-child(4){
+    position: absolute;
+    
+    width: 2.3rem;
+    height: 2.3rem;
+    right: 52%;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ql_sp_set_two:nth-child(4) button{
+    width: 2.30rem;
+    border: none;
+    outline: none;
+    background: transparent;
+    box-shadow: 0 0 10px 0 hsl(0, 0%, 0%,25%);
+    height: 2.3rem;
+    border-radius: 100%;
 }
 
 .ql_sp_set_two:nth-child(1)>span:nth-child(2){

@@ -1,3 +1,5 @@
+
+<link rel="stylesheet" href="..content/css/add_blog.css">
 <section class="admin_body">
   <form action="" method="post">
   <div class="add_product">

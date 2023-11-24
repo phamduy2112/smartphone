@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="../content/css_admin/quanly_sps.css">
+
 <section class="admin_body">
     <section class="ql_sp_k">
     <form action="">
@@ -36,11 +38,24 @@
           <span>Đang nhập</span>
           <span></span>
         </section>
+        <section class="ql_sp_set_two">
+        <form action="" method="post">
+      <button name="add_sp">
+      <i class="bi bi-plus-lg"></i>
+      </button>
+      </form>
+        </section>
+      
       </section>
+     
       <section class="ql_sp_set">
       <section class="set_ql">3.000 sản phẩm</section>
       <section class="set_ql">
-        <span><i class="fa-solid fa-chevron-left"></i></i></span>
+      <span><i class="fa-solid fa-chevron-left"></i></i></span>
+     
+       
+      
+      
       </section>
       <section class="set_ql">
         <span>1</span>
@@ -89,9 +104,11 @@
         <div><section><?=$sp['tenloai']?></section></div>
         <div><section>Iphone</section>
           <section>
-           <a href=""><span><i class="fa-solid fa-trash"></i></span></a>
+         
+          <i class="bi bi-bug-fill"></i>
+         
             <span></span>
-            <span><i class="bi bi-pencil"></i></span>
+            <a href="?mod=user&act=chinhsuasp&id=<?=$sp['id_sp']?>"><i class="bi bi-pencil"></i>  </a>
           </section></div>
       </section>
       <?php endforeach; ?>
