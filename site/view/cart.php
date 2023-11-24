@@ -25,6 +25,7 @@ $_SESSION['tongtt']=$tongtt;
 //   echo 1;
 // }
 ?>
+<link rel="stylesheet" href="../content/css/cart2.css">
 <div class="cart">
     <div class="container-md">
         <div class="cart__title">
@@ -44,7 +45,8 @@ $_SESSION['tongtt']=$tongtt;
             if(empty($_SESSION['cart']))
             $check="style='display:none;'";
             ?>
-                <div class="cart__header" <?=$check?>>
+                <div class="cart__header" 
+                <?=$check?>>
                     <div class=""></div>
                     <div class="sp">Sản phẩm</div>
                     <div>Số lượng</div>

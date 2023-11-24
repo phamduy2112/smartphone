@@ -1,45 +1,99 @@
+@import url('../css/reponsive.css');
+@import url('../css/bien.css');
+:root{
+    --font--color:#2B20A1;
+    /* FONT */
+    --Play: 'Play', sans-serif;
+    --Ruda: 'Ruda', sans-serif;
+    /* COLOR */
+    /* Chủ đạo */
+    --CD: #2B20A1;
+    /* Nền */
+    --Nen: #EAE8FF;
+}
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
+/* PRODUCT HOT*/
 .product__item{
     background-color: rgb(255, 255, 255);
-
     width: 100%;
-    margin-right: .1%;
+    margin-right: 0.1%;
     overflow: hidden;
-
-   position: relative;
-  
-    
-}
-
-.product__banner_hot{
-    
-    background-image: url('../img/banner/x.jpg');
-    padding: 50px 20px;
     position: relative;
 }
-
-#product .product__item.product__bt{
-    width:212px; 
-    height: 315px;
+.container-btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    transition: 0.3s;
 }
- .product__bt{
-    width:212px; 
-    height: 320px;
+.product__item .btn{
+    font-family: var(--Play);
+    width: 60%;
+    background-color: var(--font--color);
+    color: white;
+    border-radius: 10px;
+    border: none;
+}
+.product__item .btn:hover{
+    color: white;
+    font-weight: bold;
+}
+.product__banner_hot{
+    background-image: url('../img/banner/x.jpg');
+    padding: 20px 30px; padding-bottom: 40px;
+    border-radius: 10px;
+    position: relative;
 }
 .product___hot{
     width: 250px;
-    height: 360px;
+    height: 350px;
+}
+/* SALE */
+.product__item .ctn-notify{
+    width: 25%;
+    height: fit-content;
+    position: absolute;
+    text-align: center;
+    top: 10px;
+    left: 15px;
+}
+.product__item .count{
+    font-family: var(--Play);
+    background-color: rgb(255, 0, 0);
+    color: white;
+    margin-top: 3px;
+    padding: 1px 10px;
+    font-weight: bold;
+}
+/* NEW */
+.product__item .new{
+    font-family: var(--Play);
+    background-color: rgb(0, 255, 76);
+    color: white;
+    padding: 1px 12px;
+    font-weight: bold;
+}
+
+/* SP dành cho bạn */
+#product .product__item.product__bt{
+    width:212px; 
+    height: 315px;
+    /* background-color: red; */
+}
+ .product__bt{
+    width:212px; 
+    height: 315px;
+    /* background-color: #2B20A1; */
 }
 .product__box{
     display: flex;
     flex-wrap: wrap;
     flex-direction:row;
-    
     width: 100%;
     justify-content: space-between;
     position: relative;
@@ -50,16 +104,22 @@
     gap: 10px;
     transition: 0.5s ease;
 }
-
-.product__title {
+.product__title{
+    font-family: var(--Play);
     background-color: white;
     width: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 10px 15px;
-    color: #fb6f92;
+    font-weight: bold;
+    color: var(--CD);
+    font-size: 20px;
 }
-
+.product__title a{
+    font-size: 15px;
+    font-weight: 400;
+}
 .product .row{
     margin: 0;
 }
@@ -69,88 +129,70 @@
 .product__item .product__img img{
     width: 100%;
 }
-.product__item .count{
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: #fb6f92;
-    color: white;
-    padding: 2px 6px;
-}
-
 .product__item .icons{
-position: absolute;
-top: 20px;
-right: 15px;
-opacity: 0;
-display: flex;
-flex-direction: column;
-transition: all .5s;
+    position: absolute;
+    top: 20px;
+    right: 15px;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    transition: all .5s;
 }
 .product__item .icons a{
     width: 25px;
     height: 25px;
     border-radius: 50%;
-    border: 1px solid black;
+    border: 2px solid rgba(128, 128, 128, 0.3);
     line-height: 21px;
     text-align: center;
     margin-bottom: 4px;
-transition: all .5s;
+    transition: all .5s;
+}
+.product__item .icons a i{
+    transition: all .5s;
+    color: rgba(128, 128, 128, 0.295);
 }
 .product__item .icons a:hover{
-    color: #fb6f92;
+    border: 2px solid var(--CD);  
+}
+.product__item .icons a:hover i{
+    color: var(--font--color);
 }
 .product__item:hover .icons{
     opacity: 1;
-    top: 5px;
+    top: 12px;
 }
 .product__item .product__text h3{
     font-size: 15px;
-    font-weight: bold;
-    font-family: 'Ruda', sans-serif;
-}
-.product__item .icons{
-
+    font-family: 'Inter', sans-serif;
 }
 .product__item .product__text .stars{
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     font-size: 10px;
-=======
-    font-size: 11px;
-    
 }
 .product__item .product__text .stars i{
     color: #FFCE31;
     font-size: 13px;
 }
 .product__item .product__text .price{
-    color: #fb6f92;
->>>>>>> devVinh
-=======
-    font-size: 10px;
->>>>>>> main
-    
+    font-family: var(--Play);
+    color: red;
+    font-weight: bold;
 }
-.product__item .product__text .stars i{
-    color: #FFCE31;
-    font-size: 13px;
-=======
-    font-size: 11px;
->>>>>>> devTri
-}
-.product__item .product__text .price{
-    color: #fb6f92;
-    
-}
+.product__item .product__text .price span{
+    color: rgba(128, 128, 128, 0.616);
+    text-decoration: line-through;
+    font-size: 13px;}
 .product__item .product__text{
   z-index:111px;
-position: relative;
-bottom: 0;
-background-color: white;
-transition: all .5s;
-padding: 0 10px;
+    position: relative;
+    bottom: 0;
+    background-color: white;
+    transition: all .5s;
+    padding: 0 10px;
+}
+.product__item:hover .product__text
+.container-btn{
+    margin-top: 0px;
 }
 
 .product__item:hover .product__text{
@@ -158,52 +200,14 @@ padding: 0 10px;
 }
 .product__item .product__text .check{
     font-size: 12px;
-    color: #fb6f92;
+    color: #57E923;
 }
 .product .row >*{
     padding: 0;
     margin: 0;
 }
+
 /* san pham cac loai */
-.products__flex{
-    display: flex;
-}
-.products__left{
-    width: 20%;
-    background-color: white;
-    padding: 10px 15px;
-    margin-right: 2%;
-}
-.group__fl,
-.group__form {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-}
-.products__item h3{
-    font-size: 15px;
-}
-.group__fl{
-    font-size: 18px;
-
-    
-}
-.productss__item{
-    display: flex;
-
-}
-.productss__item .product__text{
-    font-size: 14px;
-    font-weight:bolder;
-}
-.colors .tron{
-width: 20px;
-height: 20px;
-border-radius: 50%;
-border: 1px solid black;
-
-}
 .products__right{
     width: 100%;
 }
@@ -212,53 +216,63 @@ border: 1px solid black;
     display: flex;
     justify-content:space-between ;
     padding: 10px 10px;
-    }
+}
 .container-md{
     --bs-gutter-x:0
 }
 /* nút */
-.nut_one,
-.nut{
-    position: absolute;
-    color: rgb(255, 0, 0);
-   top: 50%;
-    
-    width: 97%;
-    font-size: 23px;
-    cursor: pointer;
+.nut,.nut_one{
+    /* display: none; */
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+.product__box:hover .nut_one,
+.product__banner_hot:hover .nut{
+    /* display: block; */
+    opacity: 1;
+}
+.nut_two{
+    right: -25px !important;
 }
 .nut_one{
     width: 100%;
     top: 45%;
 }
+.nut_one,
+.nut{
+    position: absolute;
+    color: rgba(128, 128, 128, 0.425);
+    top: 50%;
+    width: 97%;
+    font-size: 23px;
+    cursor: pointer;
+
+}
 .nut_one .next,
 .nut .next{
- position: absolute;
- left: 10px;
- width: 38px;
- height: 38px;
- text-align: center;
- border-radius: 50%;
+    position: absolute;
+    left: 10px;
+    width: 38px;
+    height: 38px;
+    text-align: center;
+    border-radius: 50%;
+    border: 2px solid rgba(128, 128, 128, 0.425);
 
- border: 1px solid black;
- 
 }
 .nut_one .pre,
 .nut .pre{
     position: absolute;
-right: 10px;
-width: 38px;
-height: 38px;
-text-align: center;
-border-radius: 50%;
-border: 1px solid black;
+    right: 10px;
+    width: 38px;
+    height: 38px;
+    text-align: center;
+    border-radius: 50%;
+    border: 2px solid rgba(128, 128, 128, 0.425);
 }
-
 .dots{
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
-    
 }
 .dots .dot__item{
     width: 11px;
@@ -273,7 +287,6 @@ border: 1px solid black;
 .dot__item.active{
     background-color:red;
 }
-<<<<<<<< HEAD:template/banhang/css/product.css
 
 @media (min-width:300px){
     #desktop__left{
@@ -377,20 +390,16 @@ z-index: 111111111;
     }
 }
 
-========
->>>>>>>> 8146f052da5538020f6363259d7677b9c91da0b3:banhang/css/product.css
 @media (max-width:1500px){
     .product__bt{
         width: 180px;
     }
-<<<<<<<< HEAD:template/banhang/css/product.css
     #products .product__bt{
         height: 300px;
     }
     
-========
->>>>>>>> 8146f052da5538020f6363259d7677b9c91da0b3:banhang/css/product.css
 }
+
 @media (max-width:1000px){
     .product .d-flex .img{
         display: none;
@@ -400,11 +409,8 @@ z-index: 111111111;
         width: 230px;
         height: 335px;
     }
-<<<<<<<< HEAD:template/banhang/css/product.css
     
  
-========
->>>>>>>> 8146f052da5538020f6363259d7677b9c91da0b3:banhang/css/product.css
 }
 @media (max-width:767px){
     
@@ -419,14 +425,6 @@ z-index: 111111111;
         width: 170px;
         height: 310px;
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
-=======
-<<<<<<<< HEAD:template/banhang/css/product.css
->>>>>>> devTri
     .products__right__top form{
         display: none;
     }
@@ -474,21 +472,3 @@ z-index: 111111111;
         font-size: 13px;
     }
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-}
-@media (max-width:400px){
-    .product__bt{
-        width: 49%;
-        height: 310px;
-    }
-}
->>>>>>> devVinh
-=======
->>>>>>> main
-=======
-========
-}
->>>>>>>> 8146f052da5538020f6363259d7677b9c91da0b3:banhang/css/product.css
->>>>>>> devTri

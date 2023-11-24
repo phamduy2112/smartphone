@@ -1,33 +1,55 @@
 @import url('../css/bien.css');
+:root{
+    --font--color:#2B20A1;
+    /* FONT */
+    --Play: 'Play', sans-serif;
+    --Ruda: 'Ruda', sans-serif;
+    /* COLOR */
+    /* Chủ đạo */
+    --CD: #2B20A1;
+    /* Nền */
+    --Nen: #EAE8FF;
+}
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 /*  hang */
+.notify{
+    background-color: #2B20A1;
+    font-family: var(--Play);
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
 .cart__header{
-    display: flex;
-    flex-direction: row;
-    justify-content:space-around;
+    font-family: var(--Play);
+  
+ 
    align-items: center;
     color: white;
     font-weight: bold;
-    padding: 10px 25px;
+    padding: 6px 25px;
     background-color: var(--font--color);
+    font-size: 22px;
 }
-.cart__header .icon{
+/* .cart__header .icon{
     width: 20px;
 }
 .cart__header .sp{
     width: 250px;
-}
+} */
 .cart__body{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+
+    
     background: white;
     padding: 0 20px;
+}
+.cart__body td{
+   
 }
 .cart__body:nth-child(odd){
     background: #2b20a113;
@@ -37,14 +59,16 @@
     font-weight: bold;
     font-size: 14px;
     color: var(--font--color);
+    font-family: var(--Ruda);
 }
 .cart__buttons{
     display: flex;
     justify-content: space-between;
 }
 .cart__buttons a{
-    border: 1px solid var(--font--color);
-    padding: 5px 15px;
+    border: 2px solid var(--font--color);
+    font-family: var(--Play);
+    padding: 7px 15px;
     border-radius: 5px;
     font-weight: bold;
     }
@@ -55,15 +79,25 @@
 .cart__buttons a:last-child{
     background-color: var(--font--color);
     color: white;
+    transition: 0.2s;
 }
+.cart__buttons a:last-child:hover{
+    background-color: red;
+    border: 2px solid red;
+
+}
+
+
 .title__sp .price__sp .gia_def{
     font-weight: 400;
     color: gray;
     text-decoration: line-through;
-
+    margin-right: 2px;
+    font-size: 14px;
 }
 
 .title__sp .price__sp p span{
+    font-family: var(--Play);
     font-weight: bold;
     color: red;
     font-size: 15px;
@@ -73,10 +107,29 @@
 
 
 }
+.cart__body tr,
+ .cart__header tr{
+    text-align: center;
+}
 .cart .title__text{
     font-size: 24px;
     color: var(--font--color);
     font-weight: bold;
+    font-family: var(--Play);
+}
+.cart__body .sanpham{
+    width: 200px;
+}
+.cart__body td,
+.cart__body th{
+    position: relative;
+}
+.cart__body tr .baongoai,
+.cart__body tr input{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
 }
 .form__Cart{
     border: 1px solid var(--font--color);
@@ -113,7 +166,14 @@
     color: var(--font--color);
     text-align: center;
     font-weight: bold;
-  
+    font-size: 32px;
+    font-family: var(--Play);
+}
+.infor-check{
+    font-family: var(--Play);
+}
+.infor-check p{
+    margin: 3px 0px;
 }
 .right__carts_buton{
     display: flex;
@@ -136,6 +196,7 @@
 .giohang__right div p span{
     font-weight: bold;
 }
+
 .number__count{
     display: flex;
    font-size: 20px;
@@ -150,46 +211,61 @@ padding: 0 10px;
 }
 .sanpham__giohang {
     display: flex;
+  text-align: start;
     
+  justify-content: center;
+   
 }
 .price_all{
     font-weight: bold;
-    font-size: 18px;
+    font-size: 22px;
     color: var(--font--color);
+    font-family: var(--Play);
 }
-.sanpham__giohang{
-    width: 260px;
+.price-end span{
+    color: red;
 }
 /* .title__sp{
     width: 180px;
 } */
+
+@media (max-width:600px) {
+    .cart__header{
+        font-size: 10px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
 /* kênh thanh toan */
 .breadcrumb{
-    --bs-breadcrumb-margin-bottom :0px  
-        
+    --bs-breadcrumb-margin-bottom :0px;
+    margin-top: 10px;
    }
    
 .thanhtoan_left{
- border: 1px solid white;
- box-shadow: 0 0 5px rgba(0,0,0,0.32);
-background-color: white;
-  padding: 20px 30px;
-  margin-right: 2%;
-  border-radius: 5px;
-    
+    border: 1px solid white;
+    box-shadow: 0 0 20px rgba(212, 212, 212, 0.32);
+    background-color: white;
+    padding: 20px 30px;
+    margin-right: 2%;
+    border-radius: 5px;
 }
-.form__thanhtoan{   
-    
-   
-}
-
 .thanhtoan_left input{
     width: 100%;
     height: 35px;
     outline: none;
-    padding: 0 20px;
+    padding: 0px 10px;
     border: 1px solid #2b20a161;
     border-radius: 7px;
+    font-family: var(--Play);
 }
 .thanhtoan_left  textarea{
     border: 1px solid #2b20a161;
@@ -197,16 +273,19 @@ background-color: white;
 }
 .thanhtoan_right{
     border: 1px solid white;
-    box-shadow: 0 0 5px rgba(0,0,0,0.32);
+    box-shadow: 0 0 20px rgba(212, 212, 212, 0.32);
     background-color: white;
     padding: 20px;
- 
+}
+.check-buy{
+    font-family: var(--Play);
 }
 .thanhtoan_left h3,
 .thanhtoan_right h3{
-   
     color: var(--font--color);
     font-weight: bold;
+    font-family: var(--Play);
+    font-size: 32px;
 }
 
 .thanhtoan_left p{

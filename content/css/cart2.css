@@ -208,8 +208,44 @@ padding: 0 10px;
     width: 180px;
 } */
 
-
-
+@media (max-width:1000px){
+    .giohang__right {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}
+@media (max-width:600px) {
+    .cart__header{
+        font-size: 10px;
+    }
+    .cart__header .sp{
+        width: 150px;
+    }
+    .sanpham__giohang img{
+        width: 50px;
+    }
+    .sanpham__giohang{
+        width: 130px;
+    }
+    .title__sp{
+        font-size: 9px;
+    }
+    .title__sp .price__sp .gia_def{
+        font-size: 8px;
+    }
+    .price_all{
+        font-size: 10px;
+    }
+    .number__count{
+        font-size: 10px;
+    }
+    .number__count div{
+        padding: 0 5px;
+    }
+    .title__sp .price__sp p span{
+        font-size: 10px;
+    }
+}
 
 
 
