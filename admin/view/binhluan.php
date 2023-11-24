@@ -24,57 +24,34 @@
 
         </section>
       </section>
+      
       <section class="bl_kh_c">
         <section class="bl_ct">
-          <section>Mã bình luận</section>
-          <section>Tên</section>
           <section>Mã sản phẩm</section>
-          <section>Thời gian</section>
+          <section>Tên</section>
+          <section><i class="fa-regular fa-image"></i></section>
+          <section>Số lượt bình luận</section>
 
         </section>
-        <section class="bl_ct">
-          <section>SP_001</section>
-          <section>Iphone 13</section>
-          <section><img src="img/blog/a.webp" alt=""></section>
-          <section>3.000 bình luận</section>
-
+        <?php foreach($array_binhluan as $binhluan): ?>
+          <a href="?mod=user&act=binhluanchitiet&id_sp=<?=$binhluan['id_sp']?>">
+          <section class="bl_ct">
+          <section><?=$binhluan['id_sp']?></section>
+          <section><?=$binhluan['ten_sp']?></section>
+          <section><img src="img/blog/<?=$binhluan['hinhanh']?>" alt=""></section>
+          <section><?=$binhluan['so_luot_binh_luan']?></section>
         </section>
-        <section class="bl_ct">
-          <section>SP_001</section>
-          <section>Iphone 13</section>
-          <section><img src="img/blog/a.webp" alt=""></section>
-          <section>3.000 bình luận</section>
-
-        </section>
-        <section class="bl_ct">
-          <section>SP_001</section>
-          <section>Iphone 13</section>
-          <section><img src="img/blog/a.webp" alt=""></section>
-          <section>3.000 bình luận</section>
-
-        </section>
-        <section class="bl_ct">
-          <section>SP_001</section>
-          <section>Iphone 13</section>
-          <section><img src="img/blog/a.webp" alt=""></section>
-          <section>3.000 bình luận</section>
-
-        </section>
-        <section class="bl_ct">
-          <section>SP_001</section>
-          <section>Iphone 13</section>
-          <section><img src="img/blog/a.webp" alt=""></section>
-          <section>3.000 bình luận</section>
-
-        </section>
+        </a>
+        <?php endforeach; ?>
+      
 
 
 
 
 
-
+       
       </section>
-
+      
 
     </section>
 

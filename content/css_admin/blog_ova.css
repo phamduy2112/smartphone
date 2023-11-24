@@ -1,13 +1,14 @@
 .admin_body {
-    width: 100%;
     display: flex;
     flex-direction: column;
-    font-family: Play;
-    background: red;
-
+    font-family: Play;   
+}
+html {
+   
 }
 
 .content_con {
+    
     padding: 40px 0;
 }
 
@@ -198,7 +199,7 @@ form>.icon_search {
     align-items: center;
     flex-direction: column;
     transition: 0.9s ease;
-    overflow-y: scroll;
+    overflow-y: hidden;
 }
 
 .top_blog::-webkit-scrollbar {
@@ -361,7 +362,6 @@ form>.icon_search {
 
 .blog_time {
     width: 720px;
- 
     position: absolute;
     height: 690px;
     border-radius: 5px;
@@ -375,7 +375,7 @@ form>.icon_search {
 .blog_tin_moi_hienthi {
     display: flex;
     width: 720px;
-    height: 700px;
+    height: 100%;
     padding-bottom: 80px;
     flex-direction: column;
     border-radius: 5px;
@@ -396,8 +396,11 @@ form>.icon_search {
     background: #ccc;
     border-radius: 5px;
 }
-
-.blog_tin_moi_hienthi>.top_blog_content {
+.blog_tin_moi_hienthi>form{
+    width: 100%;
+    height: 100%;
+}
+.blog_tin_moi_hienthi .top_blog_content {
     display: flex;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.20);
     border-radius: 5px;
@@ -498,12 +501,12 @@ form>.icon_search {
     justify-content: center;
     text-align: justify;
     font-size: 11px;
-    font-weight: 400;
+    font-weight: 400;   
     letter-spacing: 1.1px;
-    opacity:1;
-    visibility: hidden;
+    opacity: 1;
     transition: 1.3s ease;
 }
+
 
 .blog_text:nth-child(1) {
     color: #000;

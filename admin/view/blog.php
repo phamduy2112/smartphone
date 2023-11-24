@@ -1,3 +1,5 @@
+
+<link rel="stylesheet" href="../content/css_admin/blog_ova.css">
 <section class="admin_body">
     <section class="content_con">
 
@@ -43,7 +45,7 @@
             <?php foreach($array_blog as $blog): ?>
             <section class="top_blog_content">
               <section class="blog_top_content_tw">
-                <img src="/content/img//<?=$blog['hinhanh']?>" alt="">
+                <img src="../content/img/productachnen/<?=$blog['hinhanh']?>" alt="">
 
               </section>
               <section class="blog_top_content_tw">
@@ -83,7 +85,7 @@
             <section class="top_blog_content">
               <section class="blog_xr">
                 <section class="blog_content_xrl">
-                  <img src="img/blog/<?=$blog_time['hinhanh']?>" alt="">
+                  <img src="../content/img/productachnen/<?=$blog_time['hinhanh']?>" alt="">
                 </section>
                 <section class="blog_content_xrl">
                   <label for=""><?=$blog_time['tieude']?></label>
@@ -101,7 +103,7 @@
                   </section>
                 </section>
               </section>
-              <section class="blog_xr" id="blog_xr_one">
+              <section class="blog_xr">
                 <section class="blog_text">
                   Nội dung
                 </section>
@@ -142,13 +144,11 @@
                 <?=$blog_time['noidung']?>
                 </section>
               </section>
-       
-       s
            
 
             </section>
           <?php endforeach;} ?>
-          <?php if(isset($cunhat)){ foreach($array_blog_cunhat as $blog_time): ?>
+          <?php  foreach($array_blog_tatca as $blog_time): ?>
             <section class="top_blog_content">
               <section class="blog_xr">
                 <section class="blog_content_xrl">
@@ -172,6 +172,40 @@
               </section>
               <section class="blog_xr">
                 <section class="blog_text">
+                  Nội dung
+                </section>
+                <section class="blog_text">
+                <?=$blog_time['noidung']?>
+                </section>
+              </section>
+           
+
+            </section>
+          <?php endforeach; ?>
+          <?php if(isset($cunhat)){ foreach($array_blog_cunhat as $blog_time): ?>
+            <section class="top_blog_content">
+              <section class="blog_xr">
+                <section class="blog_content_xrl">
+                  <img src="img/blog/<?=$blog_time['hinhanh']?>" alt="">
+                </section>
+                <section class="blog_content_xrl">
+                  <label for=""><?=$blog_time['tieude']?></label>
+                  <label for=""><?=$blog_time['ngaydang']?></label>
+                </section>
+                <section class="blog_content_xrl">
+                  <section>
+                    <i class="fa-solid fa-trash"></i>
+                  </section>
+                  <section>
+                    <i class="bi bi-pencil"></i>
+                  </section>
+                  <section>
+
+                  </section>
+                </section>
+              </section>
+              <section class="blog_xr">
+                <section class="blog_text"> 
                   Nội dung
                 </section>
                 <section class="blog_text">
@@ -218,8 +252,7 @@
   <script src="js/jquery.js"></script>
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
   <script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
-
-  <script src="../content/js/hienan.js"></script>
+  <script src="../content/js/blog.js"></script>
 
 
 

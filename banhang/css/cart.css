@@ -12,10 +12,11 @@
     border: 1px solid white;
     border-top-left-radius:20px ;
     margin-left: 1%;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     height: 250px;
     padding: 10px 0;
     box-shadow: 0 2px 5px rgba(0,0,0,0.6);
+   
 }
 .cart__right hr{
     margin: 0;

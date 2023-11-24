@@ -157,6 +157,7 @@
 .btn-control p{
     display: inline-block;
 }
+.btn-control input,
 .btn-control button{
     margin: 0px 5px;
     padding: 10px 10px;
@@ -165,6 +166,7 @@
     transition: 0.5s;
     color: white;
 }
+.btn-control input:hover,
 .btn-control button:hover{
     font-size: 18px;
     font-weight: 700;

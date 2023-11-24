@@ -53,51 +53,28 @@
                             <th>Giá</th>
                         </thead>
                         <tbody>
+                          <?php foreach($sp as $item):
+                           extract($item); 
+                           
+                            ?>
                             <tr>
-                                <td><img src="../img/service/hinhtoi5.jpg" alt=""></td>
-                                <td>Iphone 11 Promax</td>
-                                <td>2</td>
-                                <td>20.000.000đ</td>
+                                <td><img src="../content/img/productachnen/<?=$hinhanh?>" alt=""></td>
+                                <td><?=$ten_sp?></td>
+                                <td><?=$soluong?></td>
+                                <td><?=number_format($gia*((100-$khuyenmai)/100),0,',','.')?></td>
                             </tr>
-                            <tr>
-                                <td><img src="../img/service/hinhtoi5.jpg" alt=""></td>
-                                <td>Iphone 11 Promax</td>
-                                <td>2</td>
-                                <td>20.000.000đ</td>
-                            </tr>
-                            <tr>
-                                <td><img src="../img/service/hinhtoi5.jpg" alt=""></td>
-                                <td>Iphone 11 Promax</td>
-                                <td>2</td>
-                                <td>20.000.000đ</td>
-                            </tr>
-                            <tr>
-                                <td><img src="../img/service/hinhtoi5.jpg" alt=""></td>
-                                <td>Iphone 11 Promax</td>
-                                <td>2</td>
-                                <td>20.000.000đ</td>
-                            </tr>
-                            <tr>
-                                <td><img src="../img/service/hinhtoi5.jpg" alt=""></td>
-                                <td>Iphone 11 Promax</td>
-                                <td>2</td>
-                                <td>20.000.000đ</td>
-                            </tr>
-                            <tr>
-                                <td><img src="../img/service/hinhtoi5.jpg" alt=""></td>
-                                <td>Iphone 11 Promax</td>
-                                <td>2</td>
-                                <td>20.000.000đ</td>
-                            </tr>
+                          <?php endforeach;?>
                         </tbody>
                     </table>
-                    
+                    <form action="" method="post">
                     <div class="btn-control">
                         <p>Tùy chỉnh:</p>
-                        <button style="background-color: #FF0000;">Đang chuẩn bị</button>
-                        <button style="background-color: #FF9900;">Đang giao</button>
-                        <button style="background-color: #00FF19;">Hoàn tất</button>
+                        <input style="background-color: #FF0000;" type="submit" name="chuanbi" value="Đang chuẩn bị">
+                        <input style="background-color: #FF9900;" type="submit" name="danggiao" value="Đang giao">
+                        <input style="background-color: #00FF19;" type="submit" name="hoantat" value="Hoàn tất">
                     </div>
+                    </form>
+                   
                 </div>
             </div>
         </div>
@@ -136,15 +113,32 @@
                 </tbody> -->
               </table>
               <!-- SHOW -->
+              <?php foreach($tatcaDh as $item):
+                extract($item);
+                $trangThai='';
+                if($trangthai===0){
+                  $trangThai='<span class="circle" style="background-color: #FF0000; "></span>                 ';
+                }else if($trangthai===1){
+                  $trangThai='<span class="circle" style="background-color: #FF9900; "></span>                 ';
+
+                }else{
+                  $trangThai='<span class="circle" style="background-color: #00FF19; "></span>                 ';
+                }
+                ?>
               <div class="order-check">
+                <a href="?mod=user&act=donhangchitiet&id_dh=<?=$id_dh?>">
                 <ul>
-                  <li>1</li>
-                  <li><span class="circle" style="background-color: #00FF19; "></span></li>
-                  <li>10.000.00đ</li>
-                  <li>23/10/2023</li>
+                
+                <li>1</li>
+                  <li><?=$trangThai?></li>
+                  <li><?=number_format($tongtien)?></li>
+                  <li><?=$ngaydathang?></li>
                 </ul>
+                </a>
+             
               </div>
-              <div class="order-check">
+              <?php endforeach;?>
+              <!-- <div class="order-check">
                 <ul>
                   <li>1</li>
                   <li><span class="circle" style="background-color: #FF9900; "></span></li>
@@ -167,7 +161,7 @@
                   <li>10.000.00đ</li>
                   <li>23/10/2023</li>
                 </ul>
-              </div>
+              </div> -->
               
 
               <div class="control">

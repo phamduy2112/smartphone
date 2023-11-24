@@ -1,3 +1,5 @@
+
+
 <section class="admin_body">
       <div class="table--admin mt-3">
         <div class="row">
@@ -10,35 +12,37 @@
        
           <thead>
             <tr>
-              <th scope="col">STT</th>
-              <th scope="col">Tên</th>
-              <th scope="col">Email</th>
-              <th scope="col">SĐT</th>
-              <th scope="col">Vai Trò</th>
+            <th scope="col">STT</th>
+                <th scope="col">Tên</th>
+                <th scope="col">Email</th>
+                <th scope="col">SDT</th>
+                <th scope="col">Địa chỉ</th>
+                <th scope="col">Chức vị</th>
             </tr>
           </thead>
           <tbody>
+
+            <?php 
+            $stt=1;
+            foreach($khachhang_moi as $item):
+              extract($item);
+            
+                
+              $ten= $tenkhachhang==''?'chưa cập nhận':$tenkhachhang;
+              $sdt= $sdt==''?'chưa cập nhận':$sdt;
+              $diaChi= $diaChi==''?'chưa cập nhận':$diaChi;
+             $vaitro=$vaitro===1?'admin':'khách hàng';?>
             <tr>
-              <th scope="row">1</th>
-              <td>Duy</td>
-              <td>Duyp7484@gmail.com</td>
-              <td>0334491141</td>
-              <td>Khách hàng</td>
+            <th scope="row"><?=$stt?></th>
+                <td><?=$ten?></td>
+                <td><?=$email?></td>
+                <td><?=$sdt?></td>
+                <td><?=$diaChi?></td>
+                <td><?=$vaitro?></td>
             </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Duy</td>
-              <td>Duyp7484@gmail.com</td>
-              <td>0334491141</td>
-              <td>Khách hàng</td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td>Duy</td>
-              <td>Duyp7484@gmail.com</td>
-              <td>0334491141</td>
-              <td>Khách hàng</td>
-            </tr>
+         <?php 
+        $stt++;
+        endforeach;?>
           
           </tbody>
         </table>
@@ -57,32 +61,34 @@
                 <th scope="col">STT</th>
                 <th scope="col">Tên</th>
                 <th scope="col">Email</th>
-                <th scope="col">Họ tên</th>
+                <th scope="col">SDT</th>
+                <th scope="col">Địa chỉ</th>
                 <th scope="col">Chức vị</th>
               </tr>
             </thead>
             <tbody>
+              <?php 
+              $stt=1;
+              foreach($khachhang as $item):
+                extract($item);
+            
+                
+               $ten= $tenkhachhang==''?'chưa cập nhận':$tenkhachhang;
+               $sdt= $sdt==''?'chưa cập nhận':$sdt;
+               $diaChi= $diaChi==''?'chưa cập nhận':$diaChi;
+              $vaitro=$vaitro===1?'admin':'khách hàng';
+                ?>
               <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-                <td>@mdo</td>
+                <th scope="row"><?=$stt?></th>
+                <td><?=$ten?></td>
+                <td><?=$email?></td>
+                <td><?=$sdt?></td>
+                <td><?=$diaChi?></td>
+                <td><?=$vaitro?></td>
               </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-                <td>@fat</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>Larry the Bird</td>
-                <td>@twitter</td>
-                <td>@twitter</td>
-                <td>@twitter</td>
-              </tr>
+            <?php 
+          $stt++;
+          endforeach;?>
             </tbody>
           </table> 
         </div>

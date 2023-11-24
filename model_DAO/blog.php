@@ -22,4 +22,8 @@ function chinhsua_blog($ten_blog,$time_blog,$loai_blog,$anh_blog,$mota_blog){
   VALUES (?,?,?,?)";
   return pdo_execute($sql);
 }
+function xoablog($id_blog){
+  $sql="DELETE FROM blog where id_blog=?";
+  return pdo_execute($sql,$id_blog);
+}
 ?>

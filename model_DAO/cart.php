@@ -10,7 +10,10 @@ function them_donHang($date,$tt,$trangthai,$id_user){
       $sql="SELECT * FROM donhang where id_kh=$id_user";
       return pdo_query($sql);
     }
-
+    function tatca_donhang(){
+      $sql="SELECT * FROM donhang";
+      return pdo_query($sql);
+    }
     function show_donhangCT($id){
       $sql="SELECT * FROM ct_donhang where id_dh=$id";
       return pdo_query($sql);
@@ -29,5 +32,10 @@ function them_donHang($date,$tt,$trangthai,$id_user){
       $sql='SELECT * FROM sanpham JOIN ct_donhang ON sanpham.id_sp = ct_donhang.id_sp
       where id_dh=?';
       return pdo_query($sql,$id);
+    }
+   
+    function chinhsuaTrangThai($trangthai,$id){
+      $sql="UPDATE donhang set trangthai=? where id_dh=?";
+      return pdo_query($sql,$trangthai,$id);
     }
 ?>
