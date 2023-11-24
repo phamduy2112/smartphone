@@ -1,3 +1,8 @@
+<?php
+    include_once('../model_DAO/pdo.php');
+    extract($get_kh);
+    // echo $_SESSION['taikhoan'];
+    ?>
 <link rel="stylesheet" href="../content/css/lichsumuahang.css">
 <main>
 
@@ -10,8 +15,9 @@
 
                         <img src="../../admin/img/duan/us.jpg" alt="">
                     <div>
-                        <p>Name</p>
-                        <a href="">Sửa hồ sơ</a>
+                        <p><?= $user_name ?></p>
+                        <a href="?mod=user&act=dangxuat">Đăng xuất</a>
+
                     </div>
                 </div>
                 <div class="control">

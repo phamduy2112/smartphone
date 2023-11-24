@@ -1,5 +1,11 @@
 <?php 
+include_once('../model_DAO/pdo.php');
 extract($sl_mot);
+extract($lay_anh);
+// echo $sl_mot;
+// extract($kh_bl);
+
+
 function get_loai($id_loai){
   if($id_loai == 1){
     $loai="Điện thoại";
@@ -37,9 +43,6 @@ function get_price($gia, $khuyenmai){
     echo "<p><span>Giá: <del>".number_format($gia,0,',','.')."đ</del></span> <span class='price1'>".$f_price."đ</span></p>";
   }
 }
-
-
-
 ?>
 <main>
     <!-- product left -->
@@ -61,23 +64,18 @@ function get_price($gia, $khuyenmai){
                     </div>
 
                     <div class="pro_img mt-2">
-
                         <div class="img_small">
-                            <img class="img-thumbnail" src="../content/img/product_tachnen/<?=$hinhanh?>" alt="">
+                            <img class="img-thumbnail" src="../content/img/productchitiet/<?=$anh1?>" alt="">
                         </div>
                         <div class="img_small">
-                            <img class="img-thumbnail" src="../content/img/product_tachnen/<?=$hinhanh?>" alt="">
+                            <img class="img-thumbnail" src="../content/img/productchitiet/<?=$anh2?>" alt="">
                         </div>
                         <div class="img_small">
-                            <img class="img-thumbnail" src="../content/img/product_tachnen/<?=$hinhanh?>" alt="">
+                            <img class="img-thumbnail" src="../content/img/productchitiet/<?=$anh3?>" alt="">
                         </div>
                         <div class="img_small">
-                            <img class="img-thumbnail" src="../content/img/product_tachnen/<?=$hinhanh?>" alt="">
+                            <img class="img-thumbnail" src="../content/img/productchitiet/<?=$anh4?>" alt="">
                         </div>
-                        <div class="img_small">
-                            <img class="img-thumbnail" src="../content/img/product_tachnen/<?=$hinhanh?>" alt="">
-                        </div>
-
                     </div>
 
                 </div>
@@ -153,10 +151,7 @@ function get_price($gia, $khuyenmai){
                                 <p>Bạn có thể thanh toán qua :</p>
                                 <img src="../img/banner/payment2.avif" alt="">
                             </div>
-
                         </div>
-
-
                     </div>
                 </div>
 
@@ -166,7 +161,6 @@ function get_price($gia, $khuyenmai){
     </div>
 
     </div>
-
 
 
 
@@ -207,7 +201,7 @@ function get_price($gia, $khuyenmai){
                     </div>
                     <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">..</div>
                     <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-                        <h4>Đánh giá của khách hàng</h4>
+                        <h4 class="cmt-title">Đánh giá của khách hàng </h4>
                         <?php
                             $cmt='';
                             if(isset($_SESSION['taikhoan'])){
@@ -218,55 +212,78 @@ function get_price($gia, $khuyenmai){
 
                             }
                             ?>
-                        <?php foreach($load_binhluan as $id_bl):?>
+                        <?php 
+                            foreach(get_bl($idsanpham) as $item):
+                            extract ($item);
+                            $ngaydang_dt = new DateTime($ngaydang);
+                            $cmt='';
+                            if(isset($_SESSION['taikhoan'])){
+                            $cmt.='
+                            ';
+                            }else{
+                            $cmt.='style="display:none !important;"';
+                        }
+                        ?>
                         <div class="binhluan">
                             <div class="bl d-flex w-75">
                                 <div class="image">
                                     <img src="../content/img/service/hinhtoi5.jpg" alt="">
-
                                 </div>
-
                                 <div class="binhluan__d">
                                     <form action="">
-                                        <div class="name"><?=$id_bl['id_kh']?></div>
-                                        <div class="ngaythang"><?=$id_bl['ngaydang']?></div>
-                                        <div class="title"><?=$id_bl['noidung']?></div>
-                                        <div>
-                                            <span>Phản hồi</span>
-                                        </div>
+                                        <div class="name"><?=$user_name?></div>
+
+                                        <div class="ngaythang"><?=  
+                                        $ngaydang_dt->format('d-m-Y');
+                                        ?></div>
+                                        <div class="title"><?=$noidung?></div>
                                     </form>
                                 </div>
+
                             </div>
 
-                            <div class="chinhsua" <?=$cmt?>>
 
-                                <i class="fa-solid fa-gear" id="fa-gear"></i>
-                                <ul class="activeE" id="chinh">
-                                    <li><a href="?mod=page&act=xoabl&id=<?=$id_bl['id_bl']?>">Xoá</a></li>
-                                </ul>
-                            </div>
+                            
+
+                            
+
+                                <div class="dlt" <?=$cmt?>>
+                                    
+                                <?php
+                                if($user_name==$_SESSION["taikhoan"]){
+                                echo '
+                                <div class="dlt">
+                                    <a href="?mod=page&act=xoabl&id='.$id_bl.'&idsp='.$idsanpham.'">Xoá</a>
+                                </div>
+                                    ';   
+                                    }
+                                    ?>
+
+
+                                    <!-- <a href="?mod=page&act=xoabl&id='.$id_bl.'&idsp='.$idsanpham.'">Xoá</a> -->
+
+                                </div>
+
+
+
+
+
                         </div>
                         <?php endforeach;?>
-                        
-
-
-                        
-
                         <div class="d-flex mt-5" <?=$cmt?>>
+
                             <div class="image">
                                 <img src="../content/img/service/hinhtoi5.jpg" alt="">
 
                             </div>
 
-
-
                             <form action="" class="BinhLuan" method="post" >
                                 <input type="text" placeholder="Bình luận" class="binhluan1" name="noidung">
-                                <input type="submit" value="gửi" class="gui" name="gui">
+                                <input type="submit" value="Gửi" class="gui" name="gui">
                             </form>
 
-                        </div>
 
+                        </div>
                         </form>
                     </div>
                 </div>
@@ -297,10 +314,3 @@ function get_price($gia, $khuyenmai){
     </div>
 
 </main>
-
-<script>
-document.getElementById('fa-gear').onclick = function() {
-    document.getElementById('chinh').classList.toggle('activeE');
-
-}
-</script>

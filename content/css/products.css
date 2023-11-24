@@ -87,7 +87,7 @@ padding: 10px 5px;
     display: flex;
     align-items: center;
 }
-.productct__text .number__count .number__count_pr{
+.productct__text .number__count .number__count_pr{ 
     display: flex;
     align-items: center;
     text-align: center;
@@ -226,21 +226,55 @@ padding: 10px 5px;
 
 /* SHOW SHIP */
 /* SHOW CMT */
-.tab-cmt {
-    /* padding: 5px 0px; */
-}
-.tab-cmt h4{
+.cmt-title{
     font-family: var(--Play);
+    padding-bottom: 10px;
 }
 .binhluan{
     display: flex;
     justify-content: space-between;   
     margin-top: 10px;
+    border-top: 1px rgba(128, 128, 128, 0.418) solid;
+    padding: 10px;
 }
+.binhluan:nth-child(odd){
+    /* background-color: #2B20A1; */
+}
+
+.prochitiet .image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 10px;
+    margin-right: 20px;
+}
+.prochitiet .image img{
+    width: 100%;
+    background-size: cover;
+}
+.binhluan__d{
+    height: fit-content;
+}
+.binhluan__d .name{
+    font-family: var(--Play);
+    font-weight: bold;
+    color: var(--CD);
+    font-size: 20px;
+}
+.binhluan__d .ngaythang{
+    font-family: var(--Ruda);
+    color: rgba(128, 128, 128, 0.719);
+    font-size: 13px;
+}
+.binhluan__d .title{
+    font-family: var(--Play);
+}
+
 
 .chinhsua{
     position: relative;
-   margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 .binhluan .BinhLuan{
     display: flex;
@@ -257,16 +291,11 @@ padding: 10px 5px;
     top: 25px;
     right: 0;
 }
-
-
 .binhluan li{
     width: 100%;
     border-bottom: 1px solid black;
     padding: 5px 10px;
     text-align: center;
-}
-.activeE{
-    display: none;
 }
 .binhluan li:last-child{
     border-bottom: none;
@@ -276,46 +305,53 @@ padding: 10px 5px;
     text-align: center;
     padding: 10px 0;
 }
-
-
 /* bình luận */
-.prochitiet .image {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 1px solid black;
-    margin-right: 1%;
-}
-.prochitiet .image img{
+.BinhLuan{
     width: 100%;
-    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 15px;
 }
-
 .BinhLuan .binhluan1{
     border:none;
     outline: none;
     width: 80%;
     padding: 0 20px;
+    font-family: var(--Play);
+    font-size: 18px;
+    border-radius: 15px 0px 0px 15px;
+    border: 3px var(--CD) solid;
 }
-.BinhLuan{
-    width: 100%;
-    border: 1px solid black;
-    display: flex;
-    justify-content: space-between;
-    
+.BinhLuan .binhluan1::placeholder{
+    font-family: var(--Play);
 }
 .prochitiet form .gui{
-width: 5%;
-background-color: var(--font--color);
-color: white;
-border: 1px solid var(--font--color);
+    width: 20%;
+    background-color: var(--font--color);
+    border: 2px var(--CD) solid;
+    color: white;
+    font-family: var(--Play);
+    font-size: 20px;
+    border-radius: 0px 15px 15px 0px;
 }
-
+.dlt{
+    font-family: var(--Play);
+}
+.dlt a{
+    font-size: 18px;
+    transition: 0.4s;
+}
+.dlt a:hover{
+    font-weight: bold;
+    font-weight: 600;
+    font-size: 20px;
+}
 .fa-gear{
     cursor: pointer;
 }
-
+.activeE{
+    display: none;
+}
 @media (max-width:767px){
     .prochitiet .nav-item .nav-link1{
     font-size: 13px;

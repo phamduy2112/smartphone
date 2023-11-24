@@ -3,20 +3,29 @@
     margin: 0;
     box-sizing: border-box;
 }
+:root{
+    --font--color:#2B20A1;
+    /* FONT */
+    --Play: 'Play', sans-serif;
+    --Ruda: 'Ruda', sans-serif;
+    /* COLOR */
+    /* Chủ đạo */
+    --CD: #2B20A1;
+    /* Nền */
+    --Nen: #EAE8FF;
+}
 .thanhtoan-dau{
+    font-family: var(--Play);
     background-color: white;
+    font-weight: bold;
     padding:0 20px;
-    font-size: 19px;
+    font-size: 22px;
     padding: 10px 20px;
     color: red;
 }
-.right-sauthanhtoan,
-.left-sauthanhtoan{
-
-  
-}
 .thanhtoan-box{
     padding: 15px 30px;
+    font-family: var(--Play);
 }
 .thanhtoan-box .price,
 .thanhtoan-box h3{
@@ -25,6 +34,10 @@
 }
 .thanhtoan-box h4{
     color: grey;
+}
+.thanhtoan-box .title{
+    font-weight: bold;
+    color: black;
 }
 .thanhtoan-box .thanhtoan{
     color: black;

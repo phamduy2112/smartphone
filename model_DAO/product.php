@@ -6,13 +6,32 @@ function soluong_SanPham($limit,$number){
     return pdo_query($sql);
 }
 function laymot_sp($id){
-  $sql="SELECT * FROM sanpham where id_sp=$id";
+  $sql="SELECT *, id_sp as idsanpham FROM sanpham where id_sp=$id";
   return pdo_query_one($sql);
 }
+function get_bl($idsanpham){
+  $sql="SELECT * ,bl.id_bl as idbl FROM binhluan bl join khachhang kh 
+  on bl.id_kh = kh.id_kh where bl.id_sp = $idsanpham";
+  return pdo_query($sql);
+}
+
+
+
+function get_anh($id){
+  $sql="SELECT * FROM anh_sp where id_anh_sp=$id";
+  return pdo_query_one($sql);
+}
+
+
+
+
+
+
+
+
 function laytatca_SP(){
   $sql="SELECT * FROM sanpham";
   return pdo_query($sql);
-
 }
 function timKiemSP($key){
 $sql="SELECT * FROM sanpham WHERE ten_sp LIKE '%$key%' or gia like '%$key%'";
@@ -45,9 +64,13 @@ function dem_SP(){
   $sql='SELECT COUNT(*) FROM sanpham';
   return pdo_query_value($sql);
 }
+
+
+
+
+
 function sanpham($ten_sp){
 $get="";
-
 foreach($ten_sp as $item)
 {
     extract($item);
@@ -193,5 +216,4 @@ function sanpham_thuong($ten_sp){
 //   $spl="SELECT * FROM anh_sp where id_sp = $id";
 //   return pdo_query($sql);
 // }
-
 ?>
