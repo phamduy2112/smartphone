@@ -107,13 +107,17 @@ if(isset($act)){
             $_SESSION['ten_sp']=$ten_sp_trang_search;
             header('location: ?mod=user&act=timkiem');
             
-        }else if(isset($search_loc)){
-            $loc_gia=$gia_sp;
-            $loc_trangthai=$trang_thai;
-            $loc_id_loai=$id_loai;
-            $array_sp = array_loc_sp_show($loc_id_loai, $loc_trangthai,$loc_gia);
+        }else if (isset($search_loc)){
+            $array_sp = array_loc_sp_show($id_loai, $trang_thai,$gia_sp);
             include_once "./view/header.php";
             include_once "./view/timkiemsp.php";
+        }else{
+        $loc_gia=$_SESSION['gia'];
+        $loc_trangthai=$_SESSION['conhang'];
+        $loc_id_loai=$_SESSION['id_loai'];
+        $array_sp = array_loc_sp_show($loc_id_loai, $loc_trangthai,$loc_gia);
+        include_once "./view/header.php";
+        include_once "./view/timkiemsp.php";
         }
        
         break;
@@ -214,23 +218,16 @@ if(isset($act)){
         $array_blog_tatca =load_blog_tatca();
         if(isset($moinhat)){
           $array_blog_moinhat =load_blog_moi_nhat();
-          include_once "./view/header.php";
-            include_once "./view/blog.php";
-        }else if(isset($cunhat)){   
-
+        }else if(isset($tatca)){
+            $array_blog_tatca =load_blog_tatca();
+        }else if(isset($cunhat)){
             $array_blog_cunhat =load_blog_cu_nhat();
-            include_once "./view/header.php";
-            include_once "./view/blog.php";
         }else if(isset($add_blog)){
             header('location: ?mod=user&act=themblog');
-        }else {
-
-            $array_blog_tatca =load_blog_tatca();
-            include_once "./view/header.php";
-            include_once "./view/blog.php";
         }
         
-          
+            include_once "./view/header.php";
+            include_once "./view/blog.php";
         
         
        
