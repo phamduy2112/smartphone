@@ -69,6 +69,11 @@
                                                 Quản lý bình luận</a>
                                         </li>
                                         <li>
+                                            <a href="?mod=user&act=thongke" class="">
+                                                <i class="fa-solid fa-house"></i>
+                                                Quản lý Thống kê</a>
+                                        </li>
+                                        <li>
                                             <a href="?mod=user&act=danhmuc" class="">
                                                 <i class="fa-solid fa-house"></i>
                                                 Quản lý danh mục</a>

@@ -59,6 +59,7 @@
               <!-- <a href=""></a> -->
               <?php foreach($tatcaDh as $item):
                 extract($item);
+                $ngaythangnam=date('d/m/y',strtotime($ngaydathang));
                 $trangThai='';
                 if($trangthai===0){
                   $trangThai='<span class="circle" style="background-color: #FF0000; "></span>                 ';
@@ -76,7 +77,7 @@
                 <li>1</li>
                   <li><?=$trangThai?></li>
                   <li><?=number_format($tongtien)?></li>
-                  <li><?=$ngaydathang?></li>
+                  <li><?=$ngaythangnam?></li>
                 </ul>
                 </a>
              

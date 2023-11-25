@@ -126,7 +126,8 @@ foreach($khachhang_moi as $item):
   $diaChi= $diaChi==''?'chưa cập nhận':$diaChi;
  $vaitro=$vaitro===1?'admin':'khách hàng';?>
 <tr>
-<th scope="row"><?=$stt?></th>
+<th scope="row">
+  <?=$stt?></th>
     <td><?=$ten?></td>
     <td><?=$email?></td>
     <td><?=$sdt?></td>
@@ -156,42 +157,32 @@ endforeach;?>
               <span>Đã hoàn thanh</span>
             </div>
           </div>
-          <div class="khoi__admin mt-2">
-            <div class="khoi1__admin">
-                 <div class="madon">
-             <p> Mã đơn #004</p>
-              <div class="ngaythang">
-                21/12/2003 11:09:12
-              </div>
-            </div>
-            </div>
-         
-            <div class="khoi1__admin">
-              <div class="cam tron"></div>
-              <span>Đang Giao</span>
-            </div> 
-            <div class="khoi1__admin">
-              20.000.000đ
-            </div>
-          </div>
+      <?php 
+      $stt=1;
+      foreach($donhang_moinhat as $item):
+        extract($item);
+      ?>
           <div class="khoi__admin mt-2">
             <div class="khoi1__admin">
                 <div class="madon">
-              <p> Mã đơn #004</p>
+              <p> Mã đơn #00<?=$stt?></p>
               <div class="ngaythang">
-                21/12/2003 11:09:12
+                <?=$ngaydathang?>
               </div>
             </div>
             </div>
           
             <div class="khoi1__admin">
-              <div class="cam tron"></div>
-              <span>Đang Giao</span>
+              <div class="red tron"></div>
+              <span>Đang chuẩn bị</span>
             </div> 
             <div class="khoi1__admin">
-              20.000.000đ
+              <?=number_format($tongtien)?> đ
             </div>
           </div>
+          <?php 
+        $stt++;
+        endforeach;?>
           </div>
          
           </div>

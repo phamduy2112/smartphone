@@ -27,6 +27,7 @@ if(isset($act)){
         $trangThaiDH=thongke_donhang();
         $thongke_motngay=thongke_motngay();
         $thongke_slsp=thongke_soluotmua_sp();
+        $donhang_moinhat=tatca_donhang(2,'desc');
         include_once "./view/header.php";
         include_once "./view/trangchu.php";
             
@@ -55,11 +56,25 @@ if(isset($act)){
             //    echo $id_danhmuc;
             //    echo $ten; 
             $chinhsua=chinhsua_DM($ten,$id_danhmuc);
+            $thongke_slsp=thongke_soluotmua_sp();
             header('Location:?mod=user&act=danhmuc');
     
         }
         include_once "./view/header.php";
         include_once "./view/chinhsuadm.php";
+        break;
+
+    // Trang thống kê
+    case 'thongke':
+        
+        include_once "./view/header.php";
+        $trangThaiDH=thongke_donhang();
+        $thongke_dangki=thongke_ngaydangki();
+        $thongke_dangki_chitiet=thongke_ngaydangkichitiet();
+        $thongke_slsp=thongke_soluotmua_sp();
+        $thongke_bayngay=thongke_bayngay();
+        include_once "./view/thongke.php";
+
         break;
     // sản phẩm
     case 'themdanhmuc':
@@ -111,14 +126,14 @@ if(isset($act)){
     // don hang
     case 'donhang':
         include_once "./view/header.php";
-        $tatcaDh=tatca_donhang();
+        $tatcaDh=tatca_donhang(0,'asc');
         include_once "./view/donhang.php";
        
         break;
     case 'donhangchitiet':
       
         include_once "./view/header.php";
-        $tatcaDh=tatca_donhang();
+        $tatcaDh=tatca_donhang(0,'asc');
         if(isset($id_dh)){
          
            $sp=lay_hinhSP($id_dh); 
