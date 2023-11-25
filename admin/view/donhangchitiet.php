@@ -113,13 +113,16 @@
                 </tbody> -->
               </table>
               <!-- SHOW -->
-              <?php foreach($tatcaDh as $item):
+              <?php 
+                 $stt=1;
+              foreach($tatcaDh as $item):
                 extract($item);
+             
                 $ngaythangnam=date('d/m/y',strtotime($ngaydathang));
                 $trangThai='';
-                if($trangthai===0){
+                if($trangthai==0){
                   $trangThai='<span class="circle" style="background-color: #FF0000; "></span>                 ';
-                }else if($trangthai===1){
+                }else if($trangthai==1){
                   $trangThai='<span class="circle" style="background-color: #FF9900; "></span>                 ';
 
                 }else{
@@ -130,7 +133,7 @@
                 <a href="?mod=user&act=donhangchitiet&id_dh=<?=$id_dh?>">
                 <ul>
                 
-                <li>1</li>
+                <li><?=$stt?></li>
                   <li><?=$trangThai?></li>
                   <li><?=number_format($tongtien)?></li>
                   <li><?=$ngaythangnam?></li>
@@ -138,7 +141,9 @@
                 </a>
              
               </div>
-              <?php endforeach;?>
+              <?php
+            $stt++;
+            endforeach;?>
               <!-- <div class="order-check">
                 <ul>
                   <li>1</li>

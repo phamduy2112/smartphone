@@ -27,7 +27,7 @@ if(isset($act)){
         $trangThaiDH=thongke_donhang();
         $thongke_motngay=thongke_motngay();
         $thongke_slsp=thongke_soluotmua_sp();
-        $donhang_moinhat=tatca_donhang(2,'desc');
+        $donhang_moinhat=tatca_donhang(2,'desc','1');
         include_once "./view/header.php";
         include_once "./view/trangchu.php";
             
@@ -188,14 +188,14 @@ if(isset($act)){
     // don hang
     case 'donhang':
         include_once "./view/header.php";
-        $tatcaDh=tatca_donhang(0,'asc');
+        $tatcaDh=tatca_donhang(0,'asc',0);
         include_once "./view/donhang.php";
        
         break;
     case 'donhangchitiet':
       
         include_once "./view/header.php";
-        $tatcaDh=tatca_donhang(0,'asc');
+        $tatcaDh=tatca_donhang(0,'asc',0);
         if(isset($id_dh)){
          
            $sp=lay_hinhSP($id_dh); 
@@ -376,33 +376,33 @@ if(isset($act)){
 
             break;
             // don hang
-        case 'donhang':
-            include_once "./view/header.php";
-            $tatcaDh = tatca_donhang();
-            include_once "./view/donhang.php";
+        // case 'donhang':
+        //     include_once "./view/header.php";
+        //     $tatcaDh = tatca_donhang();
+        //     include_once "./view/donhang.php";
 
-            break;
-        case 'donhangchitiet':
+        //     break;
+        // case 'donhangchitiet':
 
-            include_once "./view/header.php";
-            $tatcaDh = tatca_donhang();
-            if (isset($id_dh)) {
+        //     include_once "./view/header.php";
+        //     $tatcaDh = tatca_donhang();
+        //     if (isset($id_dh)) {
 
-                $sp = lay_hinhSP($id_dh);
-                if (isset($chuanbi)) {
-                    chinhsuaTrangThai(0, $id_dh);
-                    header('Location:?mod=user&act=donhang');
-                } else if (isset($danggiao)) {
-                    chinhsuaTrangThai(1, $id_dh);
-                    header('Location:?mod=user&act=donhang');
-                } else if (isset($hoantat)) {
-                    chinhsuaTrangThai(2, $id_dh);
-                    header('Location:?mod=user&act=donhang');
-                }
-            }
-            include_once "./view/donhangchitiet.php";
+        //         $sp = lay_hinhSP($id_dh);
+        //         if (isset($chuanbi)) {
+        //             chinhsuaTrangThai(0, $id_dh);
+        //             header('Location:?mod=user&act=donhang');
+        //         } else if (isset($danggiao)) {
+        //             chinhsuaTrangThai(1, $id_dh);
+        //             header('Location:?mod=user&act=donhang');
+        //         } else if (isset($hoantat)) {
+        //             chinhsuaTrangThai(2, $id_dh);
+        //             header('Location:?mod=user&act=donhang');
+        //         }
+        //     }
+        //     include_once "./view/donhangchitiet.php";
 
-            break;
+        //     break;
             // bình luận
         case 'binhluan':
             $array_binhluan = binhluan();

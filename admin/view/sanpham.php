@@ -124,7 +124,7 @@
 
       <section class="text_ql_sp_sp">
         <div>
-          <img src="<?= $sp['hinhanh'] ?>" alt="">
+          <img src="../content/img/productachnen/<?= $sp['hinhanh'] ?>" alt="">
         </div>
         <div>
           <section><?= $sp['ten_sp'] ?></section>
@@ -143,7 +143,7 @@
               }
               ?></div>
         <div>
-          <section><?= $sp['gia'] ?> vnd</section>
+          <section><?= number_format($sp['gia']) ?> vnd</section>
         </div>
         <div>
           <section><?= $sp['tenloai'] ?></section>

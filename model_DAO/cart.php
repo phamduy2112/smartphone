@@ -10,8 +10,12 @@ function them_donHang($date,$tt,$trangthai,$id_user){
       $sql="SELECT * FROM donhang where id_kh=$id_user";
       return pdo_query($sql);
     }
-    function tatca_donhang($limit,$order){
-      $sql="SELECT * FROM donhang order by NgayDatHang $order";
+    function tatca_donhang($limit,$order,$trangthai){
+      $sql="SELECT * FROM donhang ";
+      if($trangthai==1){
+        $sql.="where trangthai=1 ";
+      }
+      $sql.="order by NgayDatHang $order";
       if($limit>0){
         $sql.=" limit 2";
       }
