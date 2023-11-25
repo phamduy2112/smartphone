@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="../content/css_admin/add_blogs.css">
 <section class="admin_body">
     <form action="" method="post">
       <section class="add_blog">
@@ -66,7 +67,7 @@
             Hủy
           </section>
           <section >
-           <input type="submit" name="capnhat"> Cập nhật
+          <button name="sua_blog">Tiếp tục</button>
           </section>
         </section>
 

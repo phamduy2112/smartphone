@@ -31,26 +31,5 @@ top_xem_them.addEventListener('click' , ()=>{
     }
 
    
-})
-
-
-var blog_xr = document.getElementById('blog_xr');
-var so_one=0;
-
-
-
-top_blog_content.forEach(element => {
-    element.addEventListener('click',() =>{
-       if(so_one==0){
-        element.style.height="900px";
-        blog_xr.style.color="red";
-        element.style.background="red";
-        so_one++;
-       }else{
-        element.style.height="153px";
-        so_one--;
-       }
-    })
-   
-    
 });
+
