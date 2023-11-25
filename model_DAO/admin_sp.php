@@ -1,8 +1,11 @@
 <?php
 include_once('pdo.php');
-function load_sp(){
+function load_sp($start,$end){
     $sql='SELECT sanpham.hinhanh,sanpham.id_sp,sanpham.conhang,sanpham.ten_sp,sanpham.gia ,
-     loai_sp.tenloai FROM sanpham INNER JOIN loai_sp on sanpham.id_loai = loai_sp.id_loai ';
+     loai_sp.tenloai FROM sanpham INNER JOIN loai_sp on sanpham.id_loai = loai_sp.id_loai order by id_sp ASC';
+     if($end>0){
+        $sql.=" Limit $start,$end";
+     }
     return pdo_query($sql);
 }
 function add_sp($id_loai_sp,$ten_sp,$gia_sp,$hinh_anh,$hedieuhanh,$trangthai,$text1,$tukhoa){

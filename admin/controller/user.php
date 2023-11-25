@@ -138,9 +138,17 @@ if(isset($act)){
         break;
     case 'sanpham':
       
-        $array_sp = load_sp();
+     
         $array_danhmuc=loaddanhmuc();
         $array_trangthai=load_trangthai();
+      
+        $tong_SP=dem_SP();
+       
+        $number_page=ceil($tong_SP/10);
+        
+        if(isset($page)){
+            $start=($page-1)*10;   
+            $array_sp = load_sp($start,10);
             if (isset($add_sp)) {
                 
                 header('location: ?mod=user&act=add_sp');
@@ -158,6 +166,8 @@ if(isset($act)){
                 include_once "./view/header.php";
                 include_once "./view/sanpham.php";
              }
+        }
+           
         include_once "./view/header.php";
         include_once "./view/sanpham.php";
         break;
