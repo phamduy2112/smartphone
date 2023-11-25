@@ -9,6 +9,7 @@
     flex-direction: column;
     justify-content: space-evenly;
     
+    
 }
 .add_blo.blog_add_item:nth-child(2){
     align-items: center;
@@ -51,6 +52,15 @@ padding: 0 20px;
     gap: 20px;
     padding: 0 20px;
  
+}
+.blog_add_item:nth-child(3) button{
+    color: white;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    outline: none;
+    border: none;
+
 }
 .blog_add_item:nth-child(3)>section{
     display: flex;

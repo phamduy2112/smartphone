@@ -3,6 +3,8 @@
     justify-content: start;
     flex-direction: column;
     gap: 20px;
+
+   
 }
 .ql_sp_k{
   
@@ -35,6 +37,16 @@
     width: 35%;
     overflow: hidden;
 }
+.search_ql_sp:nth-child(1) button{
+    width: 15%;
+    height: 100%;
+    font-size: 17px;
+    background: black;
+    outline: none;
+    border: none;
+    color: white;
+    
+}
 .search_ql_sp:nth-child(2),.search_ql_sp:nth-child(3),.search_ql_sp:nth-child(4){
     width: 15%;
     display: flex;
@@ -43,6 +55,20 @@
     font-size: 16px;
     font-weight: 600;
 }
+.search_ql_sp:nth-child(2)> select,.search_ql_sp:nth-child(3)> select,.search_ql_sp:nth-child(4)> select{
+    background: transparent;
+    width: 90%;
+    height:100%;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    color: rgb(64, 65, 66);
+    
+   
+}
+
+
 .search_ql_sp:nth-child(5){
     display: flex;
     justify-content:center;
@@ -83,7 +109,7 @@
 .ql_sp_set:nth-child(1){
     width: 45%;
     height: 50%;
-   
+   box-shadow:  0 0 10px 0 hsl(0, 0%, 0%,25%);
     display: flex;
     justify-content: space-around;
     align-items: center;

@@ -91,21 +91,73 @@ if(isset($act)){
         break;
 
     case 'timkiem':
-        $array_sp=timKiemSP($sanpham_timkiem);
+        $ten_sp=$_SESSION['ten_sp'];
+        $array_danhmuc=loaddanhmuc();
+        
+                
+        if (isset($add_sp)) {
+            header('location: ?mod=user&act=add_sp');
+        }else if(isset($tim_kiem)){
+           
+           $array_sp=timKiemSP_admin($ten_sp_trang_search);
+           include_once "./view/header.php";
+           include_once "./view/timkiemsp.php";
+        }else if(isset($search_loc)){
+            $_SESSION['id_loai']=$id_loai;
+            $_SESSION['gia']=$gia_sp;
+            $_SESSION['conhang']=$trang_thai;
+            header('location: ?mod=user&act=loc_sp');
+        }else {
+          
+         
+        $array_sp=timKiemSP_admin($ten_sp);
         include_once "./view/header.php";
         include_once "./view/timkiemsp.php";
+        }
+       
+        break;
+    case 'loc_sp':
+        $array_danhmuc=loaddanhmuc();
+        if(isset($tim_kiem)){
+            $_SESSION['ten_sp']=$ten_sp_trang_search;
+            header('location: ?mod=user&act=timkiem');
+            
+        }else if (isset($search_loc)){
+            $array_sp = array_loc_sp_show($id_loai, $trang_thai,$gia_sp);
+            include_once "./view/header.php";
+            include_once "./view/timkiemsp.php";
+        }else{
+        $loc_gia=$_SESSION['gia'];
+        $loc_trangthai=$_SESSION['conhang'];
+        $loc_id_loai=$_SESSION['id_loai'];
+        $array_sp = array_loc_sp_show($loc_id_loai, $loc_trangthai,$loc_gia);
+        include_once "./view/header.php";
+        include_once "./view/timkiemsp.php";
+        }
+       
         break;
     case 'sanpham':
       
-        $danhmuc=laytatca_DM();
-        $tong_SP=dem_SP();
-       
-        $number_page=ceil($tong_SP/10);
-        
-        if(isset($page)){
-           $start=($page-1)*10;
-           $array_sp = soluong_SanPham($start,10);
-        }
+        $array_sp = load_sp();
+        $array_danhmuc=loaddanhmuc();
+        $array_trangthai=load_trangthai();
+            if (isset($add_sp)) {
+                
+                header('location: ?mod=user&act=add_sp');
+            }else if(isset($search_loc)){
+                $_SESSION['id_loai']=$id_loai;
+                $_SESSION['gia']=$gia_sp;
+                $_SESSION['conhang']=$trang_thai;
+                header('location: ?mod=user&act=loc_sp');
+              
+            }else if(isset($timkiem)){
+                $_SESSION['ten_sp']=$sanpham_timkiem;
+                
+                header('location: ?mod=user&act=timkiem');
+            }else {
+                include_once "./view/header.php";
+                include_once "./view/sanpham.php";
+             }
         include_once "./view/header.php";
         include_once "./view/sanpham.php";
         break;
@@ -185,39 +237,45 @@ if(isset($act)){
             $array_blog_tatca =load_blog_tatca();
         }else if(isset($cunhat)){
             $array_blog_cunhat =load_blog_cu_nhat();
+        }else if(isset($add_blog)){
+            header('location: ?mod=user&act=themblog');
         }
         
-        include_once "./view/header.php";
-        include_once "./view/blog.php";
+            include_once "./view/header.php";
+            include_once "./view/blog.php";
+        
+        
+       
             
         break;
     case 'themblog':
-    
-        include_once "./view/header.php";
-        include_once "./view/themblog.php";
+        if(isset($add_blog)){
+             $array_add_blog = add_blog($loai_blog,$ten_blog,$anh_blog,$mota_blog,$time_blog);
+            header('location: ?mod=user&act=blog');
+        }else{
+            include_once "./view/header.php";
+            include_once "./view/themblog.php";
+        }
+       
         break;
     case 'chinhsuablog':
-        if(isset($capnhat)){
-            var_dump($ten_blog);
-            var_dump($time_blog);
-            var_dump($loai_blog);
-            var_dump($anh_blog);
-            var_dump($mota_blog);
-            $add_blog=chinhsua_blog($ten_blog,$time_blog,$loai_blog,$anh_blog,$mota_blog);
+        if(isset($sua_blog)){
+            $array_add_blog = chinhsua_blog($loai_blog,$ten_blog,$anh_blog,$mota_blog,$time_blog,$id);
+            header('location: ?mod=user&act=blog');
         }
         include_once "./view/header.php";
         include_once "./view/chinhsuablog.php";
         break;
-    case 'xoablog':
-   
-        break;
+    case 'xoa_blog':
+       $array_xoa_blog=xoa_blog($id);
+        header('location: ?mod=user&act=blog');
+    break;
+    case 'timkiem_blog':
+        
+    break;
 
-            include_once "./view/header.php";
-            include_once "./view/danhmuc.php";
 
-            break;
-            // sản phẩm
-   
+          
 
         case 'chinhsuasp':
            
@@ -294,7 +352,10 @@ if(isset($act)){
                 include_once "./view/themspanh.php";
             }
 
-            break;
+        break;
+
+       
+
             // khach hang
         case 'khachhang':
             $khachhang_moi = laytatcathongtin(1);
@@ -353,42 +414,6 @@ if(isset($act)){
             header('location: ?mod=user&act=binhluan');
             break;
 
-            // blog
-        case 'blog':
-            $array_blog = load_blog();
-            $array_blog_tatca = load_blog_tatca();
-            if (isset($moinhat)) {
-                $array_blog_moinhat = load_blog_moi_nhat();
-            } else if (isset($tatca)) {
-                $array_blog_tatca = load_blog_tatca();
-            } else if (isset($cunhat)) {
-                $array_blog_cunhat = load_blog_cu_nhat();
-            }
-
-            include_once "./view/header.php";
-            include_once "./view/blog.php";
-
-            break;
-        case 'themblog':
-
-            include_once "./view/header.php";
-            include_once "./view/themblog.php";
-            break;
-        case 'chinhsuablog':
-            if (isset($capnhat)) {
-                var_dump($ten_blog);
-                var_dump($time_blog);
-                var_dump($loai_blog);
-                var_dump($anh_blog);
-                var_dump($mota_blog);
-                $add_blog = chinhsua_blog($ten_blog, $time_blog, $loai_blog, $anh_blog, $mota_blog);
-            }
-            include_once "./view/header.php";
-            include_once "./view/chinhsuablog.php";
-            break;
-        case 'xoablog':
-
-            break;
     }
 } else {
     header('location: ?mod=user&act=thongke');
