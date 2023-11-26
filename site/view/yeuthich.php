@@ -1,22 +1,14 @@
-
-
+<link rel="stylesheet" href="../content/css/yeuthich.css">
 
 
 <div class="container-md">
-<div class="productCT__Bottom mt-3 ">
-        
-             <h2>Sản phẩm Yêu thích:</h2> 
-   
-        
-          <div class="product mt-2 w-100">
-       
-           
-              <div class="d-flex flex-wrap mt-2">
-             
-                   
-              <?php 
+    <div class="productCT__Bottom mt-3 sp_yt">
+        <h2>Sản phẩm yêu thích:</h2>
+        <div class="product mt-2 w-100">
+            <div class="d-flex flex-wrap mt-2">
+                <?php 
               if(empty($sp)){
-                echo ' <h3 class="text-center">Bạn chưa thêm sản phẩm vào trang yêu thích</h3> ';
+                echo ' <h3 class="text-center">(Trống)</h3> ';
               }else{
                     foreach($sp as $item){
                 
@@ -86,15 +78,7 @@
                       }
                     }
                    ?>
-                
-                   
-          
-          
-                  </div>
-              
-         
-          </div>
-          </div>
+            </div>
+        </div>
+    </div>
 </div>
-
-

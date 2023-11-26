@@ -112,11 +112,9 @@ function get_price($gia, $khuyenmai){
                         <!-- COUNT -->
                         <div class="number__count">
                             <div class="number__count_pr">
-                                <i class="fa-solid fa-minus solid"></i>
-                                <div class="number">
-                                    1
-                                </div>
-                                <i class="fa-solid fa-plus solid"></i>
+                                <p class="number">
+                                    Kho <?=$soluong?>
+                                </p>
                             </div>
 
                             <!-- ADD CART -->

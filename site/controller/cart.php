@@ -33,15 +33,20 @@ if (isset($act)) {
         header('location:?mod=cart&act=list');
     break;
     
+
     case 'list':
         include_once('./view/header.php');
         include_once('./view/cart.php');
         include_once('./view/footer.php');
         break;
+
+
     case 'tang':
         $_SESSION['cart'][$id]['SL']+=1;
         header('location:?mod=cart&act=list');
         break;
+
+
     case 'giam':
         if( $_SESSION['cart'][$id]['SL']>1){
           $_SESSION['cart'][$id]['SL']-=1;  
@@ -49,34 +54,37 @@ if (isset($act)) {
             unset($_SESSION['cart'][$id]);
             header('location:?mod=cart&act=list');
         }
-
-        
-        
         header('location:?mod=cart&act=list');
         break;
+
+
+
+
     case 'xoaHet':
         unset($_SESSION['cart']);
         header('location:?mod=cart&act=list');
         break;
+
+
+
+
     case 'trangthanhtoan':
         if(isset($_SESSION['taikhoan'])){
             include_once('./view/header.php');
             $laythongtin=laythongtin_MotKhachHang($_SESSION['taikhoan']);
+
             if(isset($btn_Thanhtoan)){
                 $id_user=lay_iduser($_SESSION['taikhoan']);
-                // extract($id_user);
-                // $time = date('Y-m-d H:i:s');  
-                // them_donHang($time,$_SESSION['tongtt'],'Đang chuẩn bị hàng',$id_user['id_kh']);
+                extract($id_user);
+                $time = date('Y-m-d H:i:s');  
+                them_donHang($time,$_SESSION['tongtt'],0,$id_user['id_kh']);
               
-                // foreach( $_SESSION['cart'] as $item){
-                //     extract($item);
-                //     // echo $id_user['id_kh'];
-                //     $id=them_cuoidonct();
-               
-                //     them_donhangCT($id['id_dh'],$MaSanPham,$SL);
-               
-                // }
-
+                foreach( $_SESSION['cart'] as $item){
+                    extract($item);
+                    // echo $id_user['id_kh'];
+                    $id=them_cuoidonct();
+                    them_donhangCT($id['id_dh'],$MaSanPham,$SL);
+                }
                 if($check==="chuyenkhoan"){
                  $_SESSION['check']='Chuyển khoản ngân hàng';
                 }else{
@@ -84,13 +92,10 @@ if (isset($act)) {
                 }
                 header('location:?mod=cart&act=trangsauthanhtoan');
                 // unset($_SESSION['cart']);
-                
-              
-          
    }  
+
    include_once('./view/trangthanhtoan.php');
    include_once('./view/footer.php');
-
    }else{
             header('location:?mod=cart&act=trangchuadangnhap');
         }

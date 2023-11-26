@@ -59,7 +59,7 @@
           
           </div>
           <input type="submit" value="Đăng kí" class="btna" name="nut_dangki"><br>
-          <span>Bạn đã có tài khoản? <a href="?mod=user&act=dangnhap">Đăng Kí ngay</a></span>
+          <span>Bạn đã có tài khoản? <a href="?mod=user&act=dangnhap">Đăng nhập ngay</a></span>
           <p class='text-danger'><?=$tb?></p>
         </form>
       </div>

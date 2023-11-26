@@ -145,15 +145,18 @@ if (isset($act)) {
         include_once("view/header.php");
         $id_user=lay_iduser($_SESSION['taikhoan']);
         $donhang=show_donhang($id_user['id_kh']);
+        $demdh =  demdh($id_user['id_kh']);
         $get_kh=laythongtin_MotKhachHang($_SESSION['taikhoan']);
-
         include_once("view/donhang.php");
         include_once("view/footer.php");
         break;
-
-// Đơn hàng chi tiết
-      case 'donhangct':
+        
+        // Đơn hàng chi tiết
+        case 'donhangct':
+        $get_kh=laythongtin_MotKhachHang($_SESSION['taikhoan']);
         $lay_SP=lay_hinhSP($idDonHang);
+        $get_ngay=get_dh($idDonHang);
+        $dem =demsp($idDonHang);
         include_once("view/header.php");
         include_once("view/donhangct.php");
         include_once("view/footer.php");

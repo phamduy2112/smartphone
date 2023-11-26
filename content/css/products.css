@@ -88,14 +88,16 @@ padding: 10px 5px;
     align-items: center;
 }
 .productct__text .number__count .number__count_pr{ 
-    display: flex;
-    align-items: center;
+    width: 150px;
     text-align: center;
-    justify-content: center;
-    border: 2px solid var(--font--color);
-    padding: 5px 0;
+    background-color: #ff0000;
+    padding: 3px 0;
     border-radius: 13px;cursor: pointer;
     margin-right: 20px;
+}
+.productct__text .number__count .number__count_pr p{
+    color: #ffffff;
+    font-weight: 900;
 }
 .number__count_pr .solid{
     padding: 0 15px;

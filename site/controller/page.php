@@ -122,6 +122,12 @@ extract($_REQUEST);
             // }
             break;
 
+            case 'huydh':
+               huydh($id); 
+               // update_sl($id);
+               header('Location:?mod=user&act=donhang');
+               break;
+
             case 'about':
                include_once './view/header.php'; 
                include_once './view/gioithieu.php';

@@ -1,19 +1,22 @@
 <?php
     include_once('../model_DAO/pdo.php');
     extract($get_kh);
+    extract($demdh);
     // echo $_SESSION['taikhoan'];
     ?>
 <link rel="stylesheet" href="../content/css/lichsumuahang.css">
 <main>
 
     <section class="container">
-        <h3>Thông tin cá nhân</h3>
+        <h3>Lịch sử mua hàng</h3>
         <div class="infor-form">
             <!-- USER -->
             <div class="user-form">
                 <div class="user">
 
-                        <img src="../../admin/img/duan/us.jpg" alt="">
+                <img src="../content/img/service/ra.jpg" alt="">
+
+
                     <div>
                         <p><?= $user_name ?></p>
                         <a href="?mod=user&act=dangxuat">Đăng xuất</a>
@@ -35,7 +38,7 @@
             <!-- INFOR -->
             <div class="order-form">
             <h4>Đơn hàng của bạn</h4>
-            <p>Có 3 đơn hàng</p>
+            <p>Có <?=$soDH?> đơn hàng</p>
                 <table>
                     <thead>
                         <th>Mã ĐH</th>
@@ -49,14 +52,31 @@
                         <?php foreach($donhang as $item):
                                 extract($item);
                                 $text_stt='';
+                                // echo $id_dh;
+                                $del="";
                                 if($trangthai==0){
-                                $text_stt='<td style="color: #FF0303;">Đang chuẩn bị hàng</td>';
+                                $text_stt='<td style="color: #FF0303;">Đang chờ duyệt</td>';
+                                $del="";
+
                                 }
                                 elseif($trangthai==1){
-                                $text_stt='<td style="color: #FF9900;">Đang giao hàng</td>';
+                                $text_stt='<td style="color: #FF9900;">Đang chuẩn bị hàng</td>';
+                                $del="style='display:none;'";
+
+                                }
+                                elseif($trangthai==2){
+                                $text_stt='<td style="color: #2B20A1;">Đang giao hàng</td>';
+                                $del="style='display:none;'";
+                        
+                                }
+                                elseif($trangthai==3){
+                                $text_stt='<td style="color: gray;">Đã hủy</td>';
+                                $del="style='display:none;'";
+
                                 }
                                 else{
-                                $text_stt='<td style="color: #57E923;">Đã giao hàng</td>';
+                                $text_stt='<td style="color: #57E923;">Thành công</td>';
+                                $del="style='display:none;'";
 
                                 }
                                 
@@ -64,11 +84,17 @@
                         <tr>
                             <td><?=$id_dh?></td>
                             <td><?=number_format($tongtien,0,',','.')?>đ</td>
-                            <td><?=$ngaydathang?></td>
+                            <td><?=
+                            
+                            $ngayThangDinhDang = date('d/m/Y', strtotime($ngaydathang));
+                            
+                            ?></td>
 
                             
                            <?=$text_stt?>
-                            <td><a href="?mod=user&act=donhangct&idDonHang=<?=$id_dh?>">Xem chi tiết</a></td>
+                            <td><a href="?mod=user&act=donhangct&idDonHang=<?=$id_dh?>">Xem chi tiết <br>
+                            <a href="?mod=page&act=huydh&id=<?=$id_dh?>" <?=$del?> >    Hủy đơn hàng</a>
+                            </a></td>
                         </tr>
 
                       <?php endforeach;?>
@@ -76,6 +102,9 @@
 
                 </table>
             </div>
+        </div>
+        <div class="">
+
         </div>
         </section>
   </main>

@@ -19,4 +19,9 @@ function xoaBinhLuan($id_bl){
 $sql='DELETE from binhluan where id_bl=?';
 return pdo_query_one($sql,$id_bl);
 }
+function huydh($id_dh){
+$sql="UPDATE donhang set trangthai=3 where id_dh = $id_dh";
+return pdo_execute($sql);
+}
+
 ?>
