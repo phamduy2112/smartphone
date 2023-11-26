@@ -163,6 +163,7 @@ if(isset($act)){
                 
                 header('location: ?mod=user&act=timkiem');
             }else {
+                
                 include_once "./view/header.php";
                 include_once "./view/sanpham.php";
              }
@@ -328,7 +329,7 @@ if(isset($id_dh)){
                 $hinh_anh =      $_SESSION['hinhanh'];
                 $text1 =     $_SESSION['text1'];
                $array_chinhsua_sp=chinhsuasp($id_loai_sp,$ten_sp,$gia_sp,$hinh_anh,$hedieuhanh,$trangthai,$text1,$tukhoa,$id_sp);
-                header('location: ?mod=user&act=sanpham');
+                header('location: ?mod=user&act=sanpham&page=1');
             } else {
                 include_once "./view/header.php";
                 include_once "./view/chinhsua_anhsp.php";
@@ -346,6 +347,7 @@ if(isset($id_dh)){
                 $_SESSION['text1'] = $w3review;
                 header('location: ?mod=user&act=add_img_sp');
             } else {
+                
                 include_once "./view/header.php";
                 include_once "./view/themsanpham.php";
             }
@@ -366,7 +368,7 @@ if(isset($id_dh)){
                 $hinh_anh =      $_SESSION['hinhanh'];
                 $text1 =     $_SESSION['text1'];
                 $array_add_sp = add_sp($id_loai_sp,$ten_sp,$gia_sp,$hinh_anh,$hedieuhanh,$trangthai,$text1,$tukhoa);
-                header('location: ?mod=user&act=sanpham');
+                header('location: ?mod=user&act=sanpham&page=1');
             } else {
                 include_once "./view/header.php";
                 include_once "./view/themspanh.php";
