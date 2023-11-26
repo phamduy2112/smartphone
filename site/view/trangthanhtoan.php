@@ -1,4 +1,3 @@
-<link rel="stylesheet" href="../content/css/cart2.css">
 <?php 
 extract($laythongtin);
 ?>
@@ -48,6 +47,9 @@ extract($laythongtin);
                             <textarea name="" id="" cols="62" rows="10"
                                 placeholder="Ghi chú đơn hàng(tuỳ chọn)"></textarea>
                         </div>
+
+
+
                     </form>
 
                 </div>
@@ -56,7 +58,7 @@ extract($laythongtin);
                     <div class="check-buy">
                         <p><span>Số lượng:</span><?=$_SESSION['tongsl']?></p>
                         <p><span>Tiền:</span>
-                            <?=number_format($_SESSION["tongtt"],0,',','.')?>đ
+                        <?=number_format($_SESSION["tongtt"],0,',','.')?>đ
                         </p>
 
                     </div>
@@ -65,8 +67,8 @@ extract($laythongtin);
                         <p><span>Khuyến mãi:</span>0</p>
                         <p><span>Giao Hàng:</span>0</p>
                         <p><span>Tổng thanh toán:</span>
-                            <?=number_format($_SESSION["tongtt"],0,',','.')?>đ
-                        </p>
+                        <?=number_format($_SESSION["tongtt"],0,',','.')?>đ
+                      </p>
 
                     </div>
                     <hr>
@@ -88,10 +90,11 @@ extract($laythongtin);
                                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
                                 <p class="check">Tôi đã đọc và <span>đồng ý</span> với <span>điều khoản và điều
                                         kiện</span> của cửa hàng </p>
+
                             </div>
-                            <input type="submit" value="Thanh toán" class="btn mua" name='btn_Thanhtoan'
-                                id="btn_Thanhtoan">
+                            <input type="submit" value="Thanh toán" class="btn mua" name='btn_Thanhtoan'>
                         </div>
+
                     </form>
                 </div>
             </div>
@@ -99,15 +102,3 @@ extract($laythongtin);
 
     </div>
 </main>
-<script>
-const checkbox = document.getElementById('exampleCheck1');
-const thanhtoan = document.getElementById('btn_Thanhtoan');
-thanhtoan.disabled = true;
-checkbox.addEventListener('change', function() {
-    if (checkbox.checked) {
-        thanhtoan.disabled = false;
-    } else {
-        thanhtoan.disabled = true;
-    }
-});
-</script>

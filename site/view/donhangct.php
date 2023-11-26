@@ -1,11 +1,5 @@
 <link rel="stylesheet" href="../content/css/lichsumuahang.css">
 <link rel="stylesheet" href="../content/css/donhangct.css">
-<?php
-    extract($get_kh);
-    extract($get_ngay);
-    extract($dem);
-    $ngayThangDinhDang = date('d/m/Y', strtotime($ngaydathang));
-?>
 <main>
 
     <section class="container">
@@ -14,10 +8,10 @@
             <!-- USER -->
           <div class="user-form">
               <div class="user">
-                      <img src="../content/img/service/ra.jpg" alt="">
+                      <img src="../../admin/img/duan/us.jpg" alt="">
                   <div>
-                      <p><?= $user_name ?></p>
-                      <a href="?mod=user&act=dangxuat">Đăng xuất</a>
+                      <p>Name</p>
+                      <a href="">Sửa hồ sơ</a>
                   </div>
               </div>
               <div class="control">
@@ -33,8 +27,8 @@
           </div>
             <!-- INFOR -->
           <div class="order-form">
-            <h4>Thông tin đơn hàng #<?=$idDonHang?></h4>
-            <h4 class="title">Có <?=$soLuongSanPham?> sản phẩm</h4>
+            <h4>Thông tin đơn hàng #1</h4>
+            <h4 class="title">Có 3 sản phẩm</h4>
             <table>
               <!-- TITLE -->
                 <thead>
@@ -45,23 +39,23 @@
                 </thead>
                 <!-- BODY -->
                 <tbody>
-
+      
                      <?php foreach($lay_SP as $item):?>
-                        <tr>
+                    <tr>
+  
                         <td>
-                            <img src="../content/img/product_tachnen/<?=$item['hinhanh']?>" alt="">
+                            <img src="../../admin/img/duan/us.jpg" alt="">
                             <span>
                                 <a href=""><?=$item['ten_sp']?> </a>  
-                                <?php
-                                    $get_gia = number_format($item['gia'],0,',','.');
-                                    $get_giaKM = number_format($item['gia']*((100-$item['khuyenmai'])/100),0,',','.');
-                                ?>
-                            <del><?=$get_gia?>đ</del><?=$get_giaKM?>đ
+                            <del><?=$item['gia']?></del><?=$item['gia']?>
                             </span>
                         </td>
                         <td><?=$item['soluong']?></td>
-                        <td><?=number_format($item['gia']*$item['soluong'],0,',','.')?>đ</td>
-                        <td><?=$ngayThangDinhDang?></td>
+                        <td><?=$item['gia']*$item['soluong']?></td>
+                        <td><?=
+                        $item['ngaydathang']
+                        ?></td>
+                
                     </tr>
                     <?php endforeach;?>
      

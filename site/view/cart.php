@@ -31,7 +31,7 @@ $_SESSION['tongtt']=$tongtt;
         <div class="cart__title">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="?mod=page&act=home">Trang chủ</a></li>
+                    <li class="breadcrumb-item"><a href="?mod=page&act=home">Trang chu</a></li>
                     <li class="breadcrumb-item active" aria-current="page">Giỏ hàng</li>
                 </ol>
             </nav>
@@ -120,11 +120,11 @@ $i++;
             ?>
                 <div class="cart__buttons mt-3">
                     <a href="?mod=page&act=home">Tiếp tục mua hàng</a>
-                    <a href="?mod=cart&act=xoaHet" <?=$check?>>Xóa tất cả</a>
+                    <a href="?mod=cart&act=xoaHet">Xóa tất cả</a>
                 </div>
 
             </div>
-            <div class="col-lg-4 col-sm-12" >
+            <div class="col-lg-4 col-sm-12">
                 <div class="giohang__right">
                     <h3>Đơn hàng của bạn</h3>
                     <div class="infor-check">

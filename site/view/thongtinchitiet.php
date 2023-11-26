@@ -13,7 +13,7 @@
                   <div class="user-form">
                     <div class="user">
 
-                    <img src="../content/img/service/ra.jpg" alt="">
+                      <img src="../template/admin/img/duan/us.jpg" alt="">
                       <div>
                         <p><?= $user_name ?></p>
                         <a href="?mod=user&act=dangxuat">Đăng xuất</a>
@@ -36,8 +36,7 @@
                     <!-- Avatar -->
                     <div class="container-avt">
                       <div class="avt">
-                      <img src="../content/img/service/ra.jpg" alt="">
-
+                        <img src="../template/admin/img/duan/us.jpg" alt="">
                         <?php
                         if($vaitro==1)
 

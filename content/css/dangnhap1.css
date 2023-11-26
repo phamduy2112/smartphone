@@ -1,21 +1,9 @@
-
-@import url('../css/bien.css');
-:root{
-  --font--color:#2B20A1;
-  /* FONT */
-  --Play: 'Play', sans-serif;
-  --Ruda: 'Ruda', sans-serif;
-  /* COLOR */
-  /* Chủ đạo */
-  --CD: #2B20A1;
-  /* Nền */
-  --Nen: #EAE8FF;
-}
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
+@import url('../css/bien.css');
 .flex{
     display: flex;
   }
@@ -91,14 +79,13 @@
   }
   
   .form__group_icon {
-    width: 100%;
-    border: 2px solid #EAE9F6;
+  width: 100%;
+  border: 1px solid #2b20a16e;
     position: relative;
     border-radius: 5px;
     
   }
   .form__group_icon input{
-    font-family: var(--Play);
     width: 70%;
     height: 40px;
     border: none;
@@ -117,34 +104,28 @@
   }
   
   .sign .btna{
-    margin-top: 3px;
-    font-family: var(--Play);
+    margin-top: 13px;
     width: 100%;
-    padding: 10px 0;
+    padding: 7px 0;
     background-color: var(--font--color);
     color: white;
     border: none;
-    box-shadow: 0 2px 5px rgba(0,0,0,.5);
+    box-shadow: 0 2px 4px rgba(0,0,0,.5);
     margin-bottom: 5px;
-    border-radius: 10px;
+    border-radius: 5px;
     font-weight: bold;
-    font-size: 20px;
   }
   .sign h1,
   .sign-up h1{
-    font-family: var(--Play);
     color: var(--font--color);
     font-weight: bold;
 }
-
 .sign .quenmk,
 .sign .form__group p,
 .sign-up .form__group p{
-  font-family: var(--Ruda);
   color: var(--font--color);
   font-weight: 600;
 }
-
   .sign-up a{
     margin-top: 5px;
     display: inline-block;
@@ -209,13 +190,14 @@
     margin-top: 10px;
    margin-right: 10px;
   }
-  .forget_from .btna{
+  .forget_from .btna
+{
     padding: 6px 15px;
     background-color: var(--font--color);
     color: white;
     border: none;
     font-weight: bold;
-    border-radius: 5px;
+  border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
   }
 

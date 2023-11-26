@@ -12,7 +12,9 @@
            
               
                 <form action="" method="post" name="myform" id="form-dangnhap">
-                  <h1>Đăng nhập tài khoản</h1>
+                  
+                  
+                  <h1>Đăng nhập</h1>
                   <div class="form__group">
                     <p>Tên tài khoản</p>
                     <div class="form__group_icon">

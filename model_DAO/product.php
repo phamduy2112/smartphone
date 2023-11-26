@@ -67,18 +67,13 @@ function dem_SP(){
 
 
 
+
+
 function sanpham($ten_sp){
 $get="";
 foreach($ten_sp as $item)
 {
     extract($item);
-    $kho='';
-    if($soluong==0){
-    $kho='<span style="color: red;">Hết hàng!</span>';
-    }
-    else{
-    $kho='<span>Kho ('.$soluong.')</span>';
-    }
  $get.='    
  <div class="product__item product___hot">
 
@@ -132,7 +127,8 @@ foreach($ten_sp as $item)
    </div>
    
    <div class="check">
-    '.$kho.'
+     <i class="fa-solid fa-check"></i>
+     <span>Còn hàng</span>
    </div>
    <div class="container-btn">
     <a href="?mod=cart&act=giohang&id='.$id_sp.'" class="btn btn-danger my-2">Mua hàng</a>
@@ -150,16 +146,8 @@ return $get;
 function sanpham_thuong($ten_sp){
   $get= '';
   foreach($ten_sp as $item){
-    
     $sale="";
     extract($item);
-    $kho='';
-    if($soluong==0){
-    $kho='<span style="color: red;">Hết hàng!</span>';
-    }
-    else{
-    $kho='<span>Kho ('.$soluong.')</span>';
-    }
     if($khuyenmai <=1){
       $sale='style="display:none;"';
     }else{
@@ -212,7 +200,8 @@ function sanpham_thuong($ten_sp){
       '.number_format($gia*((100-$khuyenmai)/100),0,',','.').'đ
     </div>
       <div class="check">
-      '.$kho.'
+        <i class="fa-solid fa-check"></i>
+        <span>Còn hàng</span>
       </div>
       <div class="container-btn">
       <a href="?mod=cart&act=giohang&id='.$id_sp.'" class="btn btn-danger w-100 my-2">Mua hàng</a>
