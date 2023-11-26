@@ -69,8 +69,10 @@
                 }else if($trangthai==1){
                   $trangThai='<span class="circle" style="background-color: #FF9900; "></span>                 ';
 
-                }else{
+                }else if($trangthai==2){
                   $trangThai='<span class="circle" style="background-color: #00FF19; "></span>                 ';
+                }else{
+                  $trangThai='<span class="circle" style="background-color: grey; "></span>';
                 }
                 ?>
               <div class="order-check">
@@ -116,9 +118,10 @@
 
               <div class="control">
                   <ul>
-                    <li><a href="">Đang chuẩn bị</a></li>
-                    <li><a href="">Đang giao hàng</a></li>
-                    <li><a href="">Đã giao hàng</a></li>
+                    <li><a href="?mod=user&act=donhang&trangthai=0">chuẩn bị</a></li>
+                    <li><a href="?mod=user&act=donhang&trangthai=1">Đang giao</a></li>
+                    <li><a href="?mod=user&act=donhang&trangthai=2">Đã giao</a></li>
+                    <li><a href="?mod=user&act=donhang&trangthai=3">Đã huỷ</a></li>
                   </ul>
               </div>
         </div>

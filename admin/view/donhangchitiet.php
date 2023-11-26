@@ -22,26 +22,26 @@
                     <div class="kh-infor">
                         <div>
                             <p>Thời gian</p>
-                            <span>: 08:01AM -  21/10/2023</span>
+                            <span>: <?=$user['ngaydathang']?></span>
                         </div>
                         <div>
                             <p>Địa chỉ</p>
-                            <span>: Công Viên Phần Mềm Quang Trung, Tân Chánh Hiệp, District 12, Ho Chi Minh City</span>
+                            <span>: <?=$user['diaChi']?></span>
 
                         </div>
                         <div>
                             <p>Họ tên</p>
-                            <span>: Nguyễn Văn Tèo</span>
+                            <span>:<?=$user['tenkhachhang']?></span>
 
                         </div>
                         <div>
                             <p>Số điện thoại</p>
-                            <span>: 08xx.xxx.172</span>
+                            <span>:<?=$user['sdt']?></span>
 
                         </div>
                         <div>
                             <p>Tổng tiền</p>
-                            <span>: 20.000.000đ</span>
+                            <span><?=$user['tongtien']?></span>
                         </div>
                     </div>
 
@@ -66,14 +66,24 @@
                           <?php endforeach;?>
                         </tbody>
                     </table>
-                    <form action="" method="post">
-                    <div class="btn-control">
-                        <p>Tùy chỉnh:</p>
-                        <input style="background-color: #FF0000;" type="submit" name="chuanbi" value="Đang chuẩn bị">
-                        <input style="background-color: #FF9900;" type="submit" name="danggiao" value="Đang giao">
-                        <input style="background-color: #00FF19;" type="submit" name="hoantat" value="Hoàn tất">
-                    </div>
-                    </form>
+                    <?php 
+                  $trang_Thai='';
+                    if($user['trangthai']<=2){
+                      $trang_Thai= '
+                      <form action="" method="post">
+                      <div class="btn-control">
+                          <p>Tùy chỉnh:</p>
+                          <input style="background-color: #FF0000;" type="submit" name="chuanbi" value="Đang chuẩn bị">
+                          <input style="background-color: #FF9900;" type="submit" name="danggiao" value="Đang giao">
+                          <input style="background-color: #00FF19;" type="submit" name="hoantat" value="Hoàn tất">
+                      </div>
+                      </form>
+                      ';
+                    }else{
+                     $trang_Thai='Huỷ đơn hàng';
+                    }
+                    ?>
+                <?=$trang_Thai?>
                    
                 </div>
             </div>
@@ -125,8 +135,10 @@
                 }else if($trangthai==1){
                   $trangThai='<span class="circle" style="background-color: #FF9900; "></span>                 ';
 
-                }else{
+                }else if($trangthai==2){
                   $trangThai='<span class="circle" style="background-color: #00FF19; "></span>                 ';
+                }else{
+                  $trangThai='<span class="circle" style="background-color: grey; "></span>';
                 }
                 ?>
               <div class="order-check">
@@ -172,9 +184,10 @@
 
               <div class="control">
                   <ul>
-                    <li><a href="">Đang chuẩn bị</a></li>
-                    <li><a href="">Đang giao hàng</a></li>
-                    <li><a href="">Đã giao hàng</a></li>
+                  <li><a href="?mod=user&act=donhang&trangthai=0">chuẩn bị</a></li>
+                    <li><a href="?mod=user&act=donhang&trangthai=1">Đang giao</a></li>
+                    <li><a href="?mod=user&act=donhang&trangthai=2">Đã giao</a></li>
+                    <li><a href="?mod=user&act=donhang&trangthai=3">Đã huỷ</a></li>
                   </ul>
               </div>
         </div>

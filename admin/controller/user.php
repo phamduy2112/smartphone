@@ -187,18 +187,28 @@ if(isset($act)){
         break;
     // don hang
     case 'donhang':
+      
         include_once "./view/header.php";
         $tatcaDh=tatca_donhang(0,'asc',0);
+        if(isset($trangthai)){
+            $tatcaDh=timTrangThai($trangthai);
+        }
         include_once "./view/donhang.php";
        
         break;
     case 'donhangchitiet':
-      
+         $user=donhangct_admin($id_dh);
+            print_r($user['trangthai']);
+
         include_once "./view/header.php";
         $tatcaDh=tatca_donhang(0,'asc',0);
-        if(isset($id_dh)){
+        print_r($tatcaDh['trangthai']);
+
+if(isset($id_dh)){
          
            $sp=lay_hinhSP($id_dh); 
+       
+        
            if(isset($chuanbi)){
             chinhsuaTrangThai(0,$id_dh);
             header('Location:?mod=user&act=donhang');
