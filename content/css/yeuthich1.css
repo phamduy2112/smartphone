@@ -1,0 +1,21 @@
+:root{
+    --font--color:#2B20A1;
+    /* FONT */
+    --Play: 'Play', sans-serif;
+    --Ruda: 'Ruda', sans-serif;
+    /* COLOR */
+    /* Chủ đạo */
+    --CD: #2B20A1;
+    /* Nền */
+    --Nen: #EAE8FF;
+}
+.container-md{
+    min-height: 280px;
+    height: fit-content;
+}
+.sp_yt h2{
+    padding: 10px 15px;
+    padding-left: 20px;
+    font-family: var(--Play);
+    font-weight: bold;
+}
