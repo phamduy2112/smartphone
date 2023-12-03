@@ -1,0 +1,362 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+:root{
+    /* FONT */
+    --Play: 'Play', sans-serif;
+    --Ruda: 'Ruda', sans-serif;
+    /* COLOR */
+    /* Chủ đạo */
+    --CD: #2B20A1;
+    /* Nền */
+    --Nen: #EAE8FF;
+}
+/* MAIN BEGIN */
+main{
+    padding: 0px;
+    height: fit-content;
+    width: 100%;
+    background-color:var(--Nen);
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+main section{
+    /* background-color: rgba(165, 42, 42, 0.301); */
+    width: 1440px;
+    height: 100%;
+    position: relative;
+}
+main section h3{
+    font-family: var(--Play);
+    color: var(--CD);
+    font-size: 30px;
+    font-weight: bold;
+    position: relative;
+    top: 28px;  
+}
+@media only screen and (max-width: 600px) {
+    main section h3{
+      font-size: 15px;
+    }
+  }
+/* Bảng khách hàng */
+.container-infor .noyi{
+    margin-left: 50px;
+}
+.container .infor-form{
+    position: relative;
+    margin-top: 40px;
+    width: 100%;
+    /* background-color: red; */
+    height: fit-content;
+    display: grid;
+    grid-template-columns: 25% 74%;
+    gap: 10px;
+    padding: 10px 0px;
+}
+.container .infor-form>.user-form{
+    background-color: white;
+    height: 210px;
+}
+.user-form .user{
+    position: relative;
+    background-color: #2B20A1;
+    height: fit-content;
+}
+.user-form .user img{
+    position: absolute;
+    top: 25px;
+    left: 30px;
+    width: 70px;
+    height: 70px;
+    border-radius: 35px;
+}
+.user div{
+    font-family: var(--Play);
+    position: absolute;
+    left: 125px;
+    top: 30px;
+}
+.user div p{
+    color: var(--CD);
+    font-weight: bold;
+    font-size: 35px;
+}
+.user div a{
+    font-size: 20px;
+    text-decoration: none;
+    color: rgba(61, 61, 61, 0.356);
+    font-weight: 600;
+}
+.control{
+    position: relative;
+    top: 120px;
+    font-family: var(--Ruda);
+}
+.profile, .order{
+    padding: 0px 0px 0px 20px;
+}
+.profile a,.order a{
+    font-size: 22px ;
+    color: var(--CD);
+    text-decoration: none;
+    transition: 0.3s;
+}
+.profile i{
+    transition: 0.3s;
+}
+.profile i, .order i{
+    color: var(--CD);
+    font-size: 22px;
+    margin-right: 20px;
+    margin-left: 10px;
+}
+.profile:hover a{
+    font-weight: bold;
+    font-size: 28px;
+}
+.profile:hover i{
+    font-size: 28px;
+}
+.order i{
+    font-size: 28px;
+}
+.order a{
+    font-size: 25px;
+    font-weight: bold;
+}
+/* Bảng THÔNG TIN */
+.main-form{
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    height: fit-content;
+    width: 100%;
+    position: relative;
+    padding: 20px 25px 30px 25px;
+}
+.main-form .container-avt{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+.main-form .avt{
+    width: fit-content;
+    height: fit-content;
+    display: inline-block;
+    padding: 0px 10px;
+}
+.main-form .avt img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    display: block;
+    margin-left: 7px;
+}
+.main-form .avt input[type="file"]{
+    display: none;
+}
+.avt a{
+    text-align:  center;
+    margin-top: 20px;
+    display: inline-block;
+    width: 100%;
+    padding: 6px 10px;
+    background-color: var(--CD);
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: var(--Play);
+    transition: 0.4s;
+}
+.avt a:hover{
+    background-color: rgb(226, 0, 0);
+    color: white;
+}
+.container-infor{
+    margin-top: 12px;
+    width: 100%;
+}
+.infor-show {
+    margin: 10px 0px;
+}
+.infor-show p{
+    font-size: 20px;
+    font-weight: bold;
+    font-family: var(--Play);
+    text-align: right;
+    color: var(--CD);
+    display: inline-block;
+    width: 25%;
+    margin-right: 30px;
+}
+.infor-show input{
+    border: 2px #c1bbff solid;
+    border-radius: 10px;
+    width: 50%;
+    padding: 4px 0px 4px 15px;
+    font-family: var(--Ruda);
+    outline: none;
+}
+.infor-show input:focus{
+    border: 2px #5445ff solid;
+    color: black;
+}
+.infor-show input{
+    /* text-align: center; */
+    font-family: var(--Play);
+    color: rgba(124, 124, 124, 0.55);
+    font-weight: bold;
+}
+.container-btn{
+    width: 100%;
+    position: relative;
+    /* right: -56%; */
+}
+.container-btn input, .container-btn a{
+    text-align:  center;
+    font-family: var(--Play);
+    padding: 3px 12px;
+    border-radius: 10px;
+    font-weight: bold;
+    border: 2px var(--CD) solid;
+    background-color: rgb(255, 255, 255);
+    color: var(--CD);
+    transition: 0.4s;
+    margin: 0px 1px;
+    cursor: pointer;
+}
+.container-btn input{
+    width:110px;
+}
+.container-btn input:hover{
+    color: white;
+    background-color: var(--CD);
+}
+.container-btn a:hover{
+    color: white;
+    background-color: var(--CD);
+}
+/* MAIN END */
+
+/* Reponsive */
+/* Đơn hàng chi tiết */
+@media (max-width:1280px){
+    .container .infor-form{
+display: block;
+}
+.main-form{
+margin-top: 10px;
+}
+}
+@media only screen and (max-width: 600px) {
+    main section h3{
+      font-size: 18px;
+    }
+    .container .infor-form{
+        grid-template-columns: 100% ;
+    }
+    .container .infor-form>.order-form{
+        padding: 10px 12px 15px 12px;
+    }
+    .order-form h4{
+        font-size: 15px;
+    }
+    .order-form .title{
+        right: 3%;
+        top: 7%;
+        font-size: 10px;
+    }
+    /* Bảng khách hàng */
+    .container .infor-form>.user-form{
+        height: 100px;
+    }
+    .user-form .user{
+        position: relative;
+    }
+    .user-form .user img{
+        top: 30px;
+        left: 30px;
+        width: 35px;
+        height: 35px;
+    }
+    .user div{
+        left: 20%;
+        top: 30px;
+    }
+    .user div p{
+        font-size: 15px;
+    }
+    .user div a{
+        font-size: 10px;
+    }
+    .control{
+        left: 55%;
+        top: 25%;
+    }
+    .profile, .order{
+        padding:0px;
+    }
+    .profile a,.order a{
+        font-size: 11px ;
+    }
+    .profile i, .order i{
+        font-size: 11px;
+        margin-right: 1px;
+        margin-left: 0px;
+    }
+    .profile:hover a{
+        font-size: 13px;
+    }
+    .profile:hover i{
+        font-size: 11px;
+    }
+    /* Bảng THÔNG TIN */
+    .main-form{
+        padding: 6px 10px 10px 10px;
+    }
+    /* INFOR SHOW */
+    .container-infor{
+        margin-top: 12px;
+        width: 100%;
+    }
+    .infor-show {
+        margin: 5px 0px;
+    }
+    .infor-show p{
+        font-size: 12px;
+        width: 35%;
+        margin-right: 10px;
+    }
+    .infor-show input{
+        font-size: 11px;
+        width: 58%;
+        padding: 2px 0px 2px 7px;
+    }
+    .infor-show input::placeholder{
+        font-size: 11px;
+    }
+    .container-btn{
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: end;
+    }
+}
+@media (max-width:350px){
+    .user div{
+        left: 24%;
+        top: 30px;
+    }
+}
+
+
+
+
+
+
+
+
+

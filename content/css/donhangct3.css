@@ -1,0 +1,387 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+:root{
+    /* FONT */
+    --Play: 'Play', sans-serif;
+    --Ruda: 'Ruda', sans-serif;
+    /* COLOR */
+    /* Chủ đạo */
+    --CD: #2B20A1;
+    /* Nền */
+    --Nen: #EAE8FF;
+}
+/* MAIN BEGIN */
+main{
+    padding: 0px;
+    height: fit-content;
+    width: 100%;
+    background-color:var(--Nen);
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+main section{
+    /* background-color: rgba(165, 42, 42, 0.301); */
+    width: 1440px;
+    height: 100%;
+    position: relative;
+}
+main section h3{
+    font-family: var(--Play);
+    color: var(--CD);
+    font-size: 30px;
+    font-weight: bold;
+    position: relative;
+    top: 28px;  
+}
+@media only screen and (max-width: 600px) {
+    main section h3{
+      font-size: 15px;
+    }
+  }
+/* Bảng khách hàng */
+.container .infor-form{
+    position: relative;
+    margin-top: 40px;
+    width: 100%;
+    /* background-color: red; */
+    height: fit-content;
+    display: grid;
+    grid-template-columns: 25% 74%;
+    gap: 10px;
+    padding: 10px 0px;
+}
+.container .infor-form>.user-form{
+    background-color: white;
+    height: 220px;
+}
+.user-form .user{
+    position: relative;
+    background-color: #2B20A1;
+    height: fit-content;
+}
+.user-form .user img{
+    position: absolute;
+    top: 25px;
+    left: 30px;
+    width: 70px;
+    height: 70px;
+    border-radius: 35px;
+}
+.user div{
+    font-family: var(--Play);
+    position: absolute;
+    left: 125px;
+    top: 30px;
+}
+.user div p{
+    color: var(--CD);
+    font-weight: bold;
+    font-size: 35px;
+}
+.user div a{
+    font-size: 20px;
+    text-decoration: none;
+    color: rgba(61, 61, 61, 0.356);
+    font-weight: 600;
+}
+.control{
+    position: relative;
+    top: 120px;
+    font-family: var(--Ruda);
+}
+.profile, .order{
+    padding: 0px 0px 0px 20px;
+}
+.profile a,.order a{
+    font-size: 22px ;
+    color: var(--CD);
+    text-decoration: none;
+    transition: 0.3s;
+}
+.profile i{
+    transition: 0.3s;
+}
+.profile i, .order i{
+    color: var(--CD);
+    font-size: 22px;
+    margin-right: 20px;
+    margin-left: 10px;
+}
+.profile:hover a{
+    font-weight: bold;
+    font-size: 28px;
+}
+.profile:hover i{
+    font-size: 28px;
+}
+.order i{
+    font-size: 28px;
+}
+.order a{
+    font-size: 25px;
+    font-weight: bold;
+}
+/* Bảng đơn hàng */
+.container .infor-form>.order-form{
+    background-color: rgb(255, 255, 255);
+    height: fit-content;
+    width: 100%;
+    position: relative;
+    padding: 20px 25px 30px 25px;
+}
+.order-form h4{
+    font-family: var(--Play);
+    color: var(--CD);
+    font-size: 30px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.order-form .title{
+ 
+    font-size: 16px;
+    font-weight: normal;
+    font-family: var(--Play);
+    color: gray;
+}
+.order-form table{
+    margin-top: 10px;
+    border-spacing: 0 ;
+    width: 100%;
+    font-family: var(--Play);
+}
+.order-form table thead {
+    color:  white;
+    background-color: var(--CD);
+}
+.order-form table thead th{
+    font-size: 17px;
+    padding: 10px 10px;
+    text-align: center;
+}
+.order-form table thead th:nth-child(1){
+   width: 35%; 
+}
+.order-form table thead th:nth-child(2){
+   width: 10%; 
+}
+.order-form table thead th:nth-child(3){
+   width: 20%; 
+}
+.order-form table thead th:nth-child(4){
+   width: 20%; 
+}
+.order-form  tr{
+    border:none;
+}
+.order-form table tbody{
+    text-align: center;
+}
+.order-form table tbody tr:nth-child(even){
+    background-color: white;
+}
+.order-form table tbody tr:nth-child(odd){
+    background-color: var(--Nen);
+}
+.order-form table tbody tr td{
+    /* padding: 15px 10px; */
+}
+table tbody tr td:nth-child(1),
+table tbody tr td:nth-child(2){
+    font-weight: bold;
+}
+table tbody tr td:nth-child(1){
+    text-align: left;
+    /* background-color: #757575; */
+    position: relative;
+    padding: 10px 10px 20px 10px;
+}
+table tbody tr td:nth-child(1) img{
+    width: 43px;
+    height: 57px;
+    position: absolute;
+    left: 10px;
+    /* bottom: 2px; */
+}
+table tbody tr td:nth-child(1) span{
+    font-size: 16px;
+    color: red;
+    position: relative;
+    top: 5px;
+    left: 55px;
+}
+table tbody tr td:nth-child(1) span del{
+    font-size: 13px;
+    font-weight: normal;
+    color: gray;
+    margin-right: 5px;
+}
+table tbody tr td:nth-child(1) a{
+    color: var(--CD);
+    font-weight: bold;
+    font-size: 15px;
+    transition: 0.3s;
+    display: inline-block;
+}
+table tbody tr td:nth-child(2){
+    font-size: 14px;
+}
+table tbody tr td:nth-child(3){
+    color: var(--CD);
+    font-weight: 600;
+}
+table tbody tr td:nth-child(4){
+    color: var(--CD);
+    font-size: 19px;
+}
+/* MAIN END */
+/* Reponsive */
+/* Đơn hàng chi tiết */
+
+
+@media only screen and (max-width: 600px) {
+    main section h3{
+      font-size: 18px;
+    }
+    .container .infor-form{
+        grid-template-columns: 100% ;
+    }
+
+
+    .container .infor-form>.order-form{
+        padding: 10px 12px 15px 12px;
+    }
+    .order-form h4{
+        font-size: 15px;
+    }
+
+    .order-form .title{
+        right: 3%;
+        top: 7%;
+        font-size: 10px;
+    }
+
+
+    /* Bảng khách hàng */
+    .container .infor-form>.user-form{
+        height: 100px;
+    }
+    .user-form .user{
+        position: relative;
+    }
+    .user-form .user img{
+        top: 30px;
+        left: 30px;
+        width: 35px;
+        height: 35px;
+    }
+    .user div{
+        left: 20%;
+        top: 30px;
+    }
+    .user div p{
+        font-size: 15px;
+    }
+    .user div a{
+        font-size: 10px;
+    }
+    .control{
+        left: 55%;
+        top: 25%;
+    }
+
+    .profile, .order{
+        padding:0px;
+    }
+    .profile a,.order a{
+        font-size: 11px ;
+    }
+    .profile i, .order i{
+        font-size: 11px;
+        margin-right: 1px;
+        margin-left: 0px;
+    }
+    .profile:hover a{
+        font-size: 13px;
+    }
+    .profile:hover i{
+        font-size: 11px;
+    }
+    .order i{
+        font-size: 14px;
+    }
+    .order a{
+        font-size: 13px;
+    }
+
+    .order-form table thead th{
+        font-size: 12px;
+        /* padding: 5px 5px; */
+    }
+    .order-form table thead th:nth-child(3){
+        display: none;
+     }
+     .order-form table thead th:nth-child(1){
+        width: 60%; 
+     }
+     .order-form table thead th:nth-child(2){
+        width: 10%; 
+     }
+     .order-form table thead th:nth-child(4){
+        width: 30%; 
+     }
+
+     .order-form table thead th{
+        font-size: 10px;
+     }
+  
+     table tbody tr td:nth-child(1){
+         padding: 5px 5px 55px 5px;
+     }
+     table tbody tr td:nth-child(1) img{
+         width: 40px;
+         height: 70%;
+         position: absolute;
+         left: 10px;
+         bottom: 20%;
+     }
+     table tbody tr td:nth-child(1) a{
+        font-size: 9px;
+        /* background-color: red; */
+        display: inline-block;
+        padding: 0px;
+        margin-top: 10px;
+        height: 10px;
+    }
+     table tbody tr td:nth-child(1) span{
+         font-size: 9px;
+         position:absolute;
+         top: 3px;
+         left: 55px;
+     }
+     table tbody tr td:nth-child(1) span del{
+         font-size: 8px;
+         margin-right: 1px;
+     }
+
+     table tbody tr td:nth-child(1){
+        padding: 5px 5px 70px 5px;
+     }
+     table tbody tr td:nth-child(2){
+         font-size: 10px;
+     }
+     table tbody tr td:nth-child(3){
+        display: none;
+     }
+     table tbody tr td:nth-child(4){
+        font-size: 10px;
+     }
+}
+@media (max-width:350px) {
+    table tbody tr td:nth-child(1){
+        padding: 5px 5px 100px 5px;
+    }
+}
